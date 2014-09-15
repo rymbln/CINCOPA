@@ -5,6 +5,7 @@ using System.Data.Objects;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Security;
 using System.Text;
 using System.Windows;
 using System.Windows.Media.Media3D;
@@ -22,6 +23,307 @@ namespace CINCOPA.Common
     public class DataManager
     {
         private static DataManager instance;
+        private static List<WARD> wardLookup;
+        private static List<ORGANISM> organismLookup;
+        private static List<ROUTE> routeLookup;
+        private static List<DRUG> drugLookup;
+        private static readonly List<string> fkLookup = new List<string>();
+        private static readonly List<string> logic3Lookup = new List<string>();
+        private static readonly List<string> logic3Type2Lookup = new List<string>();
+        private static readonly List<string> logic2Lookup = new List<string>();
+        private static readonly List<string> smokeStatusLookup = new List<string>();
+        private static readonly List<string> heavyLookup = new List<string>();
+        private static readonly List<string> sputumTypeLookup = new List<string>();
+        private static readonly List<string> incidenceEdemaLookup = new List<string>();
+        private static readonly List<string> dinamicLookup = new List<string>();
+        private static readonly List<string> efficiencyLookup = new List<string>();
+        private static readonly List<string> resultLookup = new List<string>();
+        private static readonly List<string> aeHeavyLookup = new List<string>();
+        private static readonly List<string> aeResultLookup = new List<string>();
+        private static readonly List<string> aeRelationLookup = new List<string>();
+        private static readonly List<string> aeActionsLookup = new List<string>();
+
+
+        public List<string> AEHeavyLookup
+        {
+            get
+            {
+                if (aeHeavyLookup.Count == 0)
+                {
+                    aeHeavyLookup.Add("---");
+                    aeHeavyLookup.Add("1 - Легкая");
+                    aeHeavyLookup.Add("2 - Средняя");
+                    aeHeavyLookup.Add("3 - Тяжелая");
+                }
+                return aeHeavyLookup;
+            }
+
+        }
+
+        public List<string> AEResultLookup
+        {
+            get
+            {
+                if (aeResultLookup.Count == 0)
+                {
+                    aeResultLookup.Add("---");
+                    aeResultLookup.Add("1 - Выздоровление");
+                    aeResultLookup.Add("2 - Улучшение");
+                    aeResultLookup.Add("3 - Без изменений");
+                    aeResultLookup.Add("4 - Ухудшение");
+                }
+                return aeResultLookup;
+            }
+
+        }
+
+        public List<string> AERelationLookup
+        {
+            get
+            {
+                if (aeRelationLookup.Count == 0)
+                {
+                    aeRelationLookup.Add("---");
+                    aeRelationLookup.Add("1 - Нет");
+                    aeRelationLookup.Add("2 - Неизвестно");
+                    aeRelationLookup.Add("3 - Сомнительная");
+                    aeRelationLookup.Add("4 - Возможная");
+                    aeRelationLookup.Add("5 - Вероятная");
+                }
+                return aeRelationLookup;
+            }
+
+        }
+
+        public List<string> AEActionsLookup
+        {
+            get
+            {
+                if (aeActionsLookup.Count == 0)
+                {
+                    aeActionsLookup.Add("---");
+                    aeActionsLookup.Add("1 - Нет");
+                    aeActionsLookup.Add("2 - Уменьшение дозы");
+                    aeActionsLookup.Add("3 - Временная отмена препарата");
+                    aeActionsLookup.Add("4 - Выведение из исследования");
+                    aeActionsLookup.Add("5 - Корригирующая терапия");
+                }
+                return aeActionsLookup;
+            }
+
+        }
+
+
+        public List<string> ResultLookup
+        {
+            get
+            {
+                if (resultLookup.Count == 0)
+                {
+                    resultLookup.Add("---");
+                    resultLookup.Add("1 - Положительный");
+                    resultLookup.Add("2 - Отрицательный");
+                }
+                return resultLookup;
+            }
+          
+        }
+
+        public List<string> EfficiencyLookup
+        {
+            get
+            {
+                if (efficiencyLookup.Count == 0)
+                {
+                    efficiencyLookup.Add("---");
+                    efficiencyLookup.Add("1 - Выздоровление");
+                    efficiencyLookup.Add("2 - Улучшение");
+                    efficiencyLookup.Add("3 - Ухудшение");
+                    efficiencyLookup.Add("4 - Рецидив");
+                }
+                return efficiencyLookup;
+            }
+        }
+
+
+        public List<string> DinamicLookup
+        {
+            get
+            {
+                if (dinamicLookup.Count == 0)
+                {
+                    dinamicLookup.Add("---");
+                    dinamicLookup.Add("1 - Разрешение");
+                    dinamicLookup.Add("2 - Улучшение");
+                    dinamicLookup.Add("3 - Ухудшение");
+                    dinamicLookup.Add("4 - Без Изменений");
+                    dinamicLookup.Add("5 - Новый симптом");
+                }
+                return dinamicLookup;
+            }
+        }
+
+        public List<string> IncidenceEdemaLookup
+        {
+            get
+            {
+                if (incidenceEdemaLookup.Count == 0)
+                {
+                    incidenceEdemaLookup.Add("---");
+                    incidenceEdemaLookup.Add("1 - Только стопы");
+                    incidenceEdemaLookup.Add("2 - Стопы и голени");
+                    incidenceEdemaLookup.Add("3 - Анасарка");
+                    incidenceEdemaLookup.Add("4 - Не применимо");
+                }
+                return incidenceEdemaLookup;
+            }
+        }
+
+        public List<string> SputumTypeLookup
+        {
+            get
+            {
+                if (sputumTypeLookup.Count == 0)
+                {
+                    sputumTypeLookup.Add("---");
+                    sputumTypeLookup.Add("1 - Слизистая");
+                    sputumTypeLookup.Add("2 - Слизисто-гнойная");
+                    sputumTypeLookup.Add("3 - Гнойная");
+                }
+                return sputumTypeLookup;
+            }
+        }
+
+        public List<string> HeavyLookup
+        {
+            get
+            {
+                if (heavyLookup.Count == 0)
+                {
+                    heavyLookup.Add("---");
+                    heavyLookup.Add("1 - Нетяжелая");
+                    heavyLookup.Add("2 - Тяжелая");
+                }
+                return heavyLookup;
+            }
+        }
+
+        public List<string> SmokeStatusLookup
+        {
+            get
+            {
+                if (smokeStatusLookup.Count == 0)
+                {
+                    smokeStatusLookup.Add("---");
+                    smokeStatusLookup.Add("1 - Курящий");
+                    smokeStatusLookup.Add("2 - Ранее куривший");
+                    smokeStatusLookup.Add("3 - Никогда не куривший");
+                }
+                return smokeStatusLookup;
+            }
+        }
+
+
+        public List<string> Logic3Lookup
+        {
+            get
+            {
+                if (logic3Lookup.Count ==0)
+                {
+                    logic3Lookup.Add("---");
+                    logic3Lookup.Add("1 - Да");
+                    logic3Lookup.Add("2 - Нет");
+                    logic3Lookup.Add("3 - Нет данных");
+                }
+                return logic3Lookup;
+            }
+        }
+        public List<string> Logic3Type2Lookup
+        {
+            get
+            {
+                if (logic3Type2Lookup.Count == 0)
+                {
+                    logic3Type2Lookup.Add("---");
+                    logic3Type2Lookup.Add("1 - Да");
+                    logic3Type2Lookup.Add("2 - Нет");
+                    logic3Type2Lookup.Add("3 - Неприменимо");
+                }
+                return logic3Type2Lookup;
+            }
+        }
+        public List<string> Logic2Lookup
+        {
+            get
+            {
+                if (logic2Lookup.Count == 0)
+                {
+                    logic2Lookup.Add("---");
+                    logic2Lookup.Add("1 - Да");
+                    logic2Lookup.Add("2 - Нет");
+                }
+                return logic2Lookup;
+            }
+        }
+        public List<WARD> WardLookup
+        {
+            get
+            {
+                if (wardLookup == null)
+                {
+                    wardLookup = underlyingContext.Wards.OrderBy(o => o.NAME).ToList();
+                }
+                return wardLookup;
+            }
+        }
+        public List<DRUG> DrugLookup
+        {
+            get
+            {
+                if (drugLookup == null)
+                {
+                    drugLookup = underlyingContext.Drugs.OrderBy(o => o.NAME).ToList();
+                }
+                return drugLookup;
+            }
+        }
+        public List<ROUTE> RouteLookup
+        {
+            get
+            {
+                if (routeLookup == null)
+                {
+                    routeLookup = underlyingContext.Routes.OrderBy(o => o.NAME).ToList();
+                }
+                return routeLookup;
+            }
+        }
+        public List<ORGANISM> OrganismLookup
+        {
+            get
+            {
+  organismLookup = underlyingContext.Organisms.OrderBy(o => o.NAME).ToList();
+                return organismLookup;
+            }
+        }
+
+        public List<string> FkLookup
+        {
+            get
+            {
+                if (fkLookup.Count == 0)
+                {
+                    fkLookup.Add("---");
+                    fkLookup.Add("1 - I");
+                    fkLookup.Add("2 - II");
+                    fkLookup.Add("3 - III");
+                    fkLookup.Add("4 - IV");
+                }
+                return fkLookup;
+            }
+        }
+
+
 
 
         public static DataManager Instance
@@ -871,3 +1173,4 @@ namespace CINCOPA.Common
 
     }
 }
+
