@@ -7,7 +7,7 @@
       <Diagram DiagramId="0d38f5f58d9f46e59e547f3b96cf1db7" Name="Diagram1" >
         <EntityTypeShape EntityType="CINCOPAModel.CRF" Width="2.5" PointX="2.5" PointY="2.875" />
         <EntityTypeShape EntityType="CINCOPAModel.WARD" Width="1.5" PointX="0.5" PointY="2.875" />
-        <EntityTypeShape EntityType="CINCOPAModel.USERS" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="CINCOPAModel.USER" Width="1.5" PointX="0.5" PointY="0.5" />
         <AssociationConnector Association="CINCOPAModel.CRFWARD" />
         <EntityTypeShape EntityType="CINCOPAModel.VISIT_ONE" Width="1.5" PointX="5.625" PointY="2.875" />
         <EntityTypeShape EntityType="CINCOPAModel.VISIT_ONE_ONE" Width="1.5" PointX="5.625" PointY="7" />
