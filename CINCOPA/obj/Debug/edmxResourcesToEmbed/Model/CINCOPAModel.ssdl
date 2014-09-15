@@ -152,7 +152,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
     <Property Name="NUMBER" Type="int" Nullable="false" />
@@ -192,7 +192,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
@@ -200,7 +200,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
@@ -219,7 +219,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
@@ -233,7 +233,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
@@ -248,7 +248,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
@@ -345,7 +345,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="true" />
     <Property Name="SINUS_RHYTHM" Type="bit" Nullable="true" />
     <Property Name="ATRIAL_FIBRILLATION" Type="bit" Nullable="true" />
@@ -540,7 +540,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="VISIT_ONE_C_REACTIVE_PROTEIN" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_ONE_PROCALCITONIN" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_ONE_IL6" Type="nvarchar(max)" Nullable="true" />
@@ -563,7 +563,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_ONE_KOPEPTIN" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_ONE_PROADRENOMEDULLIN" Type="nvarchar(max)" Nullable="true" />

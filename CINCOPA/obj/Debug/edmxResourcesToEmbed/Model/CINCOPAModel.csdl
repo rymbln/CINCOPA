@@ -15,144 +15,144 @@
     <EntitySet Name="AEs" EntityType="CINCOPAModel.ADVERSE_EVENT" />
     <EntitySet Name="BaseLiveIndicatorsVisit1Set" EntityType="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" />
     <AssociationSet Name="CRFVISIT_ONE" Association="CINCOPAModel.CRFVISIT_ONE">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
     </AssociationSet>
     <AssociationSet Name="CRFVISIT_ONE_ONE" Association="CINCOPAModel.CRFVISIT_ONE_ONE">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="VISIT_ONE_ONE" EntitySet="VisitOneOnes" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="VisitOneOnes" Role="VISIT_ONE_ONE" />
     </AssociationSet>
     <AssociationSet Name="CRFVISIT_THREE" Association="CINCOPAModel.CRFVISIT_THREE">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="VISIT_THREE" EntitySet="VisitThrees" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="VisitThrees" Role="VISIT_THREE" />
     </AssociationSet>
     <AssociationSet Name="CRFVISIT_TWO" Association="CINCOPAModel.CRFVISIT_TWO">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="VISIT_TWO" EntitySet="VisitTwoes" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="VisitTwoes" Role="VISIT_TWO" />
     </AssociationSet>
     <AssociationSet Name="CRFADVERSE_EVENT" Association="CINCOPAModel.CRFADVERSE_EVENT">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="ADVERSE_EVENT" EntitySet="AEs" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="AEs" Role="ADVERSE_EVENT" />
     </AssociationSet>
     <AssociationSet Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" Association="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="BASE_LIVE_INDICATORS_VISIT_1" EntitySet="BaseLiveIndicatorsVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="BaseLiveIndicatorsVisit1Set" Role="BASE_LIVE_INDICATORS_VISIT_1" />
     </AssociationSet>
     <EntitySet Name="AnamnesticDataVisit1Set" EntityType="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" />
     <AssociationSet Name="VISIT_ONEANAMNESTIC_DATA" Association="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="ANAMNESTIC_DATA" EntitySet="AnamnesticDataVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="AnamnesticDataVisit1Set" Role="ANAMNESTIC_DATA" />
     </AssociationSet>
     <EntitySet Name="EvaluationOfSymptomsVisit1Set" EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" />
     <AssociationSet Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" Association="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" EntitySet="EvaluationOfSymptomsVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="EvaluationOfSymptomsVisit1Set" Role="EVALUATION_OF_SYMPTOMS_VISIT_1" />
     </AssociationSet>
     <EntitySet Name="ElectrocardiographyVisit1Set" EntityType="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" />
     <AssociationSet Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="ELECTROCARDIOGRAPHY_VISIT_1" EntitySet="ElectrocardiographyVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="ElectrocardiographyVisit1Set" Role="ELECTROCARDIOGRAPHY_VISIT_1" />
     </AssociationSet>
     <EntitySet Name="EchocardiographyVisit1Set" EntityType="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" />
     <AssociationSet Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="ECHOCARDIOGRAPHY_VISIT_1" EntitySet="EchocardiographyVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="EchocardiographyVisit1Set" Role="ECHOCARDIOGRAPHY_VISIT_1" />
     </AssociationSet>
     <EntitySet Name="XrayChestVisit1Set" EntityType="CINCOPAModel.XRAY_CHEST_VISIT_1" />
     <AssociationSet Name="VISIT_ONEXRAY_CHEST_VISIT_1" Association="CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="XRAY_CHEST_VISIT_1" EntitySet="XrayChestVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="XrayChestVisit1Set" Role="XRAY_CHEST_VISIT_1" />
     </AssociationSet>
     <EntitySet Name="ComputedTomographyChestVisit1Set" EntityType="CINCOPAModel.COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" />
     <AssociationSet Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Association="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
-      <End Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" EntitySet="ComputedTomographyChestVisit1Set" />
+      <End EntitySet="VisitOnes" Role="VISIT_ONE" />
+      <End EntitySet="ComputedTomographyChestVisit1Set" Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" />
     </AssociationSet>
     <EntitySet Name="BaseLiveIndicatorsVisit2Set" EntityType="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_2" />
     <AssociationSet Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" Association="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
-      <End Role="VISIT_TWO" EntitySet="VisitTwoes" />
-      <End Role="BASE_LIVE_INDICATORS_VISIT_2" EntitySet="BaseLiveIndicatorsVisit2Set" />
+      <End EntitySet="VisitTwoes" Role="VISIT_TWO" />
+      <End EntitySet="BaseLiveIndicatorsVisit2Set" Role="BASE_LIVE_INDICATORS_VISIT_2" />
     </AssociationSet>
     <EntitySet Name="EvaluationOfSymptomsVisit2Set" EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_2" />
     <AssociationSet Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" Association="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
-      <End Role="VISIT_TWO" EntitySet="VisitTwoes" />
-      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_2" EntitySet="EvaluationOfSymptomsVisit2Set" />
+      <End EntitySet="VisitTwoes" Role="VISIT_TWO" />
+      <End EntitySet="EvaluationOfSymptomsVisit2Set" Role="EVALUATION_OF_SYMPTOMS_VISIT_2" />
     </AssociationSet>
     <EntitySet Name="EchocardiographyVisit3Set" EntityType="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_3" />
     <AssociationSet Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" Association="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
-      <End Role="VISIT_THREE" EntitySet="VisitThrees" />
-      <End Role="ECHOCARDIOGRAPHY_VISIT_3" EntitySet="EchocardiographyVisit3Set" />
+      <End EntitySet="VisitThrees" Role="VISIT_THREE" />
+      <End EntitySet="EchocardiographyVisit3Set" Role="ECHOCARDIOGRAPHY_VISIT_3" />
     </AssociationSet>
     <EntitySet Name="EvaluationOfSymptomsVisit11Set" EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_11" />
     <AssociationSet Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" Association="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
-      <End Role="VISIT_ONE_ONE" EntitySet="VisitOneOnes" />
-      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_11" EntitySet="EvaluationOfSymptomsVisit11Set" />
+      <End EntitySet="VisitOneOnes" Role="VISIT_ONE_ONE" />
+      <End EntitySet="EvaluationOfSymptomsVisit11Set" Role="EVALUATION_OF_SYMPTOMS_VISIT_11" />
     </AssociationSet>
     <EntitySet Name="BloodClinicalAnalyses" EntityType="CINCOPAModel.BLOOD_CLINICAL_ANALYSIS" />
     <AssociationSet Name="CRFBLOOD_CLINICAL_ANALYSIS" Association="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="BLOOD_CLINICAL_ANALYSIS" EntitySet="BloodClinicalAnalyses" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="BloodClinicalAnalyses" Role="BLOOD_CLINICAL_ANALYSIS" />
     </AssociationSet>
     <EntitySet Name="BloodTestsForMarkersOfInflammations" EntityType="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" />
     <AssociationSet Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Association="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" EntitySet="BloodTestsForMarkersOfInflammations" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="BloodTestsForMarkersOfInflammations" Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" />
     </AssociationSet>
     <EntitySet Name="BloodTestsForMarkersOfCardiacDysfunctions" EntityType="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" />
     <AssociationSet Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Association="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" EntitySet="BloodTestsForMarkersOfCardiacDysfunctions" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="BloodTestsForMarkersOfCardiacDysfunctions" Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" />
     </AssociationSet>
     <EntitySet Name="BloodChemistrys" EntityType="CINCOPAModel.BLOOD_CHEMISTRY" />
     <AssociationSet Name="CRFBLOOD_CHEMISTRY" Association="CINCOPAModel.CRFBLOOD_CHEMISTRY">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="BLOOD_CHEMISTRY" EntitySet="BloodChemistrys" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="BloodChemistrys" Role="BLOOD_CHEMISTRY" />
     </AssociationSet>
     <EntitySet Name="Organisms" EntityType="CINCOPAModel.ORGANISM" />
     <EntitySet Name="Routes" EntityType="CINCOPAModel.ROUTE" />
     <EntitySet Name="Drugs" EntityType="CINCOPAModel.DRUG" />
     <EntitySet Name="AbTherapys" EntityType="CINCOPAModel.AB_THERAPY" />
     <AssociationSet Name="CRFAB_THERAPY" Association="CINCOPAModel.CRFAB_THERAPY">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="AB_THERAPY" EntitySet="AbTherapys" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="AbTherapys" Role="AB_THERAPY" />
     </AssociationSet>
     <AssociationSet Name="ROUTEAB_THERAPY" Association="CINCOPAModel.ROUTEAB_THERAPY">
-      <End Role="ROUTE" EntitySet="Routes" />
-      <End Role="AB_THERAPY" EntitySet="AbTherapys" />
+      <End EntitySet="Routes" Role="ROUTE" />
+      <End EntitySet="AbTherapys" Role="AB_THERAPY" />
     </AssociationSet>
     <AssociationSet Name="DRUGAB_THERAPY" Association="CINCOPAModel.DRUGAB_THERAPY">
-      <End Role="DRUG" EntitySet="Drugs" />
-      <End Role="AB_THERAPY" EntitySet="AbTherapys" />
+      <End EntitySet="Drugs" Role="DRUG" />
+      <End EntitySet="AbTherapys" Role="AB_THERAPY" />
     </AssociationSet>
     <EntitySet Name="TestForPneumococcals" EntityType="CINCOPAModel.TEST_FOR_PNEUMOCOCCAL" />
     <AssociationSet Name="CRFTEST_FOR_PNEUMOCOCCAL" Association="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="TEST_FOR_PNEUMOCOCCAL" EntitySet="TestForPneumococcals" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="TestForPneumococcals" Role="TEST_FOR_PNEUMOCOCCAL" />
     </AssociationSet>
     <EntitySet Name="MicrobiologySputums" EntityType="CINCOPAModel.MICROBIOLOGY_SPUTUM" />
     <EntitySet Name="MicrobiologyBloods" EntityType="CINCOPAModel.MICROBIOLOGY_BLOOD" />
     <AssociationSet Name="CRFMICROBIOLOGY_SPUTUM" Association="CINCOPAModel.CRFMICROBIOLOGY_SPUTUM">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="MICROBIOLOGY_SPUTUM" EntitySet="MicrobiologySputums" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="MicrobiologySputums" Role="MICROBIOLOGY_SPUTUM" />
     </AssociationSet>
     <AssociationSet Name="CRFMICROBIOLOGY_BLOOD" Association="CINCOPAModel.CRFMICROBIOLOGY_BLOOD">
-      <End Role="CRF" EntitySet="CRFs" />
-      <End Role="MICROBIOLOGY_BLOOD" EntitySet="MicrobiologyBloods" />
+      <End EntitySet="CRFs" Role="CRF" />
+      <End EntitySet="MicrobiologyBloods" Role="MICROBIOLOGY_BLOOD" />
     </AssociationSet>
     <AssociationSet Name="ORGANISMMICROBIOLOGY_BLOOD" Association="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD">
-      <End Role="ORGANISM" EntitySet="Organisms" />
-      <End Role="MICROBIOLOGY_BLOOD" EntitySet="MicrobiologyBloods" />
+      <End EntitySet="Organisms" Role="ORGANISM" />
+      <End EntitySet="MicrobiologyBloods" Role="MICROBIOLOGY_BLOOD" />
     </AssociationSet>
     <AssociationSet Name="ORGANISMMICROBIOLOGY_SPUTUM" Association="CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM">
-      <End Role="ORGANISM" EntitySet="Organisms" />
-      <End Role="MICROBIOLOGY_SPUTUM" EntitySet="MicrobiologySputums" />
+      <End EntitySet="Organisms" Role="ORGANISM" />
+      <End EntitySet="MicrobiologySputums" Role="MICROBIOLOGY_SPUTUM" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="CRF">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="WARDId" Nullable="false" />
     <Property Type="String" Name="NAME" Nullable="false" />
     <Property Type="Int32" Name="NUMBER" Nullable="false" />
@@ -198,7 +198,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="NAME" Nullable="false" />
     <Property Type="String" Name="PASSWORD" Nullable="false" />
   </EntityType>
@@ -218,7 +218,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
     <Property Type="String" Name="CreatedBy" Nullable="true" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" />
@@ -238,7 +238,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
     <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
     <Property Type="String" Name="CreatedBy" Nullable="true" />
@@ -253,7 +253,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
     <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
     <Property Type="String" Name="CreatedBy" Nullable="true" />
@@ -269,7 +269,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
     <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
     <Property Type="String" Name="CreatedBy" Nullable="true" />
@@ -321,24 +321,24 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="CRFVISIT_ONE">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
   </Association>
   <Association Name="CRFVISIT_ONE_ONE">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.VISIT_ONE_ONE" Role="VISIT_ONE_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.VISIT_ONE_ONE" Multiplicity="1" Role="VISIT_ONE_ONE" />
   </Association>
   <Association Name="CRFVISIT_THREE">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.VISIT_THREE" Role="VISIT_THREE" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.VISIT_THREE" Multiplicity="1" Role="VISIT_THREE" />
   </Association>
   <Association Name="CRFVISIT_TWO">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.VISIT_TWO" Role="VISIT_TWO" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO" />
   </Association>
   <Association Name="CRFADVERSE_EVENT">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.ADVERSE_EVENT" Role="ADVERSE_EVENT" Multiplicity="*" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.ADVERSE_EVENT" Multiplicity="*" Role="ADVERSE_EVENT" />
     <ReferentialConstraint>
       <Principal Role="CRF">
         <PropertyRef Name="Id" />
@@ -349,8 +349,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" Role="BASE_LIVE_INDICATORS_VISIT_1" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" Multiplicity="1" Role="BASE_LIVE_INDICATORS_VISIT_1" />
   </Association>
   <EntityType Name="ANAMNESTIC_DATA_VISIT_1">
     <Key>
@@ -375,8 +375,8 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEANAMNESTIC_DATA">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" Role="ANAMNESTIC_DATA" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" Multiplicity="1" Role="ANAMNESTIC_DATA" />
   </Association>
   <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_1">
     <Key>
@@ -404,14 +404,14 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" Role="EVALUATION_OF_SYMPTOMS_VISIT_1" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" Multiplicity="1" Role="EVALUATION_OF_SYMPTOMS_VISIT_1" />
   </Association>
   <EntityType Name="ELECTROCARDIOGRAPHY_VISIT_1">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" FromRole="ELECTROCARDIOGRAPHY_VISIT_1" ToRole="VISIT_ONE" />
     <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" />
     <Property Type="Boolean" Name="SINUS_RHYTHM" Nullable="true" />
@@ -427,8 +427,8 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" Role="ELECTROCARDIOGRAPHY_VISIT_1" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" Multiplicity="1" Role="ELECTROCARDIOGRAPHY_VISIT_1" />
   </Association>
   <EntityType Name="ECHOCARDIOGRAPHY_VISIT_1">
     <Key>
@@ -450,8 +450,8 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" Role="ECHOCARDIOGRAPHY_VISIT_1" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" Multiplicity="1" Role="ECHOCARDIOGRAPHY_VISIT_1" />
   </Association>
   <EntityType Name="XRAY_CHEST_VISIT_1">
     <Key>
@@ -483,8 +483,8 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEXRAY_CHEST_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.XRAY_CHEST_VISIT_1" Role="XRAY_CHEST_VISIT_1" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.XRAY_CHEST_VISIT_1" Multiplicity="1" Role="XRAY_CHEST_VISIT_1" />
   </Association>
   <EntityType Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
     <Key>
@@ -516,8 +516,8 @@
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" FromRole="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" ToRole="VISIT_ONE" />
   </EntityType>
   <Association Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Multiplicity="1" Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" />
   </Association>
   <EntityType Name="BASE_LIVE_INDICATORS_VISIT_2">
     <Key>
@@ -537,8 +537,8 @@
     <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" FromRole="BASE_LIVE_INDICATORS_VISIT_2" ToRole="VISIT_TWO" />
   </EntityType>
   <Association Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
-    <End Type="CINCOPAModel.VISIT_TWO" Role="VISIT_TWO" Multiplicity="1" />
-    <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_2" Role="BASE_LIVE_INDICATORS_VISIT_2" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO" />
+    <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_2" Multiplicity="1" Role="BASE_LIVE_INDICATORS_VISIT_2" />
   </Association>
   <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_2">
     <Key>
@@ -567,8 +567,8 @@
     <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_2" ToRole="VISIT_TWO" />
   </EntityType>
   <Association Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
-    <End Type="CINCOPAModel.VISIT_TWO" Role="VISIT_TWO" Multiplicity="1" />
-    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_2" Role="EVALUATION_OF_SYMPTOMS_VISIT_2" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO" />
+    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_2" Multiplicity="1" Role="EVALUATION_OF_SYMPTOMS_VISIT_2" />
   </Association>
   <EntityType Name="ECHOCARDIOGRAPHY_VISIT_3">
     <Key>
@@ -590,8 +590,8 @@
     <NavigationProperty Name="VISIT_THREE" Relationship="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" FromRole="ECHOCARDIOGRAPHY_VISIT_3" ToRole="VISIT_THREE" />
   </EntityType>
   <Association Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
-    <End Type="CINCOPAModel.VISIT_THREE" Role="VISIT_THREE" Multiplicity="1" />
-    <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_3" Role="ECHOCARDIOGRAPHY_VISIT_3" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_THREE" Multiplicity="1" Role="VISIT_THREE" />
+    <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_3" Multiplicity="1" Role="ECHOCARDIOGRAPHY_VISIT_3" />
   </Association>
   <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_11">
     <Key>
@@ -620,8 +620,8 @@
     <NavigationProperty Name="VISIT_ONE_ONE" Relationship="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_11" ToRole="VISIT_ONE_ONE" />
   </EntityType>
   <Association Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
-    <End Type="CINCOPAModel.VISIT_ONE_ONE" Role="VISIT_ONE_ONE" Multiplicity="1" />
-    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_11" Role="EVALUATION_OF_SYMPTOMS_VISIT_11" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE_ONE" Multiplicity="1" Role="VISIT_ONE_ONE" />
+    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_11" Multiplicity="1" Role="EVALUATION_OF_SYMPTOMS_VISIT_11" />
   </Association>
   <EntityType Name="BLOOD_CLINICAL_ANALYSIS">
     <Key>
@@ -644,14 +644,14 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS" FromRole="BLOOD_CLINICAL_ANALYSIS" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_CLINICAL_ANALYSIS">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.BLOOD_CLINICAL_ANALYSIS" Role="BLOOD_CLINICAL_ANALYSIS" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.BLOOD_CLINICAL_ANALYSIS" Multiplicity="1" Role="BLOOD_CLINICAL_ANALYSIS" />
   </Association>
   <EntityType Name="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="VISIT_ONE_C_REACTIVE_PROTEIN" Nullable="true" />
     <Property Type="String" Name="VISIT_ONE_PROCALCITONIN" Nullable="true" />
     <Property Type="String" Name="VISIT_ONE_IL6" Nullable="true" />
@@ -672,14 +672,14 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Multiplicity="1" Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" />
   </Association>
   <EntityType Name="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" />
     <Property Type="String" Name="VISIT_ONE_KOPEPTIN" Nullable="true" />
     <Property Type="String" Name="VISIT_ONE_PROADRENOMEDULLIN" Nullable="true" />
@@ -697,8 +697,8 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Multiplicity="1" Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" />
   </Association>
   <EntityType Name="BLOOD_CHEMISTRY">
     <Key>
@@ -717,8 +717,8 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_CHEMISTRY" FromRole="BLOOD_CHEMISTRY" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_CHEMISTRY">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.BLOOD_CHEMISTRY" Role="BLOOD_CHEMISTRY" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.BLOOD_CHEMISTRY" Multiplicity="1" Role="BLOOD_CHEMISTRY" />
   </Association>
   <EntityType Name="ORGANISM">
     <Key>
@@ -787,8 +787,8 @@
     <NavigationProperty Name="DRUG" Relationship="CINCOPAModel.DRUGAB_THERAPY" FromRole="AB_THERAPY" ToRole="DRUG" />
   </EntityType>
   <Association Name="CRFAB_THERAPY">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.AB_THERAPY" Role="AB_THERAPY" Multiplicity="*" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.AB_THERAPY" Multiplicity="*" Role="AB_THERAPY" />
     <ReferentialConstraint>
       <Principal Role="CRF">
         <PropertyRef Name="Id" />
@@ -799,8 +799,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ROUTEAB_THERAPY">
-    <End Type="CINCOPAModel.ROUTE" Role="ROUTE" Multiplicity="1" />
-    <End Type="CINCOPAModel.AB_THERAPY" Role="AB_THERAPY" Multiplicity="*" />
+    <End Type="CINCOPAModel.ROUTE" Multiplicity="1" Role="ROUTE" />
+    <End Type="CINCOPAModel.AB_THERAPY" Multiplicity="*" Role="AB_THERAPY" />
     <ReferentialConstraint>
       <Principal Role="ROUTE">
         <PropertyRef Name="Id" />
@@ -811,8 +811,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DRUGAB_THERAPY">
-    <End Type="CINCOPAModel.DRUG" Role="DRUG" Multiplicity="1" />
-    <End Type="CINCOPAModel.AB_THERAPY" Role="AB_THERAPY" Multiplicity="*" />
+    <End Type="CINCOPAModel.DRUG" Multiplicity="1" Role="DRUG" />
+    <End Type="CINCOPAModel.AB_THERAPY" Multiplicity="*" Role="AB_THERAPY" />
     <ReferentialConstraint>
       <Principal Role="DRUG">
         <PropertyRef Name="Id" />
@@ -837,8 +837,8 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL" FromRole="TEST_FOR_PNEUMOCOCCAL" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFTEST_FOR_PNEUMOCOCCAL">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.TEST_FOR_PNEUMOCOCCAL" Role="TEST_FOR_PNEUMOCOCCAL" Multiplicity="1" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.TEST_FOR_PNEUMOCOCCAL" Multiplicity="1" Role="TEST_FOR_PNEUMOCOCCAL" />
   </Association>
   <EntityType Name="MICROBIOLOGY_SPUTUM">
     <Key>
@@ -884,8 +884,8 @@
     <NavigationProperty Name="ORGANISM" Relationship="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD" FromRole="MICROBIOLOGY_BLOOD" ToRole="ORGANISM" />
   </EntityType>
   <Association Name="CRFMICROBIOLOGY_SPUTUM">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.MICROBIOLOGY_SPUTUM" Role="MICROBIOLOGY_SPUTUM" Multiplicity="*" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.MICROBIOLOGY_SPUTUM" Multiplicity="*" Role="MICROBIOLOGY_SPUTUM" />
     <ReferentialConstraint>
       <Principal Role="CRF">
         <PropertyRef Name="Id" />
@@ -896,8 +896,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFMICROBIOLOGY_BLOOD">
-    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
-    <End Type="CINCOPAModel.MICROBIOLOGY_BLOOD" Role="MICROBIOLOGY_BLOOD" Multiplicity="*" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.MICROBIOLOGY_BLOOD" Multiplicity="*" Role="MICROBIOLOGY_BLOOD" />
     <ReferentialConstraint>
       <Principal Role="CRF">
         <PropertyRef Name="Id" />
@@ -908,8 +908,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ORGANISMMICROBIOLOGY_BLOOD">
-    <End Type="CINCOPAModel.ORGANISM" Role="ORGANISM" Multiplicity="0..1" />
-    <End Type="CINCOPAModel.MICROBIOLOGY_BLOOD" Role="MICROBIOLOGY_BLOOD" Multiplicity="*" />
+    <End Type="CINCOPAModel.ORGANISM" Multiplicity="0..1" Role="ORGANISM" />
+    <End Type="CINCOPAModel.MICROBIOLOGY_BLOOD" Multiplicity="*" Role="MICROBIOLOGY_BLOOD" />
     <ReferentialConstraint>
       <Principal Role="ORGANISM">
         <PropertyRef Name="Id" />
@@ -920,8 +920,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ORGANISMMICROBIOLOGY_SPUTUM">
-    <End Type="CINCOPAModel.ORGANISM" Role="ORGANISM" Multiplicity="0..1" />
-    <End Type="CINCOPAModel.MICROBIOLOGY_SPUTUM" Role="MICROBIOLOGY_SPUTUM" Multiplicity="*" />
+    <End Type="CINCOPAModel.ORGANISM" Multiplicity="0..1" Role="ORGANISM" />
+    <End Type="CINCOPAModel.MICROBIOLOGY_SPUTUM" Multiplicity="*" Role="MICROBIOLOGY_SPUTUM" />
     <ReferentialConstraint>
       <Principal Role="ORGANISM">
         <PropertyRef Name="Id" />

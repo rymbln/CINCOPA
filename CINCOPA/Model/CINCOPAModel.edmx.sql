@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/15/2014 18:22:11
+-- Date Created: 09/15/2014 22:12:44
 -- Generated from EDMX file: c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\Model\CINCOPAModel.edmx
 -- --------------------------------------------------
 
