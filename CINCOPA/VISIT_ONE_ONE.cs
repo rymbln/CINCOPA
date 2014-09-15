@@ -24,5 +24,6 @@ namespace CINCOPA
         public string StateCode { get; set; }
     
         public virtual CRF CRF { get; set; }
+        public virtual EVALUATION_OF_SYMPTOMS_VISIT_11 EVALUATION_OF_SYMPTOMS_VISIT_11 { get; set; }
     }
 }

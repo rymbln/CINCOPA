@@ -1,12 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CINCOPAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+<Schema Namespace="CINCOPAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
   <EntityContainer Name="CINCOPAModelContainer" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CRF" EntityType="CINCOPAModel.CRF" />
-    <EntitySet Name="WARD" EntityType="CINCOPAModel.WARD" />
+    <EntitySet Name="CRFSet" EntityType="CINCOPAModel.CRF" />
+    <EntitySet Name="WARDSet" EntityType="CINCOPAModel.WARD" />
     <EntitySet Name="USERS" EntityType="CINCOPAModel.USERS" />
     <AssociationSet Name="CRFWARD" Association="CINCOPAModel.CRFWARD">
-      <End Role="CRF" EntitySet="CRF" />
-      <End Role="WARD" EntitySet="WARD" />
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="WARD" EntitySet="WARDSet" />
+    </AssociationSet>
+    <EntitySet Name="VISIT_ONESet" EntityType="CINCOPAModel.VISIT_ONE" />
+    <EntitySet Name="VISIT_ONE_ONESet" EntityType="CINCOPAModel.VISIT_ONE_ONE" />
+    <EntitySet Name="VISIT_TWOSet" EntityType="CINCOPAModel.VISIT_TWO" />
+    <EntitySet Name="VISIT_THREESet" EntityType="CINCOPAModel.VISIT_THREE" />
+    <EntitySet Name="ADVERSE_EVENTSet" EntityType="CINCOPAModel.ADVERSE_EVENT" />
+    <EntitySet Name="BASE_LIVE_INDICATORS_VISIT_1Set" EntityType="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" />
+    <AssociationSet Name="CRFVISIT_ONE" Association="CINCOPAModel.CRFVISIT_ONE">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_ONE_ONE" Association="CINCOPAModel.CRFVISIT_ONE_ONE">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_ONE_ONE" EntitySet="VISIT_ONE_ONESet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_THREE" Association="CINCOPAModel.CRFVISIT_THREE">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_THREE" EntitySet="VISIT_THREESet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_TWO" Association="CINCOPAModel.CRFVISIT_TWO">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_TWO" EntitySet="VISIT_TWOSet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFADVERSE_EVENT" Association="CINCOPAModel.CRFADVERSE_EVENT">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="ADVERSE_EVENT" EntitySet="ADVERSE_EVENTSet" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" Association="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="BASE_LIVE_INDICATORS_VISIT_1" EntitySet="BASE_LIVE_INDICATORS_VISIT_1Set" />
+    </AssociationSet>
+    <EntitySet Name="ANAMNESTIC_DATA_VISIT_1Set" EntityType="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" />
+    <AssociationSet Name="VISIT_ONEANAMNESTIC_DATA" Association="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="ANAMNESTIC_DATA" EntitySet="ANAMNESTIC_DATA_VISIT_1Set" />
+    </AssociationSet>
+    <EntitySet Name="EVALUATION_OF_SYMPTOMS_VISIT_1Set" EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" />
+    <AssociationSet Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" Association="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" EntitySet="EVALUATION_OF_SYMPTOMS_VISIT_1Set" />
+    </AssociationSet>
+    <EntitySet Name="ELECTROCARDIOGRAPHY_VISIT_1Set" EntityType="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" />
+    <AssociationSet Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="ELECTROCARDIOGRAPHY_VISIT_1" EntitySet="ELECTROCARDIOGRAPHY_VISIT_1Set" />
+    </AssociationSet>
+    <EntitySet Name="ECHOCARDIOGRAPHY_VISIT_1Set" EntityType="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" />
+    <AssociationSet Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="ECHOCARDIOGRAPHY_VISIT_1" EntitySet="ECHOCARDIOGRAPHY_VISIT_1Set" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="CRF">
@@ -27,6 +77,11 @@
     <Property Type="String" Name="UpdatedByDate" Nullable="false" />
     <Property Type="String" Name="StateCode" Nullable="false" />
     <NavigationProperty Name="WARD" Relationship="CINCOPAModel.CRFWARD" FromRole="CRF" ToRole="WARD" />
+    <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.CRFVISIT_ONE" FromRole="CRF" ToRole="VISIT_ONE" />
+    <NavigationProperty Name="VISIT_ONE_ONE" Relationship="CINCOPAModel.CRFVISIT_ONE_ONE" FromRole="CRF" ToRole="VISIT_ONE_ONE" />
+    <NavigationProperty Name="VISIT_THREE" Relationship="CINCOPAModel.CRFVISIT_THREE" FromRole="CRF" ToRole="VISIT_THREE" />
+    <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.CRFVISIT_TWO" FromRole="CRF" ToRole="VISIT_TWO" />
+    <NavigationProperty Name="ADVERSE_EVENT" Relationship="CINCOPAModel.CRFADVERSE_EVENT" FromRole="CRF" ToRole="ADVERSE_EVENT" />
   </EntityType>
   <EntityType Name="WARD">
     <Key>
@@ -61,5 +116,239 @@
         <PropertyRef Name="WARDId" />
       </Dependent>
     </ReferentialConstraint>
+  </Association>
+  <EntityType Name="VISIT_ONE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+    <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_ONE" FromRole="VISIT_ONE" ToRole="CRF" />
+    <NavigationProperty Name="BASE_LIVE_INDICATORS_VISIT_1" Relationship="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" FromRole="VISIT_ONE" ToRole="BASE_LIVE_INDICATORS_VISIT_1" />
+    <NavigationProperty Name="ANAMNESTIC_DATA" Relationship="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" FromRole="VISIT_ONE" ToRole="ANAMNESTIC_DATA" />
+    <NavigationProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_1" Relationship="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" FromRole="VISIT_ONE" ToRole="EVALUATION_OF_SYMPTOMS_VISIT_1" />
+    <NavigationProperty Name="ELECTROCARDIOGRAPHY_VISIT_1" Relationship="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" FromRole="VISIT_ONE" ToRole="ELECTROCARDIOGRAPHY_VISIT_1" />
+    <NavigationProperty Name="ECHOCARDIOGRAPHY_VISIT_1" Relationship="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" FromRole="VISIT_ONE" ToRole="ECHOCARDIOGRAPHY_VISIT_1" />
+  </EntityType>
+  <EntityType Name="VISIT_ONE_ONE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="CRFId" Nullable="false" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+    <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_ONE_ONE" FromRole="VISIT_ONE_ONE" ToRole="CRF" />
+  </EntityType>
+  <EntityType Name="VISIT_TWO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="CRFId" Nullable="false" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+    <Property Type="Guid" Name="CRFId1" Nullable="false" />
+    <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_TWO" FromRole="VISIT_TWO" ToRole="CRF" />
+  </EntityType>
+  <EntityType Name="VISIT_THREE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="CRFId" Nullable="false" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+    <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_THREE" FromRole="VISIT_THREE" ToRole="CRF" />
+  </EntityType>
+  <EntityType Name="ADVERSE_EVENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Type="Guid" Name="CRFId" Nullable="false" />
+    <Property Type="String" Name="NAME" Nullable="false" />
+    <Property Type="DateTime" Name="DATE_START" Nullable="false" />
+    <Property Type="DateTime" Name="DATE_END" Nullable="false" />
+    <Property Type="String" Name="HEAVY" Nullable="false" />
+    <Property Type="String" Name="RESULT" Nullable="false" />
+    <Property Type="String" Name="RELATION" Nullable="false" />
+    <Property Type="String" Name="ACTIONS" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+    <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFADVERSE_EVENT" FromRole="ADVERSE_EVENT" ToRole="CRF" />
+  </EntityType>
+  <EntityType Name="BASE_LIVE_INDICATORS_VISIT_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" FromRole="BASE_LIVE_INDICATORS_VISIT_1" ToRole="VISIT_ONE" />
+    <Property Type="Int32" Name="BLOOD_PRESSURE_RIGHT_HAND" Nullable="false" />
+    <Property Type="Int32" Name="BLOOD_PRESSURE_LEFT_HAND" Nullable="false" />
+    <Property Type="Int32" Name="HEART_RATE" Nullable="false" />
+    <Property Type="Int32" Name="RESPIRATORY_RATE" Nullable="false" />
+    <Property Type="Decimal" Name="TEMPERATURE" Nullable="false" />
+    <Property Type="String" Name="HEAVY_TYPE" Nullable="false" />
+    <Property Type="String" Name="OXYGEN_THERAPY_NEEDED" Nullable="false" />
+    <Property Type="String" Name="DECOMPENSATION_SIGNS" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+  </EntityType>
+  <Association Name="CRFVISIT_ONE">
+    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+  </Association>
+  <Association Name="CRFVISIT_ONE_ONE">
+    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_ONE_ONE" Role="VISIT_ONE_ONE" Multiplicity="1" />
+  </Association>
+  <Association Name="CRFVISIT_THREE">
+    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_THREE" Role="VISIT_THREE" Multiplicity="1" />
+  </Association>
+  <Association Name="CRFVISIT_TWO">
+    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+    <End Type="CINCOPAModel.VISIT_TWO" Role="VISIT_TWO" Multiplicity="1" />
+  </Association>
+  <Association Name="CRFADVERSE_EVENT">
+    <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+    <End Type="CINCOPAModel.ADVERSE_EVENT" Role="ADVERSE_EVENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADVERSE_EVENT">
+        <PropertyRef Name="CRFId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
+    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" Role="BASE_LIVE_INDICATORS_VISIT_1" Multiplicity="1" />
+  </Association>
+  <EntityType Name="ANAMNESTIC_DATA_VISIT_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" FromRole="ANAMNESTIC_DATA" ToRole="VISIT_ONE" />
+    <Property Type="DateTime" Name="DATE_SYMPTOM" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_DIAGNOSIS" Nullable="true" />
+    <Property Type="Int32" Name="NUMBER_EPISODES" Nullable="true" />
+    <Property Type="Boolean" Name="NUMBER_EPISODES_NODATA" Nullable="false" />
+    <Property Type="String" Name="FUNCTION_CLASS" Nullable="true" />
+    <Property Type="String" Name="OTHER_EPISODES" Nullable="false" />
+    <Property Type="String" Name="SMOKE_STATUS" Nullable="false" />
+    <Property Type="Int32" Name="SMOKE_AVERAGE" Nullable="false" />
+    <Property Type="Int32" Name="SMOKE_YEARS" Nullable="false" />
+    <Property Type="Decimal" Name="SMOKE_PACK_YEARS" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+  </EntityType>
+  <Association Name="VISIT_ONEANAMNESTIC_DATA">
+    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" Role="ANAMNESTIC_DATA" Multiplicity="1" />
+  </Association>
+  <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_1" ToRole="VISIT_ONE" />
+    <Property Type="String" Name="DYSPNEA" Nullable="false" />
+    <Property Type="String" Name="COUGH" Nullable="false" />
+    <Property Type="String" Name="SPUTUM" Nullable="false" />
+    <Property Type="String" Name="SPUTUM_TYPE" Nullable="false" />
+    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="false" />
+    <Property Type="String" Name="COLD_SYMPTOM" Nullable="false" />
+    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="false" />
+    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="false" />
+    <Property Type="String" Name="CREPITUS" Nullable="false" />
+    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="false" />
+    <Property Type="String" Name="DRY_RALES" Nullable="false" />
+    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="false" />
+    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+  </EntityType>
+  <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
+    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" Role="EVALUATION_OF_SYMPTOMS_VISIT_1" Multiplicity="1" />
+  </Association>
+  <EntityType Name="ELECTROCARDIOGRAPHY_VISIT_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" FromRole="ELECTROCARDIOGRAPHY_VISIT_1" ToRole="VISIT_ONE" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="false" />
+    <Property Type="Boolean" Name="SINUS_RHYTHM" Nullable="false" />
+    <Property Type="Boolean" Name="ATRIAL_FIBRILLATION" Nullable="false" />
+    <Property Type="Boolean" Name="ARRYTHMIA_SUPRAVENTRICULAR" Nullable="false" />
+    <Property Type="Boolean" Name="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" Nullable="false" />
+    <Property Type="Int32" Name="HEART_RATE" Nullable="false" />
+    <Property Type="String" Name="SIGNIFICANT_CHANGES" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+  </EntityType>
+  <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
+    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" Role="ELECTROCARDIOGRAPHY_VISIT_1" Multiplicity="1" />
+  </Association>
+  <EntityType Name="ECHOCARDIOGRAPHY_VISIT_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" FromRole="ECHOCARDIOGRAPHY_VISIT_1" ToRole="VISIT_ONE" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="false" />
+    <Property Type="Decimal" Name="FV_PERCENT" Nullable="false" />
+    <Property Type="Decimal" Name="EA_LJ" Nullable="false" />
+    <Property Type="Decimal" Name="EA_RJ" Nullable="false" />
+    <Property Type="Decimal" Name="SDLA" Nullable="false" />
+    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="false" />
+    <Property Type="String" Name="COMMENTS" Nullable="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+    <Property Type="String" Name="StateCode" Nullable="false" />
+  </EntityType>
+  <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
+    <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="1" />
+    <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" Role="ECHOCARDIOGRAPHY_VISIT_1" Multiplicity="1" />
   </Association>
 </Schema>

@@ -15,6 +15,7 @@ namespace CINCOPA
     public partial class ADVERSE_EVENT
     {
         public System.Guid Id { get; set; }
+        public System.Guid CRFId { get; set; }
         public string NAME { get; set; }
         public System.DateTime DATE_START { get; set; }
         public System.DateTime DATE_END { get; set; }
@@ -27,7 +28,6 @@ namespace CINCOPA
         public string UpdatedBy { get; set; }
         public string UpdatedByDate { get; set; }
         public string StateCode { get; set; }
-        public System.Guid CRFId { get; set; }
     
         public virtual CRF CRF { get; set; }
     }

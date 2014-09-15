@@ -1,15 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CINCOPAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="CINCOPAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="CINCOPAModelStoreContainer">
-    <EntitySet Name="CRF" EntityType="CINCOPAModel.Store.CRF" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="WARD" EntityType="CINCOPAModel.Store.WARD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CRFSet" EntityType="CINCOPAModel.Store.CRFSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WARDSet" EntityType="CINCOPAModel.Store.WARDSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="USERS" EntityType="CINCOPAModel.Store.USERS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VISIT_ONESet" EntityType="CINCOPAModel.Store.VISIT_ONESet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VISIT_ONE_ONESet" EntityType="CINCOPAModel.Store.VISIT_ONE_ONESet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VISIT_TWOSet" EntityType="CINCOPAModel.Store.VISIT_TWOSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VISIT_THREESet" EntityType="CINCOPAModel.Store.VISIT_THREESet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ADVERSE_EVENTSet" EntityType="CINCOPAModel.Store.ADVERSE_EVENTSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BASE_LIVE_INDICATORS_VISIT_1Set" EntityType="CINCOPAModel.Store.BASE_LIVE_INDICATORS_VISIT_1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ANAMNESTIC_DATA_VISIT_1Set" EntityType="CINCOPAModel.Store.ANAMNESTIC_DATA_VISIT_1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EVALUATION_OF_SYMPTOMS_VISIT_1Set" EntityType="CINCOPAModel.Store.EVALUATION_OF_SYMPTOMS_VISIT_1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ELECTROCARDIOGRAPHY_VISIT_1Set" EntityType="CINCOPAModel.Store.ELECTROCARDIOGRAPHY_VISIT_1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ECHOCARDIOGRAPHY_VISIT_1Set" EntityType="CINCOPAModel.Store.ECHOCARDIOGRAPHY_VISIT_1Set" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="CRFWARD" Association="CINCOPAModel.Store.CRFWARD">
-      <End Role="CRF" EntitySet="CRF" />
-      <End Role="WARD" EntitySet="WARD" />
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="WARD" EntitySet="WARDSet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_ONE" Association="CINCOPAModel.Store.CRFVISIT_ONE">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_ONE_ONE" Association="CINCOPAModel.Store.CRFVISIT_ONE_ONE">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_ONE_ONE" EntitySet="VISIT_ONE_ONESet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_THREE" Association="CINCOPAModel.Store.CRFVISIT_THREE">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_THREE" EntitySet="VISIT_THREESet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_TWO" Association="CINCOPAModel.Store.CRFVISIT_TWO">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="VISIT_TWO" EntitySet="VISIT_TWOSet" />
+    </AssociationSet>
+    <AssociationSet Name="CRFADVERSE_EVENT" Association="CINCOPAModel.Store.CRFADVERSE_EVENT">
+      <End Role="CRF" EntitySet="CRFSet" />
+      <End Role="ADVERSE_EVENT" EntitySet="ADVERSE_EVENTSet" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="BASE_LIVE_INDICATORS_VISIT_1" EntitySet="BASE_LIVE_INDICATORS_VISIT_1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEANAMNESTIC_DATA" Association="CINCOPAModel.Store.VISIT_ONEANAMNESTIC_DATA">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="ANAMNESTIC_DATA" EntitySet="ANAMNESTIC_DATA_VISIT_1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" EntitySet="EVALUATION_OF_SYMPTOMS_VISIT_1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="ELECTROCARDIOGRAPHY_VISIT_1" EntitySet="ELECTROCARDIOGRAPHY_VISIT_1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+      <End Role="ECHOCARDIOGRAPHY_VISIT_1" EntitySet="ECHOCARDIOGRAPHY_VISIT_1Set" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="CRF">
+  <EntityType Name="CRFSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -26,8 +76,12 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_ONE_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_THREE_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <EntityType Name="WARD">
+  <EntityType Name="WARDSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -48,15 +102,311 @@
     <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <EntityType Name="VISIT_ONESet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BASE_LIVE_INDICATORS_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ANAMNESTIC_DATA_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EVALUATION_OF_SYMPTOMS_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ELECTROCARDIOGRAPHY_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ECHOCARDIOGRAPHY_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VISIT_ONE_ONESet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VISIT_TWOSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CRFId1" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VISIT_THREESet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ADVERSE_EVENTSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DATE_START" Type="datetime" Nullable="false" />
+    <Property Name="DATE_END" Type="datetime" Nullable="false" />
+    <Property Name="HEAVY" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RESULT" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RELATION" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ACTIONS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BASE_LIVE_INDICATORS_VISIT_1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="int" Nullable="false" />
+    <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="int" Nullable="false" />
+    <Property Name="HEART_RATE" Type="int" Nullable="false" />
+    <Property Name="RESPIRATORY_RATE" Type="int" Nullable="false" />
+    <Property Name="TEMPERATURE" Type="decimal" Nullable="false" />
+    <Property Name="HEAVY_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OXYGEN_THERAPY_NEEDED" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DECOMPENSATION_SIGNS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ANAMNESTIC_DATA_VISIT_1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_SYMPTOM" Type="datetime" Nullable="true" />
+    <Property Name="DATE_DIAGNOSIS" Type="datetime" Nullable="true" />
+    <Property Name="NUMBER_EPISODES" Type="int" Nullable="true" />
+    <Property Name="NUMBER_EPISODES_NODATA" Type="bit" Nullable="false" />
+    <Property Name="FUNCTION_CLASS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="OTHER_EPISODES" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SMOKE_STATUS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SMOKE_AVERAGE" Type="int" Nullable="false" />
+    <Property Name="SMOKE_YEARS" Type="int" Nullable="false" />
+    <Property Name="SMOKE_PACK_YEARS" Type="decimal" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DYSPNEA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="COUGH" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SPUTUM" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CREPITUS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DRY_RALES" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ELECTROCARDIOGRAPHY_VISIT_1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="false" />
+    <Property Name="SINUS_RHYTHM" Type="bit" Nullable="false" />
+    <Property Name="ATRIAL_FIBRILLATION" Type="bit" Nullable="false" />
+    <Property Name="ARRYTHMIA_SUPRAVENTRICULAR" Type="bit" Nullable="false" />
+    <Property Name="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" Type="bit" Nullable="false" />
+    <Property Name="HEART_RATE" Type="int" Nullable="false" />
+    <Property Name="SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ECHOCARDIOGRAPHY_VISIT_1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="false" />
+    <Property Name="FV_PERCENT" Type="decimal" Nullable="false" />
+    <Property Name="EA_LJ" Type="decimal" Nullable="false" />
+    <Property Name="EA_RJ" Type="decimal" Nullable="false" />
+    <Property Name="SDLA" Type="decimal" Nullable="false" />
+    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Nullable="false" />
+    <Property Name="COMMENTS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
   <Association Name="CRFWARD">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRF" Multiplicity="*" />
-    <End Role="WARD" Type="CINCOPAModel.Store.WARD" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFSet" Multiplicity="*" />
+    <End Role="WARD" Type="CINCOPAModel.Store.WARDSet" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="WARD">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="CRF">
         <PropertyRef Name="WARDId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFVISIT_ONE">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFSet" Multiplicity="*" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VISIT_ONESet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_ONE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CRF">
+        <PropertyRef Name="VISIT_ONE_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFVISIT_ONE_ONE">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFSet" Multiplicity="*" />
+    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VISIT_ONE_ONESet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_ONE_ONE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CRF">
+        <PropertyRef Name="VISIT_ONE_ONE_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFVISIT_THREE">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFSet" Multiplicity="*" />
+    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VISIT_THREESet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_THREE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CRF">
+        <PropertyRef Name="VISIT_THREE_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFVISIT_TWO">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFSet" Multiplicity="*" />
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VISIT_TWOSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_TWO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CRF">
+        <PropertyRef Name="VISIT_TWO_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFADVERSE_EVENT">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFSet" Multiplicity="1" />
+    <End Role="ADVERSE_EVENT" Type="CINCOPAModel.Store.ADVERSE_EVENTSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADVERSE_EVENT">
+        <PropertyRef Name="CRFId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VISIT_ONESet" Multiplicity="*" />
+    <End Role="BASE_LIVE_INDICATORS_VISIT_1" Type="CINCOPAModel.Store.BASE_LIVE_INDICATORS_VISIT_1Set" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="BASE_LIVE_INDICATORS_VISIT_1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="BASE_LIVE_INDICATORS_VISIT_1_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEANAMNESTIC_DATA">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VISIT_ONESet" Multiplicity="*" />
+    <End Role="ANAMNESTIC_DATA" Type="CINCOPAModel.Store.ANAMNESTIC_DATA_VISIT_1Set" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ANAMNESTIC_DATA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="ANAMNESTIC_DATA_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VISIT_ONESet" Multiplicity="*" />
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" Type="CINCOPAModel.Store.EVALUATION_OF_SYMPTOMS_VISIT_1Set" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="EVALUATION_OF_SYMPTOMS_VISIT_1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="EVALUATION_OF_SYMPTOMS_VISIT_1_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VISIT_ONESet" Multiplicity="*" />
+    <End Role="ELECTROCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.ELECTROCARDIOGRAPHY_VISIT_1Set" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ELECTROCARDIOGRAPHY_VISIT_1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="ELECTROCARDIOGRAPHY_VISIT_1_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VISIT_ONESet" Multiplicity="*" />
+    <End Role="ECHOCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.ECHOCARDIOGRAPHY_VISIT_1Set" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ECHOCARDIOGRAPHY_VISIT_1">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="ECHOCARDIOGRAPHY_VISIT_1_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

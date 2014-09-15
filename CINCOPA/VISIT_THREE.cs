@@ -24,5 +24,6 @@ namespace CINCOPA
         public string StateCode { get; set; }
     
         public virtual CRF CRF { get; set; }
+        public virtual ECHOCARDIOGRAPHY_VISIT_3 ECHOCARDIOGRAPHY_VISIT_3 { get; set; }
     }
 }

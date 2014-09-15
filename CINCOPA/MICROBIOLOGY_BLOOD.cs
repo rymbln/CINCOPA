@@ -12,10 +12,17 @@ namespace CINCOPA
     using System;
     using System.Collections.Generic;
     
-    public partial class VISIT_ONE
+    public partial class MICROBIOLOGY_BLOOD
     {
         public System.Guid Id { get; set; }
-        public System.DateTime DATE_VISIT { get; set; }
+        public System.Guid CRFId { get; set; }
+        public string DATE_CAPTURE { get; set; }
+        public string LAB_NUMBER { get; set; }
+        public string GROWTH_PATHOGENS { get; set; }
+        public System.Guid ORGANISMId { get; set; }
+        public Nullable<System.Guid> ORGANISMId1 { get; set; }
+        public string BETA { get; set; }
+        public string MRSA { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedByDate { get; set; }
         public string UpdatedBy { get; set; }
@@ -23,12 +30,6 @@ namespace CINCOPA
         public string StateCode { get; set; }
     
         public virtual CRF CRF { get; set; }
-        public virtual BASE_LIVE_INDICATORS_VISIT_1 BASE_LIVE_INDICATORS_VISIT_1 { get; set; }
-        public virtual ANAMNESTIC_DATA_VISIT_1 ANAMNESTIC_DATA { get; set; }
-        public virtual EVALUATION_OF_SYMPTOMS_VISIT_1 EVALUATION_OF_SYMPTOMS_VISIT_1 { get; set; }
-        public virtual ELECTROCARDIOGRAPHY_VISIT_1 ELECTROCARDIOGRAPHY_VISIT_1 { get; set; }
-        public virtual ECHOCARDIOGRAPHY_VISIT_1 ECHOCARDIOGRAPHY_VISIT_1 { get; set; }
-        public virtual XRAY_CHEST_VISIT_1 XRAY_CHEST_VISIT_1 { get; set; }
-        public virtual COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 { get; set; }
+        public virtual ORGANISM ORGANISM { get; set; }
     }
 }

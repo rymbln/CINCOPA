@@ -33,5 +33,27 @@ namespace CINCOPA
         public DbSet<VISIT_TWO> VISIT_TWOSet { get; set; }
         public DbSet<VISIT_THREE> VISIT_THREESet { get; set; }
         public DbSet<ADVERSE_EVENT> ADVERSE_EVENTSet { get; set; }
+        public DbSet<BASE_LIVE_INDICATORS_VISIT_1> BASE_LIVE_INDICATORS_VISIT_1Set { get; set; }
+        public DbSet<ANAMNESTIC_DATA_VISIT_1> ANAMNESTIC_DATA_VISIT_1Set { get; set; }
+        public DbSet<EVALUATION_OF_SYMPTOMS_VISIT_1> EVALUATION_OF_SYMPTOMS_VISIT_1Set { get; set; }
+        public DbSet<ELECTROCARDIOGRAPHY_VISIT_1> ELECTROCARDIOGRAPHY_VISIT_1Set { get; set; }
+        public DbSet<ECHOCARDIOGRAPHY_VISIT_1> ECHOCARDIOGRAPHY_VISIT_1Set { get; set; }
+        public DbSet<XRAY_CHEST_VISIT_1> XRAY_CHEST_VISIT_1Set { get; set; }
+        public DbSet<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1> COMPUTED_TOMOGRAPHY_CHEST_VISIT_1Set { get; set; }
+        public DbSet<BASE_LIVE_INDICATORS_VISIT_2> BASE_LIVE_INDICATORS_VISIT_2Set { get; set; }
+        public DbSet<EVALUATION_OF_SYMPTOMS_VISIT_2> EVALUATION_OF_SYMPTOMS_VISIT_2Set { get; set; }
+        public DbSet<ECHOCARDIOGRAPHY_VISIT_3> ECHOCARDIOGRAPHY_VISIT_3Set { get; set; }
+        public DbSet<EVALUATION_OF_SYMPTOMS_VISIT_11> EVALUATION_OF_SYMPTOMS_VISIT_11Set { get; set; }
+        public DbSet<BLOOD_CLINICAL_ANALYSIS> BLOOD_CLINICAL_ANALYSISSet { get; set; }
+        public DbSet<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION> BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATIONSet { get; set; }
+        public DbSet<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION> BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTIONSet { get; set; }
+        public DbSet<BLOOD_CHEMISTRY> BLOOD_CHEMISTRYSet { get; set; }
+        public DbSet<ORGANISM> ORGANISMSet { get; set; }
+        public DbSet<ROUTE> ROUTESet { get; set; }
+        public DbSet<DRUG> DRUGSet { get; set; }
+        public DbSet<AB_THERAPY> AB_THERAPYSet { get; set; }
+        public DbSet<TEST_FOR_PNEUMOCOCCAL> TEST_FOR_PNEUMOCOCCALSet { get; set; }
+        public DbSet<MICROBIOLOGY_SPUTUM> MICROBIOLOGY_SPUTUMSet { get; set; }
+        public DbSet<MICROBIOLOGY_BLOOD> MICROBIOLOGY_BLOODSet { get; set; }
     }
 }

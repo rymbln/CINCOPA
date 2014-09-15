@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CINCOPAModelStoreContainer" CdmEntityContainer="CINCOPAModelContainer">
-    <EntitySetMapping Name="CRF">
+    <EntitySetMapping Name="CRFSet">
       <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.CRF)">
-        <MappingFragment StoreEntitySet="CRF">
+        <MappingFragment StoreEntitySet="CRFSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="WARDId" ColumnName="WARDId" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -20,9 +20,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="WARD">
+    <EntitySetMapping Name="WARDSet">
       <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.WARD)">
-        <MappingFragment StoreEntitySet="WARD">
+        <MappingFragment StoreEntitySet="WARDSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
           <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
@@ -43,5 +43,258 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VISIT_ONESet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.VISIT_ONE)">
+        <MappingFragment StoreEntitySet="VISIT_ONESet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DATE_VISIT" ColumnName="DATE_VISIT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISIT_ONE_ONESet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.VISIT_ONE_ONE)">
+        <MappingFragment StoreEntitySet="VISIT_ONE_ONESet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CRFId" ColumnName="CRFId" />
+          <ScalarProperty Name="DATE_VISIT" ColumnName="DATE_VISIT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISIT_TWOSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.VISIT_TWO)">
+        <MappingFragment StoreEntitySet="VISIT_TWOSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CRFId" ColumnName="CRFId" />
+          <ScalarProperty Name="DATE_VISIT" ColumnName="DATE_VISIT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="CRFId1" ColumnName="CRFId1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISIT_THREESet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.VISIT_THREE)">
+        <MappingFragment StoreEntitySet="VISIT_THREESet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CRFId" ColumnName="CRFId" />
+          <ScalarProperty Name="DATE_VISIT" ColumnName="DATE_VISIT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADVERSE_EVENTSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.ADVERSE_EVENT)">
+        <MappingFragment StoreEntitySet="ADVERSE_EVENTSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CRFId" ColumnName="CRFId" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DATE_START" ColumnName="DATE_START" />
+          <ScalarProperty Name="DATE_END" ColumnName="DATE_END" />
+          <ScalarProperty Name="HEAVY" ColumnName="HEAVY" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="RELATION" ColumnName="RELATION" />
+          <ScalarProperty Name="ACTIONS" ColumnName="ACTIONS" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BASE_LIVE_INDICATORS_VISIT_1Set">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1)">
+        <MappingFragment StoreEntitySet="BASE_LIVE_INDICATORS_VISIT_1Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BLOOD_PRESSURE_RIGHT_HAND" ColumnName="BLOOD_PRESSURE_RIGHT_HAND" />
+          <ScalarProperty Name="BLOOD_PRESSURE_LEFT_HAND" ColumnName="BLOOD_PRESSURE_LEFT_HAND" />
+          <ScalarProperty Name="HEART_RATE" ColumnName="HEART_RATE" />
+          <ScalarProperty Name="RESPIRATORY_RATE" ColumnName="RESPIRATORY_RATE" />
+          <ScalarProperty Name="TEMPERATURE" ColumnName="TEMPERATURE" />
+          <ScalarProperty Name="HEAVY_TYPE" ColumnName="HEAVY_TYPE" />
+          <ScalarProperty Name="OXYGEN_THERAPY_NEEDED" ColumnName="OXYGEN_THERAPY_NEEDED" />
+          <ScalarProperty Name="DECOMPENSATION_SIGNS" ColumnName="DECOMPENSATION_SIGNS" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANAMNESTIC_DATA_VISIT_1Set">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.ANAMNESTIC_DATA_VISIT_1)">
+        <MappingFragment StoreEntitySet="ANAMNESTIC_DATA_VISIT_1Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DATE_SYMPTOM" ColumnName="DATE_SYMPTOM" />
+          <ScalarProperty Name="DATE_DIAGNOSIS" ColumnName="DATE_DIAGNOSIS" />
+          <ScalarProperty Name="NUMBER_EPISODES" ColumnName="NUMBER_EPISODES" />
+          <ScalarProperty Name="NUMBER_EPISODES_NODATA" ColumnName="NUMBER_EPISODES_NODATA" />
+          <ScalarProperty Name="FUNCTION_CLASS" ColumnName="FUNCTION_CLASS" />
+          <ScalarProperty Name="OTHER_EPISODES" ColumnName="OTHER_EPISODES" />
+          <ScalarProperty Name="SMOKE_STATUS" ColumnName="SMOKE_STATUS" />
+          <ScalarProperty Name="SMOKE_AVERAGE" ColumnName="SMOKE_AVERAGE" />
+          <ScalarProperty Name="SMOKE_YEARS" ColumnName="SMOKE_YEARS" />
+          <ScalarProperty Name="SMOKE_PACK_YEARS" ColumnName="SMOKE_PACK_YEARS" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVALUATION_OF_SYMPTOMS_VISIT_1Set">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1)">
+        <MappingFragment StoreEntitySet="EVALUATION_OF_SYMPTOMS_VISIT_1Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DYSPNEA" ColumnName="DYSPNEA" />
+          <ScalarProperty Name="COUGH" ColumnName="COUGH" />
+          <ScalarProperty Name="SPUTUM" ColumnName="SPUTUM" />
+          <ScalarProperty Name="SPUTUM_TYPE" ColumnName="SPUTUM_TYPE" />
+          <ScalarProperty Name="TEMPERATURE_INCREASE" ColumnName="TEMPERATURE_INCREASE" />
+          <ScalarProperty Name="COLD_SYMPTOM" ColumnName="COLD_SYMPTOM" />
+          <ScalarProperty Name="SHORTERING_OF_PERCUSSION_SOUNDS" ColumnName="SHORTERING_OF_PERCUSSION_SOUNDS" />
+          <ScalarProperty Name="MOIST_RALES_SOUNDS" ColumnName="MOIST_RALES_SOUNDS" />
+          <ScalarProperty Name="CREPITUS" ColumnName="CREPITUS" />
+          <ScalarProperty Name="PLEURAL_FRICTION_NOISE" ColumnName="PLEURAL_FRICTION_NOISE" />
+          <ScalarProperty Name="DRY_RALES" ColumnName="DRY_RALES" />
+          <ScalarProperty Name="PRESENCE_OF_EDEMA" ColumnName="PRESENCE_OF_EDEMA" />
+          <ScalarProperty Name="INCIDENCE_OF_EDEMA" ColumnName="INCIDENCE_OF_EDEMA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ELECTROCARDIOGRAPHY_VISIT_1Set">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1)">
+        <MappingFragment StoreEntitySet="ELECTROCARDIOGRAPHY_VISIT_1Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DATE_PROCEDURE" ColumnName="DATE_PROCEDURE" />
+          <ScalarProperty Name="SINUS_RHYTHM" ColumnName="SINUS_RHYTHM" />
+          <ScalarProperty Name="ATRIAL_FIBRILLATION" ColumnName="ATRIAL_FIBRILLATION" />
+          <ScalarProperty Name="ARRYTHMIA_SUPRAVENTRICULAR" ColumnName="ARRYTHMIA_SUPRAVENTRICULAR" />
+          <ScalarProperty Name="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" ColumnName="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" />
+          <ScalarProperty Name="HEART_RATE" ColumnName="HEART_RATE" />
+          <ScalarProperty Name="SIGNIFICANT_CHANGES" ColumnName="SIGNIFICANT_CHANGES" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECHOCARDIOGRAPHY_VISIT_1Set">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1)">
+        <MappingFragment StoreEntitySet="ECHOCARDIOGRAPHY_VISIT_1Set">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DATE_PROCEDURE" ColumnName="DATE_PROCEDURE" />
+          <ScalarProperty Name="FV_PERCENT" ColumnName="FV_PERCENT" />
+          <ScalarProperty Name="EA_LJ" ColumnName="EA_LJ" />
+          <ScalarProperty Name="EA_RJ" ColumnName="EA_RJ" />
+          <ScalarProperty Name="SDLA" ColumnName="SDLA" />
+          <ScalarProperty Name="AMOUNT_OF_PERICARDIAL_EFFUSION" ColumnName="AMOUNT_OF_PERICARDIAL_EFFUSION" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CRFVISIT_ONE" TypeName="CINCOPAModel.CRFVISIT_ONE" StoreEntitySet="CRFSet">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CRFVISIT_ONE_ONE" TypeName="CINCOPAModel.CRFVISIT_ONE_ONE" StoreEntitySet="CRFSet">
+      <EndProperty Name="VISIT_ONE_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CRFVISIT_THREE" TypeName="CINCOPAModel.CRFVISIT_THREE" StoreEntitySet="CRFSet">
+      <EndProperty Name="VISIT_THREE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_THREE_Id" />
+      </EndProperty>
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CRFVISIT_TWO" TypeName="CINCOPAModel.CRFVISIT_TWO" StoreEntitySet="CRFSet">
+      <EndProperty Name="VISIT_TWO">
+        <ScalarProperty Name="Id" ColumnName="VISIT_TWO_Id" />
+      </EndProperty>
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" StoreEntitySet="VISIT_ONESet">
+      <EndProperty Name="BASE_LIVE_INDICATORS_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="BASE_LIVE_INDICATORS_VISIT_1_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEANAMNESTIC_DATA" TypeName="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" StoreEntitySet="VISIT_ONESet">
+      <EndProperty Name="ANAMNESTIC_DATA">
+        <ScalarProperty Name="Id" ColumnName="ANAMNESTIC_DATA_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" StoreEntitySet="VISIT_ONESet">
+      <EndProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="EVALUATION_OF_SYMPTOMS_VISIT_1_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" StoreEntitySet="VISIT_ONESet">
+      <EndProperty Name="ELECTROCARDIOGRAPHY_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="ELECTROCARDIOGRAPHY_VISIT_1_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" StoreEntitySet="VISIT_ONESet">
+      <EndProperty Name="ECHOCARDIOGRAPHY_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="ECHOCARDIOGRAPHY_VISIT_1_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

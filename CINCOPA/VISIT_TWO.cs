@@ -22,7 +22,10 @@ namespace CINCOPA
         public string UpdatedBy { get; set; }
         public string UpdatedByDate { get; set; }
         public string StateCode { get; set; }
+        public System.Guid CRFId1 { get; set; }
     
         public virtual CRF CRF { get; set; }
+        public virtual BASE_LIVE_INDICATORS_VISIT_2 BASE_LIVE_INDICATORS_VISIT_2 { get; set; }
+        public virtual EVALUATION_OF_SYMPTOMS_VISIT_2 EVALUATION_OF_SYMPTOMS_VISIT_2 { get; set; }
     }
 }

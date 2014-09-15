@@ -13,3 +13,4 @@ c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\
 c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.exe
 c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.pdb
 c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA_Content.g.cs
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache

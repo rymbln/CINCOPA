@@ -12,23 +12,28 @@ namespace CINCOPA
     using System;
     using System.Collections.Generic;
     
-    public partial class VISIT_ONE
+    public partial class EVALUATION_OF_SYMPTOMS_VISIT_1
     {
         public System.Guid Id { get; set; }
-        public System.DateTime DATE_VISIT { get; set; }
+        public string DYSPNEA { get; set; }
+        public string COUGH { get; set; }
+        public string SPUTUM { get; set; }
+        public string SPUTUM_TYPE { get; set; }
+        public string TEMPERATURE_INCREASE { get; set; }
+        public string COLD_SYMPTOM { get; set; }
+        public string SHORTERING_OF_PERCUSSION_SOUNDS { get; set; }
+        public string MOIST_RALES_SOUNDS { get; set; }
+        public string CREPITUS { get; set; }
+        public string PLEURAL_FRICTION_NOISE { get; set; }
+        public string DRY_RALES { get; set; }
+        public string PRESENCE_OF_EDEMA { get; set; }
+        public string INCIDENCE_OF_EDEMA { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedByDate { get; set; }
         public string UpdatedBy { get; set; }
         public string UpdatedByDate { get; set; }
         public string StateCode { get; set; }
     
-        public virtual CRF CRF { get; set; }
-        public virtual BASE_LIVE_INDICATORS_VISIT_1 BASE_LIVE_INDICATORS_VISIT_1 { get; set; }
-        public virtual ANAMNESTIC_DATA_VISIT_1 ANAMNESTIC_DATA { get; set; }
-        public virtual EVALUATION_OF_SYMPTOMS_VISIT_1 EVALUATION_OF_SYMPTOMS_VISIT_1 { get; set; }
-        public virtual ELECTROCARDIOGRAPHY_VISIT_1 ELECTROCARDIOGRAPHY_VISIT_1 { get; set; }
-        public virtual ECHOCARDIOGRAPHY_VISIT_1 ECHOCARDIOGRAPHY_VISIT_1 { get; set; }
-        public virtual XRAY_CHEST_VISIT_1 XRAY_CHEST_VISIT_1 { get; set; }
-        public virtual COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 { get; set; }
+        public virtual VISIT_ONE VISIT_ONE { get; set; }
     }
 }

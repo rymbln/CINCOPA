@@ -16,11 +16,10 @@ namespace CINCOPA
     {
         public CRF()
         {
-            this.VISIT_ONE = new HashSet<VISIT_ONE>();
-            this.VISIT_ONE_ONE = new HashSet<VISIT_ONE_ONE>();
-            this.VISIT_TWO = new HashSet<VISIT_TWO>();
-            this.VISIT_THREE = new HashSet<VISIT_THREE>();
             this.ADVERSE_EVENT = new HashSet<ADVERSE_EVENT>();
+            this.AB_THERAPY = new HashSet<AB_THERAPY>();
+            this.MICROBIOLOGY_SPUTUM = new HashSet<MICROBIOLOGY_SPUTUM>();
+            this.MICROBIOLOGY_BLOOD = new HashSet<MICROBIOLOGY_BLOOD>();
         }
     
         public System.Guid Id { get; set; }
@@ -38,10 +37,18 @@ namespace CINCOPA
         public string StateCode { get; set; }
     
         public virtual WARD WARD { get; set; }
-        public virtual ICollection<VISIT_ONE> VISIT_ONE { get; set; }
-        public virtual ICollection<VISIT_ONE_ONE> VISIT_ONE_ONE { get; set; }
-        public virtual ICollection<VISIT_TWO> VISIT_TWO { get; set; }
-        public virtual ICollection<VISIT_THREE> VISIT_THREE { get; set; }
+        public virtual VISIT_ONE VISIT_ONE { get; set; }
+        public virtual VISIT_ONE_ONE VISIT_ONE_ONE { get; set; }
+        public virtual VISIT_THREE VISIT_THREE { get; set; }
+        public virtual VISIT_TWO VISIT_TWO { get; set; }
         public virtual ICollection<ADVERSE_EVENT> ADVERSE_EVENT { get; set; }
+        public virtual BLOOD_CLINICAL_ANALYSIS BLOOD_CLINICAL_ANALYSIS { get; set; }
+        public virtual BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION { get; set; }
+        public virtual BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION { get; set; }
+        public virtual BLOOD_CHEMISTRY BLOOD_CHEMISTRY { get; set; }
+        public virtual ICollection<AB_THERAPY> AB_THERAPY { get; set; }
+        public virtual TEST_FOR_PNEUMOCOCCAL TEST_FOR_PNEUMOCOCCAL { get; set; }
+        public virtual ICollection<MICROBIOLOGY_SPUTUM> MICROBIOLOGY_SPUTUM { get; set; }
+        public virtual ICollection<MICROBIOLOGY_BLOOD> MICROBIOLOGY_BLOOD { get; set; }
     }
 }

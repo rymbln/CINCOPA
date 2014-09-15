@@ -12,23 +12,24 @@ namespace CINCOPA
     using System;
     using System.Collections.Generic;
     
-    public partial class VISIT_ONE
+    public partial class ORGANISM
     {
+        public ORGANISM()
+        {
+            this.MICROBIOLOGY_BLOOD = new HashSet<MICROBIOLOGY_BLOOD>();
+            this.MICROBIOLOGY_SPUTUM = new HashSet<MICROBIOLOGY_SPUTUM>();
+        }
+    
         public System.Guid Id { get; set; }
-        public System.DateTime DATE_VISIT { get; set; }
+        public string NAME { get; set; }
+        public string CODE { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedByDate { get; set; }
         public string UpdatedBy { get; set; }
         public string UpdatedByDate { get; set; }
         public string StateCode { get; set; }
     
-        public virtual CRF CRF { get; set; }
-        public virtual BASE_LIVE_INDICATORS_VISIT_1 BASE_LIVE_INDICATORS_VISIT_1 { get; set; }
-        public virtual ANAMNESTIC_DATA_VISIT_1 ANAMNESTIC_DATA { get; set; }
-        public virtual EVALUATION_OF_SYMPTOMS_VISIT_1 EVALUATION_OF_SYMPTOMS_VISIT_1 { get; set; }
-        public virtual ELECTROCARDIOGRAPHY_VISIT_1 ELECTROCARDIOGRAPHY_VISIT_1 { get; set; }
-        public virtual ECHOCARDIOGRAPHY_VISIT_1 ECHOCARDIOGRAPHY_VISIT_1 { get; set; }
-        public virtual XRAY_CHEST_VISIT_1 XRAY_CHEST_VISIT_1 { get; set; }
-        public virtual COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 { get; set; }
+        public virtual ICollection<MICROBIOLOGY_BLOOD> MICROBIOLOGY_BLOOD { get; set; }
+        public virtual ICollection<MICROBIOLOGY_SPUTUM> MICROBIOLOGY_SPUTUM { get; set; }
     }
 }
