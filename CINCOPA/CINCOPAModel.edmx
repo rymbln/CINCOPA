@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CINCOPAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CINCOPAModelStoreContainer">
+    <EntitySet Name="CRF" EntityType="CINCOPAModel.Store.CRF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WARD" EntityType="CINCOPAModel.Store.WARD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USERS" EntityType="CINCOPAModel.Store.USERS" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CRFWARD" Association="CINCOPAModel.Store.CRFWARD">
+      <End Role="CRF" EntitySet="CRF" />
+      <End Role="WARD" EntitySet="WARD" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CRF">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NUMBER" Type="int" Nullable="false" />
+    <Property Name="DATE_BIRTH" Type="datetime" Nullable="true" />
+    <Property Name="DATE_HOSPITALISATION" Type="datetime" Nullable="true" />
+    <Property Name="DATE_DISCHARGE" Type="datetime" Nullable="true" />
+    <Property Name="AE_LOGIC" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WARD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NUMBER" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="CRFWARD">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRF" Multiplicity="*" />
+    <End Role="WARD" Type="CINCOPAModel.Store.WARD" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="WARD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CRF">
+        <PropertyRef Name="WARDId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CINCOPAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="CINCOPAModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CRFSet" EntityType="CINCOPAModel.CRF" />
+          <EntitySet Name="WARDSet" EntityType="CINCOPAModel.WARD" />
+          <EntitySet Name="USERS" EntityType="CINCOPAModel.USERS" />
+          <AssociationSet Name="CRFWARD" Association="CINCOPAModel.CRFWARD">
+            <End Role="CRF" EntitySet="CRFSet" />
+            <End Role="WARD" EntitySet="WARDSet" />
+          </AssociationSet>
+          <EntitySet Name="VISIT_ONESet" EntityType="CINCOPAModel.VISIT_ONE" />
+          <AssociationSet Name="CRFVISIT_ONE" Association="CINCOPAModel.CRFVISIT_ONE">
+            <End Role="CRF" EntitySet="CRFSet" />
+            <End Role="VISIT_ONE" EntitySet="VISIT_ONESet" />
+          </AssociationSet>
+          <EntitySet Name="VISIT_ONE_ONESet" EntityType="CINCOPAModel.VISIT_ONE_ONE" />
+          <AssociationSet Name="CRFVISIT_ONE_ONE" Association="CINCOPAModel.CRFVISIT_ONE_ONE">
+            <End Role="CRF" EntitySet="CRFSet" />
+            <End Role="VISIT_ONE_ONE" EntitySet="VISIT_ONE_ONESet" />
+          </AssociationSet>
+          <EntitySet Name="VISIT_TWOSet" EntityType="CINCOPAModel.VISIT_TWO" />
+          <AssociationSet Name="CRFVISIT_TWO" Association="CINCOPAModel.CRFVISIT_TWO">
+            <End Role="CRF" EntitySet="CRFSet" />
+            <End Role="VISIT_TWO" EntitySet="VISIT_TWOSet" />
+          </AssociationSet>
+          <EntitySet Name="VISIT_THREESet" EntityType="CINCOPAModel.VISIT_THREE" />
+          <AssociationSet Name="CRFVISIT_THREE" Association="CINCOPAModel.CRFVISIT_THREE">
+            <End Role="CRF" EntitySet="CRFSet" />
+            <End Role="VISIT_THREE" EntitySet="VISIT_THREESet" />
+          </AssociationSet>
+          <EntitySet Name="ADVERSE_EVENTSet" EntityType="CINCOPAModel.ADVERSE_EVENT" />
+          <AssociationSet Name="CRFADVERSE_EVENT" Association="CINCOPAModel.CRFADVERSE_EVENT">
+            <End Role="CRF" EntitySet="CRFSet" />
+            <End Role="ADVERSE_EVENT" EntitySet="ADVERSE_EVENTSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CRF">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="WARDId" Nullable="false" />
+          <Property Type="String" Name="NAME" Nullable="false" />
+          <Property Type="Int32" Name="NUMBER" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_BIRTH" Nullable="true" />
+          <Property Type="DateTime" Name="DATE_HOSPITALISATION" Nullable="true" />
+          <Property Type="DateTime" Name="DATE_DISCHARGE" Nullable="true" />
+          <Property Type="String" Name="AE_LOGIC" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="WARD" Relationship="CINCOPAModel.CRFWARD" FromRole="CRF" ToRole="WARD" />
+          <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.CRFVISIT_ONE" FromRole="CRF" ToRole="VISIT_ONE" />
+          <NavigationProperty Name="VISIT_ONE_ONE" Relationship="CINCOPAModel.CRFVISIT_ONE_ONE" FromRole="CRF" ToRole="VISIT_ONE_ONE" />
+          <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.CRFVISIT_TWO" FromRole="CRF" ToRole="VISIT_TWO" />
+          <NavigationProperty Name="VISIT_THREE" Relationship="CINCOPAModel.CRFVISIT_THREE" FromRole="CRF" ToRole="VISIT_THREE" />
+          <NavigationProperty Name="ADVERSE_EVENT" Relationship="CINCOPAModel.CRFADVERSE_EVENT" FromRole="CRF" ToRole="ADVERSE_EVENT" />
+        </EntityType>
+        <EntityType Name="WARD">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="NAME" Nullable="false" />
+          <Property Type="Int32" Name="NUMBER" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFWARD" FromRole="WARD" ToRole="CRF" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="NAME" Nullable="false" />
+          <Property Type="String" Name="PASSWORD" Nullable="false" />
+        </EntityType>
+        <Association Name="CRFWARD">
+          <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="*" />
+          <End Type="CINCOPAModel.WARD" Role="WARD" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="WARD">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CRF">
+              <PropertyRef Name="WARDId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VISIT_ONE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="CRFId" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_ONE" FromRole="VISIT_ONE" ToRole="CRF" />
+        </EntityType>
+        <Association Name="CRFVISIT_ONE">
+          <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+          <End Type="CINCOPAModel.VISIT_ONE" Role="VISIT_ONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRF">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VISIT_ONE">
+              <PropertyRef Name="CRFId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VISIT_ONE_ONE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="CRFId" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_ONE_ONE" FromRole="VISIT_ONE_ONE" ToRole="CRF" />
+        </EntityType>
+        <Association Name="CRFVISIT_ONE_ONE">
+          <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+          <End Type="CINCOPAModel.VISIT_ONE_ONE" Role="VISIT_ONE_ONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRF">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VISIT_ONE_ONE">
+              <PropertyRef Name="CRFId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VISIT_TWO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="CRFId" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_TWO" FromRole="VISIT_TWO" ToRole="CRF" />
+        </EntityType>
+        <Association Name="CRFVISIT_TWO">
+          <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+          <End Type="CINCOPAModel.VISIT_TWO" Role="VISIT_TWO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRF">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VISIT_TWO">
+              <PropertyRef Name="CRFId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VISIT_THREE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="CRFId" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_VISIT" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_THREE" FromRole="VISIT_THREE" ToRole="CRF" />
+        </EntityType>
+        <Association Name="CRFVISIT_THREE">
+          <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+          <End Type="CINCOPAModel.VISIT_THREE" Role="VISIT_THREE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRF">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VISIT_THREE">
+              <PropertyRef Name="CRFId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ADVERSE_EVENT">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="NAME" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_START" Nullable="false" />
+          <Property Type="DateTime" Name="DATE_END" Nullable="false" />
+          <Property Type="String" Name="HEAVY" Nullable="false" />
+          <Property Type="String" Name="RESULT" Nullable="false" />
+          <Property Type="String" Name="RELATION" Nullable="false" />
+          <Property Type="String" Name="ACTIONS" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" />
+          <Property Type="String" Name="CreatedByDate" Nullable="false" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" />
+          <Property Type="String" Name="UpdatedByDate" Nullable="false" />
+          <Property Type="String" Name="StateCode" Nullable="false" />
+          <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFADVERSE_EVENT" FromRole="ADVERSE_EVENT" ToRole="CRF" />
+          <Property Type="Guid" Name="CRFId" Nullable="false" />
+        </EntityType>
+        <Association Name="CRFADVERSE_EVENT">
+          <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="1" />
+          <End Type="CINCOPAModel.ADVERSE_EVENT" Role="ADVERSE_EVENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CRF">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ADVERSE_EVENT">
+              <PropertyRef Name="CRFId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CINCOPAModelStoreContainer" CdmEntityContainer="CINCOPAModelContainer">
+    <EntitySetMapping Name="CRFSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.CRF)">
+        <MappingFragment StoreEntitySet="CRF">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WARDId" ColumnName="WARDId" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="DATE_BIRTH" ColumnName="DATE_BIRTH" />
+          <ScalarProperty Name="DATE_HOSPITALISATION" ColumnName="DATE_HOSPITALISATION" />
+          <ScalarProperty Name="DATE_DISCHARGE" ColumnName="DATE_DISCHARGE" />
+          <ScalarProperty Name="AE_LOGIC" ColumnName="AE_LOGIC" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WARDSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.WARD)">
+        <MappingFragment StoreEntitySet="WARD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.USERS)">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

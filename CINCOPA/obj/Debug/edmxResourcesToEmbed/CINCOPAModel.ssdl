@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CINCOPAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CINCOPAModelStoreContainer">
+    <EntitySet Name="CRF" EntityType="CINCOPAModel.Store.CRF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WARD" EntityType="CINCOPAModel.Store.WARD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USERS" EntityType="CINCOPAModel.Store.USERS" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CRFWARD" Association="CINCOPAModel.Store.CRFWARD">
+      <End Role="CRF" EntitySet="CRF" />
+      <End Role="WARD" EntitySet="WARD" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CRF">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NUMBER" Type="int" Nullable="false" />
+    <Property Name="DATE_BIRTH" Type="datetime" Nullable="true" />
+    <Property Name="DATE_HOSPITALISATION" Type="datetime" Nullable="true" />
+    <Property Name="DATE_DISCHARGE" Type="datetime" Nullable="true" />
+    <Property Name="AE_LOGIC" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WARD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NUMBER" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="CRFWARD">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRF" Multiplicity="*" />
+    <End Role="WARD" Type="CINCOPAModel.Store.WARD" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="WARD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CRF">
+        <PropertyRef Name="WARDId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

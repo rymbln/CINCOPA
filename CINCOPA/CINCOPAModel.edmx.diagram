@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d38f5f58d9f46e59e547f3b96cf1db7" Name="Diagram1" >
+        <EntityTypeShape EntityType="CINCOPAModel.CRF" Width="2.5" PointX="2.5" PointY="2.875" />
+        <EntityTypeShape EntityType="CINCOPAModel.WARD" Width="1.5" PointX="0.5" PointY="2.875" />
+        <EntityTypeShape EntityType="CINCOPAModel.USERS" Width="1.5" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="CINCOPAModel.CRFWARD" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_ONE" Width="1.5" PointX="5.625" PointY="2.875" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_ONE" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_ONE_ONE" Width="1.5" PointX="5.625" PointY="5.875" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_ONE_ONE" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_TWO" Width="1.5" PointX="5.5" PointY="9" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_TWO" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_THREE" Width="1.5" PointX="5.5" PointY="12" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_THREE" />
+        <EntityTypeShape EntityType="CINCOPAModel.ADVERSE_EVENT" Width="1.5" PointX="5.5" PointY="15.125" />
+        <AssociationConnector Association="CINCOPAModel.CRFADVERSE_EVENT" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

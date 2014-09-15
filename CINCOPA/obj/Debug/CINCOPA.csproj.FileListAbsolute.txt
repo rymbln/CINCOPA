@@ -1,0 +1,15 @@
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\CINCOPA.exe.config
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\CINCOPA.exe
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\CINCOPA.pdb
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\EntityFramework.dll
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\EntityFramework.xml
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\MainWindow.baml
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\MainWindow.g.cs
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\App.g.cs
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA_MarkupCompile.cache
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.g.resources
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.Properties.Resources.resources
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csproj.GenerateResource.Cache
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.exe
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.pdb
+c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA_Content.g.cs

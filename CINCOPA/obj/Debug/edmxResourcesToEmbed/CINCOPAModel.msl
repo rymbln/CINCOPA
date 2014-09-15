@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CINCOPAModelStoreContainer" CdmEntityContainer="CINCOPAModelContainer">
+    <EntitySetMapping Name="CRF">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.CRF)">
+        <MappingFragment StoreEntitySet="CRF">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WARDId" ColumnName="WARDId" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="DATE_BIRTH" ColumnName="DATE_BIRTH" />
+          <ScalarProperty Name="DATE_HOSPITALISATION" ColumnName="DATE_HOSPITALISATION" />
+          <ScalarProperty Name="DATE_DISCHARGE" ColumnName="DATE_DISCHARGE" />
+          <ScalarProperty Name="AE_LOGIC" ColumnName="AE_LOGIC" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WARD">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.WARD)">
+        <MappingFragment StoreEntitySet="WARD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.USERS)">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
