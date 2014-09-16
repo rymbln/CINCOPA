@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Data.Objects;
 using System.Globalization;
@@ -1172,6 +1173,21 @@ namespace CINCOPA.Common
             return obj;
         }
 
+
+        public List<CRF> GetCrfForCurrentUser()
+        {
+            try
+            {
+                var str = Authentification.GetCurrentUser().NAME;
+                return underlyingContext.CRFs.Where(o => o.CreatedBy == str).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось получить список карт.", ex.Message);
+                return null;
+            }
+            
+        }
     }
 }
 

@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CINCOPA.Common;
 using CINCOPA.Model;
+using CINCOPA.ViewModel;
 
 namespace CINCOPA.Views
 {
@@ -25,7 +26,7 @@ namespace CINCOPA.Views
             InitializeComponent();
         }
 
-          private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             if ((txtName.Text != "") & (txtPassword.Text != ""))
             {
@@ -33,17 +34,12 @@ namespace CINCOPA.Views
                 user.NAME = txtName.Text;
                 user.PASSWORD = txtPassword.Text;
                 if (Authentification.AuthentificateUser(user))
-
                 {
-                    //MainViewModel main = new MainViewModel();
-                    //MainView window = new View.MainView { DataContext = main };
-                    //window.Show();
-                    MessageBox.Show("Worked!");
+                    MainWindowViewModel main = new MainWindowViewModel();
+                    MainWindow window = new MainWindow { DataContext = main };
+                    window.Show();
 
-                 //   var obj = DataManager.Instance.CreateCrf();
-               //     DataManager.Instance.Save();
-                   
-                    //   this.Close();
+                    this.Close();
                 }
 
             }

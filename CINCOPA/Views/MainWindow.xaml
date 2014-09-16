@@ -1,0 +1,39 @@
+﻿<Window x:Class="CINCOPA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="768" Width="1024">
+   <DockPanel>
+       <ToolBar DockPanel.Dock="Top">
+            <Button Command="{Binding OpenCrfCommand}"
+                   Content="Открыть карту"/>
+            <Separator/>
+            <Button Command="{Binding AddCrfCommand}"
+                   Content="Добавить карту"/>
+           <Separator/>
+            <Button Command="{Binding DeleteCrfCommand}"
+                   Content="Удалить карту"/>
+            <Separator/>
+            <Button Command="{Binding CheckCrfCommand}"
+                   Content="Проверить все карты"/>
+           
+        </ToolBar>
+       
+            <DataGrid
+                 SelectedItem="{Binding Path=CurrentCrf, Mode=TwoWay}" 
+                              ItemsSource="{Binding Path=AllCrf}" 
+                              AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ИРК" Width="*"  Binding="{Binding Path=NUMBER}" />
+                    <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding Path=NAME}" />
+                    <DataGridTextColumn Header="ЛПУ" Width="*" Binding="{Binding Path=WARD_NAME}" />
+                    <DataGridTextColumn Header="Дата рождения" Width="*" Binding="{Binding Path=DATE_BIRTH}" />
+                <DataGridTextColumn Header="Дата госпитализации" Width="*" Binding="{Binding Path=DATE_HOSPITALISATION}" />
+                <DataGridTextColumn Header="Дата выписки" Width="*" Binding="{Binding Path=DATE_DISCHARGE}" />
+            </DataGrid.Columns>
+
+            </DataGrid>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{Binding Path=TotalCards,  UpdateSourceTrigger=PropertyChanged}" />
+        </StatusBar>
+    </DockPanel>
+</Window>
