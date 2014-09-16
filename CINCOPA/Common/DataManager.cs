@@ -382,8 +382,8 @@ namespace CINCOPA.Common
         {
             bool success = false;
             CRF obj = null;
-            using (var transaction = new TransactionScope())
-            {
+            //using (var transaction = new TransactionScope())
+            //{
                 try
                 {
                     obj = underlyingContext.CreateObject<CRF>();
@@ -423,7 +423,7 @@ namespace CINCOPA.Common
 
 
                     // Mark the transaction as complete.
-                    transaction.Complete();
+                   // transaction.Complete();
                     success = true;
                 }
                 catch (Exception ex)
@@ -444,7 +444,7 @@ namespace CINCOPA.Common
                 }
 
                 return obj;
-            }
+            
         }
 
 
@@ -524,7 +524,7 @@ namespace CINCOPA.Common
 
             underlyingContext.BloodClinicalAnalyses.AddObject(obj);
 
-            Save();
+           // Save();
 
             return obj;
         }
@@ -544,7 +544,7 @@ namespace CINCOPA.Common
 
             underlyingContext.BloodChemistrys.AddObject(obj);
 
-            Save();
+            //Save();
 
             return obj;
         }
@@ -562,28 +562,29 @@ namespace CINCOPA.Common
 
             underlyingContext.TestForPneumococcals.AddObject(obj);
 
-            Save();
+         //   Save();
 
             return obj;
         }
 
         private WARD GetDefaultWard()
         {
-            if (!underlyingContext.Wards.Any())
-            {
-                underlyingContext.Wards.AddObject(new WARD
-                {
-                    CreatedBy = Authentification.GetCurrentUser().NAME,
-                    CreatedByDate = DateTime.Now.ToString(),
-                    UpdatedBy = Authentification.GetCurrentUser().NAME,
-                    UpdatedByDate = DateTime.Now.ToString(),
-                    NAME = "---",
-                    NUMBER = 0,
-                    Id = GuidComb.Generate()
-                });
-
-            }
-            return underlyingContext.Wards.OrderBy(o => o.NUMBER).FirstOrDefault();
+            //if (!underlyingContext.Wards.Any())
+            //{
+            //    underlyingContext.Wards.AddObject(new WARD
+            //    {
+            //        CreatedBy = Authentification.GetCurrentUser().NAME,
+            //        CreatedByDate = DateTime.Now.ToString(),
+            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
+            //        UpdatedByDate = DateTime.Now.ToString(),
+            //        NAME = "---",
+            //        NUMBER = 0,
+            //        Id = GuidComb.Generate()
+            //    });
+            //    Save();
+            //}
+            var obj = underlyingContext.Wards.OrderBy(o => o.NUMBER).FirstOrDefault();
+            return obj;
         }
 
         private ORGANISM GetDefaultOrganism()
@@ -1074,7 +1075,7 @@ namespace CINCOPA.Common
                 obj.RELATION = "---";
                 obj.ACTIONS = "---";
                 underlyingContext.AEs.AddObject(obj);
-                Save();
+              //  Save();
             }
             catch (Exception ex)
             {
@@ -1103,7 +1104,7 @@ namespace CINCOPA.Common
                 obj.DATE_END = null;
 
                 underlyingContext.AbTherapys.AddObject(obj);
-                Save();
+              //  Save();
             }
             catch (Exception ex)
             {
@@ -1134,7 +1135,7 @@ namespace CINCOPA.Common
                 obj.BETA = "---";
                 obj.MRSA = "---";
                 underlyingContext.MicrobiologySputums.AddObject(obj);
-                Save();
+               // Save();
             }
             catch (Exception ex)
             {
@@ -1162,7 +1163,7 @@ namespace CINCOPA.Common
                 obj.BETA = "---";
                 obj.MRSA = "---";
                 underlyingContext.MicrobiologyBloods.AddObject(obj);
-                Save();
+               // Save();
             }
             catch (Exception ex)
             {
