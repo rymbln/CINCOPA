@@ -13,6 +13,7 @@ namespace CINCOPA.ViewModel
     public class MainWindowViewModel : ViewModelBase
     {
         private CRF currentCrf { get; set; }
+        private ObservableCollection<CRF> allCrf { get; set; }
         private string totalCards { get; set; }
 
         public MainWindowViewModel()
@@ -20,48 +21,59 @@ namespace CINCOPA.ViewModel
             AllCrf = new ObservableCollection<CRF>();
 
             AllCrf = new ObservableCollection<CRF>(DataManager.Instance.GetCrfForCurrentUser());
-            AllCrf.CollectionChanged += AllCrf_CollectionChanged;
 
             OpenCrfCommand = new DelegateCommand(o => OpenCrf(), o=> CurrentCrf != null);
             AddCrfCommand = new DelegateCommand(o => AddCrf());
             DeleteCrfCommand = new DelegateCommand(o => DeleteCrf(), o => CurrentCrf != null);
             CheckCrfCommand = new DelegateCommand(o => CheckCrf());
+            RefreshCommand = new DelegateCommand(o => Refresh());
         }
 
-        void AllCrf_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+       public ObservableCollection<CRF> AllCrf
         {
-            AllCrf = new ObservableCollection<CRF>(DataManager.Instance.GetCrfForCurrentUser());
-            CurrentCrf = AllCrf.FirstOrDefault();
-            TotalCards = "Пользователем " + Authentification.GetCurrentUser().NAME + " введено " + AllCrf.Count +
-                         " карт.";
-        }
+            get { return allCrf; }
+            set
+            {
+                allCrf = value;
+                CurrentCrf = AllCrf.FirstOrDefault();
+                TotalCards = "Пользователем " + Authentification.GetCurrentUser().NAME + " введено " + AllCrf.Count +
+                             " карт.";
 
-        public ObservableCollection<CRF>  AllCrf { get; private set; }
+                OnPropertyChanged("AllCrf");
+            }
+        }
         
         public ICommand OpenCrfCommand { get; private set; }
         public ICommand AddCrfCommand { get; private set; }
         public ICommand DeleteCrfCommand { get; private set; }
         public ICommand CheckCrfCommand { get; private set; }
+        public ICommand RefreshCommand { get; private set; }
 
-        public void OpenCrf()
+        private void OpenCrf()
         {
             //Todo
         }
 
-        public void AddCrf()
+        private void AddCrf()
         {
             //Todo   
         }
 
-        public void DeleteCrf()
+        private void DeleteCrf()
         {
          //Todo
    
         }
 
-        public void CheckCrf()
+        private void CheckCrf()
         {
             //Todo
+        }
+
+        private void Refresh()
+        {
+            AllCrf = new ObservableCollection<CRF>(DataManager.Instance.GetCrfForCurrentUser());
+          OnPropertyChanged("AllCrf");
         }
 
         public string TotalCards

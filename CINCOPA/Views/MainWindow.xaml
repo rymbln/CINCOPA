@@ -15,10 +15,14 @@
             <Separator/>
             <Button Command="{Binding CheckCrfCommand}"
                    Content="Проверить все карты"/>
-           
+            <Separator/>
+            <Button Command="{Binding RefreshCommand}"
+                   Content="Обновить"/>
         </ToolBar>
-       
-            <DataGrid
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock Text="{Binding Path=TotalCards,  UpdateSourceTrigger=PropertyChanged}" />
+        </StatusBar>
+        <DataGrid
                  SelectedItem="{Binding Path=CurrentCrf, Mode=TwoWay}" 
                               ItemsSource="{Binding Path=AllCrf}" 
                               AutoGenerateColumns="False" IsReadOnly="True">
@@ -32,8 +36,6 @@
             </DataGrid.Columns>
 
             </DataGrid>
-        <StatusBar DockPanel.Dock="Bottom">
-            <StatusBarItem Content="{Binding Path=TotalCards,  UpdateSourceTrigger=PropertyChanged}" />
-        </StatusBar>
+        
     </DockPanel>
 </Window>
