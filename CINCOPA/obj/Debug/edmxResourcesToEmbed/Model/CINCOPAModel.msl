@@ -568,163 +568,163 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="CRFVISIT_ONE" TypeName="CINCOPAModel.CRFVISIT_ONE" StoreEntitySet="CRFs">
+    <AssociationSetMapping Name="CRFVISIT_ONE" TypeName="CINCOPAModel.CRFVISIT_ONE" StoreEntitySet="VisitOnes">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CRFVISIT_ONE_ONE" TypeName="CINCOPAModel.CRFVISIT_ONE_ONE" StoreEntitySet="VisitOneOnes">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_ONE_ONE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CRFVISIT_THREE" TypeName="CINCOPAModel.CRFVISIT_THREE" StoreEntitySet="VisitThrees">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_THREE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CRFVISIT_TWO" TypeName="CINCOPAModel.CRFVISIT_TWO" StoreEntitySet="VisitTwoes">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
+      <EndProperty Name="VISIT_TWO">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" StoreEntitySet="BaseLiveIndicatorsVisit1Set">
       <EndProperty Name="VISIT_ONE">
         <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
       </EndProperty>
-      <EndProperty Name="CRF">
+      <EndProperty Name="BASE_LIVE_INDICATORS_VISIT_1">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFVISIT_ONE_ONE" TypeName="CINCOPAModel.CRFVISIT_ONE_ONE" StoreEntitySet="CRFs">
-      <EndProperty Name="VISIT_ONE_ONE">
-        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_ONE_Id" />
+    <AssociationSetMapping Name="VISIT_ONEANAMNESTIC_DATA" TypeName="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" StoreEntitySet="AnamnesticDataVisit1Set">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
       </EndProperty>
-      <EndProperty Name="CRF">
+      <EndProperty Name="ANAMNESTIC_DATA">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFVISIT_THREE" TypeName="CINCOPAModel.CRFVISIT_THREE" StoreEntitySet="CRFs">
-      <EndProperty Name="VISIT_THREE">
-        <ScalarProperty Name="Id" ColumnName="VISIT_THREE_Id" />
+    <AssociationSetMapping Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" StoreEntitySet="EvaluationOfSymptomsVisit1Set">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
       </EndProperty>
-      <EndProperty Name="CRF">
+      <EndProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_1">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFVISIT_TWO" TypeName="CINCOPAModel.CRFVISIT_TWO" StoreEntitySet="CRFs">
+    <AssociationSetMapping Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" StoreEntitySet="ElectrocardiographyVisit1Set">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="ELECTROCARDIOGRAPHY_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" StoreEntitySet="EchocardiographyVisit1Set">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="ECHOCARDIOGRAPHY_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONEXRAY_CHEST_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1" StoreEntitySet="XrayChestVisit1Set">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="XRAY_CHEST_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" TypeName="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" StoreEntitySet="ComputedTomographyChestVisit1Set">
+      <EndProperty Name="VISIT_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" TypeName="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" StoreEntitySet="BaseLiveIndicatorsVisit2Set">
       <EndProperty Name="VISIT_TWO">
         <ScalarProperty Name="Id" ColumnName="VISIT_TWO_Id" />
       </EndProperty>
-      <EndProperty Name="CRF">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" StoreEntitySet="VisitOnes">
-      <EndProperty Name="BASE_LIVE_INDICATORS_VISIT_1">
-        <ScalarProperty Name="Id" ColumnName="BASE_LIVE_INDICATORS_VISIT_1_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONEANAMNESTIC_DATA" TypeName="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" StoreEntitySet="VisitOnes">
-      <EndProperty Name="ANAMNESTIC_DATA">
-        <ScalarProperty Name="Id" ColumnName="ANAMNESTIC_DATA_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" StoreEntitySet="VisitOnes">
-      <EndProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_1">
-        <ScalarProperty Name="Id" ColumnName="EVALUATION_OF_SYMPTOMS_VISIT_1_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" StoreEntitySet="VisitOnes">
-      <EndProperty Name="ELECTROCARDIOGRAPHY_VISIT_1">
-        <ScalarProperty Name="Id" ColumnName="ELECTROCARDIOGRAPHY_VISIT_1_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" StoreEntitySet="VisitOnes">
-      <EndProperty Name="ECHOCARDIOGRAPHY_VISIT_1">
-        <ScalarProperty Name="Id" ColumnName="ECHOCARDIOGRAPHY_VISIT_1_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONEXRAY_CHEST_VISIT_1" TypeName="CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1" StoreEntitySet="VisitOnes">
-      <EndProperty Name="XRAY_CHEST_VISIT_1">
-        <ScalarProperty Name="Id" ColumnName="XRAY_CHEST_VISIT_1_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" TypeName="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" StoreEntitySet="VisitOnes">
-      <EndProperty Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-        <ScalarProperty Name="Id" ColumnName="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_ONE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" TypeName="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" StoreEntitySet="VisitTwoes">
       <EndProperty Name="BASE_LIVE_INDICATORS_VISIT_2">
-        <ScalarProperty Name="Id" ColumnName="BASE_LIVE_INDICATORS_VISIT_2_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_TWO">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" TypeName="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" StoreEntitySet="VisitTwoes">
+    <AssociationSetMapping Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" TypeName="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" StoreEntitySet="EvaluationOfSymptomsVisit2Set">
+      <EndProperty Name="VISIT_TWO">
+        <ScalarProperty Name="Id" ColumnName="VISIT_TWO_Id" />
+      </EndProperty>
       <EndProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_2">
-        <ScalarProperty Name="Id" ColumnName="EVALUATION_OF_SYMPTOMS_VISIT_2_Id" />
-      </EndProperty>
-      <EndProperty Name="VISIT_TWO">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" TypeName="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" StoreEntitySet="VisitThrees">
-      <EndProperty Name="ECHOCARDIOGRAPHY_VISIT_3">
-        <ScalarProperty Name="Id" ColumnName="ECHOCARDIOGRAPHY_VISIT_3_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" TypeName="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" StoreEntitySet="EchocardiographyVisit3Set">
       <EndProperty Name="VISIT_THREE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_THREE_Id" />
+      </EndProperty>
+      <EndProperty Name="ECHOCARDIOGRAPHY_VISIT_3">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" TypeName="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" StoreEntitySet="VisitOneOnes">
-      <EndProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_11">
-        <ScalarProperty Name="Id" ColumnName="EVALUATION_OF_SYMPTOMS_VISIT_11_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" TypeName="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" StoreEntitySet="EvaluationOfSymptomsVisit11Set">
       <EndProperty Name="VISIT_ONE_ONE">
+        <ScalarProperty Name="Id" ColumnName="VISIT_ONE_ONE_Id" />
+      </EndProperty>
+      <EndProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_11">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFBLOOD_CLINICAL_ANALYSIS" TypeName="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS" StoreEntitySet="CRFs">
+    <AssociationSetMapping Name="CRFBLOOD_CLINICAL_ANALYSIS" TypeName="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS" StoreEntitySet="BloodClinicalAnalyses">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
       <EndProperty Name="BLOOD_CLINICAL_ANALYSIS">
-        <ScalarProperty Name="Id" ColumnName="BLOOD_CLINICAL_ANALYSIS_Id" />
-      </EndProperty>
-      <EndProperty Name="CRF">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" TypeName="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" StoreEntitySet="CRFs">
+    <AssociationSetMapping Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" TypeName="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" StoreEntitySet="BloodTestsForMarkersOfInflammations">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
       <EndProperty Name="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-        <ScalarProperty Name="Id" ColumnName="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id" />
-      </EndProperty>
-      <EndProperty Name="CRF">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" TypeName="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" StoreEntitySet="CRFs">
+    <AssociationSetMapping Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" TypeName="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" StoreEntitySet="BloodTestsForMarkersOfCardiacDysfunctions">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
       <EndProperty Name="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-        <ScalarProperty Name="Id" ColumnName="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id" />
-      </EndProperty>
-      <EndProperty Name="CRF">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFBLOOD_CHEMISTRY" TypeName="CINCOPAModel.CRFBLOOD_CHEMISTRY" StoreEntitySet="CRFs">
+    <AssociationSetMapping Name="CRFBLOOD_CHEMISTRY" TypeName="CINCOPAModel.CRFBLOOD_CHEMISTRY" StoreEntitySet="BloodChemistrys">
+      <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
       <EndProperty Name="BLOOD_CHEMISTRY">
-        <ScalarProperty Name="Id" ColumnName="BLOOD_CHEMISTRY_Id" />
-      </EndProperty>
-      <EndProperty Name="CRF">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="CRFTEST_FOR_PNEUMOCOCCAL" TypeName="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL" StoreEntitySet="CRFs">
-      <EndProperty Name="TEST_FOR_PNEUMOCOCCAL">
-        <ScalarProperty Name="Id" ColumnName="TEST_FOR_PNEUMOCOCCAL_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="CRFTEST_FOR_PNEUMOCOCCAL" TypeName="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL" StoreEntitySet="TestForPneumococcals">
       <EndProperty Name="CRF">
+        <ScalarProperty Name="Id" ColumnName="CRF_Id" />
+      </EndProperty>
+      <EndProperty Name="TEST_FOR_PNEUMOCOCCAL">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

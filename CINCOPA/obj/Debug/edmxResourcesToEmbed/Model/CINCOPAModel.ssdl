@@ -165,15 +165,6 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_ONE_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_THREE_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BLOOD_CLINICAL_ANALYSIS_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BLOOD_CHEMISTRY_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="TEST_FOR_PNEUMOCOCCAL_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Wards">
     <Key>
@@ -207,13 +198,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="BASE_LIVE_INDICATORS_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ANAMNESTIC_DATA_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="EVALUATION_OF_SYMPTOMS_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ELECTROCARDIOGRAPHY_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ECHOCARDIOGRAPHY_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="XRAY_CHEST_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="VisitOneOnes">
     <Key>
@@ -227,7 +212,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="EVALUATION_OF_SYMPTOMS_VISIT_11_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="VisitTwoes">
     <Key>
@@ -241,8 +226,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="BASE_LIVE_INDICATORS_VISIT_2_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="EVALUATION_OF_SYMPTOMS_VISIT_2_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="VisitThrees">
     <Key>
@@ -256,7 +240,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="ECHOCARDIOGRAPHY_VISIT_3_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="AEs">
     <Key>
@@ -295,6 +279,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="AnamnesticDataVisit1Set">
     <Key>
@@ -316,6 +301,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="EvaluationOfSymptomsVisit1Set">
     <Key>
@@ -340,6 +326,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="ElectrocardiographyVisit1Set">
     <Key>
@@ -358,6 +345,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="EchocardiographyVisit1Set">
     <Key>
@@ -376,6 +364,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="XrayChestVisit1Set">
     <Key>
@@ -404,6 +393,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="ComputedTomographyChestVisit1Set">
     <Key>
@@ -432,6 +422,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="BaseLiveIndicatorsVisit2Set">
     <Key>
@@ -448,6 +439,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="EvaluationOfSymptomsVisit2Set">
     <Key>
@@ -473,6 +465,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="EchocardiographyVisit3Set">
     <Key>
@@ -491,6 +484,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="EvaluationOfSymptomsVisit11Set">
     <Key>
@@ -516,6 +510,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="BloodClinicalAnalyses">
     <Key>
@@ -535,6 +530,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="BloodTestsForMarkersOfInflammations">
     <Key>
@@ -558,6 +554,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="BloodTestsForMarkersOfCardiacDysfunctions">
     <Key>
@@ -578,6 +575,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="BloodChemistrys">
     <Key>
@@ -593,6 +591,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Organisms">
     <Key>
@@ -665,6 +664,7 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="MicrobiologySputums">
     <Key>
@@ -718,55 +718,65 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFVISIT_ONE">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VISIT_ONE">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="VISIT_ONE_Id" />
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFVISIT_ONE_ONE">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VisitOneOnes" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VisitOneOnes" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VISIT_ONE_ONE">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="VISIT_ONE_ONE_Id" />
+      <Dependent Role="VISIT_ONE_ONE">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFVISIT_THREE">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VisitThrees" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VisitThrees" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VISIT_THREE">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="VISIT_THREE_Id" />
+      <Dependent Role="VISIT_THREE">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFVISIT_TWO">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VISIT_TWO">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="VISIT_TWO_Id" />
+      <Dependent Role="VISIT_TWO">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFADVERSE_EVENT">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="ADVERSE_EVENT" Type="CINCOPAModel.Store.AEs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CRF">
@@ -778,187 +788,219 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="BASE_LIVE_INDICATORS_VISIT_1" Type="CINCOPAModel.Store.BaseLiveIndicatorsVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BASE_LIVE_INDICATORS_VISIT_1" Type="CINCOPAModel.Store.BaseLiveIndicatorsVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BASE_LIVE_INDICATORS_VISIT_1">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="BASE_LIVE_INDICATORS_VISIT_1_Id" />
+      <Dependent Role="BASE_LIVE_INDICATORS_VISIT_1">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEANAMNESTIC_DATA">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="ANAMNESTIC_DATA" Type="CINCOPAModel.Store.AnamnesticDataVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ANAMNESTIC_DATA" Type="CINCOPAModel.Store.AnamnesticDataVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ANAMNESTIC_DATA">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="ANAMNESTIC_DATA_Id" />
+      <Dependent Role="ANAMNESTIC_DATA">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="EVALUATION_OF_SYMPTOMS_VISIT_1">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="EVALUATION_OF_SYMPTOMS_VISIT_1_Id" />
+      <Dependent Role="EVALUATION_OF_SYMPTOMS_VISIT_1">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="ELECTROCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.ElectrocardiographyVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ELECTROCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.ElectrocardiographyVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ELECTROCARDIOGRAPHY_VISIT_1">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="ELECTROCARDIOGRAPHY_VISIT_1_Id" />
+      <Dependent Role="ELECTROCARDIOGRAPHY_VISIT_1">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="ECHOCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.EchocardiographyVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ECHOCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.EchocardiographyVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ECHOCARDIOGRAPHY_VISIT_1">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="ECHOCARDIOGRAPHY_VISIT_1_Id" />
+      <Dependent Role="ECHOCARDIOGRAPHY_VISIT_1">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEXRAY_CHEST_VISIT_1">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="XRAY_CHEST_VISIT_1" Type="CINCOPAModel.Store.XrayChestVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="XRAY_CHEST_VISIT_1" Type="CINCOPAModel.Store.XrayChestVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="XRAY_CHEST_VISIT_1">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="XRAY_CHEST_VISIT_1_Id" />
+      <Dependent Role="XRAY_CHEST_VISIT_1">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
-    <End Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Type="CINCOPAModel.Store.ComputedTomographyChestVisit1Set" Multiplicity="1" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Type="CINCOPAModel.Store.ComputedTomographyChestVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE">
-        <PropertyRef Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id" />
+      <Dependent Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
+        <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
-    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="*" />
-    <End Role="BASE_LIVE_INDICATORS_VISIT_2" Type="CINCOPAModel.Store.BaseLiveIndicatorsVisit2Set" Multiplicity="1" />
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BASE_LIVE_INDICATORS_VISIT_2" Type="CINCOPAModel.Store.BaseLiveIndicatorsVisit2Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BASE_LIVE_INDICATORS_VISIT_2">
+      <Principal Role="VISIT_TWO">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_TWO">
-        <PropertyRef Name="BASE_LIVE_INDICATORS_VISIT_2_Id" />
+      <Dependent Role="BASE_LIVE_INDICATORS_VISIT_2">
+        <PropertyRef Name="VISIT_TWO_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
-    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="*" />
-    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_2" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit2Set" Multiplicity="1" />
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_2" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit2Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="EVALUATION_OF_SYMPTOMS_VISIT_2">
+      <Principal Role="VISIT_TWO">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_TWO">
-        <PropertyRef Name="EVALUATION_OF_SYMPTOMS_VISIT_2_Id" />
+      <Dependent Role="EVALUATION_OF_SYMPTOMS_VISIT_2">
+        <PropertyRef Name="VISIT_TWO_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
-    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VisitThrees" Multiplicity="*" />
-    <End Role="ECHOCARDIOGRAPHY_VISIT_3" Type="CINCOPAModel.Store.EchocardiographyVisit3Set" Multiplicity="1" />
+    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VisitThrees" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ECHOCARDIOGRAPHY_VISIT_3" Type="CINCOPAModel.Store.EchocardiographyVisit3Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ECHOCARDIOGRAPHY_VISIT_3">
+      <Principal Role="VISIT_THREE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_THREE">
-        <PropertyRef Name="ECHOCARDIOGRAPHY_VISIT_3_Id" />
+      <Dependent Role="ECHOCARDIOGRAPHY_VISIT_3">
+        <PropertyRef Name="VISIT_THREE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
-    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VisitOneOnes" Multiplicity="*" />
-    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_11" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit11Set" Multiplicity="1" />
+    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VisitOneOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_11" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit11Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="EVALUATION_OF_SYMPTOMS_VISIT_11">
+      <Principal Role="VISIT_ONE_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="VISIT_ONE_ONE">
-        <PropertyRef Name="EVALUATION_OF_SYMPTOMS_VISIT_11_Id" />
+      <Dependent Role="EVALUATION_OF_SYMPTOMS_VISIT_11">
+        <PropertyRef Name="VISIT_ONE_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFBLOOD_CLINICAL_ANALYSIS">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="BLOOD_CLINICAL_ANALYSIS" Type="CINCOPAModel.Store.BloodClinicalAnalyses" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_CLINICAL_ANALYSIS" Type="CINCOPAModel.Store.BloodClinicalAnalyses" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BLOOD_CLINICAL_ANALYSIS">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="BLOOD_CLINICAL_ANALYSIS_Id" />
+      <Dependent Role="BLOOD_CLINICAL_ANALYSIS">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Type="CINCOPAModel.Store.BloodTestsForMarkersOfInflammations" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Type="CINCOPAModel.Store.BloodTestsForMarkersOfInflammations" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id" />
+      <Dependent Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Type="CINCOPAModel.Store.BloodTestsForMarkersOfCardiacDysfunctions" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Type="CINCOPAModel.Store.BloodTestsForMarkersOfCardiacDysfunctions" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id" />
+      <Dependent Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFBLOOD_CHEMISTRY">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="BLOOD_CHEMISTRY" Type="CINCOPAModel.Store.BloodChemistrys" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_CHEMISTRY" Type="CINCOPAModel.Store.BloodChemistrys" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BLOOD_CHEMISTRY">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="BLOOD_CHEMISTRY_Id" />
+      <Dependent Role="BLOOD_CHEMISTRY">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFAB_THERAPY">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="AB_THERAPY" Type="CINCOPAModel.Store.AbTherapys" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CRF">
@@ -994,19 +1036,23 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFTEST_FOR_PNEUMOCOCCAL">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
-    <End Role="TEST_FOR_PNEUMOCOCCAL" Type="CINCOPAModel.Store.TestForPneumococcals" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TEST_FOR_PNEUMOCOCCAL" Type="CINCOPAModel.Store.TestForPneumococcals" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="TEST_FOR_PNEUMOCOCCAL">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CRF">
-        <PropertyRef Name="TEST_FOR_PNEUMOCOCCAL_Id" />
+      <Dependent Role="TEST_FOR_PNEUMOCOCCAL">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFMICROBIOLOGY_SPUTUM">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="MICROBIOLOGY_SPUTUM" Type="CINCOPAModel.Store.MicrobiologySputums" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CRF">
@@ -1018,7 +1064,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFMICROBIOLOGY_BLOOD">
-    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1" />
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="MICROBIOLOGY_BLOOD" Type="CINCOPAModel.Store.MicrobiologyBloods" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CRF">

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/16/2014 10:17:32
+-- Date Created: 09/16/2014 14:26:08
 -- Generated from EDMX file: C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\Model\CINCOPAModel.edmx
 -- --------------------------------------------------
 
@@ -21,7 +21,7 @@ IF OBJECT_ID(N'[dbo].[FK_CRFWARD]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CRFs] DROP CONSTRAINT [FK_CRFWARD];
 GO
 IF OBJECT_ID(N'[dbo].[FK_CRFVISIT_ONE]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[CRFs] DROP CONSTRAINT [FK_CRFVISIT_ONE];
+    ALTER TABLE [dbo].[VisitOnes] DROP CONSTRAINT [FK_CRFVISIT_ONE];
 GO
 IF OBJECT_ID(N'[dbo].[FK_CRFVISIT_ONE_ONE]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CRFs] DROP CONSTRAINT [FK_CRFVISIT_ONE_ONE];
@@ -218,16 +218,7 @@ CREATE TABLE [dbo].[CRFs] (
     [CreatedByDate] nvarchar(max)  NOT NULL,
     [UpdatedBy] nvarchar(max)  NOT NULL,
     [UpdatedByDate] nvarchar(max)  NOT NULL,
-    [StateCode] nvarchar(max)  NULL,
-    [VISIT_ONE_Id] uniqueidentifier  NOT NULL,
-    [VISIT_ONE_ONE_Id] uniqueidentifier  NOT NULL,
-    [VISIT_THREE_Id] uniqueidentifier  NOT NULL,
-    [VISIT_TWO_Id] uniqueidentifier  NOT NULL,
-    [BLOOD_CLINICAL_ANALYSIS_Id] uniqueidentifier  NOT NULL,
-    [BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id] uniqueidentifier  NOT NULL,
-    [BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id] uniqueidentifier  NOT NULL,
-    [BLOOD_CHEMISTRY_Id] uniqueidentifier  NOT NULL,
-    [TEST_FOR_PNEUMOCOCCAL_Id] uniqueidentifier  NOT NULL
+    [StateCode] nvarchar(max)  NULL
 );
 GO
 
@@ -261,13 +252,7 @@ CREATE TABLE [dbo].[VisitOnes] (
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
     [StateCode] nvarchar(max)  NULL,
-    [BASE_LIVE_INDICATORS_VISIT_1_Id] uniqueidentifier  NOT NULL,
-    [ANAMNESTIC_DATA_Id] uniqueidentifier  NOT NULL,
-    [EVALUATION_OF_SYMPTOMS_VISIT_1_Id] uniqueidentifier  NOT NULL,
-    [ELECTROCARDIOGRAPHY_VISIT_1_Id] uniqueidentifier  NOT NULL,
-    [ECHOCARDIOGRAPHY_VISIT_1_Id] uniqueidentifier  NOT NULL,
-    [XRAY_CHEST_VISIT_1_Id] uniqueidentifier  NOT NULL,
-    [COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id] uniqueidentifier  NOT NULL
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -281,7 +266,7 @@ CREATE TABLE [dbo].[VisitOneOnes] (
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
     [StateCode] nvarchar(max)  NULL,
-    [EVALUATION_OF_SYMPTOMS_VISIT_11_Id] uniqueidentifier  NOT NULL
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -295,8 +280,7 @@ CREATE TABLE [dbo].[VisitTwoes] (
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
     [StateCode] nvarchar(max)  NULL,
-    [BASE_LIVE_INDICATORS_VISIT_2_Id] uniqueidentifier  NOT NULL,
-    [EVALUATION_OF_SYMPTOMS_VISIT_2_Id] uniqueidentifier  NOT NULL
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -310,7 +294,7 @@ CREATE TABLE [dbo].[VisitThrees] (
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
     [StateCode] nvarchar(max)  NULL,
-    [ECHOCARDIOGRAPHY_VISIT_3_Id] uniqueidentifier  NOT NULL
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -348,7 +332,8 @@ CREATE TABLE [dbo].[BaseLiveIndicatorsVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -369,7 +354,8 @@ CREATE TABLE [dbo].[AnamnesticDataVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -393,7 +379,8 @@ CREATE TABLE [dbo].[EvaluationOfSymptomsVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -411,7 +398,8 @@ CREATE TABLE [dbo].[ElectrocardiographyVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -429,7 +417,8 @@ CREATE TABLE [dbo].[EchocardiographyVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -457,7 +446,8 @@ CREATE TABLE [dbo].[XrayChestVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -485,7 +475,8 @@ CREATE TABLE [dbo].[ComputedTomographyChestVisit1Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -501,7 +492,8 @@ CREATE TABLE [dbo].[BaseLiveIndicatorsVisit2Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_TWO_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -526,7 +518,8 @@ CREATE TABLE [dbo].[EvaluationOfSymptomsVisit2Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_TWO_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -544,7 +537,8 @@ CREATE TABLE [dbo].[EchocardiographyVisit3Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_THREE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -569,7 +563,8 @@ CREATE TABLE [dbo].[EvaluationOfSymptomsVisit11Set] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [VISIT_ONE_ONE_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -588,7 +583,8 @@ CREATE TABLE [dbo].[BloodClinicalAnalyses] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -611,7 +607,8 @@ CREATE TABLE [dbo].[BloodTestsForMarkersOfInflammations] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -631,7 +628,8 @@ CREATE TABLE [dbo].[BloodTestsForMarkersOfCardiacDysfunctions] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -646,7 +644,8 @@ CREATE TABLE [dbo].[BloodChemistrys] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -718,7 +717,8 @@ CREATE TABLE [dbo].[TestForPneumococcals] (
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,
     [UpdatedByDate] nvarchar(max)  NULL,
-    [StateCode] nvarchar(max)  NULL
+    [StateCode] nvarchar(max)  NULL,
+    [CRF_Id] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -963,60 +963,60 @@ ON [dbo].[CRFs]
     ([WARDId]);
 GO
 
--- Creating foreign key on [VISIT_ONE_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'VisitOnes'
+ALTER TABLE [dbo].[VisitOnes]
 ADD CONSTRAINT [FK_CRFVISIT_ONE]
-    FOREIGN KEY ([VISIT_ONE_Id])
-    REFERENCES [dbo].[VisitOnes]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFVISIT_ONE'
 CREATE INDEX [IX_FK_CRFVISIT_ONE]
-ON [dbo].[CRFs]
-    ([VISIT_ONE_Id]);
+ON [dbo].[VisitOnes]
+    ([CRF_Id]);
 GO
 
--- Creating foreign key on [VISIT_ONE_ONE_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'VisitOneOnes'
+ALTER TABLE [dbo].[VisitOneOnes]
 ADD CONSTRAINT [FK_CRFVISIT_ONE_ONE]
-    FOREIGN KEY ([VISIT_ONE_ONE_Id])
-    REFERENCES [dbo].[VisitOneOnes]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFVISIT_ONE_ONE'
 CREATE INDEX [IX_FK_CRFVISIT_ONE_ONE]
-ON [dbo].[CRFs]
-    ([VISIT_ONE_ONE_Id]);
+ON [dbo].[VisitOneOnes]
+    ([CRF_Id]);
 GO
 
--- Creating foreign key on [VISIT_THREE_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'VisitThrees'
+ALTER TABLE [dbo].[VisitThrees]
 ADD CONSTRAINT [FK_CRFVISIT_THREE]
-    FOREIGN KEY ([VISIT_THREE_Id])
-    REFERENCES [dbo].[VisitThrees]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFVISIT_THREE'
 CREATE INDEX [IX_FK_CRFVISIT_THREE]
-ON [dbo].[CRFs]
-    ([VISIT_THREE_Id]);
+ON [dbo].[VisitThrees]
+    ([CRF_Id]);
 GO
 
--- Creating foreign key on [VISIT_TWO_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'VisitTwoes'
+ALTER TABLE [dbo].[VisitTwoes]
 ADD CONSTRAINT [FK_CRFVISIT_TWO]
-    FOREIGN KEY ([VISIT_TWO_Id])
-    REFERENCES [dbo].[VisitTwoes]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFVISIT_TWO'
 CREATE INDEX [IX_FK_CRFVISIT_TWO]
-ON [dbo].[CRFs]
-    ([VISIT_TWO_Id]);
+ON [dbo].[VisitTwoes]
+    ([CRF_Id]);
 GO
 
 -- Creating foreign key on [CRFId] in table 'AEs'
@@ -1025,7 +1025,7 @@ ADD CONSTRAINT [FK_CRFADVERSE_EVENT]
     FOREIGN KEY ([CRFId])
     REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFADVERSE_EVENT'
 CREATE INDEX [IX_FK_CRFADVERSE_EVENT]
@@ -1033,214 +1033,214 @@ ON [dbo].[AEs]
     ([CRFId]);
 GO
 
--- Creating foreign key on [BASE_LIVE_INDICATORS_VISIT_1_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'BaseLiveIndicatorsVisit1Set'
+ALTER TABLE [dbo].[BaseLiveIndicatorsVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1]
-    FOREIGN KEY ([BASE_LIVE_INDICATORS_VISIT_1_Id])
-    REFERENCES [dbo].[BaseLiveIndicatorsVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1'
 CREATE INDEX [IX_FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1]
-ON [dbo].[VisitOnes]
-    ([BASE_LIVE_INDICATORS_VISIT_1_Id]);
+ON [dbo].[BaseLiveIndicatorsVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [ANAMNESTIC_DATA_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'AnamnesticDataVisit1Set'
+ALTER TABLE [dbo].[AnamnesticDataVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONEANAMNESTIC_DATA]
-    FOREIGN KEY ([ANAMNESTIC_DATA_Id])
-    REFERENCES [dbo].[AnamnesticDataVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONEANAMNESTIC_DATA'
 CREATE INDEX [IX_FK_VISIT_ONEANAMNESTIC_DATA]
-ON [dbo].[VisitOnes]
-    ([ANAMNESTIC_DATA_Id]);
+ON [dbo].[AnamnesticDataVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [EVALUATION_OF_SYMPTOMS_VISIT_1_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'EvaluationOfSymptomsVisit1Set'
+ALTER TABLE [dbo].[EvaluationOfSymptomsVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1]
-    FOREIGN KEY ([EVALUATION_OF_SYMPTOMS_VISIT_1_Id])
-    REFERENCES [dbo].[EvaluationOfSymptomsVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1'
 CREATE INDEX [IX_FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1]
-ON [dbo].[VisitOnes]
-    ([EVALUATION_OF_SYMPTOMS_VISIT_1_Id]);
+ON [dbo].[EvaluationOfSymptomsVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [ELECTROCARDIOGRAPHY_VISIT_1_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'ElectrocardiographyVisit1Set'
+ALTER TABLE [dbo].[ElectrocardiographyVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1]
-    FOREIGN KEY ([ELECTROCARDIOGRAPHY_VISIT_1_Id])
-    REFERENCES [dbo].[ElectrocardiographyVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1'
 CREATE INDEX [IX_FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1]
-ON [dbo].[VisitOnes]
-    ([ELECTROCARDIOGRAPHY_VISIT_1_Id]);
+ON [dbo].[ElectrocardiographyVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [ECHOCARDIOGRAPHY_VISIT_1_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'EchocardiographyVisit1Set'
+ALTER TABLE [dbo].[EchocardiographyVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1]
-    FOREIGN KEY ([ECHOCARDIOGRAPHY_VISIT_1_Id])
-    REFERENCES [dbo].[EchocardiographyVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1'
 CREATE INDEX [IX_FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1]
-ON [dbo].[VisitOnes]
-    ([ECHOCARDIOGRAPHY_VISIT_1_Id]);
+ON [dbo].[EchocardiographyVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [XRAY_CHEST_VISIT_1_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'XrayChestVisit1Set'
+ALTER TABLE [dbo].[XrayChestVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONEXRAY_CHEST_VISIT_1]
-    FOREIGN KEY ([XRAY_CHEST_VISIT_1_Id])
-    REFERENCES [dbo].[XrayChestVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONEXRAY_CHEST_VISIT_1'
 CREATE INDEX [IX_FK_VISIT_ONEXRAY_CHEST_VISIT_1]
-ON [dbo].[VisitOnes]
-    ([XRAY_CHEST_VISIT_1_Id]);
+ON [dbo].[XrayChestVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id] in table 'VisitOnes'
-ALTER TABLE [dbo].[VisitOnes]
+-- Creating foreign key on [VISIT_ONE_Id] in table 'ComputedTomographyChestVisit1Set'
+ALTER TABLE [dbo].[ComputedTomographyChestVisit1Set]
 ADD CONSTRAINT [FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1]
-    FOREIGN KEY ([COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id])
-    REFERENCES [dbo].[ComputedTomographyChestVisit1Set]
+    FOREIGN KEY ([VISIT_ONE_Id])
+    REFERENCES [dbo].[VisitOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1'
 CREATE INDEX [IX_FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1]
-ON [dbo].[VisitOnes]
-    ([COMPUTED_TOMOGRAPHY_CHEST_VISIT_1_Id]);
+ON [dbo].[ComputedTomographyChestVisit1Set]
+    ([VISIT_ONE_Id]);
 GO
 
--- Creating foreign key on [BASE_LIVE_INDICATORS_VISIT_2_Id] in table 'VisitTwoes'
-ALTER TABLE [dbo].[VisitTwoes]
+-- Creating foreign key on [VISIT_TWO_Id] in table 'BaseLiveIndicatorsVisit2Set'
+ALTER TABLE [dbo].[BaseLiveIndicatorsVisit2Set]
 ADD CONSTRAINT [FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2]
-    FOREIGN KEY ([BASE_LIVE_INDICATORS_VISIT_2_Id])
-    REFERENCES [dbo].[BaseLiveIndicatorsVisit2Set]
+    FOREIGN KEY ([VISIT_TWO_Id])
+    REFERENCES [dbo].[VisitTwoes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2'
 CREATE INDEX [IX_FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2]
-ON [dbo].[VisitTwoes]
-    ([BASE_LIVE_INDICATORS_VISIT_2_Id]);
+ON [dbo].[BaseLiveIndicatorsVisit2Set]
+    ([VISIT_TWO_Id]);
 GO
 
--- Creating foreign key on [EVALUATION_OF_SYMPTOMS_VISIT_2_Id] in table 'VisitTwoes'
-ALTER TABLE [dbo].[VisitTwoes]
+-- Creating foreign key on [VISIT_TWO_Id] in table 'EvaluationOfSymptomsVisit2Set'
+ALTER TABLE [dbo].[EvaluationOfSymptomsVisit2Set]
 ADD CONSTRAINT [FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2]
-    FOREIGN KEY ([EVALUATION_OF_SYMPTOMS_VISIT_2_Id])
-    REFERENCES [dbo].[EvaluationOfSymptomsVisit2Set]
+    FOREIGN KEY ([VISIT_TWO_Id])
+    REFERENCES [dbo].[VisitTwoes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2'
 CREATE INDEX [IX_FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2]
-ON [dbo].[VisitTwoes]
-    ([EVALUATION_OF_SYMPTOMS_VISIT_2_Id]);
+ON [dbo].[EvaluationOfSymptomsVisit2Set]
+    ([VISIT_TWO_Id]);
 GO
 
--- Creating foreign key on [ECHOCARDIOGRAPHY_VISIT_3_Id] in table 'VisitThrees'
-ALTER TABLE [dbo].[VisitThrees]
+-- Creating foreign key on [VISIT_THREE_Id] in table 'EchocardiographyVisit3Set'
+ALTER TABLE [dbo].[EchocardiographyVisit3Set]
 ADD CONSTRAINT [FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3]
-    FOREIGN KEY ([ECHOCARDIOGRAPHY_VISIT_3_Id])
-    REFERENCES [dbo].[EchocardiographyVisit3Set]
+    FOREIGN KEY ([VISIT_THREE_Id])
+    REFERENCES [dbo].[VisitThrees]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3'
 CREATE INDEX [IX_FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3]
-ON [dbo].[VisitThrees]
-    ([ECHOCARDIOGRAPHY_VISIT_3_Id]);
+ON [dbo].[EchocardiographyVisit3Set]
+    ([VISIT_THREE_Id]);
 GO
 
--- Creating foreign key on [EVALUATION_OF_SYMPTOMS_VISIT_11_Id] in table 'VisitOneOnes'
-ALTER TABLE [dbo].[VisitOneOnes]
+-- Creating foreign key on [VISIT_ONE_ONE_Id] in table 'EvaluationOfSymptomsVisit11Set'
+ALTER TABLE [dbo].[EvaluationOfSymptomsVisit11Set]
 ADD CONSTRAINT [FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11]
-    FOREIGN KEY ([EVALUATION_OF_SYMPTOMS_VISIT_11_Id])
-    REFERENCES [dbo].[EvaluationOfSymptomsVisit11Set]
+    FOREIGN KEY ([VISIT_ONE_ONE_Id])
+    REFERENCES [dbo].[VisitOneOnes]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11'
 CREATE INDEX [IX_FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11]
-ON [dbo].[VisitOneOnes]
-    ([EVALUATION_OF_SYMPTOMS_VISIT_11_Id]);
+ON [dbo].[EvaluationOfSymptomsVisit11Set]
+    ([VISIT_ONE_ONE_Id]);
 GO
 
--- Creating foreign key on [BLOOD_CLINICAL_ANALYSIS_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'BloodClinicalAnalyses'
+ALTER TABLE [dbo].[BloodClinicalAnalyses]
 ADD CONSTRAINT [FK_CRFBLOOD_CLINICAL_ANALYSIS]
-    FOREIGN KEY ([BLOOD_CLINICAL_ANALYSIS_Id])
-    REFERENCES [dbo].[BloodClinicalAnalyses]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFBLOOD_CLINICAL_ANALYSIS'
 CREATE INDEX [IX_FK_CRFBLOOD_CLINICAL_ANALYSIS]
-ON [dbo].[CRFs]
-    ([BLOOD_CLINICAL_ANALYSIS_Id]);
+ON [dbo].[BloodClinicalAnalyses]
+    ([CRF_Id]);
 GO
 
--- Creating foreign key on [BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'BloodTestsForMarkersOfInflammations'
+ALTER TABLE [dbo].[BloodTestsForMarkersOfInflammations]
 ADD CONSTRAINT [FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION]
-    FOREIGN KEY ([BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id])
-    REFERENCES [dbo].[BloodTestsForMarkersOfInflammations]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION'
 CREATE INDEX [IX_FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION]
-ON [dbo].[CRFs]
-    ([BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION_Id]);
+ON [dbo].[BloodTestsForMarkersOfInflammations]
+    ([CRF_Id]);
 GO
 
--- Creating foreign key on [BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'BloodTestsForMarkersOfCardiacDysfunctions'
+ALTER TABLE [dbo].[BloodTestsForMarkersOfCardiacDysfunctions]
 ADD CONSTRAINT [FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION]
-    FOREIGN KEY ([BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id])
-    REFERENCES [dbo].[BloodTestsForMarkersOfCardiacDysfunctions]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION'
 CREATE INDEX [IX_FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION]
-ON [dbo].[CRFs]
-    ([BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION_Id]);
+ON [dbo].[BloodTestsForMarkersOfCardiacDysfunctions]
+    ([CRF_Id]);
 GO
 
--- Creating foreign key on [BLOOD_CHEMISTRY_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'BloodChemistrys'
+ALTER TABLE [dbo].[BloodChemistrys]
 ADD CONSTRAINT [FK_CRFBLOOD_CHEMISTRY]
-    FOREIGN KEY ([BLOOD_CHEMISTRY_Id])
-    REFERENCES [dbo].[BloodChemistrys]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFBLOOD_CHEMISTRY'
 CREATE INDEX [IX_FK_CRFBLOOD_CHEMISTRY]
-ON [dbo].[CRFs]
-    ([BLOOD_CHEMISTRY_Id]);
+ON [dbo].[BloodChemistrys]
+    ([CRF_Id]);
 GO
 
 -- Creating foreign key on [CRFId] in table 'AbTherapys'
@@ -1249,7 +1249,7 @@ ADD CONSTRAINT [FK_CRFAB_THERAPY]
     FOREIGN KEY ([CRFId])
     REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFAB_THERAPY'
 CREATE INDEX [IX_FK_CRFAB_THERAPY]
@@ -1285,18 +1285,18 @@ ON [dbo].[AbTherapys]
     ([DRUGId]);
 GO
 
--- Creating foreign key on [TEST_FOR_PNEUMOCOCCAL_Id] in table 'CRFs'
-ALTER TABLE [dbo].[CRFs]
+-- Creating foreign key on [CRF_Id] in table 'TestForPneumococcals'
+ALTER TABLE [dbo].[TestForPneumococcals]
 ADD CONSTRAINT [FK_CRFTEST_FOR_PNEUMOCOCCAL]
-    FOREIGN KEY ([TEST_FOR_PNEUMOCOCCAL_Id])
-    REFERENCES [dbo].[TestForPneumococcals]
+    FOREIGN KEY ([CRF_Id])
+    REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFTEST_FOR_PNEUMOCOCCAL'
 CREATE INDEX [IX_FK_CRFTEST_FOR_PNEUMOCOCCAL]
-ON [dbo].[CRFs]
-    ([TEST_FOR_PNEUMOCOCCAL_Id]);
+ON [dbo].[TestForPneumococcals]
+    ([CRF_Id]);
 GO
 
 -- Creating foreign key on [CRFId] in table 'MicrobiologySputums'
@@ -1305,7 +1305,7 @@ ADD CONSTRAINT [FK_CRFMICROBIOLOGY_SPUTUM]
     FOREIGN KEY ([CRFId])
     REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFMICROBIOLOGY_SPUTUM'
 CREATE INDEX [IX_FK_CRFMICROBIOLOGY_SPUTUM]
@@ -1319,7 +1319,7 @@ ADD CONSTRAINT [FK_CRFMICROBIOLOGY_BLOOD]
     FOREIGN KEY ([CRFId])
     REFERENCES [dbo].[CRFs]
         ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CRFMICROBIOLOGY_BLOOD'
 CREATE INDEX [IX_FK_CRFMICROBIOLOGY_BLOOD]

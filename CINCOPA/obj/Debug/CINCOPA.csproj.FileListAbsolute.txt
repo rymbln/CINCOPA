@@ -15,4 +15,3 @@ c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\
 c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA_Content.g.cs
 c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\LoginView.baml
 c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\LoginView.g.cs
-c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache

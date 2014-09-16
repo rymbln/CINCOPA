@@ -40,8 +40,8 @@ namespace CINCOPA.Views
                     //window.Show();
                     MessageBox.Show("Worked!");
 
-                    var obj = DataManager.Instance.CreateCrf();
-                    DataManager.Instance.Save();
+                 //   var obj = DataManager.Instance.CreateCrf();
+               //     DataManager.Instance.Save();
                    
                     //   this.Close();
                 }

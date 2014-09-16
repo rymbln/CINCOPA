@@ -321,23 +321,33 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="CRFVISIT_ONE">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
   </Association>
   <Association Name="CRFVISIT_ONE_ONE">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.VISIT_ONE_ONE" Multiplicity="1" Role="VISIT_ONE_ONE" />
   </Association>
   <Association Name="CRFVISIT_THREE">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.VISIT_THREE" Multiplicity="1" Role="VISIT_THREE" />
   </Association>
   <Association Name="CRFVISIT_TWO">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO" />
   </Association>
   <Association Name="CRFADVERSE_EVENT">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.ADVERSE_EVENT" Multiplicity="*" Role="ADVERSE_EVENT" />
     <ReferentialConstraint>
       <Principal Role="CRF">
@@ -349,7 +359,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" Multiplicity="1" Role="BASE_LIVE_INDICATORS_VISIT_1" />
   </Association>
   <EntityType Name="ANAMNESTIC_DATA_VISIT_1">
@@ -375,7 +387,9 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEANAMNESTIC_DATA">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" Multiplicity="1" Role="ANAMNESTIC_DATA" />
   </Association>
   <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_1">
@@ -404,7 +418,9 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" Multiplicity="1" Role="EVALUATION_OF_SYMPTOMS_VISIT_1" />
   </Association>
   <EntityType Name="ELECTROCARDIOGRAPHY_VISIT_1">
@@ -427,7 +443,9 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" Multiplicity="1" Role="ELECTROCARDIOGRAPHY_VISIT_1" />
   </Association>
   <EntityType Name="ECHOCARDIOGRAPHY_VISIT_1">
@@ -450,7 +468,9 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" Multiplicity="1" Role="ECHOCARDIOGRAPHY_VISIT_1" />
   </Association>
   <EntityType Name="XRAY_CHEST_VISIT_1">
@@ -483,7 +503,9 @@
     <Property Type="String" Name="StateCode" Nullable="true" />
   </EntityType>
   <Association Name="VISIT_ONEXRAY_CHEST_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.XRAY_CHEST_VISIT_1" Multiplicity="1" Role="XRAY_CHEST_VISIT_1" />
   </Association>
   <EntityType Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
@@ -516,7 +538,9 @@
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" FromRole="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" ToRole="VISIT_ONE" />
   </EntityType>
   <Association Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Multiplicity="1" Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" />
   </Association>
   <EntityType Name="BASE_LIVE_INDICATORS_VISIT_2">
@@ -537,7 +561,9 @@
     <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" FromRole="BASE_LIVE_INDICATORS_VISIT_2" ToRole="VISIT_TWO" />
   </EntityType>
   <Association Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
-    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO" />
+    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_2" Multiplicity="1" Role="BASE_LIVE_INDICATORS_VISIT_2" />
   </Association>
   <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_2">
@@ -567,7 +593,9 @@
     <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_2" ToRole="VISIT_TWO" />
   </EntityType>
   <Association Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
-    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO" />
+    <End Type="CINCOPAModel.VISIT_TWO" Multiplicity="1" Role="VISIT_TWO">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_2" Multiplicity="1" Role="EVALUATION_OF_SYMPTOMS_VISIT_2" />
   </Association>
   <EntityType Name="ECHOCARDIOGRAPHY_VISIT_3">
@@ -590,7 +618,9 @@
     <NavigationProperty Name="VISIT_THREE" Relationship="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" FromRole="ECHOCARDIOGRAPHY_VISIT_3" ToRole="VISIT_THREE" />
   </EntityType>
   <Association Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
-    <End Type="CINCOPAModel.VISIT_THREE" Multiplicity="1" Role="VISIT_THREE" />
+    <End Type="CINCOPAModel.VISIT_THREE" Multiplicity="1" Role="VISIT_THREE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_3" Multiplicity="1" Role="ECHOCARDIOGRAPHY_VISIT_3" />
   </Association>
   <EntityType Name="EVALUATION_OF_SYMPTOMS_VISIT_11">
@@ -620,7 +650,9 @@
     <NavigationProperty Name="VISIT_ONE_ONE" Relationship="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_11" ToRole="VISIT_ONE_ONE" />
   </EntityType>
   <Association Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
-    <End Type="CINCOPAModel.VISIT_ONE_ONE" Multiplicity="1" Role="VISIT_ONE_ONE" />
+    <End Type="CINCOPAModel.VISIT_ONE_ONE" Multiplicity="1" Role="VISIT_ONE_ONE">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_11" Multiplicity="1" Role="EVALUATION_OF_SYMPTOMS_VISIT_11" />
   </Association>
   <EntityType Name="BLOOD_CLINICAL_ANALYSIS">
@@ -644,7 +676,9 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS" FromRole="BLOOD_CLINICAL_ANALYSIS" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_CLINICAL_ANALYSIS">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.BLOOD_CLINICAL_ANALYSIS" Multiplicity="1" Role="BLOOD_CLINICAL_ANALYSIS" />
   </Association>
   <EntityType Name="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
@@ -672,7 +706,9 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Multiplicity="1" Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" />
   </Association>
   <EntityType Name="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
@@ -697,7 +733,9 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Multiplicity="1" Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" />
   </Association>
   <EntityType Name="BLOOD_CHEMISTRY">
@@ -717,7 +755,9 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_CHEMISTRY" FromRole="BLOOD_CHEMISTRY" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_CHEMISTRY">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.BLOOD_CHEMISTRY" Multiplicity="1" Role="BLOOD_CHEMISTRY" />
   </Association>
   <EntityType Name="ORGANISM">
@@ -787,7 +827,9 @@
     <NavigationProperty Name="DRUG" Relationship="CINCOPAModel.DRUGAB_THERAPY" FromRole="AB_THERAPY" ToRole="DRUG" />
   </EntityType>
   <Association Name="CRFAB_THERAPY">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.AB_THERAPY" Multiplicity="*" Role="AB_THERAPY" />
     <ReferentialConstraint>
       <Principal Role="CRF">
@@ -837,7 +879,9 @@
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL" FromRole="TEST_FOR_PNEUMOCOCCAL" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFTEST_FOR_PNEUMOCOCCAL">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.TEST_FOR_PNEUMOCOCCAL" Multiplicity="1" Role="TEST_FOR_PNEUMOCOCCAL" />
   </Association>
   <EntityType Name="MICROBIOLOGY_SPUTUM">
@@ -884,7 +928,9 @@
     <NavigationProperty Name="ORGANISM" Relationship="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD" FromRole="MICROBIOLOGY_BLOOD" ToRole="ORGANISM" />
   </EntityType>
   <Association Name="CRFMICROBIOLOGY_SPUTUM">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.MICROBIOLOGY_SPUTUM" Multiplicity="*" Role="MICROBIOLOGY_SPUTUM" />
     <ReferentialConstraint>
       <Principal Role="CRF">
@@ -896,7 +942,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CRFMICROBIOLOGY_BLOOD">
-    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF" />
+    <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="CINCOPAModel.MICROBIOLOGY_BLOOD" Multiplicity="*" Role="MICROBIOLOGY_BLOOD" />
     <ReferentialConstraint>
       <Principal Role="CRF">
