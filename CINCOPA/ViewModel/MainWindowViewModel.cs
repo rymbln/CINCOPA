@@ -7,6 +7,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using CINCOPA.Common;
 using CINCOPA.Model;
+using CINCOPA.Views;
 
 namespace CINCOPA.ViewModel
 {
@@ -51,12 +52,16 @@ namespace CINCOPA.ViewModel
 
         private void OpenCrf()
         {
-            //Todo
+            var vm = CurrentCrf;
+            var v = new CrfView { DataContext = vm };
+            v.Show();
         }
 
         private void AddCrf()
         {
-            //Todo   
+            var vm = DataManager.Instance.CreateCrf();
+            var v = new CrfView {DataContext = vm};
+            v.Show();
         }
 
         private void DeleteCrf()

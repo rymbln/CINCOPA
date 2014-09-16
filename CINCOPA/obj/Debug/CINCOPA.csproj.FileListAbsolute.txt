@@ -16,3 +16,8 @@ c:\users\rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\MainWindow.baml
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\ControlResources.baml
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\CrfView.baml
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\App.baml
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\CrfView.g.cs
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\Xceed.Wpf.Toolkit.dll

@@ -1,0 +1,199 @@
+﻿<Window x:Class="CINCOPA.Views.CrfView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="CrfView" Height="768" Width="1024">
+    <ScrollViewer>
+        <DockPanel>
+            <ToolBarTray DockPanel.Dock="Top">
+                <ToolBar>
+                    <Button Command="{Binding SaveCommand}" Content="Сохранить"/>
+                    <Separator/>
+                    <Button Command="{Binding CheckCommand}" Content="Проверить"/>
+                    <Separator/>
+                    <Button Command="{Binding CancelCommand}" Content="Отмена"/>
+                </ToolBar>
+            </ToolBarTray>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <HeaderedContentControl Grid.Row="0" Style="{StaticResource SubDisplayArea}" Margin="2">
+                    <HeaderedContentControl.Header>
+                        Личная информация
+                    </HeaderedContentControl.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Content="№ ИРК:"  />
+                        <TextBox Grid.Column="1" Grid.Row="0" 
+                                 Text="{Binding Path=FieldNUMBER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                        <Label Grid.Column="2" Grid.Row="0" Content="Отделение госпитализации:" />
+                        <ComboBox Grid.Column="3" Grid.Row="0"  
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=FieldWARD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=WardLookup}" 
+                                  DisplayMemberPath="NAME" />
+
+                        <Label Grid.Column="4" Grid.Row="0" Content="ФИО Пациента:" />
+                        <TextBox Grid.Column="5" Grid.Row="0" 
+                                 Text="{Binding Path=FieldNAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                        <Label Grid.Column="0" Grid.Row="1" Content="Дата рождения пациента" />
+                        <xctk:MaskedTextBox   Grid.Column="1" Grid.Row="1" 
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                            <Binding Path="FieldDATE_BIRTH" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                        </xctk:MaskedTextBox>
+
+                        <Label Grid.Column="2" Grid.Row="1" Content="Дата госпитализации" />
+                        <xctk:MaskedTextBox   Grid.Column="3" Grid.Row="1" 
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                            <Binding Path="FieldDATE_HOSPITALIZATION" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                        </xctk:MaskedTextBox>
+
+                        <Label Grid.Column="4" Grid.Row="1" Content="Дата выписки" />
+                        <xctk:MaskedTextBox   Grid.Column="5" Grid.Row="1" 
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                            <Binding Path="FieldDATE_DISCHARGE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                        </xctk:MaskedTextBox>
+
+                    </Grid>
+                </HeaderedContentControl>
+                <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
+                    <HeaderedContentControl.Header>
+                        ВИЗИТ 1
+                    </HeaderedContentControl.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Orientation="Horizontal">
+                            <Label  Content="ДАТА ВИЗИТА 1" />
+                            <xctk:MaskedTextBox
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                                <Binding Path="FieldDATE_VISIT_ONE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                            </xctk:MaskedTextBox>
+                        </StackPanel>
+                        <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
+                            <HeaderedContentControl.Header>
+                                Анамнестические данные
+                            </HeaderedContentControl.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Label Grid.Column="0" Grid.Row="0"
+                                    Content="Дата появления симптомов ВП (ИНДП)" />
+                                <xctk:MaskedTextBox Grid.Column="1" Grid.Row="0"
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                                    <Binding Path="FieldANAMNESTIC_DATE_SYMPTOM" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                </xctk:MaskedTextBox>
+
+                                <Label Grid.Column="2" Grid.Row="0"
+                                    Content="Дата установления диагноза ХСН" />
+                                <xctk:MaskedTextBox Grid.Column="3" Grid.Row="0"
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                                    <Binding Path="FieldANAMNESTIC_DATE_DIAGNOSIS" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                </xctk:MaskedTextBox>
+
+                                <Label Grid.Column="0" Grid.Row="1" Content="Количество эпизодов декомпенсации в течение последний 12 месяцев"  />
+                                <TextBox Grid.Column="1" Grid.Row="1" 
+                                 Text="{Binding Path=FieldANAMNESTIC_NUMBER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                <Label Grid.Column="2" Grid.Row="1" Content="Нет данных"  />
+                                <!--<CheckBox Grid.Column="3" Grid.Row="1" 
+                                 Checked="{Binding Path=FieldANAMNESTIC_NUMBER_EPISODES_NODATA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+
+                                <Label Grid.Column="0" Grid.Row="2" Content="ФК ХСН:" />
+                                <ComboBox Grid.Column="1" Grid.Row="2"  
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=FieldANAMNESTIC_FUNCTION_CLASS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=FkLookup}" />
+
+                                <Label Grid.Column="2" Grid.Row="2" Content="Были ли другие эпзоды ВП в течение последних 12 месяцев:" />
+                                <ComboBox Grid.Column="3" Grid.Row="2"  
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=FieldANAMNESTIC_OTHER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=Logic3Lookup}" />
+
+                                <Label Grid.Column="0" Grid.Row="3" Content="Статус курения:" />
+                                <ComboBox Grid.Column="1" Grid.Row="3"  
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=FieldANAMNESTIC_SMOKE_STATUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=SmokeStatusLookup}" />
+
+                                <Label Grid.Column="2" Grid.Row="3" Content="Среднее число выкуриваемых сигарет в день:"  />
+                                <TextBox Grid.Column="3" Grid.Row="3" 
+                                 Text="{Binding Path=FieldANAMNESTIC_SMOKE_AVERAGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                <Label Grid.Column="0" Grid.Row="4" Content="Число лет курения:"  />
+                                <TextBox Grid.Column="1" Grid.Row="4" 
+                                 Text="{Binding Path=FieldANAMNESTIC_SMOKE_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                
+                                <Label Grid.Column="2" Grid.Row="4" Content="Число пачка/лет:"  />
+                                <TextBox Grid.Column="3" Grid.Row="4" 
+                                 Text="{Binding Path=FieldANAMNESTIC_SMOKE_PACK_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+
+
+                            </Grid>
+                        </HeaderedContentControl>
+
+                    </Grid>
+                </HeaderedContentControl>
+
+            </Grid>
+        </DockPanel>
+    </ScrollViewer>
+</Window>

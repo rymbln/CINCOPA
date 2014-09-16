@@ -60,7 +60,6 @@ namespace CINCOPA.Common
             }
 
         }
-
         public List<string> AEResultLookup
         {
             get
@@ -77,7 +76,6 @@ namespace CINCOPA.Common
             }
 
         }
-
         public List<string> AERelationLookup
         {
             get
@@ -95,7 +93,6 @@ namespace CINCOPA.Common
             }
 
         }
-
         public List<string> AEActionsLookup
         {
             get
@@ -113,8 +110,6 @@ namespace CINCOPA.Common
             }
 
         }
-
-
         public List<string> ResultLookup
         {
             get
@@ -129,7 +124,6 @@ namespace CINCOPA.Common
             }
           
         }
-
         public List<string> EfficiencyLookup
         {
             get
@@ -145,8 +139,6 @@ namespace CINCOPA.Common
                 return efficiencyLookup;
             }
         }
-
-
         public List<string> DinamicLookup
         {
             get
@@ -163,7 +155,6 @@ namespace CINCOPA.Common
                 return dinamicLookup;
             }
         }
-
         public List<string> IncidenceEdemaLookup
         {
             get
@@ -179,7 +170,6 @@ namespace CINCOPA.Common
                 return incidenceEdemaLookup;
             }
         }
-
         public List<string> SputumTypeLookup
         {
             get
@@ -194,7 +184,6 @@ namespace CINCOPA.Common
                 return sputumTypeLookup;
             }
         }
-
         public List<string> HeavyLookup
         {
             get
@@ -208,7 +197,6 @@ namespace CINCOPA.Common
                 return heavyLookup;
             }
         }
-
         public List<string> SmokeStatusLookup
         {
             get
@@ -223,8 +211,6 @@ namespace CINCOPA.Common
                 return smokeStatusLookup;
             }
         }
-
-
         public List<string> Logic3Lookup
         {
             get
@@ -307,7 +293,6 @@ namespace CINCOPA.Common
                 return organismLookup;
             }
         }
-
         public List<string> FkLookup
         {
             get
