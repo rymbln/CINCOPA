@@ -19,9 +19,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <HeaderedContentControl Grid.Row="0" Style="{StaticResource SubDisplayArea}" Margin="2">
                     <HeaderedContentControl.Header>
@@ -84,359 +81,356 @@
 
                     </Grid>
                 </HeaderedContentControl>
-                <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
-                    <HeaderedContentControl.Header>
-                        ВИЗИТ 1
-                    </HeaderedContentControl.Header>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <StackPanel Grid.Row="0" Orientation="Horizontal">
-                            <Label  Content="ДАТА ВИЗИТА 1" />
-                            <xctk:MaskedTextBox
+                <TabControl Grid.Row="1">
+                    <TabItem Header="Визит 1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <Label  Content="ДАТА ВИЗИТА 1" />
+                                <xctk:MaskedTextBox
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                <Binding Path="FieldDATE_VISIT_ONE" 
+                                    <Binding Path="FieldDATE_VISIT_ONE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                            </xctk:MaskedTextBox>
-                        </StackPanel>
-                        <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
-                            <HeaderedContentControl.Header>
-                                Анамнестические данные
-                            </HeaderedContentControl.Header>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                                </xctk:MaskedTextBox>
+                            </StackPanel>
+                            <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Анамнестические данные
+                                </HeaderedContentControl.Header>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <Label Grid.Column="0" Grid.Row="0"
+                                    <Label Grid.Column="0" Grid.Row="0"
                                     Content="Дата появления симптомов ВП (ИНДП)" />
-                                <xctk:MaskedTextBox Grid.Column="1" Grid.Row="0"
+                                    <xctk:MaskedTextBox Grid.Column="1" Grid.Row="0"
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="FieldVISIT_ONE_ANAMNESTIC_DATE_SYMPTOM" 
+                                        <Binding Path="FieldVISIT_ONE_ANAMNESTIC_DATE_SYMPTOM" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                </xctk:MaskedTextBox>
+                                    </xctk:MaskedTextBox>
 
-                                <Label Grid.Column="2" Grid.Row="0"
+                                    <Label Grid.Column="2" Grid.Row="0"
                                     Content="Дата установления диагноза ХСН" />
-                                <xctk:MaskedTextBox Grid.Column="3" Grid.Row="0"
+                                    <xctk:MaskedTextBox Grid.Column="3" Grid.Row="0"
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="FieldVISIT_ONE_ANAMNESTIC_DATE_DIAGNOSIS" 
+                                        <Binding Path="FieldVISIT_ONE_ANAMNESTIC_DATE_DIAGNOSIS" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                </xctk:MaskedTextBox>
+                                    </xctk:MaskedTextBox>
 
-                                <Label Grid.Column="0" Grid.Row="1" Content="Количество эпизодов декомпенсации в течение последний 12 месяцев"  />
-                                <TextBox Grid.Column="1" Grid.Row="1" 
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Количество эпизодов декомпенсации в течение последний 12 месяцев"  />
+                                    <TextBox Grid.Column="1" Grid.Row="1" 
                                  Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_NUMBER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                <Label Grid.Column="2" Grid.Row="1" Content="Нет данных"  />
-                                <!--<CheckBox Grid.Column="3" Grid.Row="1" 
+                                    <Label Grid.Column="2" Grid.Row="1" Content="Нет данных"  />
+                                    <!--<CheckBox Grid.Column="3" Grid.Row="1" 
                                  Checked="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_NUMBER_EPISODES_NODATA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
 
-                                <Label Grid.Column="0" Grid.Row="2" Content="ФК ХСН:" />
-                                <ComboBox Grid.Column="1" Grid.Row="2"  
+                                    <Label Grid.Column="0" Grid.Row="2" Content="ФК ХСН:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="2"  
                                   SelectedValuePath="." 
                                   SelectedItem="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_FUNCTION_CLASS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=FkLookup}" />
 
-                                <Label Grid.Column="2" Grid.Row="2" Content="Были ли другие эпзоды ВП в течение последних 12 месяцев:" />
-                                <ComboBox Grid.Column="3" Grid.Row="2"  
+                                    <Label Grid.Column="2" Grid.Row="2" Content="Были ли другие эпзоды ВП в течение последних 12 месяцев:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="2"  
                                   SelectedValuePath="." 
                                   SelectedItem="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_OTHER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=Logic3Lookup}" />
 
-                                <Label Grid.Column="0" Grid.Row="3" Content="Статус курения:" />
-                                <ComboBox Grid.Column="1" Grid.Row="3"  
+                                    <Label Grid.Column="0" Grid.Row="3" Content="Статус курения:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="3"  
                                   SelectedValuePath="." 
                                   SelectedItem="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_STATUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=SmokeStatusLookup}" />
 
-                                <Label Grid.Column="2" Grid.Row="3" Content="Среднее число выкуриваемых сигарет в день:"  />
-                                <TextBox Grid.Column="3" Grid.Row="3" 
+                                    <Label Grid.Column="2" Grid.Row="3" Content="Среднее число выкуриваемых сигарет в день:"  />
+                                    <TextBox Grid.Column="3" Grid.Row="3" 
                                  Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_AVERAGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                <Label Grid.Column="0" Grid.Row="4" Content="Число лет курения:"  />
-                                <TextBox Grid.Column="1" Grid.Row="4" 
+                                    <Label Grid.Column="0" Grid.Row="4" Content="Число лет курения:"  />
+                                    <TextBox Grid.Column="1" Grid.Row="4" 
                                  Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                <Label Grid.Column="2" Grid.Row="4" Content="Число пачка/лет:"  />
-                                <TextBox Grid.Column="3" Grid.Row="4" 
+                                    <Label Grid.Column="2" Grid.Row="4" Content="Число пачка/лет:"  />
+                                    <TextBox Grid.Column="3" Grid.Row="4" 
                                  Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_PACK_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
 
 
-                            </Grid>
-                        </HeaderedContentControl>
-                        <HeaderedContentControl Grid.Row="2" Style="{StaticResource SubDisplayArea}" Margin="2">
-                            <HeaderedContentControl.Header>
-                                Основные показатели жизнедеятельности
-                            </HeaderedContentControl.Header>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                                </Grid>
+                            </HeaderedContentControl>
+                            <HeaderedContentControl Grid.Row="2" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Основные показатели жизнедеятельности
+                                </HeaderedContentControl.Header>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
+                                    <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
                                         Style="{StaticResource DetailBorder}">
-                                    <Grid >
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Label Grid.Column="0" Grid.Row="0"
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0"
                                                Content="АД Правая рука" />
-                                        <Label Grid.Column="1" Grid.Row="0"
+                                            <Label Grid.Column="1" Grid.Row="0"
                                                Content="АД Левая рука" />
-                                        <Label Grid.Column="2" Grid.Row="0"
+                                            <Label Grid.Column="2" Grid.Row="0"
                                                Content="ЧСС/мин" />
-                                        <Label Grid.Column="3" Grid.Row="0"
+                                            <Label Grid.Column="3" Grid.Row="0"
                                                Content="ЧДД/мин" />
-                                        <Label Grid.Column="4" Grid.Row="0"
+                                            <Label Grid.Column="4" Grid.Row="0"
                                                Content="Температура тела" />
-                                        <TextBox Grid.Column="0" Grid.Row="1" 
+                                            <TextBox Grid.Column="0" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_ONE_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="1" Grid.Row="1" 
+                                            <TextBox Grid.Column="1" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_ONE_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="2" Grid.Row="1" 
+                                            <TextBox Grid.Column="2" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_ONE_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="3" Grid.Row="1" 
+                                            <TextBox Grid.Column="3" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_ONE_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="4" Grid.Row="1" 
+                                            <TextBox Grid.Column="4" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_ONE_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                    </Grid>
-                                </Border>
+                                        </Grid>
+                                    </Border>
 
-                                <Label Grid.Column="1" Grid.Row="0" Content="Степени тяжести ВП:" />
-                                <ComboBox Grid.Column="2" Grid.Row="0"  
+                                    <Label Grid.Column="1" Grid.Row="0" Content="Степени тяжести ВП:" />
+                                    <ComboBox Grid.Column="2" Grid.Row="0"  
                                   SelectedValuePath="." 
                                   SelectedItem="{Binding Path=FieldVISIT_ONE_HEAVY_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=HeavyLookup}" />
 
-                                <Label Grid.Column="1" Grid.Row="1" Content="Пациент нуждается в оксигенотерапии:" />
-                                <ComboBox Grid.Column="2" Grid.Row="1"  
+                                    <Label Grid.Column="1" Grid.Row="1" Content="Пациент нуждается в оксигенотерапии:" />
+                                    <ComboBox Grid.Column="2" Grid.Row="1"  
                                   SelectedValuePath="." 
                                   SelectedItem="{Binding Path=FieldVISIT_ONE_OXYGEN_THERAPY_NEEDED, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=Logic2Lookup}" />
 
-                                <Label Grid.Column="1" Grid.Row="2" Content="Наличие признаков декомпенсации ХСН:" />
-                                <ComboBox Grid.Column="2" Grid.Row="2"  
+                                    <Label Grid.Column="1" Grid.Row="2" Content="Наличие признаков декомпенсации ХСН:" />
+                                    <ComboBox Grid.Column="2" Grid.Row="2"  
                                   SelectedValuePath="." 
                                   SelectedItem="{Binding Path=FieldVISIT_ONE_DECOMPENSATION_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=Logic2Lookup}" />
 
-                            </Grid>
-                        </HeaderedContentControl>
+                                </Grid>
+                            </HeaderedContentControl>
 
-                        <HeaderedContentControl Grid.Row="3" Style="{StaticResource SubDisplayArea}" Margin="2">
-                            <HeaderedContentControl.Header>
-                                Оценка симптомов ВП и ХСН
-                            </HeaderedContentControl.Header>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                            <HeaderedContentControl Grid.Row="3" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Оценка симптомов ВП и ХСН
+                                </HeaderedContentControl.Header>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
-                                <ComboBox Grid.Column="1" Grid.Row="0"  
+                                    <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="0"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
-                                <ComboBox Grid.Column="3" Grid.Row="0"  
+                                    <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="0"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
-                                <ComboBox Grid.Column="5" Grid.Row="0"  
+                                    <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="0"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
-                                <ComboBox Grid.Column="1" Grid.Row="1"  
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="1"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=sputumTypeLookup}" />
 
-                                <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
-                                <ComboBox Grid.Column="3" Grid.Row="1"  
+                                    <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="1"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
-                                <ComboBox Grid.Column="5" Grid.Row="1"  
+                                    <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="1"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
-                                <ComboBox Grid.Column="1" Grid.Row="2"  
+                                    <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="2"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
-                                <ComboBox Grid.Column="3" Grid.Row="2"  
+                                    <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="2"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
-                                <ComboBox Grid.Column="5" Grid.Row="2"  
+                                    <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="2"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
-                                <ComboBox Grid.Column="1" Grid.Row="3"  
+                                    <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="3"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
-                                <ComboBox Grid.Column="3" Grid.Row="3"  
+                                    <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="3"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
-                                <ComboBox Grid.Column="5" Grid.Row="3"  
+                                    <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="3"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
 
-                                <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
-                                <ComboBox Grid.Column="1" Grid.Row="4"  
+                                    <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="4"  
                                           SelectedValuePath="." 
                                           SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=incidenceEdemaLookup}" />
-                            </Grid>
-                        </HeaderedContentControl>
-                        <StackPanel Grid.Row="4" Orientation="Horizontal">
-                        <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
-                            <HeaderedContentControl.Header>
-                                Рентгенография органов грудной клетки
-                            </HeaderedContentControl.Header>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <StackPanel Orientation="Horizontal"
-                                            Grid.Row="0">
-                                    <Label Content="Дата проведения:" />
-                                    <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_ONE_XRAY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                    </xctk:MaskedTextBox>
-                                    <Label Content="Рентгенологические признаки пневмонии:" />
-                                    <ComboBox
-                                          SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_XRAY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
-                                </StackPanel>
-
-                                <Border Grid.Row="1"
-                                        Style="{StaticResource DetailBorder}">
-                                    <Grid >
+                                </Grid>
+                            </HeaderedContentControl>
+                            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Рентгенография органов грудной клетки
+                                    </HeaderedContentControl.Header>
+                                    <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0"
+                                        <StackPanel Orientation="Horizontal"
+                                            Grid.Row="0">
+                                            <Label Content="Дата проведения:" />
+                                            <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                                <Binding Path="FieldVISIT_ONE_XRAY_DATE_PROCEDURE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                            </xctk:MaskedTextBox>
+                                            <Label Content="Рентгенологические признаки пневмонии:" />
+                                            <ComboBox
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_XRAY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                        </StackPanel>
+
+                                        <Border Grid.Row="1"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0"
                                                Text="Правая верхняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0"
                                                Text="Правая средняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0"
                                                Text="Правая нижняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="0"
                                                Text="Левая верхняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="5" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="5" Grid.Row="0"
                                                Text="Левая нижняя доля" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="1"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="1"
                                                Text="Альвеолярная инфильтрация" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="2"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="2"
                                                Text="Интерстициальная инфильтрация" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="3"
                                                Text="Нет" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="3"
                                                Text="Справа" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="3"
                                                Text="Слева" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="3"
                                                Text="Двусторонний" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="4"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="4"
                                                Text="Плевральный выпот" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="5"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="5"
                                                Text="Другие изменения" />
 
 
-                                        <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
@@ -465,84 +459,84 @@
                                         <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Checked="{Binding Path=FieldVISIT_ONE_XRAY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
 
-                                        <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
+                                                <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
                                                  Text="{Binding Path=FieldVISIT_ONE_XRAY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            </Grid>
+                                        </Border>
                                     </Grid>
-                                </Border>
-                            </Grid>
-                        </HeaderedContentControl>
-                        <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
-                            <HeaderedContentControl.Header>
-                                Компьютерная томография органов грудной клетки
-                            </HeaderedContentControl.Header>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <StackPanel Orientation="Horizontal"
-                                            Grid.Row="0">
-                                    <Label Content="Дата проведения:" />
-                                    <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                    </xctk:MaskedTextBox>
-                                    <Label Content="Томографические признаки пневмонии:" />
-                                    <ComboBox
-                                          SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
-                                </StackPanel>
-
-                                <Border Grid.Row="1"
-                                        Style="{StaticResource DetailBorder}">
-                                    <Grid >
+                                </HeaderedContentControl>
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Компьютерная томография органов грудной клетки
+                                    </HeaderedContentControl.Header>
+                                    <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0"
+                                        <StackPanel Orientation="Horizontal"
+                                            Grid.Row="0">
+                                            <Label Content="Дата проведения:" />
+                                            <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                                <Binding Path="FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                            </xctk:MaskedTextBox>
+                                            <Label Content="Томографические признаки пневмонии:" />
+                                            <ComboBox
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                        </StackPanel>
+
+                                        <Border Grid.Row="1"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0"
                                                Text="Правая верхняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0"
                                                Text="Правая средняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0"
                                                Text="Правая нижняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="0"
                                                Text="Левая верхняя доля" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="5" Grid.Row="0"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="5" Grid.Row="0"
                                                Text="Левая нижняя доля" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="1"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="1"
                                                Text="Альвеолярная инфильтрация" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="2"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="2"
                                                Text="Интерстициальная инфильтрация" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="3"
                                                Text="Нет" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="3"
                                                Text="Справа" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="3"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="3"
                                                Text="Слева" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="3" 
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="3" 
                                                Text="Двусторонний" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}"  Width="100" Grid.Column="0" Grid.Row="4"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}"  Width="100" Grid.Column="0" Grid.Row="4"
                                                Text="Плевральный выпот" />
-                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="5"
+                                                <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="5"
                                                Text="Другие изменения" />
 
 
-                                        <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
@@ -571,20 +565,219 @@
                                         <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
 
-                                        <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
+                                                <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
                                                  Text="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            </Grid>
+                                        </Border>
                                     </Grid>
-                                </Border>
-                            </Grid>
-                        </HeaderedContentControl>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="6">
-                            <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                </HeaderedContentControl>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Row="5">
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Электрокардиографическое исследование
+                                    </HeaderedContentControl.Header>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
+                                        <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                            <Binding Path="FieldVISIT_ONE_ELECTROCARDIOGRAPHY_DATE_PROCEDURE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                        </xctk:MaskedTextBox>
+
+                                        <Label Grid.Row="1" Grid.Column="0"  Content="ЧСС в минуту:" />
+                                        <TextBox Grid.Column="1" Grid.Row="1"
+                                                 Text="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_HEARTH_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        <Label Grid.Row="2" Grid.Column="0"  Content="Значимые ЭКГ изменения:" />
+                                        <TextBox Grid.Column="1" Grid.Row="2"
+                                                 Text="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0"
+                                               Content="Ритм синусовый" />
+                                                <Label Grid.Column="0" Grid.Row="1"
+                                               Content="Мерцание предсердий" />
+                                                <Label Grid.Column="0" Grid.Row="2"
+                                               Content="Экстрасистолия суправентикулярная" />
+                                                <Label Grid.Column="0" Grid.Row="3"
+                                               Content="Экстрасистолия желудочковая" />
+
+                                                <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_SINUS_RHYTHM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ATRIAL_FIBRILLATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_SUPRAVENTRICULAR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                            </Grid>
+                                        </Border>
+
+                                    </Grid>
+                                </HeaderedContentControl>
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Эхокардиографическое исследование
+                                    </HeaderedContentControl.Header>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
+                                        <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                            <Binding Path="FieldVISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                        </xctk:MaskedTextBox>
+
+                                        <Label Grid.Row="1" Grid.Column="0"  Content="Объем перикардиального выпота:" />
+                                        <TextBox Grid.Column="1" Grid.Row="1"
+                                                 Text="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        <Label Grid.Row="2" Grid.Column="0"  Content="Комментарии:" />
+                                        <TextBox Grid.Column="1" Grid.Row="2"
+                                                 Text="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0"
+                                               Content="ФВ (%)" />
+                                                <Label Grid.Column="0" Grid.Row="1"
+                                               Content="ЕА_ЛЖ (уе)" />
+                                                <Label Grid.Column="0" Grid.Row="2"
+                                               Content="ЕА_ПЖ (уе)" />
+                                                <Label Grid.Column="0" Grid.Row="3"
+                                               Content="СДЛА (мм.рт.ст.)" />
+
+                                                <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                            </Grid>
+                                        </Border>
+
+                                    </Grid>
+                                </HeaderedContentControl>
+                            </StackPanel>
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Визит 2 и Визит 3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <Label  Content="ДАТА ВИЗИТА 2" />
+                                <xctk:MaskedTextBox
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                                    <Binding Path="FieldDATE_VISIT_TWO" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                </xctk:MaskedTextBox>
+                            </StackPanel>
+                            <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>
-                                    Электрокардиографическое исследование
+                                    Основные показатели жизнедеятельности
+                                </HeaderedContentControl.Header>
+                               <Border 
+                                        Style="{StaticResource DetailBorder}">
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Grid.Row="0"
+                                               Content="АД Правая рука" />
+                                            <Label Grid.Column="1" Grid.Row="0"
+                                               Content="АД Левая рука" />
+                                            <Label Grid.Column="2" Grid.Row="0"
+                                               Content="ЧСС/мин" />
+                                            <Label Grid.Column="3" Grid.Row="0"
+                                               Content="ЧДД/мин" />
+                                            <Label Grid.Column="4" Grid.Row="0"
+                                               Content="Температура тела" />
+                                            <TextBox Grid.Column="0" Grid.Row="1" 
+                                                 Text="{Binding Path=FieldVISIT_TWO_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="1" Grid.Row="1" 
+                                                 Text="{Binding Path=FieldVISIT_TWO_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="2" Grid.Row="1" 
+                                                 Text="{Binding Path=FieldVISIT_TWO_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="1" 
+                                                 Text="{Binding Path=FieldVISIT_TWO_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="4" Grid.Row="1" 
+                                                 Text="{Binding Path=FieldVISIT_TWO_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        </Grid>
+                                    </Border>
+                           </HeaderedContentControl>
+                            <HeaderedContentControl Grid.Row="2" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Динамика симптомов ВП и ХСН
                                 </HeaderedContentControl.Header>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
@@ -593,58 +786,106 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
-                                    <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_ONE_ELECTROCARDIOGRAPHY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                    </xctk:MaskedTextBox>
 
-                                    <Label Grid.Row="1" Grid.Column="0"  Content="ЧСС в минуту:" />
-                                    <TextBox Grid.Column="1" Grid.Row="1"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_HEARTH_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                    <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="0"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
 
-                                    <Label Grid.Row="2" Grid.Column="0"  Content="Значимые ЭКГ изменения:" />
-                                    <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                    <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="0"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
 
-                                    <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
-                                        Style="{StaticResource DetailBorder}">
-                                        <Grid >
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="Auto"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Label Grid.Column="0" Grid.Row="0"
-                                               Content="Ритм синусовый" />
-                                            <Label Grid.Column="0" Grid.Row="1"
-                                               Content="Мерцание предсердий" />
-                                            <Label Grid.Column="0" Grid.Row="2"
-                                               Content="Экстрасистолия суправентикулярная" />
-                                            <Label Grid.Column="0" Grid.Row="3"
-                                               Content="Экстрасистолия желудочковая" />
+                                    <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="0"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
 
-                                            <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_SINUS_RHYTHM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ATRIAL_FIBRILLATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_SUPRAVENTRICULAR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
-                                        </Grid>
-                                    </Border>
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="1"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
 
+                                    <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="1"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="1"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="2"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="2"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="2"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="3"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="3"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="3"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="4"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="4" Content="Оценка эффективности терапии:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="4"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_THERAPY_EFFICIENCY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
                                 </Grid>
                             </HeaderedContentControl>
-                            <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                <Label  Content="ДАТА ВИЗИТА 3" />
+                                <xctk:MaskedTextBox
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                                    <Binding Path="FieldDATE_VISIT_THREE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                </xctk:MaskedTextBox>
+                            </StackPanel>
+                            <HeaderedContentControl Grid.Row="4" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>
                                     Эхокардиографическое исследование
                                 </HeaderedContentControl.Header>
@@ -661,18 +902,18 @@
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
                                     <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
+                                        <Binding Path="FieldVISIT_THREE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                     </xctk:MaskedTextBox>
 
                                     <Label Grid.Row="1" Grid.Column="0"  Content="Объем перикардиального выпота:" />
                                     <TextBox Grid.Column="1" Grid.Row="1"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Label Grid.Row="2" Grid.Column="0"  Content="Комментарии:" />
                                     <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
                                         Style="{StaticResource DetailBorder}">
@@ -697,21 +938,22 @@
                                                Content="СДЛА (мм.рт.ст.)" />
 
                                             <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
                                         </Grid>
                                     </Border>
 
                                 </Grid>
                             </HeaderedContentControl>
-                        </StackPanel>
-                    </Grid>
-                </HeaderedContentControl>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+             
 
             </Grid>
         </DockPanel>
