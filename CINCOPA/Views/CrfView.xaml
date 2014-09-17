@@ -1205,6 +1205,88 @@
                         </Grid>
 
                     </TabItem>
+                    <TabItem Header="АБ Терапия">
+                        <StackPanel Orientation="Vertical">
+                            <ToolBar>
+                                <Button Command="{Binding AddABTherapyCommand}" Content="Добавить" ToolTip="Добавить"/>
+                                <Separator/>
+                                <Button Command="{Binding DeleteABTherapyCommand}" Content="Удалить" ToolTip="Удалить"/>
+                                <Separator/>
+                            </ToolBar>
+                            <DataGrid AutoGenerateColumns="False"
+                            ItemsSource="{Binding AllABTherapy}"
+                                  SelectedItem="{Binding CurrentABTherapy}" CanUserAddRows="False" CanUserDeleteRows="False">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header= "Наименование препарата">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ComboBox 
+                                                            IsEnabled="True"
+                                                          SelectedValuePath="." 
+                                                          SelectedItem="{Binding Path=FieldDRUG, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          ItemsSource="{Binding Path=DrugLookup}" 
+                                                          DisplayMemberPath="Name" />
+                                                    <TextBlock Grid.Column="1" Padding="4,2,4,3">
+                                                            <Hyperlink Command="{Binding SelectDrugCommand}">
+                                                                <Run Text="..."/>
+                                                            </Hyperlink>
+                                                    </TextBlock>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Разовая доза"  Binding="{Binding Path=FieldSINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTemplateColumn Header= "Путь введения">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ComboBox 
+                                                            IsEnabled="True"
+                                                          SelectedValuePath="." 
+                                                          SelectedItem="{Binding Path=FieldROUTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          ItemsSource="{Binding Path=RouteLookup}" 
+                                                          DisplayMemberPath="Name" />
+                                                    <TextBlock Grid.Column="1" Padding="4,2,4,3">
+                                                            <Hyperlink Command="{Binding SelectRouteCommand}">
+                                                                <Run Text="..."/>
+                                                            </Hyperlink>
+                                                    </TextBlock>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Кратность (раз в сут.)"  Binding="{Binding Path=FieldFREQUENCY, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTemplateColumn Header= "Дата начала приема" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                                    <Binding Path="FieldDATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                </xctk:MaskedTextBox>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header= "Дата окончания приема" IsReadOnly="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                                    <Binding Path="FieldDATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                </xctk:MaskedTextBox>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </TabItem>
                 </TabControl>
 
 
