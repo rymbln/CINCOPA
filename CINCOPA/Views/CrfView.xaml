@@ -1287,6 +1287,214 @@
                             </DataGrid>
                         </StackPanel>
                     </TabItem>
+                    <TabItem Header="Микробиологическое исследование">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <HeaderedContentControl Grid.Row="0" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Тест на пневмококковую антигенурию
+                                </HeaderedContentControl.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label  Content="Проводился:" />
+                                    <ComboBox  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldTEST_LOGIC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
+
+                                    <Label Content="Результат:" />
+                                    <ComboBox 
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldTEST_RESULT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=ResultLookup}" />
+                                </StackPanel>
+                            </HeaderedContentControl>
+                                <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Мокрота
+                                    </HeaderedContentControl.Header>
+                                    <StackPanel Orientation="Vertical">
+                                        <ToolBar>
+                                            <Button Command="{Binding AddMBSputumCommand}" Content="Добавить" ToolTip="Добавить"/>
+                                            <Separator/>
+                                            <Button Command="{Binding DeleteMBSputumCommand}" Content="Удалить" ToolTip="Удалить"/>
+                                            <Separator/>
+                                        </ToolBar>
+                                        <DataGrid AutoGenerateColumns="False"
+                            ItemsSource="{Binding AllMicrobiologySputum}"
+                                  SelectedItem="{Binding CurrentMicrobiologySputum}" CanUserAddRows="False" CanUserDeleteRows="False">
+                                            <DataGrid.Columns>
+                                                <DataGridTemplateColumn Header= "Дата забора" IsReadOnly="True">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                                                <Binding Path="FieldMB_SPUTUM_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                            </xctk:MaskedTextBox>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                                <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=FieldMB_SPUTUM_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                                <DataGridTextColumn Header="Лейкоциты"  Binding="{Binding Path=FieldMB_SPUTUM_QUALITY_LEUKOCYTES, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                                <DataGridTextColumn Header="Эпителиоциты"  Binding="{Binding Path=FieldMB_SPUTUM_QUALITY_EPITHELIAL, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                                <DataGridCheckBoxColumn Header="Нерепр.образец" Binding="{Binding Path=FieldMB_SPUTUM_NOT_REPRESENTATIVE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}"/>
+                                                <DataGridTemplateColumn Header= "Рост возбудителей">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <ComboBox 
+                                                                        IsEnabled="True"
+                                                                      SelectedValuePath="." 
+                                                                      SelectedItem="{Binding Path=FieldMB_SPUTUM_GROWTH_PATHOGENS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      ItemsSource="{Binding Path=Logic2Lookup}" 
+                                                                      />
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+
+                                                <DataGridTemplateColumn Header= "Выд. организм">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <ComboBox 
+                                                            IsEnabled="True"
+                                                          SelectedValuePath="." 
+                                                          SelectedItem="{Binding Path=FieldMB_SPUTUM_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          ItemsSource="{Binding Path=OrganismLookup}" 
+                                                          DisplayMemberPath="Name" />
+                                                                <TextBlock Grid.Column="1" Padding="4,2,4,3">
+                                                            <Hyperlink Command="{Binding SelectOrganismCommand}">
+                                                                <Run Text="..."/>
+                                                            </Hyperlink>
+                                                                </TextBlock>
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                                <DataGridTemplateColumn Header= "BETA">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <ComboBox 
+                                                                        IsEnabled="True"
+                                                                      SelectedValuePath="." 
+                                                                      SelectedItem="{Binding Path=FieldMB_SPUTUM_BETA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      ItemsSource="{Binding Path=Logic3Lookup}" 
+                                                                      />
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                                <DataGridTemplateColumn Header= "MRSA">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <ComboBox 
+                                                                        IsEnabled="True"
+                                                                      SelectedValuePath="." 
+                                                                      SelectedItem="{Binding Path=FieldMB_SPUTUM_MRSA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      ItemsSource="{Binding Path=Logic3Lookup}" 
+                                                                      />
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </StackPanel>
+                                </HeaderedContentControl>
+                            <HeaderedContentControl Grid.Row="2" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Кровь
+                                </HeaderedContentControl.Header>
+                                <StackPanel Orientation="Vertical">
+                                    <ToolBar>
+                                        <Button Command="{Binding AddMBBloodCommand}" Content="Добавить" ToolTip="Добавить"/>
+                                        <Separator/>
+                                        <Button Command="{Binding DeleteMBBloodCommand}" Content="Удалить" ToolTip="Удалить"/>
+                                        <Separator/>
+                                    </ToolBar>
+                                    <DataGrid AutoGenerateColumns="False"
+                            ItemsSource="{Binding AllMicrobiologyBlood}"
+                                  SelectedItem="{Binding CurrentMicrobiologyBlood}" CanUserAddRows="False" CanUserDeleteRows="False">
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Header= "Дата забора" IsReadOnly="True">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
+                                                            <Binding Path="FieldMB_BLOOD_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                        </xctk:MaskedTextBox>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=FieldMB_BLOOD_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            <DataGridTemplateColumn Header= "Рост возбудителей">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <ComboBox 
+                                                                        IsEnabled="True"
+                                                                      SelectedValuePath="." 
+                                                                      SelectedItem="{Binding Path=FieldMB_BLOOD_GROWTH_PATHOGENS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      ItemsSource="{Binding Path=Logic2Lookup}" 
+                                                                      />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+
+                                            <DataGridTemplateColumn Header= "Выд. организм">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*"/>
+                                                                <ColumnDefinition Width="Auto"/>
+                                                            </Grid.ColumnDefinitions>
+                                                            <ComboBox 
+                                                            IsEnabled="True"
+                                                          SelectedValuePath="." 
+                                                          SelectedItem="{Binding Path=FieldMB_BLOOD_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          ItemsSource="{Binding Path=OrganismLookup}" 
+                                                          DisplayMemberPath="Name" />
+                                                            <TextBlock Grid.Column="1" Padding="4,2,4,3">
+                                                            <Hyperlink Command="{Binding SelectOrganismCommand}">
+                                                                <Run Text="..."/>
+                                                            </Hyperlink>
+                                                            </TextBlock>
+                                                        </Grid>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Header= "BETA">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <ComboBox 
+                                                                        IsEnabled="True"
+                                                                      SelectedValuePath="." 
+                                                                      SelectedItem="{Binding Path=FieldMB_BLOOD_BETA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      ItemsSource="{Binding Path=Logic3Lookup}" 
+                                                                      />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Header= "MRSA">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <ComboBox 
+                                                                        IsEnabled="True"
+                                                                      SelectedValuePath="." 
+                                                                      SelectedItem="{Binding Path=FieldMB_BLOOD_MRSA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      ItemsSource="{Binding Path=Logic3Lookup}" 
+                                                                      />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </HeaderedContentControl>
+                        </Grid>
+                    </TabItem>
                 </TabControl>
 
 

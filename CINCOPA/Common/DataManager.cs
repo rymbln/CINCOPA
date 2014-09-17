@@ -500,11 +500,11 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture); ;
             obj.VISIT_ONE_LEUKOCYTOSIS = null;
-            obj.VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS = null;
+            obj.VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = null;
             obj.VISIT_ONE_OTHERS = "---";
             obj.VISIT_ONE_SIGNIFICANT_CHANGES = "---";
             obj.VISIT_TWO_LEUKOCYTOSIS = null;
-            obj.VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS = null;
+            obj.VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = null;
             obj.VISIT_TWO_OTHERS = "---";
             obj.VISIT_TWO_SIGNIFICANT_CHANGES = "---";
 
