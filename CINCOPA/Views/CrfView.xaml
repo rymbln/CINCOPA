@@ -372,14 +372,14 @@
                                             Grid.Row="0">
                                             <Label Content="Дата проведения:" />
                                             <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                <Binding Path="FieldVISIT_ONE_XRAY_DATE_PROCEDURE" 
+                                                <Binding Path="FieldBLOOD_TEST_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                             </xctk:MaskedTextBox>
                                             <Label Content="Рентгенологические признаки пневмонии:" />
                                             <ComboBox
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_XRAY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=FieldBLOOD_TEST_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=logic2Lookup}" />
                                         </StackPanel>
 
@@ -431,36 +431,36 @@
 
 
                                                 <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_XRAY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
 
                                                 <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
-                                                 Text="{Binding Path=FieldVISIT_ONE_XRAY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=FieldBLOOD_TEST_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                     </Grid>
@@ -731,44 +731,44 @@
                                 <HeaderedContentControl.Header>
                                     Основные показатели жизнедеятельности
                                 </HeaderedContentControl.Header>
-                               <Border 
+                                <Border 
                                         Style="{StaticResource DetailBorder}">
-                                        <Grid >
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
-                                            </Grid.RowDefinitions>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="Auto"/>
-                                            </Grid.ColumnDefinitions>
-                                            <Label Grid.Column="0" Grid.Row="0"
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="0"
                                                Content="АД Правая рука" />
-                                            <Label Grid.Column="1" Grid.Row="0"
+                                        <Label Grid.Column="1" Grid.Row="0"
                                                Content="АД Левая рука" />
-                                            <Label Grid.Column="2" Grid.Row="0"
+                                        <Label Grid.Column="2" Grid.Row="0"
                                                Content="ЧСС/мин" />
-                                            <Label Grid.Column="3" Grid.Row="0"
+                                        <Label Grid.Column="3" Grid.Row="0"
                                                Content="ЧДД/мин" />
-                                            <Label Grid.Column="4" Grid.Row="0"
+                                        <Label Grid.Column="4" Grid.Row="0"
                                                Content="Температура тела" />
-                                            <TextBox Grid.Column="0" Grid.Row="1" 
+                                        <TextBox Grid.Column="0" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_TWO_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                            <TextBox Grid.Column="1" Grid.Row="1" 
+                                        <TextBox Grid.Column="1" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_TWO_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                            <TextBox Grid.Column="2" Grid.Row="1" 
+                                        <TextBox Grid.Column="2" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_TWO_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                            <TextBox Grid.Column="3" Grid.Row="1" 
+                                        <TextBox Grid.Column="3" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_TWO_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                            <TextBox Grid.Column="4" Grid.Row="1" 
+                                        <TextBox Grid.Column="4" Grid.Row="1" 
                                                  Text="{Binding Path=FieldVISIT_TWO_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                        </Grid>
-                                    </Border>
-                           </HeaderedContentControl>
+                                    </Grid>
+                                </Border>
+                            </HeaderedContentControl>
                             <HeaderedContentControl Grid.Row="2" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>
                                     Динамика симптомов ВП и ХСН
@@ -952,8 +952,261 @@
                             </HeaderedContentControl>
                         </Grid>
                     </TabItem>
+                    <TabItem Header="Результаты Лабораторных исследований">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Клинический анализ крови
+                                    </HeaderedContentControl.Header>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border Grid.Column="0"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Content="ВИЗИТ 1"  HorizontalAlignment="Center" FontWeight="Bold" />
+                                                <Label Grid.Column="0" Grid.Row="1" Content="Значимые изменения" />
+                                                <Label Grid.Column="0" Grid.Row="2" Content="Лейкоцитоз" />
+                                                <Label Grid.Column="0" Grid.Row="3" Content="Молодые формы лейкоцитов" />
+                                                <Label Grid.Column="0" Grid.Row="4" Content="Другое" />
+
+                                                <ComboBox Grid.Column="1" Grid.Row="1"  
+                                                        SelectedValuePath="." 
+                                                        SelectedItem="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        ItemsSource="{Binding Path=Logic2Lookup}" />
+                                                <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_LEUKOCYTOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_OTHERS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            </Grid>
+                                        </Border>
+                                        <Border Grid.Column="1"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Content="ВИЗИТ 2"  HorizontalAlignment="Center" FontWeight="Bold" />
+                                                <Label Grid.Column="0" Grid.Row="1" Content="Значимые изменения" />
+                                                <Label Grid.Column="0" Grid.Row="2" Content="Лейкоцитоз" />
+                                                <Label Grid.Column="0" Grid.Row="3" Content="Молодые формы лейкоцитов" />
+                                                <Label Grid.Column="0" Grid.Row="4" Content="Другое" />
+
+                                                <ComboBox Grid.Column="1" Grid.Row="1"  
+                                                        SelectedValuePath="." 
+                                                        SelectedItem="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        ItemsSource="{Binding Path=Logic2Lookup}" />
+                                                <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_LEUKOCYTOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_OTHERS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </HeaderedContentControl>
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Биохимический анализ крови
+                                    </HeaderedContentControl.Header>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Border Grid.Column="0"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Content="ВИЗИТ 1"  HorizontalAlignment="Center" FontWeight="Bold" />
+                                                <Label Grid.Column="0" Grid.Row="1" Content="Значимые изменения" />
+                                                <Label Grid.Column="0" Grid.Row="2" Content="Изменения" />
+
+                                                <ComboBox Grid.Column="1" Grid.Row="1"  
+                                                        SelectedValuePath="." 
+                                                        SelectedItem="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_ONE_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        ItemsSource="{Binding Path=Logic2Lookup}" />
+                                                <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_ONE_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            </Grid>
+                                        </Border>
+                                        <Border Grid.Column="1"
+                                        Style="{StaticResource DetailBorder}">
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  Content="ВИЗИТ 2"  HorizontalAlignment="Center" FontWeight="Bold" />
+                                                <Label Grid.Column="0" Grid.Row="1" Content="Значимые изменения" />
+                                                <Label Grid.Column="0" Grid.Row="2" Content="Изменения" />
+
+                                                <ComboBox Grid.Column="1" Grid.Row="1"  
+                                                        SelectedValuePath="." 
+                                                        SelectedItem="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_TWO_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        ItemsSource="{Binding Path=Logic2Lookup}" />
+                                                <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_TWO_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </HeaderedContentControl>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Анализ крови на маркеры воспаления
+                                    </HeaderedContentControl.Header>
+                                    <Border Grid.Row="1"
+                                        Style="{StaticResource DetailBorder}">
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0" Text="Визит 1" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0" Text="Визит 2" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0" Text="Визит 3" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="1" Text="С-реактивный белок" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="2" Text="Прокальцитонин" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="3" Text="ИЛ-6" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="4" Text="ФНО" />
+
+
+                                            <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
+                                            <TextBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        </Grid>
+                                    </Border>
+                                </HeaderedContentControl>
+                                <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
+                                    <HeaderedContentControl.Header>
+                                        Анализ крови на маркеры кардиальной дисфункции
+                                    </HeaderedContentControl.Header>
+                                    <Border Grid.Row="1"
+                                        Style="{StaticResource DetailBorder}">
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0" Text="Визит 1" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0" Text="Визит 2" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0" Text="Визит 3" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="1" Text="Мозговой натрийуретический пептид" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="2" Text="Копептин" />
+                                            <TextBlock Style="{StaticResource TextBlockSmall}" Width="100" Grid.Column="0" Grid.Row="3" Text="Проадреномедуллин" />
+
+
+                                            <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
+                                            <TextBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <TextBox Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        </Grid>
+                                    </Border>
+                                </HeaderedContentControl>
+                            </StackPanel>
+                        </Grid>
+
+                    </TabItem>
                 </TabControl>
-             
+
 
             </Grid>
         </DockPanel>

@@ -662,11 +662,11 @@
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="VISIT_ONE_SIGNIFICANT_CHANGES" Nullable="true" />
     <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS" Nullable="true" />
+    <Property Type="String" Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" />
     <Property Type="String" Name="VISIT_ONE_OTHERS" Nullable="true" />
     <Property Type="String" Name="VISIT_TWO_SIGNIFICANT_CHANGES" Nullable="true" />
     <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS" Nullable="true" />
+    <Property Type="String" Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" />
     <Property Type="String" Name="VISIT_TWO_OTHERS" Nullable="true" />
     <Property Type="String" Name="CreatedBy" Nullable="true" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" />

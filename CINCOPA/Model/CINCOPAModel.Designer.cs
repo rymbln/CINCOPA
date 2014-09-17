@@ -3342,24 +3342,24 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS
+        public global::System.String VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS
         {
             get
             {
-                return _VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS;
+                return _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS;
             }
             set
             {
-                OnVISIT_ONE_LUKOCYTOSIS_YOUNG_FORMSChanging(value);
-                ReportPropertyChanging("VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS");
-                _VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS");
-                OnVISIT_ONE_LUKOCYTOSIS_YOUNG_FORMSChanged();
+                OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanging(value);
+                ReportPropertyChanging("VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
+                _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
+                OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanged();
             }
         }
-        private global::System.String _VISIT_ONE_LUKOCYTOSIS_YOUNG_FORMS;
-        partial void OnVISIT_ONE_LUKOCYTOSIS_YOUNG_FORMSChanging(global::System.String value);
-        partial void OnVISIT_ONE_LUKOCYTOSIS_YOUNG_FORMSChanged();
+        private global::System.String _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS;
+        partial void OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanging(global::System.String value);
+        partial void OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3438,24 +3438,24 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS
+        public global::System.String VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS
         {
             get
             {
-                return _VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS;
+                return _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS;
             }
             set
             {
-                OnVISIT_TWO_LUKOCYTOSIS_YOUNG_FORMSChanging(value);
-                ReportPropertyChanging("VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS");
-                _VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS");
-                OnVISIT_TWO_LUKOCYTOSIS_YOUNG_FORMSChanged();
+                OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanging(value);
+                ReportPropertyChanging("VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
+                _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
+                OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanged();
             }
         }
-        private global::System.String _VISIT_TWO_LUKOCYTOSIS_YOUNG_FORMS;
-        partial void OnVISIT_TWO_LUKOCYTOSIS_YOUNG_FORMSChanging(global::System.String value);
-        partial void OnVISIT_TWO_LUKOCYTOSIS_YOUNG_FORMSChanged();
+        private global::System.String _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS;
+        partial void OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanging(global::System.String value);
+        partial void OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
