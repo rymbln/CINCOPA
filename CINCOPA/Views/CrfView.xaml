@@ -39,24 +39,24 @@
                         </Grid.RowDefinitions>
                         <Label Grid.Column="0" Grid.Row="0" Content="№ ИРК:"  />
                         <TextBox Grid.Column="1" Grid.Row="0" 
-                                 Text="{Binding Path=FieldNUMBER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                 Text="{Binding Path=NUMBER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                         <Label Grid.Column="2" Grid.Row="0" Content="Отделение госпитализации:" />
                         <ComboBox Grid.Column="3" Grid.Row="0"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldWARD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=WARD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=WardLookup}" 
                                   DisplayMemberPath="NAME" />
 
                         <Label Grid.Column="4" Grid.Row="0" Content="ФИО Пациента:" />
                         <TextBox Grid.Column="5" Grid.Row="0" 
-                                 Text="{Binding Path=FieldNAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                 Text="{Binding Path=NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                         <Label Grid.Column="0" Grid.Row="1" Content="Дата рождения пациента" />
                         <xctk:MaskedTextBox   Grid.Column="1" Grid.Row="1" 
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                            <Binding Path="FieldDATE_BIRTH" 
+                            <Binding Path="DATE_BIRTH" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                         </xctk:MaskedTextBox>
@@ -65,7 +65,7 @@
                         <xctk:MaskedTextBox   Grid.Column="3" Grid.Row="1" 
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                            <Binding Path="FieldDATE_HOSPITALIZATION" 
+                            <Binding Path="DATE_HOSPITALIZATION" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                         </xctk:MaskedTextBox>
@@ -74,7 +74,7 @@
                         <xctk:MaskedTextBox   Grid.Column="5" Grid.Row="1" 
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                            <Binding Path="FieldDATE_DISCHARGE" 
+                            <Binding Path="DATE_DISCHARGE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                         </xctk:MaskedTextBox>
@@ -97,7 +97,7 @@
                                 <xctk:MaskedTextBox
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="FieldDATE_VISIT_ONE" 
+                                    <Binding Path="DATE_VISIT_ONE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                 </xctk:MaskedTextBox>
@@ -126,7 +126,7 @@
                                     <xctk:MaskedTextBox Grid.Column="1" Grid.Row="0"
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_ONE_ANAMNESTIC_DATE_SYMPTOM" 
+                                        <Binding Path="VISIT_ONE_ANAMNESTIC_DATE_SYMPTOM" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                     </xctk:MaskedTextBox>
@@ -136,48 +136,48 @@
                                     <xctk:MaskedTextBox Grid.Column="3" Grid.Row="0"
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_ONE_ANAMNESTIC_DATE_DIAGNOSIS" 
+                                        <Binding Path="VISIT_ONE_ANAMNESTIC_DATE_DIAGNOSIS" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                     </xctk:MaskedTextBox>
 
                                     <Label Grid.Column="0" Grid.Row="1" Content="Количество эпизодов декомпенсации в течение последний 12 месяцев"  />
                                     <TextBox Grid.Column="1" Grid.Row="1" 
-                                 Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_NUMBER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                 Text="{Binding Path=VISIT_ONE_ANAMNESTIC_NUMBER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Label Grid.Column="2" Grid.Row="1" Content="Нет данных"  />
-                                    <!--<CheckBox Grid.Column="3" Grid.Row="1" 
-                                 Checked="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_NUMBER_EPISODES_NODATA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                    <CheckBox Grid.Column="3" Grid.Row="1" 
+                                 IsChecked="{Binding Path=VISIT_ONE_ANAMNESTIC_NUMBER_EPISODES_NODATA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  />
 
                                     <Label Grid.Column="0" Grid.Row="2" Content="ФК ХСН:" />
                                     <ComboBox Grid.Column="1" Grid.Row="2"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_FUNCTION_CLASS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=VISIT_ONE_ANAMNESTIC_FUNCTION_CLASS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=FkLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="2" Content="Были ли другие эпзоды ВП в течение последних 12 месяцев:" />
                                     <ComboBox Grid.Column="3" Grid.Row="2"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_OTHER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=VISIT_ONE_ANAMNESTIC_OTHER_EPISODES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=Logic3Lookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="3" Content="Статус курения:" />
                                     <ComboBox Grid.Column="1" Grid.Row="3"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_STATUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=VISIT_ONE_ANAMNESTIC_SMOKE_STATUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=SmokeStatusLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="3" Content="Среднее число выкуриваемых сигарет в день:"  />
                                     <TextBox Grid.Column="3" Grid.Row="3" 
-                                 Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_AVERAGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                 Text="{Binding Path=VISIT_ONE_ANAMNESTIC_SMOKE_AVERAGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Label Grid.Column="0" Grid.Row="4" Content="Число лет курения:"  />
                                     <TextBox Grid.Column="1" Grid.Row="4" 
-                                 Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                 Text="{Binding Path=VISIT_ONE_ANAMNESTIC_SMOKE_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Label Grid.Column="2" Grid.Row="4" Content="Число пачка/лет:"  />
                                     <TextBox Grid.Column="3" Grid.Row="4" 
-                                 Text="{Binding Path=FieldVISIT_ONE_ANAMNESTIC_SMOKE_PACK_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                 Text="{Binding Path=VISIT_ONE_ANAMNESTIC_SMOKE_PACK_YEARS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
 
 
@@ -224,15 +224,15 @@
                                             <Label Grid.Column="4" Grid.Row="0"
                                                Content="Температура тела" />
                                             <TextBox Grid.Column="0" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_ONE_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="1" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_ONE_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="2" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_ONE_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_ONE_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="4" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_ONE_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                         </Grid>
                                     </Border>
@@ -240,19 +240,19 @@
                                     <Label Grid.Column="1" Grid.Row="0" Content="Степени тяжести ВП:" />
                                     <ComboBox Grid.Column="2" Grid.Row="0"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldVISIT_ONE_HEAVY_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=VISIT_ONE_HEAVY_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=HeavyLookup}" />
 
                                     <Label Grid.Column="1" Grid.Row="1" Content="Пациент нуждается в оксигенотерапии:" />
                                     <ComboBox Grid.Column="2" Grid.Row="1"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldVISIT_ONE_OXYGEN_THERAPY_NEEDED, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=VISIT_ONE_OXYGEN_THERAPY_NEEDED, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="1" Grid.Row="2" Content="Наличие признаков декомпенсации ХСН:" />
                                     <ComboBox Grid.Column="2" Grid.Row="2"  
                                   SelectedValuePath="." 
-                                  SelectedItem="{Binding Path=FieldVISIT_ONE_DECOMPENSATION_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  SelectedItem="{Binding Path=VISIT_ONE_DECOMPENSATION_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                   ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                 </Grid>
@@ -282,80 +282,80 @@
                                     <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
                                     <ComboBox Grid.Column="1" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
                                     <ComboBox Grid.Column="3" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
                                     <ComboBox Grid.Column="5" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
                                     <ComboBox Grid.Column="1" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=sputumTypeLookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=SputumTypeLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
                                     <ComboBox Grid.Column="3" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
                                     <ComboBox Grid.Column="5" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
                                     <ComboBox Grid.Column="1" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
                                     <ComboBox Grid.Column="3" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
                                     <ComboBox Grid.Column="5" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
                                     <ComboBox Grid.Column="1" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
                                     <ComboBox Grid.Column="3" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
                                     <ComboBox Grid.Column="5" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
                                     <ComboBox Grid.Column="1" Grid.Row="4"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=incidenceEdemaLookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=IncidenceEdemaLookup}" />
                                 </Grid>
                             </HeaderedContentControl>
                             <StackPanel Grid.Row="4" Orientation="Horizontal">
@@ -372,15 +372,15 @@
                                             Grid.Row="0">
                                             <Label Content="Дата проведения:" />
                                             <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                <Binding Path="FieldBLOOD_TEST_DATE_PROCEDURE" 
+                                                <Binding Path="XRAY_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                             </xctk:MaskedTextBox>
                                             <Label Content="Рентгенологические признаки пневмонии:" />
                                             <ComboBox
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldBLOOD_TEST_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=XRAY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
                                         </StackPanel>
 
                                         <Border Grid.Row="1"
@@ -430,37 +430,37 @@
                                                Text="Другие изменения" />
 
 
-                                                <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldBLOOD_TEST_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                                 <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
-                                                 Text="{Binding Path=FieldBLOOD_TEST_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=XRAY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                     </Grid>
@@ -478,15 +478,15 @@
                                             Grid.Row="0">
                                             <Label Content="Дата проведения:" />
                                             <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                <Binding Path="FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE" 
+                                                <Binding Path="VISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                             </xctk:MaskedTextBox>
                                             <Label Content="Томографические признаки пневмонии:" />
                                             <ComboBox
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=logic2Lookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=Logic2Lookup}" />
                                         </StackPanel>
 
                                         <Border Grid.Row="1"
@@ -536,37 +536,37 @@
                                                Text="Другие изменения" />
 
 
-                                                <!--<CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                                 <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
-                                                 Text="{Binding Path=FieldVISIT_ONE_COMPUTED_TOMOGRAPHY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                     </Grid>
@@ -590,18 +590,18 @@
                                         </Grid.RowDefinitions>
                                         <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
                                         <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                            <Binding Path="FieldVISIT_ONE_ELECTROCARDIOGRAPHY_DATE_PROCEDURE" 
+                                            <Binding Path="VISIT_ONE_ELECTROCARDIOGRAPHY_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                         </xctk:MaskedTextBox>
 
                                         <Label Grid.Row="1" Grid.Column="0"  Content="ЧСС в минуту:" />
                                         <TextBox Grid.Column="1" Grid.Row="1"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_HEARTH_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_HEARTH_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                         <Label Grid.Row="2" Grid.Column="0"  Content="Значимые ЭКГ изменения:" />
                                         <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                         <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
                                         Style="{StaticResource DetailBorder}">
@@ -625,14 +625,14 @@
                                                 <Label Grid.Column="0" Grid.Row="3"
                                                Content="Экстрасистолия желудочковая" />
 
-                                                <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_SINUS_RHYTHM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_SINUS_RHYTHM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ATRIAL_FIBRILLATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_ATRIAL_FIBRILLATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_SUPRAVENTRICULAR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_SUPRAVENTRICULAR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
 
@@ -655,18 +655,18 @@
                                         </Grid.RowDefinitions>
                                         <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
                                         <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                            <Binding Path="FieldVISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
+                                            <Binding Path="VISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                         </xctk:MaskedTextBox>
 
                                         <Label Grid.Row="1" Grid.Column="0"  Content="Объем перикардиального выпота:" />
                                         <TextBox Grid.Column="1" Grid.Row="1"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                         <Label Grid.Row="2" Grid.Column="0"  Content="Комментарии:" />
                                         <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                         <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
                                         Style="{StaticResource DetailBorder}">
@@ -690,14 +690,14 @@
                                                 <Label Grid.Column="0" Grid.Row="3"
                                                Content="СДЛА (мм.рт.ст.)" />
 
-                                                <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_ONE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
 
@@ -722,7 +722,7 @@
                                 <xctk:MaskedTextBox
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="FieldDATE_VISIT_TWO" 
+                                    <Binding Path="DATE_VISIT_TWO" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                 </xctk:MaskedTextBox>
@@ -756,15 +756,15 @@
                                         <Label Grid.Column="4" Grid.Row="0"
                                                Content="Температура тела" />
                                         <TextBox Grid.Column="0" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_TWO_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_TWO_BLOOD_PRESSURE_RIGHT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <TextBox Grid.Column="1" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_TWO_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_TWO_BLOOD_PRESSURE_LEFT_HAND, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <TextBox Grid.Column="2" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_TWO_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_TWO_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <TextBox Grid.Column="3" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_TWO_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_TWO_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <TextBox Grid.Column="4" Grid.Row="1" 
-                                                 Text="{Binding Path=FieldVISIT_TWO_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_TWO_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     </Grid>
                                 </Border>
@@ -793,86 +793,86 @@
                                     <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
                                     <ComboBox Grid.Column="1" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
                                     <ComboBox Grid.Column="3" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
                                     <ComboBox Grid.Column="5" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
                                     <ComboBox Grid.Column="1" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
                                     <ComboBox Grid.Column="3" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
                                     <ComboBox Grid.Column="5" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
                                     <ComboBox Grid.Column="1" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
                                     <ComboBox Grid.Column="3" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
                                     <ComboBox Grid.Column="5" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
                                     <ComboBox Grid.Column="1" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
                                     <ComboBox Grid.Column="3" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
                                     <ComboBox Grid.Column="5" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
                                     <ComboBox Grid.Column="1" Grid.Row="4"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="4" Content="Оценка эффективности терапии:" />
                                     <ComboBox Grid.Column="3" Grid.Row="4"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_TWO_SYMPTOMS_THERAPY_EFFICIENCY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=DinamicLookup}" />
+                                          SelectedItem="{Binding Path=VISIT_TWO_SYMPTOMS_THERAPY_EFFICIENCY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=EfficiencyLookup}" />
                                 </Grid>
                             </HeaderedContentControl>
                             <StackPanel Grid.Row="3" Orientation="Horizontal">
@@ -880,7 +880,7 @@
                                 <xctk:MaskedTextBox
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="FieldDATE_VISIT_THREE" 
+                                    <Binding Path="DATE_VISIT_THREE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                 </xctk:MaskedTextBox>
@@ -902,18 +902,18 @@
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
                                     <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="FieldVISIT_THREE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
+                                        <Binding Path="VISIT_THREE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                     </xctk:MaskedTextBox>
 
                                     <Label Grid.Row="1" Grid.Column="0"  Content="Объем перикардиального выпота:" />
                                     <TextBox Grid.Column="1" Grid.Row="1"
-                                                 Text="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Label Grid.Row="2" Grid.Column="0"  Content="Комментарии:" />
                                     <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                     <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"
                                         Style="{StaticResource DetailBorder}">
@@ -937,14 +937,14 @@
                                             <Label Grid.Column="0" Grid.Row="3"
                                                Content="СДЛА (мм.рт.ст.)" />
 
-                                            <!--<CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                            <CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Checked="{Binding Path=FieldVISIT_THREE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />-->
+                                                IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         </Grid>
                                     </Border>
 
@@ -991,14 +991,14 @@
 
                                                 <ComboBox Grid.Column="1" Grid.Row="1"  
                                                         SelectedValuePath="." 
-                                                        SelectedItem="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        SelectedItem="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_ONE_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                                         ItemsSource="{Binding Path=Logic2Lookup}" />
                                                 <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_LEUKOCYTOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_ONE_LEUKOCYTOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_ONE_OTHERS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_ONE_OTHERS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                         <Border Grid.Column="1"
@@ -1023,14 +1023,14 @@
 
                                                 <ComboBox Grid.Column="1" Grid.Row="1"  
                                                         SelectedValuePath="." 
-                                                        SelectedItem="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        SelectedItem="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_TWO_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                                         ItemsSource="{Binding Path=Logic2Lookup}" />
                                                 <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_LEUKOCYTOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_TWO_LEUKOCYTOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CLINICAL_ANALYSIS_VISIT_TWO_OTHERS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CLINICAL_ANALYSIS_VISIT_TWO_OTHERS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                     </Grid>
@@ -1063,10 +1063,10 @@
 
                                                 <ComboBox Grid.Column="1" Grid.Row="1"  
                                                         SelectedValuePath="." 
-                                                        SelectedItem="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_ONE_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        SelectedItem="{Binding Path=BLOOD_CHEMISTRY_VISIT_ONE_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                                         ItemsSource="{Binding Path=Logic2Lookup}" />
                                                 <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_ONE_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CHEMISTRY_VISIT_ONE_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                         <Border Grid.Column="1"
@@ -1087,10 +1087,10 @@
 
                                                 <ComboBox Grid.Column="1" Grid.Row="1"  
                                                         SelectedValuePath="." 
-                                                        SelectedItem="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_TWO_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                                        SelectedItem="{Binding Path=BLOOD_CHEMISTRY_VISIT_TWO_SIGNIFICANT_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                                         ItemsSource="{Binding Path=Logic2Lookup}" />
                                                 <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_CHEMISTRY_VISIT_TWO_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_CHEMISTRY_VISIT_TWO_CHANGES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                     </Grid>
@@ -1127,29 +1127,29 @@
 
 
                                             <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
                                             <TextBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         </Grid>
                                     </Border>
                                 </HeaderedContentControl>
@@ -1181,23 +1181,23 @@
 
 
                                             <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
                                             <TextBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_ONE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_TWO_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             <TextBox Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=FieldBLOOD_TEST_VISIT_THREE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_THREE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         </Grid>
                                     </Border>
                                 </HeaderedContentControl>
@@ -1228,7 +1228,7 @@
                                                     <ComboBox 
                                                             IsEnabled="True"
                                                           SelectedValuePath="." 
-                                                          SelectedItem="{Binding Path=FieldDRUG, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          SelectedItem="{Binding Path=DRUG, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=DrugLookup}" 
                                                           DisplayMemberPath="Name" />
                                                     <TextBlock Grid.Column="1" Padding="4,2,4,3">
@@ -1240,7 +1240,7 @@
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
-                                    <DataGridTextColumn Header="Разовая доза"  Binding="{Binding Path=FieldSINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTextColumn Header="Разовая доза"  Binding="{Binding Path=SINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                     <DataGridTemplateColumn Header= "Путь введения">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
@@ -1252,7 +1252,7 @@
                                                     <ComboBox 
                                                             IsEnabled="True"
                                                           SelectedValuePath="." 
-                                                          SelectedItem="{Binding Path=FieldROUTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          SelectedItem="{Binding Path=ROUTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=RouteLookup}" 
                                                           DisplayMemberPath="Name" />
                                                     <TextBlock Grid.Column="1" Padding="4,2,4,3">
@@ -1264,12 +1264,12 @@
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
-                                    <DataGridTextColumn Header="Кратность (раз в сут.)"  Binding="{Binding Path=FieldFREQUENCY, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTextColumn Header="Кратность (раз в сут.)"  Binding="{Binding Path=FREQUENCY, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                     <DataGridTemplateColumn Header= "Дата начала приема" IsReadOnly="True">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="FieldDATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                    <Binding Path="DATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                                 </xctk:MaskedTextBox>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
@@ -1278,7 +1278,7 @@
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="FieldDATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                    <Binding Path="DATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                                 </xctk:MaskedTextBox>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
@@ -1302,13 +1302,13 @@
                                     <Label  Content="Проводился:" />
                                     <ComboBox  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldTEST_LOGIC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=TEST_LOGIC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=Logic2Lookup}" />
 
                                     <Label Content="Результат:" />
                                     <ComboBox 
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldTEST_RESULT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=TEST_RESULT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=ResultLookup}" />
                                 </StackPanel>
                             </HeaderedContentControl>
@@ -1331,22 +1331,22 @@
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
                                                         <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                            <Binding Path="FieldMB_SPUTUM_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                            <Binding Path="MB_SPUTUM_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                                         </xctk:MaskedTextBox>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
-                                            <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=FieldMB_SPUTUM_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
-                                            <DataGridTextColumn Header="Лейкоциты"  Binding="{Binding Path=FieldMB_SPUTUM_QUALITY_LEUKOCYTES, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
-                                            <DataGridTextColumn Header="Эпителиоциты"  Binding="{Binding Path=FieldMB_SPUTUM_QUALITY_EPITHELIAL, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
-                                            <DataGridCheckBoxColumn Header="Нерепр.образец" Binding="{Binding Path=FieldMB_SPUTUM_NOT_REPRESENTATIVE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}"/>
+                                            <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=MB_SPUTUM_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            <DataGridTextColumn Header="Лейкоциты"  Binding="{Binding Path=MB_SPUTUM_QUALITY_LEUKOCYTES, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            <DataGridTextColumn Header="Эпителиоциты"  Binding="{Binding Path=MB_SPUTUM_QUALITY_EPITHELIAL, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            <DataGridCheckBoxColumn Header="Нерепр.образец" Binding="{Binding Path=MB_SPUTUM_NOT_REPRESENTATIVE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}"/>
                                             <DataGridTemplateColumn Header= "Рост возбудителей">
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
                                                         <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldMB_SPUTUM_GROWTH_PATHOGENS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=MB_SPUTUM_GROWTH_PATHOGENS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=Logic2Lookup}" 
                                                                       />
                                                     </DataTemplate>
@@ -1364,7 +1364,7 @@
                                                             <ComboBox 
                                                             IsEnabled="True"
                                                           SelectedValuePath="." 
-                                                          SelectedItem="{Binding Path=FieldMB_SPUTUM_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          SelectedItem="{Binding Path=MB_SPUTUM_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=OrganismLookup}" 
                                                           DisplayMemberPath="Name" />
                                                             <TextBlock Grid.Column="1" Padding="4,2,4,3">
@@ -1382,7 +1382,7 @@
                                                         <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldMB_SPUTUM_BETA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=MB_SPUTUM_BETA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=Logic3Lookup}" 
                                                                       />
                                                     </DataTemplate>
@@ -1394,7 +1394,7 @@
                                                         <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldMB_SPUTUM_MRSA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=MB_SPUTUM_MRSA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=Logic3Lookup}" 
                                                                       />
                                                     </DataTemplate>
@@ -1423,19 +1423,19 @@
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
                                                         <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                            <Binding Path="FieldMB_BLOOD_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                            <Binding Path="MB_BLOOD_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                                         </xctk:MaskedTextBox>
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
-                                            <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=FieldMB_BLOOD_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                            <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=MB_BLOOD_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                             <DataGridTemplateColumn Header= "Рост возбудителей">
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
                                                         <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldMB_BLOOD_GROWTH_PATHOGENS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=MB_BLOOD_GROWTH_PATHOGENS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=Logic2Lookup}" 
                                                                       />
                                                     </DataTemplate>
@@ -1453,7 +1453,7 @@
                                                             <ComboBox 
                                                             IsEnabled="True"
                                                           SelectedValuePath="." 
-                                                          SelectedItem="{Binding Path=FieldMB_BLOOD_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          SelectedItem="{Binding Path=MB_BLOOD_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=OrganismLookup}" 
                                                           DisplayMemberPath="Name" />
                                                             <TextBlock Grid.Column="1" Padding="4,2,4,3">
@@ -1471,7 +1471,7 @@
                                                         <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldMB_BLOOD_BETA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=MB_BLOOD_BETA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=Logic3Lookup}" 
                                                                       />
                                                     </DataTemplate>
@@ -1483,7 +1483,7 @@
                                                         <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldMB_BLOOD_MRSA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=MB_BLOOD_MRSA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=Logic3Lookup}" 
                                                                       />
                                                     </DataTemplate>
@@ -1506,7 +1506,7 @@
                                 <xctk:MaskedTextBox
                                                       Mask="00/00/0000"
                                                       ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="FieldDATE_VISIT_ONE_ONE" 
+                                    <Binding Path="DATE_VISIT_ONE_ONE" 
                                                  Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
                                                  ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                 </xctk:MaskedTextBox>
@@ -1535,86 +1535,86 @@
                                     <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
                                     <ComboBox Grid.Column="1" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
                                     <ComboBox Grid.Column="3" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
                                     <ComboBox Grid.Column="5" Grid.Row="0"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
                                     <ComboBox Grid.Column="1" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
                                     <ComboBox Grid.Column="3" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
                                     <ComboBox Grid.Column="5" Grid.Row="1"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
                                     <ComboBox Grid.Column="1" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
                                     <ComboBox Grid.Column="3" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
                                     <ComboBox Grid.Column="5" Grid.Row="2"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
                                     <ComboBox Grid.Column="1" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
                                     <ComboBox Grid.Column="3" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
                                     <ComboBox Grid.Column="5" Grid.Row="3"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
                                     <ComboBox Grid.Column="1" Grid.Row="4"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=DinamicLookup}" />
 
                                     <Label Grid.Column="2" Grid.Row="4" Content="Оценка эффективности терапии:" />
                                     <ComboBox Grid.Column="3" Grid.Row="4"  
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_THERAPY_EFFICIENCY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
-                                          ItemsSource="{Binding Path=DinamicLookup}" />
+                                          SelectedItem="{Binding Path=VISIT_ONE_ONE_SYMPTOMS_THERAPY_EFFICIENCY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=EfficiencyLookup}" />
                                 </Grid>
                             </HeaderedContentControl>
                         </Grid>
@@ -1625,7 +1625,7 @@
                                 <Label Content="Отмечалось ли в ходе исследования развитие НЯ?:" />
                                 <ComboBox
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=FieldAE_LOGIC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=AE_LOGIC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=Logic2Lookup}" />
                             </StackPanel>
 
@@ -1639,12 +1639,12 @@
                             ItemsSource="{Binding AllAE}"
                                   SelectedItem="{Binding CurrentAE}" CanUserAddRows="False" CanUserDeleteRows="False">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Нежелательное явление"  Binding="{Binding Path=FieldMB_BLOOD_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTextColumn Header="Нежелательное явление"  Binding="{Binding Path=MB_BLOOD_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                     <DataGridTemplateColumn Header= "Дата начала" IsReadOnly="True">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="FieldAE_DATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                    <Binding Path="AE_DATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                                 </xctk:MaskedTextBox>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
@@ -1653,7 +1653,7 @@
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="FieldAE_DATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                                    <Binding Path="AE_DATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
                                                 </xctk:MaskedTextBox>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
@@ -1664,7 +1664,7 @@
                                                 <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldAE_HEAVY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=AE_HEAVY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=AEHeavyLookup}" 
                                                                       />
                                             </DataTemplate>
@@ -1676,7 +1676,7 @@
                                                 <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldAE_RESULT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=AE_RESULT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=AEResultLookup}" 
                                                                       />
                                             </DataTemplate>
@@ -1688,7 +1688,7 @@
                                                 <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldAE_RELATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=AE_RELATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=AERelationLookup}" 
                                                                       />
                                             </DataTemplate>
@@ -1700,7 +1700,7 @@
                                                 <ComboBox 
                                                                         IsEnabled="True"
                                                                       SelectedValuePath="." 
-                                                                      SelectedItem="{Binding Path=FieldAE_ACTIONS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                                      SelectedItem="{Binding Path=AE_ACTIONS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                                       ItemsSource="{Binding Path=AEActionsLookup}" 
                                                                       />
                                             </DataTemplate>

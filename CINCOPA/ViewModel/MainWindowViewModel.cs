@@ -52,14 +52,14 @@ namespace CINCOPA.ViewModel
 
         private void OpenCrf()
         {
-            var vm = CurrentCrf;
+            var vm = new CrfViewModel(CurrentCrf);
             var v = new CrfView { DataContext = vm };
             v.Show();
         }
 
         private void AddCrf()
         {
-            var vm = DataManager.Instance.CreateCrf();
+            var vm = new CrfViewModel(DataManager.Instance.CreateCrf());
             var v = new CrfView {DataContext = vm};
             v.Show();
         }

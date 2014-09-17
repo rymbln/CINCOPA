@@ -3342,7 +3342,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS
+        public Nullable<global::System.Decimal> VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS
         {
             get
             {
@@ -3352,13 +3352,13 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanging(value);
                 ReportPropertyChanging("VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
-                _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
                 OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanged();
             }
         }
-        private global::System.String _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS;
-        partial void OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanging(global::System.String value);
+        private Nullable<global::System.Decimal> _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS;
+        partial void OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanging(Nullable<global::System.Decimal> value);
         partial void OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanged();
     
         /// <summary>
@@ -3438,7 +3438,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS
+        public Nullable<global::System.Decimal> VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS
         {
             get
             {
@@ -3448,13 +3448,13 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanging(value);
                 ReportPropertyChanging("VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
-                _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
                 OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanged();
             }
         }
-        private global::System.String _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS;
-        partial void OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanging(global::System.String value);
+        private Nullable<global::System.Decimal> _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS;
+        partial void OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanging(Nullable<global::System.Decimal> value);
         partial void OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanged();
     
         /// <summary>
