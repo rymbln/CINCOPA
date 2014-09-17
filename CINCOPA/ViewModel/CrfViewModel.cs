@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using CINCOPA.Common;
 using CINCOPA.Model;
 
@@ -18,6 +19,84 @@ namespace CINCOPA.ViewModel
             {
                 Model = obj;
             }
+            SaveCommand = new DelegateCommand(o=>Save());
+            CheckCommand = new DelegateCommand(o=>Check());
+            CancelCommand = new DelegateCommand(o=>Cancel());
+            AddABTherapyCommand = new DelegateCommand(o=>AddAbTherapy());
+            DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
+            SelectDrugCommand = new DelegateCommand(o => SelectDrug());
+            SelectRouteCommand = new DelegateCommand(o=> SelectRoute());
+            AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
+            DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
+            SelectOrganismForBloodCommand = new DelegateCommand(o => SelectOrganismForBlood());
+            SelectOrganismForSputumCommand = new DelegateCommand(o=> SelectOrganismForSputum());
+            AddMBBloodCommand = new DelegateCommand(o => AddMBBlood());
+            DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
+            AddAECommand = new DelegateCommand(o => AddAE());
+            DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
+        }
+
+        public ICommand SaveCommand { get; private set; }
+        private void Save()
+        {
+
+        }
+        public ICommand CheckCommand { get; private set; }
+        private void Check()
+        {
+
+        }
+        public ICommand CancelCommand { get; private set; }
+        private void Cancel()
+        {
+        }
+        public ICommand AddABTherapyCommand { get; private set; }
+        private void AddAbTherapy()
+        {
+        }
+        public ICommand DeleteABTherapyCommand { get; private set; }
+        private void DeleteABTherapy()
+        {
+        }
+        public ICommand SelectDrugCommand { get; private set; }
+        private void SelectDrug()
+        {
+        }
+        public ICommand SelectRouteCommand { get; private set; }
+        private void SelectRoute()
+        {
+        }
+        public ICommand AddMBSputumCommand { get; private set; }
+        private void AddMBSputum()
+        {
+        }
+        public ICommand DeleteMBSputumCommand { get; private set; }
+        private void DeleteMBSputum()
+        {
+        }
+        public ICommand SelectOrganismForSputumCommand { get; private set; }
+        private void SelectOrganismForSputum()
+        {
+        }
+        public ICommand SelectOrganismForBloodCommand { get; private set; }
+        private void SelectOrganismForBlood()
+        {
+        }
+        public ICommand AddMBBloodCommand { get; private set; }
+        private void AddMBBlood()
+        {
+        }
+        public ICommand DeleteMBBloodCommand { get; private set; }
+        private void DeleteMBBlood()
+        {
+        }
+        public ICommand AddAECommand { get; private set; }
+        private void AddAE()
+        {
+        }
+        public ICommand DeleteAECommand { get; private set; }
+        private void DeleteAE()
+        {
         }
 
         #region ComboBox Sources

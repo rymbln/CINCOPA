@@ -1368,7 +1368,7 @@
                                                           ItemsSource="{Binding Path=OrganismLookup}" 
                                                           DisplayMemberPath="Name" />
                                                             <TextBlock Grid.Column="1" Padding="4,2,4,3">
-                                                            <Hyperlink Command="{Binding SelectOrganismCommand}">
+                                                            <Hyperlink Command="{Binding SelectOrganismForSputumCommand}">
                                                                 <Run Text="..."/>
                                                             </Hyperlink>
                                                             </TextBlock>
@@ -1457,7 +1457,7 @@
                                                           ItemsSource="{Binding Path=OrganismLookup}" 
                                                           DisplayMemberPath="Name" />
                                                             <TextBlock Grid.Column="1" Padding="4,2,4,3">
-                                                            <Hyperlink Command="{Binding SelectOrganismCommand}">
+                                                            <Hyperlink Command="{Binding SelectOrganismForBloodCommand}">
                                                                 <Run Text="..."/>
                                                             </Hyperlink>
                                                             </TextBlock>
