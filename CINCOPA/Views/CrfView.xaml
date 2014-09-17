@@ -1495,6 +1495,130 @@
                             </HeaderedContentControl>
                         </Grid>
                     </TabItem>
+                    <TabItem Header="Визит 1.1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <Label  Content="ДАТА ВИЗИТА 1.1" />
+                                <xctk:MaskedTextBox
+                                                      Mask="00/00/0000"
+                                                      ValueDataType="{x:Type s:DateTime}">
+                                    <Binding Path="FieldDATE_VISIT_ONE_ONE" 
+                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
+                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
+                                </xctk:MaskedTextBox>
+                            </StackPanel>
+                            <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
+                                <HeaderedContentControl.Header>
+                                    Динамика симптомов ВП и ХСН
+                                </HeaderedContentControl.Header>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" Content="Появление или усиление одышки:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="0"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_DYSPNEA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="0" Content="Появление или усиление кашля:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="0"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_COUGH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="0" Content="Наличие мокроты:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="0"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_SPUTUM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Характер мокроты:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="1"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_SPUTUM_TYPE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="1" Content="Повышение температуры тела:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="1"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_TEMPERATURE_INCREASE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="1" Content="Наличие сиптомов простуды:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="1"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_COLD_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="2" Content="Укорочение перкуторного звука:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="2"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="2" Content="Влажные мелкопузырчатые хрипы:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="2"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_MOIST_RALES_SOUNDS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="2" Content="Крепитация:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="2"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_CREPITUS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="3" Content="Шум трения плевры:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="3"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="3" Content="Сухие хрипы:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="3"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_DRY_RALES, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="4" Grid.Row="3" Content="Наличие отеков:" />
+                                    <ComboBox Grid.Column="5" Grid.Row="3"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_PRESENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="0" Grid.Row="4" Content="Распространенность отеков:" />
+                                    <ComboBox Grid.Column="1" Grid.Row="4"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+
+                                    <Label Grid.Column="2" Grid.Row="4" Content="Оценка эффективности терапии:" />
+                                    <ComboBox Grid.Column="3" Grid.Row="4"  
+                                          SelectedValuePath="." 
+                                          SelectedItem="{Binding Path=FieldVISIT_ONE_ONE_SYMPTOMS_THERAPY_EFFICIENCY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          ItemsSource="{Binding Path=DinamicLookup}" />
+                                </Grid>
+                            </HeaderedContentControl>
+                          </Grid>
+                    </TabItem>
                 </TabControl>
 
 
