@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/17/2014 11:46:05
+-- Date Created: 09/18/2014 15:51:48
 -- Generated from EDMX file: C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\Model\CINCOPAModel.edmx
 -- --------------------------------------------------
 
@@ -573,11 +573,11 @@ CREATE TABLE [dbo].[BloodClinicalAnalyses] (
     [Id] uniqueidentifier  NOT NULL,
     [VISIT_ONE_SIGNIFICANT_CHANGES] nvarchar(max)  NULL,
     [VISIT_ONE_LEUKOCYTOSIS] decimal(18,0)  NULL,
-    [VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS] nvarchar(max)  NULL,
+    [VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS] decimal(18,0)  NULL,
     [VISIT_ONE_OTHERS] nvarchar(max)  NULL,
     [VISIT_TWO_SIGNIFICANT_CHANGES] nvarchar(max)  NULL,
     [VISIT_TWO_LEUKOCYTOSIS] decimal(18,0)  NULL,
-    [VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS] nvarchar(max)  NULL,
+    [VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS] decimal(18,0)  NULL,
     [VISIT_TWO_OTHERS] nvarchar(max)  NULL,
     [CreatedBy] nvarchar(max)  NULL,
     [CreatedByDate] nvarchar(max)  NULL,

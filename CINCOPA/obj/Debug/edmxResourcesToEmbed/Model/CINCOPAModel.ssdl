@@ -519,11 +519,11 @@
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="VISIT_ONE_SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_ONE_LEUKOCYTOSIS" Type="decimal" Nullable="true" />
-    <Property Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Nullable="true" />
     <Property Name="VISIT_ONE_OTHERS" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_TWO_SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_TWO_LEUKOCYTOSIS" Type="decimal" Nullable="true" />
-    <Property Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Nullable="true" />
     <Property Name="VISIT_TWO_OTHERS" Type="nvarchar(max)" Nullable="true" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />

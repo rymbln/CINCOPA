@@ -23,17 +23,17 @@ namespace CINCOPA.ViewModel
             CheckCommand = new DelegateCommand(o=>Check());
             CancelCommand = new DelegateCommand(o=>Cancel());
             AddABTherapyCommand = new DelegateCommand(o=>AddAbTherapy());
-            DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
+           // DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
             SelectDrugCommand = new DelegateCommand(o => SelectDrug());
             SelectRouteCommand = new DelegateCommand(o=> SelectRoute());
             AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
-            DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
+            //DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
             SelectOrganismForBloodCommand = new DelegateCommand(o => SelectOrganismForBlood());
             SelectOrganismForSputumCommand = new DelegateCommand(o=> SelectOrganismForSputum());
             AddMBBloodCommand = new DelegateCommand(o => AddMBBlood());
-            DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
+            //DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
             AddAECommand = new DelegateCommand(o => AddAE());
-            DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
+            //DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
         }
 
         public ICommand SaveCommand { get; private set; }

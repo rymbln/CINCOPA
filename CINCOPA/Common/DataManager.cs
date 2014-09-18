@@ -877,6 +877,7 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
+            obj.Id = GuidComb.Generate();
             obj.DATE_VISIT = null;
 
             //underlyingContext.VisitOneOnes.AddObject(obj);
@@ -929,6 +930,7 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
+            obj.Id = GuidComb.Generate();
             obj.DATE_VISIT = null;
 
             // underlyingContext.VisitTwoes.AddObject(obj);
@@ -1004,6 +1006,7 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
+            obj.Id = GuidComb.Generate();
             obj.DATE_VISIT = null;
 
             //underlyingContext.VisitThrees.AddObject(obj);
