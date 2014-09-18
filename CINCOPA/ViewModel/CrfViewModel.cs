@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
+using System.Windows.Navigation;
 using CINCOPA.Common;
 using CINCOPA.Model;
 
@@ -12,34 +14,77 @@ namespace CINCOPA.ViewModel
     public class CrfViewModel : ViewModelBase
     {
         private CRF Model;
-
+        private AB_THERAPY currentABTherapy;
+        private AEViewModel currentAE;
         public CrfViewModel(CRF obj)
         {
             if (obj != null)
             {
                 Model = obj;
+
+                AllAE = new ObservableCollection<AEViewModel>();
+                foreach (var adverseEvent in Model.ADVERSE_EVENT)
+                {
+                    AllAE.Add(new AEViewModel(adverseEvent));
+                }
+                AllAE.CollectionChanged += (sender, e) =>
+                {
+                    CurrentAE = AllAE.FirstOrDefault();
+                };
+
+
+
+                //AllABTherapy = new ObservableCollection<AB_THERAPY>();
+                //foreach (var abTherapy in Model.AB_THERAPY)
+                //{
+                //   // AllABTherapy
+                //}
+
+                SaveCommand = new DelegateCommand(o => Save());
+                CheckCommand = new DelegateCommand(o => Check());
+                CancelCommand = new DelegateCommand(o => Cancel());
+                AddABTherapyCommand = new DelegateCommand(o => AddAbTherapy());
+                // DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
+                SelectDrugCommand = new DelegateCommand(o => SelectDrug());
+                SelectRouteCommand = new DelegateCommand(o => SelectRoute());
+                AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
+                //DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
+                SelectOrganismForBloodCommand = new DelegateCommand(o => SelectOrganismForBlood());
+                SelectOrganismForSputumCommand = new DelegateCommand(o => SelectOrganismForSputum());
+                AddMBBloodCommand = new DelegateCommand(o => AddMBBlood());
+                //DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
+                AddAECommand = new DelegateCommand(o => AddAE());
+                DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
+
             }
-            SaveCommand = new DelegateCommand(o=>Save());
-            CheckCommand = new DelegateCommand(o=>Check());
-            CancelCommand = new DelegateCommand(o=>Cancel());
-            AddABTherapyCommand = new DelegateCommand(o=>AddAbTherapy());
-           // DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
-            SelectDrugCommand = new DelegateCommand(o => SelectDrug());
-            SelectRouteCommand = new DelegateCommand(o=> SelectRoute());
-            AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
-            //DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
-            SelectOrganismForBloodCommand = new DelegateCommand(o => SelectOrganismForBlood());
-            SelectOrganismForSputumCommand = new DelegateCommand(o=> SelectOrganismForSputum());
-            AddMBBloodCommand = new DelegateCommand(o => AddMBBlood());
-            //DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
-            AddAECommand = new DelegateCommand(o => AddAE());
-            //DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
+        }
+
+        public ObservableCollection<AB_THERAPY> AllABTherapy { get; private set; }
+        public ObservableCollection<AEViewModel> AllAE { get; private set; } 
+
+        public AEViewModel CurrentAE
+        {
+            get { return currentAE; }
+            set
+            {
+                currentAE = value;
+                OnPropertyChanged("CurrentAE");
+            }
+        }
+        public AB_THERAPY CurrentABTherapy
+        {
+            get { return currentABTherapy; }
+            set
+            {
+                currentABTherapy = value;
+                OnPropertyChanged("CurrentABTherapy");
+            }
         }
 
         public ICommand SaveCommand { get; private set; }
         private void Save()
         {
-
+            DataManager.Instance.Save();
         }
         public ICommand CheckCommand { get; private set; }
         private void Check()
@@ -77,10 +122,24 @@ namespace CINCOPA.ViewModel
         public ICommand SelectOrganismForSputumCommand { get; private set; }
         private void SelectOrganismForSputum()
         {
+            //var vm = new SelectOrganismViewModel();
+            //vm.ShowDialog();
+            //if (vm.DialogResult)
+            //{
+            //    OnPropertyChanged("OrganismLookup");
+            //    Drug = vm.CurrentItem;
+            //}
         }
         public ICommand SelectOrganismForBloodCommand { get; private set; }
         private void SelectOrganismForBlood()
         {
+            //var vm = new SelectOrganismViewModel();
+            //vm.ShowDialog();
+            //if (vm.DialogResult)
+            //{
+            //    OnPropertyChanged("OrganismLookup");
+            //    Drug = vm.CurrentItem;
+            //}
         }
         public ICommand AddMBBloodCommand { get; private set; }
         private void AddMBBlood()
@@ -93,10 +152,23 @@ namespace CINCOPA.ViewModel
         public ICommand AddAECommand { get; private set; }
         private void AddAE()
         {
+            var obj = DataManager.Instance.CreateAEforCRF(Model);
+            var vm = new AEViewModel(obj);
+            AllAE.Add(vm);
+            Model.ADVERSE_EVENT.Add(obj);
+            OnPropertyChanged("AllAE");
+            CurrentAE = AllAE.LastOrDefault();
         }
         public ICommand DeleteAECommand { get; private set; }
         private void DeleteAE()
         {
+            //DataManager.Instance.RemoveAEforCRF(CurrentAE.Model);
+            Model.ADVERSE_EVENT.Remove(CurrentAE.Model);
+            DataManager.Instance.DeleteAE(CurrentAE.Model);
+            AllAE.Remove(CurrentAE);
+        
+            OnPropertyChanged("AllAE");
+            CurrentAE = AllAE.FirstOrDefault();
         }
 
         #region ComboBox Sources
@@ -1891,7 +1963,7 @@ namespace CINCOPA.ViewModel
 
         public string BLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE
         {
-            get {return Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE; }
+            get { return Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE; }
             set
             {
                 Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE = value;

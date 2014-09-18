@@ -122,7 +122,7 @@ namespace CINCOPA.Common
                 }
                 return resultLookup;
             }
-          
+
         }
         public List<string> EfficiencyLookup
         {
@@ -215,7 +215,7 @@ namespace CINCOPA.Common
         {
             get
             {
-                if (logic3Lookup.Count ==0)
+                if (logic3Lookup.Count == 0)
                 {
                     logic3Lookup.Add("---");
                     logic3Lookup.Add("1 - Да");
@@ -289,7 +289,7 @@ namespace CINCOPA.Common
         {
             get
             {
-  organismLookup = underlyingContext.Organisms.OrderBy(o => o.NAME).ToList();
+                organismLookup = underlyingContext.Organisms.OrderBy(o => o.NAME).ToList();
                 return organismLookup;
             }
         }
@@ -370,67 +370,67 @@ namespace CINCOPA.Common
             CRF obj = null;
             //using (var transaction = new TransactionScope())
             //{
-                try
-                {
-                    obj = underlyingContext.CreateObject<CRF>();
+            try
+            {
+                obj = underlyingContext.CreateObject<CRF>();
 
-                    obj.Id = GuidComb.Generate();
-                    obj.CreatedBy = Authentification.GetCurrentUser().NAME;
-                    obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
-                    obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
-                    obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
-                    obj.StateCode = "---";
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.StateCode = "---";
 
-                    obj.NAME = "---";
-                    obj.NUMBER = -100;
-                    obj.DATE_BIRTH = null;
-                    obj.DATE_HOSPITALISATION = null;
-                    obj.DATE_DISCHARGE = null;
-                    obj.AE_LOGIC = "2 - Нет";
-                    obj.WARD = GetDefaultWard();
-
-
-                    obj.TEST_FOR_PNEUMOCOCCAL = CreateTestForPneumococcal();
-                    obj.BLOOD_CHEMISTRY = CreateBloodChemistry();
-                    obj.BLOOD_CLINICAL_ANALYSIS = CreateBloodClinicalAnalysis();
-
-                    obj.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION =
-                        CreateBloodTestsForMarkersOfCardiacDysfunction();
-                    obj.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION = CreateTestsForMarkersOfInflammation();
+                obj.NAME = "---";
+                obj.NUMBER = -100;
+                obj.DATE_BIRTH = null;
+                obj.DATE_HOSPITALISATION = null;
+                obj.DATE_DISCHARGE = null;
+                obj.AE_LOGIC = "2 - Нет";
+                obj.WARD = GetDefaultWard();
 
 
-                    obj.VISIT_ONE = CreateVisitOne();
-                    obj.VISIT_ONE_ONE = CreateVisitOneOne();
-                    obj.VISIT_TWO = CreateVisitTwo();
-                    obj.VISIT_THREE = CreateVisitThree();
+                obj.TEST_FOR_PNEUMOCOCCAL = CreateTestForPneumococcal();
+                obj.BLOOD_CHEMISTRY = CreateBloodChemistry();
+                obj.BLOOD_CLINICAL_ANALYSIS = CreateBloodClinicalAnalysis();
 
-                    underlyingContext.CRFs.AddObject(obj);
-                    Save();
+                obj.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION =
+                    CreateBloodTestsForMarkersOfCardiacDysfunction();
+                obj.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION = CreateTestsForMarkersOfInflammation();
 
 
-                    // Mark the transaction as complete.
-                   // transaction.Complete();
-                    success = true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(@"Операция не может быть выполнена. Ошибка: "
-                                           + ex.Message);
-                }
+                obj.VISIT_ONE = CreateVisitOne();
+                obj.VISIT_ONE_ONE = CreateVisitOneOne();
+                obj.VISIT_TWO = CreateVisitTwo();
+                obj.VISIT_THREE = CreateVisitThree();
 
-                if (success)
-                {
-                    underlyingContext.AcceptChanges();
-                }
-                else
-                {
-                    underlyingContext.RollbackChanges();
-                    MessageBox.Show(@"Транзакция прервана!");
+                underlyingContext.CRFs.AddObject(obj);
+                Save();
 
-                }
 
-                return obj;
-            
+                // Mark the transaction as complete.
+                // transaction.Complete();
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(@"Операция не может быть выполнена. Ошибка: "
+                                       + ex.Message);
+            }
+
+            if (success)
+            {
+                underlyingContext.AcceptChanges();
+            }
+            else
+            {
+                underlyingContext.RollbackChanges();
+                MessageBox.Show(@"Транзакция прервана!");
+
+            }
+
+            return obj;
+
         }
 
 
@@ -510,7 +510,7 @@ namespace CINCOPA.Common
 
             underlyingContext.BloodClinicalAnalyses.AddObject(obj);
 
-           // Save();
+            // Save();
 
             return obj;
         }
@@ -548,7 +548,7 @@ namespace CINCOPA.Common
 
             underlyingContext.TestForPneumococcals.AddObject(obj);
 
-         //   Save();
+            //   Save();
 
             return obj;
         }
@@ -1064,7 +1064,7 @@ namespace CINCOPA.Common
                 obj.RELATION = "---";
                 obj.ACTIONS = "---";
                 underlyingContext.AEs.AddObject(obj);
-              //  Save();
+                //  Save();
             }
             catch (Exception ex)
             {
@@ -1093,7 +1093,7 @@ namespace CINCOPA.Common
                 obj.DATE_END = null;
 
                 underlyingContext.AbTherapys.AddObject(obj);
-              //  Save();
+                //  Save();
             }
             catch (Exception ex)
             {
@@ -1124,7 +1124,7 @@ namespace CINCOPA.Common
                 obj.BETA = "---";
                 obj.MRSA = "---";
                 underlyingContext.MicrobiologySputums.AddObject(obj);
-               // Save();
+                // Save();
             }
             catch (Exception ex)
             {
@@ -1152,7 +1152,7 @@ namespace CINCOPA.Common
                 obj.BETA = "---";
                 obj.MRSA = "---";
                 underlyingContext.MicrobiologyBloods.AddObject(obj);
-               // Save();
+                // Save();
             }
             catch (Exception ex)
             {
@@ -1174,7 +1174,79 @@ namespace CINCOPA.Common
                 MessageBox.Show("Не удалось получить список карт.", ex.Message);
                 return null;
             }
-            
+
+        }
+
+        public IEnumerable<ORGANISM> GetAllOrganisms()
+        {
+            return underlyingContext.Organisms.OrderBy(o => o.NAME);
+        }
+
+        public IEnumerable<ROUTE> GetAllRoutes()
+        {
+            return underlyingContext.Routes.OrderBy(o => o.NAME);
+        }
+
+        public IEnumerable<DRUG> GetAllDrugs()
+        {
+            return underlyingContext.Drugs.OrderBy(o => o.NAME);
+        }
+
+        public ORGANISM AddOrganism(string NewItem)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<ORGANISM>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.NAME = NewItem;
+                obj.CODE = "NEED_CODE";
+                underlyingContext.Organisms.AddObject(obj);
+                Save();
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось добавить организм! Ошибка: " + ex.Message);
+                return null;
+            }
+        }
+
+        public ADVERSE_EVENT CreateAEforCRF(CRF Model)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<ADVERSE_EVENT>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+
+                obj.CRFId = Model.Id;
+                obj.ACTIONS = "---";
+                obj.HEAVY = "---";
+                obj.NAME = "---";
+                obj.RELATION = "---";
+                obj.RESULT = "---";
+
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+       
+        }
+
+        public void DeleteAE(ADVERSE_EVENT obj)
+        {
+            underlyingContext.AEs.DeleteObject(obj);
+
         }
     }
 }

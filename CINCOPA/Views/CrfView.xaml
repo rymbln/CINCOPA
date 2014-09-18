@@ -1639,22 +1639,18 @@
                             ItemsSource="{Binding AllAE}"
                                   SelectedItem="{Binding CurrentAE}" CanUserAddRows="False" CanUserDeleteRows="False">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Нежелательное явление"  Binding="{Binding Path=MB_BLOOD_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTextColumn Header="Нежелательное явление"  Binding="{Binding Path=AE_NAME, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                     <DataGridTemplateColumn Header= "Дата начала" IsReadOnly="True">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="AE_DATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                                </xctk:MaskedTextBox>
+                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" Value="{Binding Path=AE_DATE_START, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
                                     <DataGridTemplateColumn Header= "Дата окончания" IsReadOnly="True">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="AE_DATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                                </xctk:MaskedTextBox>
+                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" Value="{Binding Path=AE_DATE_END, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>

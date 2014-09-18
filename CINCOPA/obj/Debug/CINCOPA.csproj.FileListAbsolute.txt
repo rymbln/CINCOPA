@@ -22,3 +22,4 @@ C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\bin\Debug\Xceed.Wpf.Toolkit.dll
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\SelectWindowView.baml
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\SelectWindowView.g.cs
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
