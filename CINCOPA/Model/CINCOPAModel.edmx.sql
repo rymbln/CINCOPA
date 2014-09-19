@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/18/2014 15:51:48
+-- Date Created: 09/19/2014 11:15:38
 -- Generated from EDMX file: C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\Model\CINCOPAModel.edmx
 -- --------------------------------------------------
 
@@ -726,7 +726,7 @@ GO
 CREATE TABLE [dbo].[MicrobiologySputums] (
     [Id] uniqueidentifier  NOT NULL,
     [CRFId] uniqueidentifier  NOT NULL,
-    [DATE_CAPTURE] nvarchar(max)  NULL,
+    [DATE_CAPTURE] datetime  NULL,
     [LAB_NUMBER] nvarchar(max)  NULL,
     [QUALITY_LEUKOCYTES] nvarchar(max)  NULL,
     [QUALITY_EPITHELIAL] nvarchar(max)  NULL,
@@ -747,7 +747,7 @@ GO
 CREATE TABLE [dbo].[MicrobiologyBloods] (
     [Id] uniqueidentifier  NOT NULL,
     [CRFId] uniqueidentifier  NOT NULL,
-    [DATE_CAPTURE] nvarchar(max)  NULL,
+    [DATE_CAPTURE] datetime  NULL,
     [LAB_NUMBER] nvarchar(max)  NULL,
     [GROWTH_PATHOGENS] nvarchar(max)  NULL,
     [ORGANISMId] uniqueidentifier  NULL,

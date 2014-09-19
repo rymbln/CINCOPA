@@ -672,7 +672,7 @@
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_CAPTURE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DATE_CAPTURE" Type="datetime" Nullable="true" />
     <Property Name="LAB_NUMBER" Type="nvarchar(max)" Nullable="true" />
     <Property Name="QUALITY_LEUKOCYTES" Type="nvarchar(max)" Nullable="true" />
     <Property Name="QUALITY_EPITHELIAL" Type="nvarchar(max)" Nullable="true" />
@@ -693,7 +693,7 @@
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_CAPTURE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DATE_CAPTURE" Type="datetime" Nullable="true" />
     <Property Name="LAB_NUMBER" Type="nvarchar(max)" Nullable="true" />
     <Property Name="GROWTH_PATHOGENS" Type="nvarchar(max)" Nullable="true" />
     <Property Name="ORGANISMId" Type="uniqueidentifier" Nullable="true" />

@@ -14,7 +14,7 @@ namespace CINCOPA.ViewModel
     public class CrfViewModel : ViewModelBase
     {
         private CRF Model;
-        private AB_THERAPY currentABTherapy;
+        private ABTherapyViewModel currentABTherapy;
         private AEViewModel currentAE;
         public CrfViewModel(CRF obj)
         {
@@ -32,7 +32,15 @@ namespace CINCOPA.ViewModel
                     CurrentAE = AllAE.FirstOrDefault();
                 };
 
-
+                AllABTherapy = new ObservableCollection<ABTherapyViewModel>();
+                foreach (var abTherapy in Model.AB_THERAPY)
+                {
+                    AllABTherapy.Add(new ABTherapyViewModel(abTherapy));
+                }
+                AllABTherapy.CollectionChanged += (sender, e) =>
+                {
+                    CurrentABTherapy = AllABTherapy.FirstOrDefault();
+                };
 
                 //AllABTherapy = new ObservableCollection<AB_THERAPY>();
                 //foreach (var abTherapy in Model.AB_THERAPY)
@@ -44,9 +52,9 @@ namespace CINCOPA.ViewModel
                 CheckCommand = new DelegateCommand(o => Check());
                 CancelCommand = new DelegateCommand(o => Cancel());
                 AddABTherapyCommand = new DelegateCommand(o => AddAbTherapy());
-                // DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
-                SelectDrugCommand = new DelegateCommand(o => SelectDrug());
-                SelectRouteCommand = new DelegateCommand(o => SelectRoute());
+                DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
+          
+             
                 AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
                 //DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
                 SelectOrganismForBloodCommand = new DelegateCommand(o => SelectOrganismForBlood());
@@ -59,7 +67,7 @@ namespace CINCOPA.ViewModel
             }
         }
 
-        public ObservableCollection<AB_THERAPY> AllABTherapy { get; private set; }
+        public ObservableCollection<ABTherapyViewModel> AllABTherapy { get; private set; }
         public ObservableCollection<AEViewModel> AllAE { get; private set; } 
 
         public AEViewModel CurrentAE
@@ -71,7 +79,7 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("CurrentAE");
             }
         }
-        public AB_THERAPY CurrentABTherapy
+        public ABTherapyViewModel CurrentABTherapy
         {
             get { return currentABTherapy; }
             set
@@ -80,6 +88,7 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("CurrentABTherapy");
             }
         }
+
 
         public ICommand SaveCommand { get; private set; }
         private void Save()
@@ -98,19 +107,25 @@ namespace CINCOPA.ViewModel
         public ICommand AddABTherapyCommand { get; private set; }
         private void AddAbTherapy()
         {
+            var obj = DataManager.Instance.CreateABforCRF(Model);
+            var vm = new ABTherapyViewModel(obj);
+            AllABTherapy.Add(vm);
+            Model.AB_THERAPY.Add(obj);
+            OnPropertyChanged("AllABTherapy");
+            CurrentABTherapy = AllABTherapy.LastOrDefault();
         }
         public ICommand DeleteABTherapyCommand { get; private set; }
         private void DeleteABTherapy()
         {
+            Model.AB_THERAPY.Remove(CurrentABTherapy.Model);
+            DataManager.Instance.DeleteABTherapy(CurrentABTherapy.Model);
+            AllABTherapy.Remove(CurrentABTherapy);
+
+            OnPropertyChanged("AllABTherapy");
+            CurrentABTherapy = AllABTherapy.FirstOrDefault();
         }
-        public ICommand SelectDrugCommand { get; private set; }
-        private void SelectDrug()
-        {
-        }
-        public ICommand SelectRouteCommand { get; private set; }
-        private void SelectRoute()
-        {
-        }
+    
+  
         public ICommand AddMBSputumCommand { get; private set; }
         private void AddMBSputum()
         {

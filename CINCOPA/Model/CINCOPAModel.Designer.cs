@@ -9238,7 +9238,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String DATE_CAPTURE
+        public Nullable<global::System.DateTime> DATE_CAPTURE
         {
             get
             {
@@ -9248,13 +9248,13 @@ namespace CINCOPA.Model
             {
                 OnDATE_CAPTUREChanging(value);
                 ReportPropertyChanging("DATE_CAPTURE");
-                _DATE_CAPTURE = StructuralObject.SetValidValue(value, true);
+                _DATE_CAPTURE = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DATE_CAPTURE");
                 OnDATE_CAPTUREChanged();
             }
         }
-        private global::System.String _DATE_CAPTURE;
-        partial void OnDATE_CAPTUREChanging(global::System.String value);
+        private Nullable<global::System.DateTime> _DATE_CAPTURE;
+        partial void OnDATE_CAPTUREChanging(Nullable<global::System.DateTime> value);
         partial void OnDATE_CAPTUREChanged();
     
         /// <summary>
@@ -9665,7 +9665,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String DATE_CAPTURE
+        public Nullable<global::System.DateTime> DATE_CAPTURE
         {
             get
             {
@@ -9675,13 +9675,13 @@ namespace CINCOPA.Model
             {
                 OnDATE_CAPTUREChanging(value);
                 ReportPropertyChanging("DATE_CAPTURE");
-                _DATE_CAPTURE = StructuralObject.SetValidValue(value, true);
+                _DATE_CAPTURE = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DATE_CAPTURE");
                 OnDATE_CAPTUREChanged();
             }
         }
-        private global::System.String _DATE_CAPTURE;
-        partial void OnDATE_CAPTUREChanging(global::System.String value);
+        private Nullable<global::System.DateTime> _DATE_CAPTURE;
+        partial void OnDATE_CAPTUREChanging(Nullable<global::System.DateTime> value);
         partial void OnDATE_CAPTUREChanged();
     
         /// <summary>

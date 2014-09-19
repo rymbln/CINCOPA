@@ -575,65 +575,65 @@ namespace CINCOPA.Common
 
         private ORGANISM GetDefaultOrganism()
         {
-            if (!underlyingContext.Organisms.Any())
-            {
-                underlyingContext.Organisms.AddObject(new ORGANISM
-                {
-                    CreatedBy = Authentification.GetCurrentUser().NAME,
-                    CreatedByDate = DateTime.Now.ToString(),
-                    UpdatedBy = Authentification.GetCurrentUser().NAME,
-                    UpdatedByDate = DateTime.Now.ToString(),
-                    NAME = "---",
-                    CODE = "---",
-                    Id = GuidComb.Generate()
-                });
+            //if (!underlyingContext.Organisms.Any())
+            //{
+            //    underlyingContext.Organisms.AddObject(new ORGANISM
+            //    {
+            //        CreatedBy = Authentification.GetCurrentUser().NAME,
+            //        CreatedByDate = DateTime.Now.ToString(),
+            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
+            //        UpdatedByDate = DateTime.Now.ToString(),
+            //        NAME = "---",
+            //        CODE = "---",
+            //        Id = GuidComb.Generate()
+            //    });
 
-            }
+            //}
             return underlyingContext.Organisms.OrderBy(o => o.NAME).FirstOrDefault();
         }
 
         private DRUG GetDefaultDrug()
         {
-            if (!underlyingContext.Drugs.Any())
-            {
-                underlyingContext.Drugs.AddObject(new DRUG
-                {
-                    CreatedBy = Authentification.GetCurrentUser().NAME,
-                    CreatedByDate = DateTime.Now.ToString(),
-                    UpdatedBy = Authentification.GetCurrentUser().NAME,
-                    UpdatedByDate = DateTime.Now.ToString(),
-                    NAME = "---",
-                    MNN = "---",
-                    GROUP = "---",
-                    CODE = "0",
-                    Id = GuidComb.Generate()
-                })
-                ;
+            //if (!underlyingContext.Drugs.Any())
+            //{
+            //    underlyingContext.Drugs.AddObject(new DRUG
+            //    {
+            //        CreatedBy = Authentification.GetCurrentUser().NAME,
+            //        CreatedByDate = DateTime.Now.ToString(),
+            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
+            //        UpdatedByDate = DateTime.Now.ToString(),
+            //        NAME = "---",
+            //        MNN = "---",
+            //        GROUP = "---",
+            //        CODE = "0",
+            //        Id = GuidComb.Generate()
+            //    })
+            //    ;
 
 
 
-            }
+            //}
             return underlyingContext.Drugs.OrderBy(o => o.CODE).FirstOrDefault();
         }
 
 
         private ROUTE GetDefaultRoute()
         {
-            if (!underlyingContext.Routes.Any())
-            {
-                underlyingContext.Routes.AddObject(new ROUTE
-                {
-                    CreatedBy = Authentification.GetCurrentUser().NAME,
-                    CreatedByDate = DateTime.Now.ToString(),
-                    UpdatedBy = Authentification.GetCurrentUser().NAME,
-                    UpdatedByDate = DateTime.Now.ToString(),
-                    NAME = "---",
+            //if (!underlyingContext.Routes.Any())
+            //{
+            //    underlyingContext.Routes.AddObject(new ROUTE
+            //    {
+            //        CreatedBy = Authentification.GetCurrentUser().NAME,
+            //        CreatedByDate = DateTime.Now.ToString(),
+            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
+            //        UpdatedByDate = DateTime.Now.ToString(),
+            //        NAME = "---",
 
-                    CODE = "0",
-                    Id = GuidComb.Generate()
-                });
+            //        CODE = "0",
+            //        Id = GuidComb.Generate()
+            //    });
 
-            }
+            //}
             return underlyingContext.Routes.OrderBy(o => o.CODE).FirstOrDefault();
         }
 
@@ -1247,6 +1247,39 @@ namespace CINCOPA.Common
         {
             underlyingContext.AEs.DeleteObject(obj);
 
+        }
+
+        public AB_THERAPY CreateABforCRF(CRF Model)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<AB_THERAPY>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+
+                obj.CRFId = Model.Id;
+                obj.DRUG = GetDefaultDrug();
+                obj.ROUTE = GetDefaultRoute();
+                obj.SINGLE_DOSE = "---";
+                obj.FREQUENCY = "---";
+                obj.DATE_START = null;
+                obj.DATE_END = null;
+
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public void DeleteABTherapy(AB_THERAPY aB_THERAPY)
+        {
+            underlyingContext.AbTherapys.DeleteObject(aB_THERAPY);
         }
     }
 }

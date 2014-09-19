@@ -71,10 +71,14 @@
     <Compile Include="Model\CINCOPAEntities.cs" />
     <Compile Include="Model\CRF.cs" />
     <Compile Include="Model\ICINCOPAContext.cs" />
+    <Compile Include="ViewModel\ABTherapyViewModel.cs" />
     <Compile Include="ViewModel\AEViewModel.cs" />
     <Compile Include="ViewModel\CrfViewModel.cs" />
     <Compile Include="ViewModel\DelegateCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\MicrobiologyBloodViewModel.cs" />
+    <Compile Include="ViewModel\MicrobiologySputumViewModel.cs" />
+    <Compile Include="ViewModel\SelectDrugViewModel.cs" />
     <Compile Include="ViewModel\SelectOrganismViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\CrfView.xaml.cs">

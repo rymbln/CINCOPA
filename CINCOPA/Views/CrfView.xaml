@@ -1228,7 +1228,7 @@
                                                     <ComboBox 
                                                             IsEnabled="True"
                                                           SelectedValuePath="." 
-                                                          SelectedItem="{Binding Path=DRUG, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          SelectedItem="{Binding Path=AB_DRUG, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=DrugLookup}" 
                                                           DisplayMemberPath="Name" />
                                                     <TextBlock Grid.Column="1" Padding="4,2,4,3">
@@ -1240,7 +1240,7 @@
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
-                                    <DataGridTextColumn Header="Разовая доза"  Binding="{Binding Path=SINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTextColumn Header="Разовая доза"  Binding="{Binding Path=AB_SINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                     <DataGridTemplateColumn Header= "Путь введения">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
@@ -1252,7 +1252,7 @@
                                                     <ComboBox 
                                                             IsEnabled="True"
                                                           SelectedValuePath="." 
-                                                          SelectedItem="{Binding Path=ROUTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
+                                                          SelectedItem="{Binding Path=AB_ROUTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=RouteLookup}" 
                                                           DisplayMemberPath="Name" />
                                                     <TextBlock Grid.Column="1" Padding="4,2,4,3">
@@ -1264,22 +1264,19 @@
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
-                                    <DataGridTextColumn Header="Кратность (раз в сут.)"  Binding="{Binding Path=FREQUENCY, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                    <DataGridTextColumn Header="Кратность (раз в сут.)"  Binding="{Binding Path=AB_FREQUENCY, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                     <DataGridTemplateColumn Header= "Дата начала приема" IsReadOnly="True">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="DATE_START" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                                </xctk:MaskedTextBox>
+                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                                      Value="{Binding Path=AB_DATE_START, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
                                     <DataGridTemplateColumn Header= "Дата окончания приема" IsReadOnly="True">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                    <Binding Path="DATE_END" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                                </xctk:MaskedTextBox>
+                                                <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" Value="{Binding Path=AB_DATE_END, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>
