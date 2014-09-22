@@ -16,6 +16,9 @@ namespace CINCOPA.ViewModel
         private CRF Model;
         private ABTherapyViewModel currentABTherapy;
         private AEViewModel currentAE;
+        private MicrobiologySputumViewModel currentMBSputum;
+        private MicrobiologyBloodViewModel currentMBBlood;
+
         public CrfViewModel(CRF obj)
         {
             if (obj != null)
@@ -41,12 +44,24 @@ namespace CINCOPA.ViewModel
                 {
                     CurrentABTherapy = AllABTherapy.FirstOrDefault();
                 };
-
-                //AllABTherapy = new ObservableCollection<AB_THERAPY>();
-                //foreach (var abTherapy in Model.AB_THERAPY)
-                //{
-                //   // AllABTherapy
-                //}
+                AllMicrobiologyBlood = new ObservableCollection<MicrobiologyBloodViewModel>();
+                foreach (var microbiologyBlood in Model.MICROBIOLOGY_BLOOD)
+                {
+                    AllMicrobiologyBlood.Add(new MicrobiologyBloodViewModel(microbiologyBlood));
+                }
+                AllMicrobiologyBlood.CollectionChanged += (sender, e) =>
+                {
+                    CurrentMBBlood = AllMicrobiologyBlood.FirstOrDefault();
+                };
+                AllMicrobiologySputum = new ObservableCollection<MicrobiologySputumViewModel>();
+                foreach (var microbiologySputum in Model.MICROBIOLOGY_SPUTUM)
+                {
+                    AllMicrobiologySputum.Add(new MicrobiologySputumViewModel(microbiologySputum));
+                }
+                AllMicrobiologySputum.CollectionChanged += (sender, e) =>
+                {
+                    CurrentMBSputum = AllMicrobiologySputum.FirstOrDefault();
+                };
 
                 SaveCommand = new DelegateCommand(o => Save());
                 CheckCommand = new DelegateCommand(o => Check());
@@ -56,11 +71,10 @@ namespace CINCOPA.ViewModel
           
              
                 AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
-                //DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
-                SelectOrganismForBloodCommand = new DelegateCommand(o => SelectOrganismForBlood());
-                SelectOrganismForSputumCommand = new DelegateCommand(o => SelectOrganismForSputum());
+                DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
+             
                 AddMBBloodCommand = new DelegateCommand(o => AddMBBlood());
-                //DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
+                DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
                 AddAECommand = new DelegateCommand(o => AddAE());
                 DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
 
@@ -69,6 +83,8 @@ namespace CINCOPA.ViewModel
 
         public ObservableCollection<ABTherapyViewModel> AllABTherapy { get; private set; }
         public ObservableCollection<AEViewModel> AllAE { get; private set; } 
+        public ObservableCollection<MicrobiologySputumViewModel> AllMicrobiologySputum { get; private set; }
+        public ObservableCollection<MicrobiologyBloodViewModel> AllMicrobiologyBlood { get; private set; }
 
         public AEViewModel CurrentAE
         {
@@ -88,6 +104,27 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("CurrentABTherapy");
             }
         }
+
+        public MicrobiologySputumViewModel CurrentMBSputum
+        {
+            get { return currentMBSputum; }
+            set
+            {
+                currentMBSputum = value;
+                OnPropertyChanged("CurrentMBSputum");
+            }
+        }
+
+        public MicrobiologyBloodViewModel CurrentMBBlood
+        {
+            get { return currentMBBlood; }
+            set
+            {
+                currentMBBlood = value;
+                OnPropertyChanged("CurrentMBBlood");
+            }
+        }
+
 
 
         public ICommand SaveCommand { get; private set; }
@@ -129,40 +166,45 @@ namespace CINCOPA.ViewModel
         public ICommand AddMBSputumCommand { get; private set; }
         private void AddMBSputum()
         {
+            var obj = DataManager.Instance.CreateMicrobiologySputumForCRF(Model);
+            var vm = new MicrobiologySputumViewModel(obj);
+            AllMicrobiologySputum.Add(vm);
+            Model.MICROBIOLOGY_SPUTUM.Add(obj);
+            OnPropertyChanged("AllMicrobiologySputum");
+            CurrentMBSputum = AllMicrobiologySputum.LastOrDefault();
         }
         public ICommand DeleteMBSputumCommand { get; private set; }
         private void DeleteMBSputum()
         {
+            //DataManager.Instance.RemoveAEforCRF(CurrentAE.Model);
+            Model.MICROBIOLOGY_SPUTUM.Remove(CurrentMBSputum.Model);
+            DataManager.Instance.DeleteMBSputum(CurrentMBSputum.Model);
+            AllMicrobiologySputum.Remove(CurrentMBSputum);
+
+            OnPropertyChanged("AllMicrobiologySputum");
+            CurrentMBSputum = AllMicrobiologySputum.FirstOrDefault();
         }
         public ICommand SelectOrganismForSputumCommand { get; private set; }
-        private void SelectOrganismForSputum()
-        {
-            //var vm = new SelectOrganismViewModel();
-            //vm.ShowDialog();
-            //if (vm.DialogResult)
-            //{
-            //    OnPropertyChanged("OrganismLookup");
-            //    Drug = vm.CurrentItem;
-            //}
-        }
-        public ICommand SelectOrganismForBloodCommand { get; private set; }
-        private void SelectOrganismForBlood()
-        {
-            //var vm = new SelectOrganismViewModel();
-            //vm.ShowDialog();
-            //if (vm.DialogResult)
-            //{
-            //    OnPropertyChanged("OrganismLookup");
-            //    Drug = vm.CurrentItem;
-            //}
-        }
-        public ICommand AddMBBloodCommand { get; private set; }
+       public ICommand AddMBBloodCommand { get; private set; }
         private void AddMBBlood()
         {
+            var obj = DataManager.Instance.CreateMicrobiologyBloodForCRF(Model);
+            var vm = new MicrobiologyBloodViewModel(obj);
+            AllMicrobiologyBlood.Add(vm);
+            Model.MICROBIOLOGY_BLOOD.Add(obj);
+            OnPropertyChanged("AllMicrobiologyBlood");
+            CurrentMBBlood = AllMicrobiologyBlood.LastOrDefault();
         }
         public ICommand DeleteMBBloodCommand { get; private set; }
         private void DeleteMBBlood()
         {
+            //DataManager.Instance.RemoveAEforCRF(CurrentAE.Model);
+            Model.MICROBIOLOGY_BLOOD.Remove(CurrentMBBlood.Model);
+            DataManager.Instance.DeleteMBBlood(CurrentMBBlood.Model);
+            AllMicrobiologyBlood.Remove(CurrentMBBlood);
+
+            OnPropertyChanged("AllMicrobiologyBlood");
+            CurrentMBBlood = AllMicrobiologyBlood.FirstOrDefault();
         }
         public ICommand AddAECommand { get; private set; }
         private void AddAE()
@@ -185,6 +227,7 @@ namespace CINCOPA.ViewModel
             OnPropertyChanged("AllAE");
             CurrentAE = AllAE.FirstOrDefault();
         }
+     
 
         #region ComboBox Sources
         public List<string> AEHeavyLookup
@@ -646,6 +689,16 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("VISIT_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE");
             }
         }
+
+        public string VISIT_ONE_ONE_SYMPTOMS_THERAPY_EFFICIENCY
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.THERAPY_EFFICIENCY; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.THERAPY_EFFICIENCY = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_THERAPY_EFFICIENCY");
+            }
+        }
         public string VISIT_ONE_SYMPTOMS_DRY_RALES
         {
             get { return Model.VISIT_ONE.EVALUATION_OF_SYMPTOMS_VISIT_1.DRY_RALES; }
@@ -671,6 +724,126 @@ namespace CINCOPA.ViewModel
             {
                 Model.VISIT_ONE.EVALUATION_OF_SYMPTOMS_VISIT_1.INCIDENCE_OF_EDEMA = value;
                 OnPropertyChanged("VISIT_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA");
+            }
+        }
+        #endregion
+        #region VISIT ONE_ONE EVALUATION SYMPTOM
+
+        public string VISIT_ONE_ONE_SYMPTOMS_DYSPNEA
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.DYSPNEA; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.DYSPNEA = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_DYSPNEA");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_COUGH
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.COUGH; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.COUGH = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_COUGH");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_SPUTUM
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.SPUTUM; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.SPUTUM = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_SPUTUM");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_SPUTUM_TYPE
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.SPUTUM_TYPE; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.SPUTUM_TYPE = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_SPUTUM_TYPE");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_TEMPERATURE_INCREASE
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.TEMPERATURE_INCREASE; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.TEMPERATURE_INCREASE = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_TEMPERATURE_INCREASE");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_COLD_SYMPTOM
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.COLD_SYMPTOM; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.COLD_SYMPTOM = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_COLD_SYMPTOM");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.SHORTERING_OF_PERCUSSION_SOUNDS; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.SHORTERING_OF_PERCUSSION_SOUNDS = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_SHORTERING_OF_PERCUSSION_SOUNDS");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_MOIST_RALES_SOUNDS
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.MOIST_RALES_SOUNDS; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.MOIST_RALES_SOUNDS = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_MOIST_RALES_SOUNDS");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_CREPITUS
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.CREPITUS; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.CREPITUS = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_CREPITUS");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.PLEURAL_FRICTION_NOISE; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.PLEURAL_FRICTION_NOISE = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_PLEURAL_FRICTION_NOISE");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_DRY_RALES
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.DRY_RALES; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.DRY_RALES = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_DRY_RALES");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_PRESENCE_OF_EDEMA
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.PRESENCE_OF_EDEMA; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.PRESENCE_OF_EDEMA = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_PRESENCE_OF_EDEMA");
+            }
+        }
+        public string VISIT_ONE_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA
+        {
+            get { return Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.INCIDENCE_OF_EDEMA; }
+            set
+            {
+                Model.VISIT_ONE_ONE.EVALUATION_OF_SYMPTOMS_VISIT_11.INCIDENCE_OF_EDEMA = value;
+                OnPropertyChanged("VISIT_ONE_ONE_SYMPTOMS_INCIDENCE_OF_EDEMA");
             }
         }
         #endregion

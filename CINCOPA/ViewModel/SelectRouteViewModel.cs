@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Windows.Input;
 using CINCOPA.Common;
 using CINCOPA.Model;
@@ -10,17 +7,16 @@ using CINCOPA.Views;
 
 namespace CINCOPA.ViewModel
 {
-    public class SelectDrugViewModel:ViewModelBase
+   public class SelectRouteViewModel: ViewModelBase
     {
-
-        private SelectWindowView v;
+             private SelectWindowView v;
         private bool dialogResult;
         private string searchString = "";
-        private DRUG currentItem;
+        private ROUTE currentItem;
         private string newItem;
 
 
-        public SelectDrugViewModel()
+        public SelectRouteViewModel()
         {
             AddNewCommand = new DelegateCommand(o=>AddNew());
             OkCommand = new DelegateCommand(o => OkHandler());
@@ -31,8 +27,8 @@ namespace CINCOPA.ViewModel
         public ICommand OkCommand { get; set; }
         public ICommand AddNewCommand { get; set; }
 
-        public ObservableCollection<DRUG> AllItems { get;  set; }
-        public ObservableCollection<DRUG> AllItemsDB { get;  set; }
+        public ObservableCollection<ROUTE> AllItems { get;  set; }
+        public ObservableCollection<ROUTE> AllItemsDB { get;  set; }
 
         public bool ShowDialog()
         {
@@ -48,7 +44,7 @@ namespace CINCOPA.ViewModel
 
         private void AddNew()
         {
-            DataManager.Instance.AddDrug(NewItem);
+            DataManager.Instance.AddRoute(NewItem);
             Refresh();
         }
         public bool DialogResult
@@ -61,7 +57,7 @@ namespace CINCOPA.ViewModel
             }
         }
 
-        public DRUG CurrentItem
+        public ROUTE CurrentItem
         {
             get { return currentItem; }
             set
@@ -101,7 +97,7 @@ namespace CINCOPA.ViewModel
 
         private void Filter()
         {
-            AllItems = new ObservableCollection<DRUG>(AllItemsDB.Where(o => o.NAME.ToUpper().Contains(SearchString.ToUpper())));
+            AllItems = new ObservableCollection<ROUTE>(AllItemsDB.Where(o => o.NAME.ToUpper().Contains(SearchString.ToUpper())));
             OnPropertyChanged("AllItems");
             CurrentItem = AllItems.Count > 0 ? AllItems[0] : null;
         }
@@ -110,7 +106,7 @@ namespace CINCOPA.ViewModel
         {
             searchString = "";
             OnPropertyChanged("SearchString");
-            AllItemsDB = new ObservableCollection<DRUG>(DataManager.Instance.GetAllDrugs());
+            AllItemsDB = new ObservableCollection<ROUTE>(DataManager.Instance.GetAllRoutes());
             AllItems = AllItemsDB;
             OnPropertyChanged("AllItems");
             CurrentItem = AllItems.Count > 0 ? AllItems[0] : null;

@@ -80,6 +80,7 @@
     <Compile Include="ViewModel\MicrobiologySputumViewModel.cs" />
     <Compile Include="ViewModel\SelectDrugViewModel.cs" />
     <Compile Include="ViewModel\SelectOrganismViewModel.cs" />
+    <Compile Include="ViewModel\SelectRouteViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\CrfView.xaml.cs">
       <DependentUpon>CrfView.xaml</DependentUpon>

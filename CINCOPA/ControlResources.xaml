@@ -114,4 +114,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <Style TargetType="Button">
+        <Setter Property="Margin" Value="2,5,2,5"/>
+        <Setter Property="MinWidth" Value="100"/>
+    </Style>
 </ResourceDictionary>

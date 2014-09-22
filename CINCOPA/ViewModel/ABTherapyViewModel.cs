@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
@@ -19,6 +20,7 @@ namespace CINCOPA.ViewModel
                 Model = obj;
             }
             SelectDrugCommand = new DelegateCommand(o => SelectDrug());
+            SelectRouteCommand = new DelegateCommand(o => SelectRoute());
         }
 
         public ICommand SelectDrugCommand { get; private set; }
@@ -65,9 +67,29 @@ namespace CINCOPA.ViewModel
             }
         }
 
-        public List<DRUG> DrugLookup
+        public DateTime? AB_DATE_START
         {
-            get { return DataManager.Instance.DrugLookup; }
+            get { return Model.DATE_START; }
+            set
+            {
+                Model.DATE_START = value;
+                OnPropertyChanged("AB_DATE_START");
+            }
+        }
+
+        public DateTime? AB_DATE_END
+        {
+            get { return Model.DATE_END; }
+            set
+            {
+                Model.DATE_END = value;
+                OnPropertyChanged("AB_DATE_END");
+            }
+        }
+
+        public ObservableCollection<DRUG> DrugLookup
+        {
+            get { return new ObservableCollection<DRUG>(DataManager.Instance.DrugLookup); }
         }
 
         public List<ROUTE> RouteLookup
@@ -83,8 +105,22 @@ namespace CINCOPA.ViewModel
             vm.ShowDialog();
             if (vm.DialogResult)
             {
+                
                 OnPropertyChanged("DrugLookup");
                 AB_DRUG = vm.CurrentItem;
+            }
+        }
+
+
+        private void SelectRoute()
+        {
+            var vm = new SelectRouteViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+
+                OnPropertyChanged("RouteLookup");
+                AB_ROUTE = vm.CurrentItem;
             }
         }
     }

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/19/2014 11:15:38
+-- Date Created: 09/22/2014 13:47:51
 -- Generated from EDMX file: C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\Model\CINCOPAModel.edmx
 -- --------------------------------------------------
 
@@ -698,8 +698,8 @@ CREATE TABLE [dbo].[AbTherapys] (
     [ROUTEId] uniqueidentifier  NOT NULL,
     [SINGLE_DOSE] nvarchar(max)  NULL,
     [FREQUENCY] nvarchar(max)  NULL,
-    [DATE_START] nvarchar(max)  NULL,
-    [DATE_END] nvarchar(max)  NULL,
+    [DATE_START] datetime  NULL,
+    [DATE_END] datetime  NULL,
     [CreatedBy] nvarchar(max)  NULL,
     [CreatedByDate] nvarchar(max)  NULL,
     [UpdatedBy] nvarchar(max)  NULL,

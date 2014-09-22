@@ -815,8 +815,8 @@
     <Property Type="Guid" Name="ROUTEId" Nullable="false" />
     <Property Type="String" Name="SINGLE_DOSE" Nullable="true" />
     <Property Type="String" Name="FREQUENCY" Nullable="true" />
-    <Property Type="String" Name="DATE_START" Nullable="true" />
-    <Property Type="String" Name="DATE_END" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_START" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_END" Nullable="true" />
     <Property Type="String" Name="CreatedBy" Nullable="true" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" />
     <Property Type="String" Name="UpdatedBy" Nullable="true" />

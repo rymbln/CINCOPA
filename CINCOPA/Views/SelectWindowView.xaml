@@ -20,24 +20,24 @@
         </StackPanel>
         <Grid HorizontalAlignment="Left" DockPanel.Dock="Bottom">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="Новый элемент"/>
-            <TextBox Grid.Column="1"
+            <Button Grid.Column="0" Command="{Binding AddNewCommand}" Content="Добавить" IsDefault="True"/>
+
+            <TextBox Grid.Column="1" MinWidth="150"
                   Text="{Binding Path=NewItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" />
-            <Button Grid.Column="2" Command="{Binding AddNewCommand}" Content="Добавить" IsDefault="True"/>
         </Grid>
            
         <ListView 
-             ItemsSource="{Binding CurrentItem}"
-             SelectedItem="{Binding AllItems}"
+             ItemsSource="{Binding Path=AllItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"
+             SelectedItem="{Binding Path=CurrentItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"
              >
             <ListView.View>
                 <GridView>
                     <GridViewColumn 
+                        Width="200"
                          Header="Имя"
                          DisplayMemberBinding="{Binding NAME}"/>
                 </GridView>

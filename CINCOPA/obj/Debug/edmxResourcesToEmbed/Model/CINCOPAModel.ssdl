@@ -644,8 +644,8 @@
     <Property Name="ROUTEId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="SINGLE_DOSE" Type="nvarchar(max)" Nullable="true" />
     <Property Name="FREQUENCY" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="DATE_START" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="DATE_END" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DATE_START" Type="datetime" Nullable="true" />
+    <Property Name="DATE_END" Type="datetime" Nullable="true" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />

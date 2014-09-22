@@ -99,5 +99,15 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("MB_BLOOD_MRSA");
             }
         }
+
+        public List<string> Logic2Lookup
+        {
+            get { return DataManager.Instance.Logic2Lookup; }
+        }
+
+        public List<string> Logic3Lookup
+        {
+            get { return DataManager.Instance.Logic3Lookup; }
+        }
     }
 }

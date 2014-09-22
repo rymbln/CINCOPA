@@ -1230,7 +1230,7 @@
                                                           SelectedValuePath="." 
                                                           SelectedItem="{Binding Path=AB_DRUG, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=DrugLookup}" 
-                                                          DisplayMemberPath="Name" />
+                                                          DisplayMemberPath="NAME" />
                                                     <TextBlock Grid.Column="1" Padding="4,2,4,3">
                                                             <Hyperlink Command="{Binding SelectDrugCommand}">
                                                                 <Run Text="..."/>
@@ -1254,7 +1254,7 @@
                                                           SelectedValuePath="." 
                                                           SelectedItem="{Binding Path=AB_ROUTE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=RouteLookup}" 
-                                                          DisplayMemberPath="Name" />
+                                                          DisplayMemberPath="NAME" />
                                                     <TextBlock Grid.Column="1" Padding="4,2,4,3">
                                                             <Hyperlink Command="{Binding SelectRouteCommand}">
                                                                 <Run Text="..."/>
@@ -1327,10 +1327,10 @@
                                             <DataGridTemplateColumn Header= "Дата забора" IsReadOnly="True">
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                            <Binding Path="MB_SPUTUM_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                                        </xctk:MaskedTextBox>
-                                                    </DataTemplate>
+                                                        <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                                      Value="{Binding Path=MB_SPUTUM_DATE_CAPTURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
+                                                         </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
                                             <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=MB_SPUTUM_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
@@ -1363,9 +1363,9 @@
                                                           SelectedValuePath="." 
                                                           SelectedItem="{Binding Path=MB_SPUTUM_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=OrganismLookup}" 
-                                                          DisplayMemberPath="Name" />
+                                                          DisplayMemberPath="NAME" />
                                                             <TextBlock Grid.Column="1" Padding="4,2,4,3">
-                                                            <Hyperlink Command="{Binding SelectOrganismForSputumCommand}">
+                                                            <Hyperlink Command="{Binding SelectOrganismCommand}">
                                                                 <Run Text="..."/>
                                                             </Hyperlink>
                                                             </TextBlock>
@@ -1419,9 +1419,10 @@
                                             <DataGridTemplateColumn Header= "Дата забора" IsReadOnly="True">
                                                 <DataGridTemplateColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                            <Binding Path="MB_BLOOD_DATE_CAPTURE" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                                        </xctk:MaskedTextBox>
+                                                        <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                                      Value="{Binding Path=MB_BLOOD_DATE_CAPTURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
+
                                                     </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
@@ -1452,9 +1453,9 @@
                                                           SelectedValuePath="." 
                                                           SelectedItem="{Binding Path=MB_BLOOD_ORGANISM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=False,NotifyOnValidationError=False}" 
                                                           ItemsSource="{Binding Path=OrganismLookup}" 
-                                                          DisplayMemberPath="Name" />
+                                                          DisplayMemberPath="NAME" />
                                                             <TextBlock Grid.Column="1" Padding="4,2,4,3">
-                                                            <Hyperlink Command="{Binding SelectOrganismForBloodCommand}">
+                                                            <Hyperlink Command="{Binding SelectOrganismCommand}">
                                                                 <Run Text="..."/>
                                                             </Hyperlink>
                                                             </TextBlock>

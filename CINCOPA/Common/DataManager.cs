@@ -267,22 +267,16 @@ namespace CINCOPA.Common
         {
             get
             {
-                if (drugLookup == null)
-                {
-                    drugLookup = underlyingContext.Drugs.OrderBy(o => o.NAME).ToList();
-                }
-                return drugLookup;
+                return drugLookup = underlyingContext.Drugs.OrderBy(o => o.NAME).ToList();
+
             }
         }
         public List<ROUTE> RouteLookup
         {
             get
             {
-                if (routeLookup == null)
-                {
-                    routeLookup = underlyingContext.Routes.OrderBy(o => o.NAME).ToList();
-                }
-                return routeLookup;
+                return routeLookup = underlyingContext.Routes.OrderBy(o => o.NAME).ToList();
+
             }
         }
         public List<ORGANISM> OrganismLookup
@@ -1240,7 +1234,7 @@ namespace CINCOPA.Common
                 MessageBox.Show(ex.Message);
                 return null;
             }
-       
+
         }
 
         public void DeleteAE(ADVERSE_EVENT obj)
@@ -1280,6 +1274,123 @@ namespace CINCOPA.Common
         public void DeleteABTherapy(AB_THERAPY aB_THERAPY)
         {
             underlyingContext.AbTherapys.DeleteObject(aB_THERAPY);
+        }
+
+        public DRUG AddDrug(string NewItem)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<DRUG>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.NAME = NewItem;
+                obj.CODE = "NEED_CODE";
+                underlyingContext.Drugs.AddObject(obj);
+                Save();
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось добавить препарат! Ошибка: " + ex.Message);
+                return null;
+            }
+        }
+
+        public ROUTE AddRoute(string NewItem)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<ROUTE>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.NAME = NewItem;
+                obj.CODE = "NEED_CODE";
+                underlyingContext.Routes.AddObject(obj);
+                Save();
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось добавить препарат! Ошибка: " + ex.Message);
+                return null;
+            }
+        }
+
+        public MICROBIOLOGY_SPUTUM CreateMicrobiologySputumForCRF(CRF Model)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<MICROBIOLOGY_SPUTUM>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+
+                obj.CRFId = Model.Id;
+                obj.BETA = "---";
+                obj.DATE_CAPTURE = null;
+                obj.GROWTH_PATHOGENS = "---";
+                obj.LAB_NUMBER = "---";
+                obj.QUALITY_LEUKOCYTES = "---";
+                obj.QUALITY_EPITHELIAL = "---";
+                obj.NOT_REPRESENTATIVE = null;
+                obj.ORGANISM = GetDefaultOrganism();
+                obj.MRSA = "---";
+
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public MICROBIOLOGY_BLOOD CreateMicrobiologyBloodForCRF(CRF Model)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<MICROBIOLOGY_BLOOD>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+
+                obj.CRFId = Model.Id;
+                obj.BETA = "---";
+                obj.DATE_CAPTURE = null;
+                obj.GROWTH_PATHOGENS = "---";
+                obj.LAB_NUMBER = "---";
+                obj.ORGANISM = GetDefaultOrganism();
+                obj.MRSA = "---";
+
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public void DeleteMBSputum(MICROBIOLOGY_SPUTUM mICROBIOLOGY_SPUTUM)
+        {
+           underlyingContext.MicrobiologySputums.DeleteObject(mICROBIOLOGY_SPUTUM);
+        }
+
+
+
+        public void DeleteMBBlood(MICROBIOLOGY_BLOOD mICROBIOLOGY_BLOOD)
+        {
+            underlyingContext.MicrobiologyBloods.DeleteObject(mICROBIOLOGY_BLOOD);
         }
     }
 }

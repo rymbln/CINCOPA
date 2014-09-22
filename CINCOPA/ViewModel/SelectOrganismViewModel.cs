@@ -23,7 +23,7 @@ namespace CINCOPA.ViewModel
 
         public SelectOrganismViewModel()
         {
-            AddNewCommand = new DelegateCommand(o=>AddNew(),o=> NewItem.Trim().Length > 0);
+            AddNewCommand = new DelegateCommand(o=>AddNew());
             OkCommand = new DelegateCommand(o => OkHandler());
             Refresh();
 
@@ -32,8 +32,8 @@ namespace CINCOPA.ViewModel
         public ICommand OkCommand { get; set; }
         public ICommand AddNewCommand { get; set; }
 
-        public ObservableCollection<ORGANISM> AllItems { get; private set; }
-        public ObservableCollection<ORGANISM> AllItemsDB { get; private set; }
+        public ObservableCollection<ORGANISM> AllItems { get;  set; }
+        public ObservableCollection<ORGANISM> AllItemsDB { get; set; }
 
         public bool ShowDialog()
         {

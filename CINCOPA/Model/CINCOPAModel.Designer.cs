@@ -1014,7 +1014,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String DATE_START
+        public Nullable<global::System.DateTime> DATE_START
         {
             get
             {
@@ -1024,13 +1024,13 @@ namespace CINCOPA.Model
             {
                 OnDATE_STARTChanging(value);
                 ReportPropertyChanging("DATE_START");
-                _DATE_START = StructuralObject.SetValidValue(value, true);
+                _DATE_START = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DATE_START");
                 OnDATE_STARTChanged();
             }
         }
-        private global::System.String _DATE_START;
-        partial void OnDATE_STARTChanging(global::System.String value);
+        private Nullable<global::System.DateTime> _DATE_START;
+        partial void OnDATE_STARTChanging(Nullable<global::System.DateTime> value);
         partial void OnDATE_STARTChanged();
     
         /// <summary>
@@ -1038,7 +1038,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String DATE_END
+        public Nullable<global::System.DateTime> DATE_END
         {
             get
             {
@@ -1048,13 +1048,13 @@ namespace CINCOPA.Model
             {
                 OnDATE_ENDChanging(value);
                 ReportPropertyChanging("DATE_END");
-                _DATE_END = StructuralObject.SetValidValue(value, true);
+                _DATE_END = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DATE_END");
                 OnDATE_ENDChanged();
             }
         }
-        private global::System.String _DATE_END;
-        partial void OnDATE_ENDChanging(global::System.String value);
+        private Nullable<global::System.DateTime> _DATE_END;
+        partial void OnDATE_ENDChanging(Nullable<global::System.DateTime> value);
         partial void OnDATE_ENDChanged();
     
         /// <summary>
