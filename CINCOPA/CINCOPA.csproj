@@ -66,6 +66,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Authentification.cs" />
+    <Compile Include="Common\CheckDoubles.cs" />
     <Compile Include="Common\DataManager.cs" />
     <Compile Include="Common\GuidComb.cs" />
     <Compile Include="Model\CINCOPAEntities.cs" />

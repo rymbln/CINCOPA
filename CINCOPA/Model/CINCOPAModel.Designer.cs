@@ -19,12 +19,12 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFWARD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.CRF), "WARD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.WARD), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_ONE_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_ONE_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE_ONE))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_THREE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_THREE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_THREE))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_TWO", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_TWO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_TWO))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFADVERSE_EVENT", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "ADVERSE_EVENT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.ADVERSE_EVENT), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFWARD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.ModelClasses), "WARD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.WARD), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_ONE_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "VISIT_ONE_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE_ONE))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_THREE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "VISIT_THREE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_THREE))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_TWO", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "VISIT_TWO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_TWO))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFADVERSE_EVENT", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "ADVERSE_EVENT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.ADVERSE_EVENT), true)]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "BASE_LIVE_INDICATORS_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BASE_LIVE_INDICATORS_VISIT_1))]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "ANAMNESTIC_DATA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ANAMNESTIC_DATA_VISIT_1))]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "EVALUATION_OF_SYMPTOMS_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.EVALUATION_OF_SYMPTOMS_VISIT_1))]
@@ -36,16 +36,16 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_TWO), "EVALUATION_OF_SYMPTOMS_VISIT_2", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.EVALUATION_OF_SYMPTOMS_VISIT_2))]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_THREE), "ECHOCARDIOGRAPHY_VISIT_3", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ECHOCARDIOGRAPHY_VISIT_3))]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE_ONE), "EVALUATION_OF_SYMPTOMS_VISIT_11", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.EVALUATION_OF_SYMPTOMS_VISIT_11))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_CLINICAL_ANALYSIS", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_CLINICAL_ANALYSIS", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_CLINICAL_ANALYSIS))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_CHEMISTRY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_CHEMISTRY", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_CHEMISTRY))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFAB_THERAPY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_CLINICAL_ANALYSIS", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "BLOOD_CLINICAL_ANALYSIS", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_CLINICAL_ANALYSIS))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_CHEMISTRY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "BLOOD_CHEMISTRY", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_CHEMISTRY))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFAB_THERAPY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "ROUTEAB_THERAPY", "ROUTE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ROUTE), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "DRUGAB_THERAPY", "DRUG", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.DRUG), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFTEST_FOR_PNEUMOCOCCAL", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "TEST_FOR_PNEUMOCOCCAL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.TEST_FOR_PNEUMOCOCCAL))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFMICROBIOLOGY_SPUTUM", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "MICROBIOLOGY_SPUTUM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_SPUTUM), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFMICROBIOLOGY_BLOOD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "MICROBIOLOGY_BLOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_BLOOD), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFTEST_FOR_PNEUMOCOCCAL", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "TEST_FOR_PNEUMOCOCCAL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.TEST_FOR_PNEUMOCOCCAL))]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFMICROBIOLOGY_SPUTUM", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "MICROBIOLOGY_SPUTUM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_SPUTUM), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFMICROBIOLOGY_BLOOD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ModelClasses), "MICROBIOLOGY_BLOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_BLOOD), true)]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CINCOPA.Model.ORGANISM), "MICROBIOLOGY_BLOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_BLOOD), true)]
 [assembly: EdmRelationshipAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CINCOPA.Model.ORGANISM), "MICROBIOLOGY_SPUTUM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_SPUTUM), true)]
 
@@ -102,18 +102,18 @@ namespace CINCOPA.Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<CRF> CRFs
+        public ObjectSet<ModelClasses> CRFs
         {
             get
             {
                 if ((_CRFs == null))
                 {
-                    _CRFs = base.CreateObjectSet<CRF>("CRFs");
+                    _CRFs = base.CreateObjectSet<ModelClasses>("CRFs");
                 }
                 return _CRFs;
             }
         }
-        private ObjectSet<CRF> _CRFs;
+        private ObjectSet<ModelClasses> _CRFs;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -586,7 +586,7 @@ namespace CINCOPA.Model
         /// <summary>
         /// Deprecated Method for adding a new object to the CRFs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToCRFs(CRF cRF)
+        public void AddToCRFs(ModelClasses cRF)
         {
             base.AddObject("CRFs", cRF);
         }
@@ -1189,15 +1189,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFAB_THERAPY", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFAB_THERAPY", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFAB_THERAPY", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -1205,17 +1205,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFAB_THERAPY", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFAB_THERAPY", "CRF", value);
                 }
             }
         }
@@ -1678,15 +1678,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFADVERSE_EVENT", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFADVERSE_EVENT", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFADVERSE_EVENT", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -1694,17 +1694,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFADVERSE_EVENT", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFADVERSE_EVENT", "CRF", value);
                 }
             }
         }
@@ -3202,15 +3202,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_CHEMISTRY", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -3218,17 +3218,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF", value);
                 }
             }
         }
@@ -3613,15 +3613,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_CLINICAL_ANALYSIS", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -3629,17 +3629,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF", value);
                 }
             }
         }
@@ -4048,15 +4048,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -4064,17 +4064,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", value);
                 }
             }
         }
@@ -4555,15 +4555,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -4571,17 +4571,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", value);
                 }
             }
         }
@@ -5223,7 +5223,7 @@ namespace CINCOPA.Model
     [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="CRF")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class CRF : EntityObject
+    public partial class ModelClasses : EntityObject
     {
         #region Factory Method
     
@@ -5239,9 +5239,9 @@ namespace CINCOPA.Model
         /// <param name="createdByDate">Initial value of the CreatedByDate property.</param>
         /// <param name="updatedBy">Initial value of the UpdatedBy property.</param>
         /// <param name="updatedByDate">Initial value of the UpdatedByDate property.</param>
-        public static CRF CreateCRF(global::System.Guid id, global::System.Guid wARDId, global::System.String nAME, global::System.Int32 nUMBER, global::System.String aE_LOGIC, global::System.String createdBy, global::System.String createdByDate, global::System.String updatedBy, global::System.String updatedByDate)
+        public static ModelClasses CreateCRF(global::System.Guid id, global::System.Guid wARDId, global::System.String nAME, global::System.Int32 nUMBER, global::System.String aE_LOGIC, global::System.String createdBy, global::System.String createdByDate, global::System.String updatedBy, global::System.String updatedByDate)
         {
-            CRF cRF = new CRF();
+            ModelClasses cRF = new ModelClasses();
             cRF.Id = id;
             cRF.WARDId = wARDId;
             cRF.NAME = nAME;
@@ -9509,15 +9509,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFMICROBIOLOGY_BLOOD", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -9525,17 +9525,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF", value);
                 }
             }
         }
@@ -10008,15 +10008,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFMICROBIOLOGY_SPUTUM", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -10024,17 +10024,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF", value);
                 }
             }
         }
@@ -10841,15 +10841,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFTEST_FOR_PNEUMOCOCCAL", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -10857,17 +10857,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF", value);
                 }
             }
         }
@@ -11193,15 +11193,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_ONE", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -11209,17 +11209,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE", "CRF", value);
                 }
             }
         }
@@ -11728,15 +11728,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_ONE_ONE", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -11744,17 +11744,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF", value);
                 }
             }
         }
@@ -12035,15 +12035,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_THREE", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_THREE", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_THREE", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -12051,17 +12051,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_THREE", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_THREE", "CRF", value);
                 }
             }
         }
@@ -12342,15 +12342,15 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_TWO", "CRF")]
-        public CRF CRF
+        public ModelClasses CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_TWO", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_TWO", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -12358,17 +12358,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<CRF> CRFReference
+        public EntityReference<ModelClasses> CRFReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_TWO", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ModelClasses>("CINCOPAModel.CRFVISIT_TWO", "CRF", value);
                 }
             }
         }
@@ -12697,17 +12697,17 @@ namespace CINCOPA.Model
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFWARD", "CRF")]
-        public EntityCollection<CRF> CRF
+        public EntityCollection<ModelClasses> CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CRF>("CINCOPAModel.CRFWARD", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ModelClasses>("CINCOPAModel.CRFWARD", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CRF>("CINCOPAModel.CRFWARD", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ModelClasses>("CINCOPAModel.CRFWARD", "CRF", value);
                 }
             }
         }

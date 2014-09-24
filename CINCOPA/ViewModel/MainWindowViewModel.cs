@@ -13,15 +13,15 @@ namespace CINCOPA.ViewModel
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private CRF currentCrf { get; set; }
-        private ObservableCollection<CRF> allCrf { get; set; }
+        private ModelClasses currentCrf { get; set; }
+        private ObservableCollection<ModelClasses> allCrf { get; set; }
         private string totalCards { get; set; }
 
         public MainWindowViewModel()
         {
-            AllCrf = new ObservableCollection<CRF>();
+            AllCrf = new ObservableCollection<ModelClasses>();
 
-            AllCrf = new ObservableCollection<CRF>(DataManager.Instance.GetCrfForCurrentUser());
+            AllCrf = new ObservableCollection<ModelClasses>(DataManager.Instance.GetCrfForCurrentUser());
 
             OpenCrfCommand = new DelegateCommand(o => OpenCrf(), o=> CurrentCrf != null);
             AddCrfCommand = new DelegateCommand(o => AddCrf());
@@ -30,7 +30,7 @@ namespace CINCOPA.ViewModel
             RefreshCommand = new DelegateCommand(o => Refresh());
         }
 
-       public ObservableCollection<CRF> AllCrf
+       public ObservableCollection<ModelClasses> AllCrf
         {
             get { return allCrf; }
             set
@@ -77,7 +77,7 @@ namespace CINCOPA.ViewModel
 
         private void Refresh()
         {
-            AllCrf = new ObservableCollection<CRF>(DataManager.Instance.GetCrfForCurrentUser());
+            AllCrf = new ObservableCollection<ModelClasses>(DataManager.Instance.GetCrfForCurrentUser());
           OnPropertyChanged("AllCrf");
         }
 
@@ -91,7 +91,7 @@ namespace CINCOPA.ViewModel
             }
         }
 
-        public CRF CurrentCrf
+        public ModelClasses CurrentCrf
         {
             get { return currentCrf; }
             set

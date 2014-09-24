@@ -13,13 +13,13 @@ namespace CINCOPA.ViewModel
 {
     public class CrfViewModel : ViewModelBase
     {
-        private CRF Model;
+        private ModelClasses Model;
         private ABTherapyViewModel currentABTherapy;
         private AEViewModel currentAE;
         private MicrobiologySputumViewModel currentMBSputum;
         private MicrobiologyBloodViewModel currentMBBlood;
 
-        public CrfViewModel(CRF obj)
+        public CrfViewModel(ModelClasses obj)
         {
             if (obj != null)
             {

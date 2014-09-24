@@ -12,7 +12,7 @@ namespace CINCOPA.Model
 
     public interface ICINCOPAContext : IDisposable
     {
-        ObjectSet<CRF> CRFs { get; }
+        ObjectSet<ModelClasses> CRFs { get; }
         ObjectSet<USER> Users { get; }
         ObjectSet<WARD> Wards { get; }
         ObjectSet<ADVERSE_EVENT> AEs { get; }

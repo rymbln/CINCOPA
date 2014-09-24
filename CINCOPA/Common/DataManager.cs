@@ -358,15 +358,15 @@ namespace CINCOPA.Common
 
 
 
-        public CRF CreateCrf()
+        public ModelClasses CreateCrf()
         {
             bool success = false;
-            CRF obj = null;
+            ModelClasses obj = null;
             //using (var transaction = new TransactionScope())
             //{
             try
             {
-                obj = underlyingContext.CreateObject<CRF>();
+                obj = underlyingContext.CreateObject<ModelClasses>();
 
                 obj.Id = GuidComb.Generate();
                 obj.CreatedBy = Authentification.GetCurrentUser().NAME;
@@ -1038,7 +1038,7 @@ namespace CINCOPA.Common
             return obj;
         }
 
-        public ADVERSE_EVENT CreateAdverseEvent(CRF crf)
+        public ADVERSE_EVENT CreateAdverseEvent(ModelClasses crf)
         {
             ADVERSE_EVENT obj = null;
             try
@@ -1067,7 +1067,7 @@ namespace CINCOPA.Common
             return obj;
         }
 
-        public AB_THERAPY CreateABTherapy(CRF crf)
+        public AB_THERAPY CreateABTherapy(ModelClasses crf)
         {
             AB_THERAPY obj = null;
             try
@@ -1096,7 +1096,7 @@ namespace CINCOPA.Common
             return obj;
         }
 
-        public MICROBIOLOGY_SPUTUM CreateMicrobiologySputum(CRF crf)
+        public MICROBIOLOGY_SPUTUM CreateMicrobiologySputum(ModelClasses crf)
         {
             MICROBIOLOGY_SPUTUM obj = null;
             try
@@ -1127,7 +1127,7 @@ namespace CINCOPA.Common
             return obj;
         }
 
-        public MICROBIOLOGY_BLOOD CreateMicrobiologyBlood(CRF crf)
+        public MICROBIOLOGY_BLOOD CreateMicrobiologyBlood(ModelClasses crf)
         {
             MICROBIOLOGY_BLOOD obj = null;
             try
@@ -1156,7 +1156,7 @@ namespace CINCOPA.Common
         }
 
 
-        public List<CRF> GetCrfForCurrentUser()
+        public List<ModelClasses> GetCrfForCurrentUser()
         {
             try
             {
@@ -1209,7 +1209,7 @@ namespace CINCOPA.Common
             }
         }
 
-        public ADVERSE_EVENT CreateAEforCRF(CRF Model)
+        public ADVERSE_EVENT CreateAEforCRF(ModelClasses Model)
         {
             try
             {
@@ -1243,7 +1243,7 @@ namespace CINCOPA.Common
 
         }
 
-        public AB_THERAPY CreateABforCRF(CRF Model)
+        public AB_THERAPY CreateABforCRF(ModelClasses Model)
         {
             try
             {
@@ -1322,7 +1322,7 @@ namespace CINCOPA.Common
             }
         }
 
-        public MICROBIOLOGY_SPUTUM CreateMicrobiologySputumForCRF(CRF Model)
+        public MICROBIOLOGY_SPUTUM CreateMicrobiologySputumForCRF(ModelClasses Model)
         {
             try
             {
@@ -1353,7 +1353,7 @@ namespace CINCOPA.Common
             }
         }
 
-        public MICROBIOLOGY_BLOOD CreateMicrobiologyBloodForCRF(CRF Model)
+        public MICROBIOLOGY_BLOOD CreateMicrobiologyBloodForCRF(ModelClasses Model)
         {
             try
             {
