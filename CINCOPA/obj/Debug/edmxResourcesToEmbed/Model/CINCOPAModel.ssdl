@@ -186,6 +186,7 @@
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ROLE" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="VisitOnes">
     <Key>

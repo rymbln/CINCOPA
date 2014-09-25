@@ -53,32 +53,19 @@
                                  Text="{Binding Path=NAME, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                         <Label Grid.Column="0" Grid.Row="1" Content="Дата рождения пациента" />
-                        <xctk:MaskedTextBox   Grid.Column="1" Grid.Row="1" 
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                            <Binding Path="DATE_BIRTH" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                        </xctk:MaskedTextBox>
+                        <xctk:MaskedTextBox Grid.Column="1" Grid.Row="1" 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_BIRTH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
 
                         <Label Grid.Column="2" Grid.Row="1" Content="Дата госпитализации" />
-                        <xctk:MaskedTextBox   Grid.Column="3" Grid.Row="1" 
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                            <Binding Path="DATE_HOSPITALIZATION" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                        </xctk:MaskedTextBox>
-
+                        <xctk:MaskedTextBox Grid.Column="3" Grid.Row="1" 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_HOSPITALIZATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
                         <Label Grid.Column="4" Grid.Row="1" Content="Дата выписки" />
-                        <xctk:MaskedTextBox   Grid.Column="5" Grid.Row="1" 
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                            <Binding Path="DATE_DISCHARGE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                        </xctk:MaskedTextBox>
 
+                        <xctk:MaskedTextBox Grid.Column="5" Grid.Row="1" 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_DISCHARGE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
                     </Grid>
                 </HeaderedContentControl>
                 <TabControl Grid.Row="1">
@@ -94,13 +81,10 @@
                             </Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Orientation="Horizontal">
                                 <Label  Content="ДАТА ВИЗИТА 1" />
-                                <xctk:MaskedTextBox
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="DATE_VISIT_ONE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                </xctk:MaskedTextBox>
+                                <xctk:MaskedTextBox 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_VISIT_ONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
                             </StackPanel>
                             <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>
@@ -123,23 +107,18 @@
 
                                     <Label Grid.Column="0" Grid.Row="0"
                                     Content="Дата появления симптомов ВП (ИНДП)" />
+                      
                                     <xctk:MaskedTextBox Grid.Column="1" Grid.Row="0"
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="VISIT_ONE_ANAMNESTIC_DATE_SYMPTOM" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                    </xctk:MaskedTextBox>
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=VISIT_ONE_ANAMNESTIC_DATE_SYMPTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
 
                                     <Label Grid.Column="2" Grid.Row="0"
                                     Content="Дата установления диагноза ХСН" />
+
                                     <xctk:MaskedTextBox Grid.Column="3" Grid.Row="0"
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="VISIT_ONE_ANAMNESTIC_DATE_DIAGNOSIS" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                    </xctk:MaskedTextBox>
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=VISIT_ONE_ANAMNESTIC_DATE_DIAGNOSIS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
 
                                     <Label Grid.Column="0" Grid.Row="1" Content="Количество эпизодов декомпенсации в течение последний 12 месяцев"  />
                                     <TextBox Grid.Column="1" Grid.Row="1" 
@@ -371,11 +350,12 @@
                                         <StackPanel Orientation="Horizontal"
                                             Grid.Row="0">
                                             <Label Content="Дата проведения:" />
-                                            <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                <Binding Path="XRAY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                            </xctk:MaskedTextBox>
+         
+                                            <xctk:MaskedTextBox 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=XRAY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
+
                                             <Label Content="Рентгенологические признаки пневмонии:" />
                                             <ComboBox
                                           SelectedValuePath="." 
@@ -432,31 +412,31 @@
 
                                                 <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                                 <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
@@ -477,11 +457,11 @@
                                         <StackPanel Orientation="Horizontal"
                                             Grid.Row="0">
                                             <Label Content="Дата проведения:" />
-                                            <xctk:MaskedTextBox Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                                <Binding Path="VISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                            </xctk:MaskedTextBox>
+    
+                                            <xctk:MaskedTextBox 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
                                             <Label Content="Томографические признаки пневмонии:" />
                                             <ComboBox
                                           SelectedValuePath="." 
@@ -538,31 +518,31 @@
 
                                                 <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                                 <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
@@ -589,11 +569,11 @@
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
                                         <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
-                                        <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                            <Binding Path="VISIT_ONE_ELECTROCARDIOGRAPHY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                        </xctk:MaskedTextBox>
+
+                                        <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1"
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
 
                                         <Label Grid.Row="1" Grid.Column="0"  Content="ЧСС в минуту:" />
                                         <TextBox Grid.Column="1" Grid.Row="1"
@@ -627,11 +607,11 @@
 
                                                 <CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_SINUS_RHYTHM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_ATRIAL_FIBRILLATION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_SUPRAVENTRICULAR, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ELECTROCARDIOGRAPHY_ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
@@ -654,11 +634,10 @@
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
                                         <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
-                                        <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                            <Binding Path="VISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                        </xctk:MaskedTextBox>
+           
+                                        <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1"
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
 
                                         <Label Grid.Row="1" Grid.Column="0"  Content="Объем перикардиального выпота:" />
                                         <TextBox Grid.Column="1" Grid.Row="1"
@@ -692,11 +671,11 @@
 
                                                 <CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
@@ -719,13 +698,11 @@
                             </Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Orientation="Horizontal">
                                 <Label  Content="ДАТА ВИЗИТА 2" />
-                                <xctk:MaskedTextBox
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="DATE_VISIT_TWO" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                </xctk:MaskedTextBox>
+
+                                <xctk:MaskedTextBox 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_VISIT_TWO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
                             </StackPanel>
                             <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>
@@ -877,13 +854,10 @@
                             </HeaderedContentControl>
                             <StackPanel Grid.Row="3" Orientation="Horizontal">
                                 <Label  Content="ДАТА ВИЗИТА 3" />
-                                <xctk:MaskedTextBox
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="DATE_VISIT_THREE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                </xctk:MaskedTextBox>
+                                <xctk:MaskedTextBox 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_VISIT_THREE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
                             </StackPanel>
                             <HeaderedContentControl Grid.Row="4" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>
@@ -901,11 +875,10 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
-                                    <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}">
-                                        <Binding Path="VISIT_THREE_ECHOCARDIOGRAPHY_DATE_PROCEDURE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                    </xctk:MaskedTextBox>
+                                <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1"
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
 
                                     <Label Grid.Row="1" Grid.Column="0"  Content="Объем перикардиального выпота:" />
                                     <TextBox Grid.Column="1" Grid.Row="1"
@@ -939,11 +912,11 @@
 
                                             <CheckBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            <CheckBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                         </Grid>
                                     </Border>
@@ -1330,7 +1303,7 @@
                                                         <xctk:MaskedTextBox   Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
                                                                       Value="{Binding Path=MB_SPUTUM_DATE_CAPTURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
 
-                                                         </DataTemplate>
+                                                    </DataTemplate>
                                                 </DataGridTemplateColumn.CellTemplate>
                                             </DataGridTemplateColumn>
                                             <DataGridTextColumn Header="Лабораторный номер"  Binding="{Binding Path=MB_SPUTUM_LAB_NUMBER, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
@@ -1501,13 +1474,10 @@
                             </Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Orientation="Horizontal">
                                 <Label  Content="ДАТА ВИЗИТА 1.1" />
-                                <xctk:MaskedTextBox
-                                                      Mask="00/00/0000"
-                                                      ValueDataType="{x:Type s:DateTime}">
-                                    <Binding Path="DATE_VISIT_ONE_ONE" 
-                                                 Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"
-                                                 ValidatesOnDataErrors="True" NotifyOnValidationError="True"/>
-                                </xctk:MaskedTextBox>
+                                <xctk:MaskedTextBox 
+                                                Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
+                                                Value="{Binding Path=DATE_VISIT_ONE_ONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+
                             </StackPanel>
                             <HeaderedContentControl Grid.Row="1" Style="{StaticResource SubDisplayArea}" Margin="2">
                                 <HeaderedContentControl.Header>

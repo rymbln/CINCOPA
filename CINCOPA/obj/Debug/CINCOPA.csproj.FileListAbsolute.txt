@@ -23,3 +23,5 @@ C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.exe
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.pdb
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.baml
+C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.g.cs

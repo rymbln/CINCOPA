@@ -70,10 +70,11 @@
     <Compile Include="Common\DataManager.cs" />
     <Compile Include="Common\GuidComb.cs" />
     <Compile Include="Model\CINCOPAEntities.cs" />
-    <Compile Include="Model\CRF.cs" />
+    <Compile Include="Model\ModelClasses.cs" />
     <Compile Include="Model\ICINCOPAContext.cs" />
     <Compile Include="ViewModel\ABTherapyViewModel.cs" />
     <Compile Include="ViewModel\AEViewModel.cs" />
+    <Compile Include="ViewModel\CheckDoubleViewModel.cs" />
     <Compile Include="ViewModel\CrfViewModel.cs" />
     <Compile Include="ViewModel\DelegateCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
@@ -83,6 +84,9 @@
     <Compile Include="ViewModel\SelectOrganismViewModel.cs" />
     <Compile Include="ViewModel\SelectRouteViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="Views\CheckDoubleView.xaml.cs">
+      <DependentUpon>CheckDoubleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CrfView.xaml.cs">
       <DependentUpon>CrfView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +97,10 @@
       <DependentUpon>SelectWindowView.xaml</DependentUpon>
     </Compile>
     <Page Include="ControlResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CheckDoubleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

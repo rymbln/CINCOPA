@@ -191,6 +191,7 @@
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ROLE" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="VisitOnes">
     <Key>
@@ -1311,6 +1312,7 @@
           <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Type="String" Name="NAME" Nullable="false" />
           <Property Type="String" Name="PASSWORD" Nullable="false" />
+          <Property Type="String" Name="ROLE" Nullable="true" />
         </EntityType>
         <Association Name="CRFWARD">
           <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="*" ></End>
@@ -2135,6 +2137,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
           <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -7,7 +7,7 @@ using System.Text;
 namespace CINCOPA.Model
 {
 
-    public partial class ModelClasses : EntityObject
+    public partial class CRF : EntityObject
     {
         public string WARD_NAME
         {

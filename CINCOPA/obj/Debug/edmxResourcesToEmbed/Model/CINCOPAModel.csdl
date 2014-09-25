@@ -201,6 +201,7 @@
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="NAME" Nullable="false" />
     <Property Type="String" Name="PASSWORD" Nullable="false" />
+    <Property Type="String" Name="ROLE" Nullable="true" />
   </EntityType>
   <Association Name="CRFWARD">
     <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="*" />

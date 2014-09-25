@@ -40,6 +40,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
           <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 09/22/2014 13:47:51
+-- Date Created: 09/25/2014 16:45:11
 -- Generated from EDMX file: C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\Model\CINCOPAModel.edmx
 -- --------------------------------------------------
 
@@ -239,7 +239,8 @@ GO
 CREATE TABLE [dbo].[Users] (
     [Id] uniqueidentifier  NOT NULL,
     [NAME] nvarchar(max)  NOT NULL,
-    [PASSWORD] nvarchar(max)  NOT NULL
+    [PASSWORD] nvarchar(max)  NOT NULL,
+    [ROLE] nvarchar(max)  NULL
 );
 GO
 
