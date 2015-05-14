@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Configuration;
-using System.Data.Objects;
+using System.Data.Entity.Core.Objects;
+
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
@@ -14,9 +15,9 @@ using CINCOPA.Model;
 
 
 
-using System.Linq;
 using System.Data;
-using System.Data.Objects;
+
+
 using System.Transactions;
 
 namespace CINCOPA.Common

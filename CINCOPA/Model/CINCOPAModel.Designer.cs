@@ -19,35 +19,35 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFWARD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.CRF), "WARD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.WARD), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_ONE_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_ONE_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE_ONE))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_THREE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_THREE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_THREE))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFVISIT_TWO", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VISIT_TWO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_TWO))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFADVERSE_EVENT", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "ADVERSE_EVENT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.ADVERSE_EVENT), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "BASE_LIVE_INDICATORS_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BASE_LIVE_INDICATORS_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "ANAMNESTIC_DATA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ANAMNESTIC_DATA_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "EVALUATION_OF_SYMPTOMS_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.EVALUATION_OF_SYMPTOMS_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "ELECTROCARDIOGRAPHY_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ELECTROCARDIOGRAPHY_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "ECHOCARDIOGRAPHY_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ECHOCARDIOGRAPHY_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONEXRAY_CHEST_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "XRAY_CHEST_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.XRAY_CHEST_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VISIT_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE), "COMPUTED_TOMOGRAPHY_CHEST_VISIT_1", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.COMPUTED_TOMOGRAPHY_CHEST_VISIT_1))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VISIT_TWO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_TWO), "BASE_LIVE_INDICATORS_VISIT_2", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BASE_LIVE_INDICATORS_VISIT_2))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_TWO), "EVALUATION_OF_SYMPTOMS_VISIT_2", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.EVALUATION_OF_SYMPTOMS_VISIT_2))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_THREE), "ECHOCARDIOGRAPHY_VISIT_3", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ECHOCARDIOGRAPHY_VISIT_3))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VISIT_ONE_ONE), "EVALUATION_OF_SYMPTOMS_VISIT_11", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.EVALUATION_OF_SYMPTOMS_VISIT_11))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_CLINICAL_ANALYSIS", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_CLINICAL_ANALYSIS", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_CLINICAL_ANALYSIS))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFBLOOD_CHEMISTRY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BLOOD_CHEMISTRY", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.BLOOD_CHEMISTRY))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFAB_THERAPY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "ROUTEAB_THERAPY", "ROUTE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.ROUTE), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "DRUGAB_THERAPY", "DRUG", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.DRUG), "AB_THERAPY", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AB_THERAPY), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFTEST_FOR_PNEUMOCOCCAL", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "TEST_FOR_PNEUMOCOCCAL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.TEST_FOR_PNEUMOCOCCAL))]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFMICROBIOLOGY_SPUTUM", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "MICROBIOLOGY_SPUTUM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_SPUTUM), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "CRFMICROBIOLOGY_BLOOD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "MICROBIOLOGY_BLOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_BLOOD), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CINCOPA.Model.ORGANISM), "MICROBIOLOGY_BLOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_BLOOD), true)]
-[assembly: EdmRelationshipAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CINCOPA.Model.ORGANISM), "MICROBIOLOGY_SPUTUM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MICROBIOLOGY_SPUTUM), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFAB_THERAPY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "AbTherapy", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AbTherapy), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_DRUGAB_THERAPY", "Drug", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.Drug), "AbTherapy", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AbTherapy), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_ROUTEAB_THERAPY", "Route", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.Route), "AbTherapy", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AbTherapy), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFADVERSE_EVENT", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "AE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AE), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONEANAMNESTIC_DATA", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "AnamnesticDataVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.AnamnesticDataVisit1Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "BaseLiveIndicatorsVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.BaseLiveIndicatorsVisit1Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VisitTwo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitTwo), "BaseLiveIndicatorsVisit2Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.BaseLiveIndicatorsVisit2Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFBLOOD_CHEMISTRY", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BloodChemistry", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.BloodChemistry), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFBLOOD_CLINICAL_ANALYSIS", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BloodClinicalAnalys", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.BloodClinicalAnalys), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BloodTestsForMarkersOfCardiacDysfunction", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.BloodTestsForMarkersOfCardiacDysfunction), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "BloodTestsForMarkersOfInflammation", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.BloodTestsForMarkersOfInflammation), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "ComputedTomographyChestVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.ComputedTomographyChestVisit1Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFMICROBIOLOGY_BLOOD", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "MicrobiologyBlood", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MicrobiologyBlood), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFMICROBIOLOGY_SPUTUM", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "MicrobiologySputum", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MicrobiologySputum), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFTEST_FOR_PNEUMOCOCCAL", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "TestForPneumococcal", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.TestForPneumococcal), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFVISIT_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.VisitOne), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFVISIT_ONE_ONE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VisitOneOne", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.VisitOneOne), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFVISIT_THREE", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VisitThree", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.VisitThree), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFVISIT_TWO", "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.CRF), "VisitTwo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.VisitTwo), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_CRFWARD", "Ward", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.Ward), "CRF", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.CRF), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "EchocardiographyVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.EchocardiographyVisit1Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VisitThree", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitThree), "EchocardiographyVisit3Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.EchocardiographyVisit3Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "ElectrocardiographyVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.ElectrocardiographyVisit1Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VisitOneOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOneOne), "EvaluationOfSymptomsVisit11Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.EvaluationOfSymptomsVisit11Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "EvaluationOfSymptomsVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.EvaluationOfSymptomsVisit1Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VisitTwo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitTwo), "EvaluationOfSymptomsVisit2Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.EvaluationOfSymptomsVisit2Set), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_ORGANISMMICROBIOLOGY_BLOOD", "Organism", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CINCOPA.Model.Organism), "MicrobiologyBlood", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MicrobiologyBlood), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_ORGANISMMICROBIOLOGY_SPUTUM", "Organism", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CINCOPA.Model.Organism), "MicrobiologySputum", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.MicrobiologySputum), true)]
+[assembly: EdmRelationshipAttribute("CINCOPAModel", "FK_VISIT_ONEXRAY_CHEST_VISIT_1", "VisitOne", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(CINCOPA.Model.VisitOne), "XrayChestVisit1Set", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CINCOPA.Model.XrayChestVisit1Set), true)]
 
 #endregion
 
@@ -102,6 +102,166 @@ namespace CINCOPA.Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<AbTherapy> AbTherapys
+        {
+            get
+            {
+                if ((_AbTherapys == null))
+                {
+                    _AbTherapys = base.CreateObjectSet<AbTherapy>("AbTherapys");
+                }
+                return _AbTherapys;
+            }
+        }
+        private ObjectSet<AbTherapy> _AbTherapys;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<AE> AEs
+        {
+            get
+            {
+                if ((_AEs == null))
+                {
+                    _AEs = base.CreateObjectSet<AE>("AEs");
+                }
+                return _AEs;
+            }
+        }
+        private ObjectSet<AE> _AEs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<AnamnesticDataVisit1Set> AnamnesticDataVisit1Set
+        {
+            get
+            {
+                if ((_AnamnesticDataVisit1Set == null))
+                {
+                    _AnamnesticDataVisit1Set = base.CreateObjectSet<AnamnesticDataVisit1Set>("AnamnesticDataVisit1Set");
+                }
+                return _AnamnesticDataVisit1Set;
+            }
+        }
+        private ObjectSet<AnamnesticDataVisit1Set> _AnamnesticDataVisit1Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BaseLiveIndicatorsVisit1Set> BaseLiveIndicatorsVisit1Set
+        {
+            get
+            {
+                if ((_BaseLiveIndicatorsVisit1Set == null))
+                {
+                    _BaseLiveIndicatorsVisit1Set = base.CreateObjectSet<BaseLiveIndicatorsVisit1Set>("BaseLiveIndicatorsVisit1Set");
+                }
+                return _BaseLiveIndicatorsVisit1Set;
+            }
+        }
+        private ObjectSet<BaseLiveIndicatorsVisit1Set> _BaseLiveIndicatorsVisit1Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BaseLiveIndicatorsVisit2Set> BaseLiveIndicatorsVisit2Set
+        {
+            get
+            {
+                if ((_BaseLiveIndicatorsVisit2Set == null))
+                {
+                    _BaseLiveIndicatorsVisit2Set = base.CreateObjectSet<BaseLiveIndicatorsVisit2Set>("BaseLiveIndicatorsVisit2Set");
+                }
+                return _BaseLiveIndicatorsVisit2Set;
+            }
+        }
+        private ObjectSet<BaseLiveIndicatorsVisit2Set> _BaseLiveIndicatorsVisit2Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BloodChemistry> BloodChemistrys
+        {
+            get
+            {
+                if ((_BloodChemistrys == null))
+                {
+                    _BloodChemistrys = base.CreateObjectSet<BloodChemistry>("BloodChemistrys");
+                }
+                return _BloodChemistrys;
+            }
+        }
+        private ObjectSet<BloodChemistry> _BloodChemistrys;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BloodClinicalAnalys> BloodClinicalAnalyses
+        {
+            get
+            {
+                if ((_BloodClinicalAnalyses == null))
+                {
+                    _BloodClinicalAnalyses = base.CreateObjectSet<BloodClinicalAnalys>("BloodClinicalAnalyses");
+                }
+                return _BloodClinicalAnalyses;
+            }
+        }
+        private ObjectSet<BloodClinicalAnalys> _BloodClinicalAnalyses;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BloodTestsForMarkersOfCardiacDysfunction> BloodTestsForMarkersOfCardiacDysfunctions
+        {
+            get
+            {
+                if ((_BloodTestsForMarkersOfCardiacDysfunctions == null))
+                {
+                    _BloodTestsForMarkersOfCardiacDysfunctions = base.CreateObjectSet<BloodTestsForMarkersOfCardiacDysfunction>("BloodTestsForMarkersOfCardiacDysfunctions");
+                }
+                return _BloodTestsForMarkersOfCardiacDysfunctions;
+            }
+        }
+        private ObjectSet<BloodTestsForMarkersOfCardiacDysfunction> _BloodTestsForMarkersOfCardiacDysfunctions;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BloodTestsForMarkersOfInflammation> BloodTestsForMarkersOfInflammations
+        {
+            get
+            {
+                if ((_BloodTestsForMarkersOfInflammations == null))
+                {
+                    _BloodTestsForMarkersOfInflammations = base.CreateObjectSet<BloodTestsForMarkersOfInflammation>("BloodTestsForMarkersOfInflammations");
+                }
+                return _BloodTestsForMarkersOfInflammations;
+            }
+        }
+        private ObjectSet<BloodTestsForMarkersOfInflammation> _BloodTestsForMarkersOfInflammations;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ComputedTomographyChestVisit1Set> ComputedTomographyChestVisit1Set
+        {
+            get
+            {
+                if ((_ComputedTomographyChestVisit1Set == null))
+                {
+                    _ComputedTomographyChestVisit1Set = base.CreateObjectSet<ComputedTomographyChestVisit1Set>("ComputedTomographyChestVisit1Set");
+                }
+                return _ComputedTomographyChestVisit1Set;
+            }
+        }
+        private ObjectSet<ComputedTomographyChestVisit1Set> _ComputedTomographyChestVisit1Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<CRF> CRFs
         {
             get
@@ -118,470 +278,406 @@ namespace CINCOPA.Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<WARD> Wards
-        {
-            get
-            {
-                if ((_Wards == null))
-                {
-                    _Wards = base.CreateObjectSet<WARD>("Wards");
-                }
-                return _Wards;
-            }
-        }
-        private ObjectSet<WARD> _Wards;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<USER> Users
-        {
-            get
-            {
-                if ((_Users == null))
-                {
-                    _Users = base.CreateObjectSet<USER>("Users");
-                }
-                return _Users;
-            }
-        }
-        private ObjectSet<USER> _Users;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<VISIT_ONE> VisitOnes
-        {
-            get
-            {
-                if ((_VisitOnes == null))
-                {
-                    _VisitOnes = base.CreateObjectSet<VISIT_ONE>("VisitOnes");
-                }
-                return _VisitOnes;
-            }
-        }
-        private ObjectSet<VISIT_ONE> _VisitOnes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<VISIT_ONE_ONE> VisitOneOnes
-        {
-            get
-            {
-                if ((_VisitOneOnes == null))
-                {
-                    _VisitOneOnes = base.CreateObjectSet<VISIT_ONE_ONE>("VisitOneOnes");
-                }
-                return _VisitOneOnes;
-            }
-        }
-        private ObjectSet<VISIT_ONE_ONE> _VisitOneOnes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<VISIT_TWO> VisitTwoes
-        {
-            get
-            {
-                if ((_VisitTwoes == null))
-                {
-                    _VisitTwoes = base.CreateObjectSet<VISIT_TWO>("VisitTwoes");
-                }
-                return _VisitTwoes;
-            }
-        }
-        private ObjectSet<VISIT_TWO> _VisitTwoes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<VISIT_THREE> VisitThrees
-        {
-            get
-            {
-                if ((_VisitThrees == null))
-                {
-                    _VisitThrees = base.CreateObjectSet<VISIT_THREE>("VisitThrees");
-                }
-                return _VisitThrees;
-            }
-        }
-        private ObjectSet<VISIT_THREE> _VisitThrees;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ADVERSE_EVENT> AEs
-        {
-            get
-            {
-                if ((_AEs == null))
-                {
-                    _AEs = base.CreateObjectSet<ADVERSE_EVENT>("AEs");
-                }
-                return _AEs;
-            }
-        }
-        private ObjectSet<ADVERSE_EVENT> _AEs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BASE_LIVE_INDICATORS_VISIT_1> BaseLiveIndicatorsVisit1Set
-        {
-            get
-            {
-                if ((_BaseLiveIndicatorsVisit1Set == null))
-                {
-                    _BaseLiveIndicatorsVisit1Set = base.CreateObjectSet<BASE_LIVE_INDICATORS_VISIT_1>("BaseLiveIndicatorsVisit1Set");
-                }
-                return _BaseLiveIndicatorsVisit1Set;
-            }
-        }
-        private ObjectSet<BASE_LIVE_INDICATORS_VISIT_1> _BaseLiveIndicatorsVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ANAMNESTIC_DATA_VISIT_1> AnamnesticDataVisit1Set
-        {
-            get
-            {
-                if ((_AnamnesticDataVisit1Set == null))
-                {
-                    _AnamnesticDataVisit1Set = base.CreateObjectSet<ANAMNESTIC_DATA_VISIT_1>("AnamnesticDataVisit1Set");
-                }
-                return _AnamnesticDataVisit1Set;
-            }
-        }
-        private ObjectSet<ANAMNESTIC_DATA_VISIT_1> _AnamnesticDataVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_1> EvaluationOfSymptomsVisit1Set
-        {
-            get
-            {
-                if ((_EvaluationOfSymptomsVisit1Set == null))
-                {
-                    _EvaluationOfSymptomsVisit1Set = base.CreateObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_1>("EvaluationOfSymptomsVisit1Set");
-                }
-                return _EvaluationOfSymptomsVisit1Set;
-            }
-        }
-        private ObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_1> _EvaluationOfSymptomsVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ELECTROCARDIOGRAPHY_VISIT_1> ElectrocardiographyVisit1Set
-        {
-            get
-            {
-                if ((_ElectrocardiographyVisit1Set == null))
-                {
-                    _ElectrocardiographyVisit1Set = base.CreateObjectSet<ELECTROCARDIOGRAPHY_VISIT_1>("ElectrocardiographyVisit1Set");
-                }
-                return _ElectrocardiographyVisit1Set;
-            }
-        }
-        private ObjectSet<ELECTROCARDIOGRAPHY_VISIT_1> _ElectrocardiographyVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ECHOCARDIOGRAPHY_VISIT_1> EchocardiographyVisit1Set
-        {
-            get
-            {
-                if ((_EchocardiographyVisit1Set == null))
-                {
-                    _EchocardiographyVisit1Set = base.CreateObjectSet<ECHOCARDIOGRAPHY_VISIT_1>("EchocardiographyVisit1Set");
-                }
-                return _EchocardiographyVisit1Set;
-            }
-        }
-        private ObjectSet<ECHOCARDIOGRAPHY_VISIT_1> _EchocardiographyVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<XRAY_CHEST_VISIT_1> XrayChestVisit1Set
-        {
-            get
-            {
-                if ((_XrayChestVisit1Set == null))
-                {
-                    _XrayChestVisit1Set = base.CreateObjectSet<XRAY_CHEST_VISIT_1>("XrayChestVisit1Set");
-                }
-                return _XrayChestVisit1Set;
-            }
-        }
-        private ObjectSet<XRAY_CHEST_VISIT_1> _XrayChestVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1> ComputedTomographyChestVisit1Set
-        {
-            get
-            {
-                if ((_ComputedTomographyChestVisit1Set == null))
-                {
-                    _ComputedTomographyChestVisit1Set = base.CreateObjectSet<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1>("ComputedTomographyChestVisit1Set");
-                }
-                return _ComputedTomographyChestVisit1Set;
-            }
-        }
-        private ObjectSet<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1> _ComputedTomographyChestVisit1Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BASE_LIVE_INDICATORS_VISIT_2> BaseLiveIndicatorsVisit2Set
-        {
-            get
-            {
-                if ((_BaseLiveIndicatorsVisit2Set == null))
-                {
-                    _BaseLiveIndicatorsVisit2Set = base.CreateObjectSet<BASE_LIVE_INDICATORS_VISIT_2>("BaseLiveIndicatorsVisit2Set");
-                }
-                return _BaseLiveIndicatorsVisit2Set;
-            }
-        }
-        private ObjectSet<BASE_LIVE_INDICATORS_VISIT_2> _BaseLiveIndicatorsVisit2Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_2> EvaluationOfSymptomsVisit2Set
-        {
-            get
-            {
-                if ((_EvaluationOfSymptomsVisit2Set == null))
-                {
-                    _EvaluationOfSymptomsVisit2Set = base.CreateObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_2>("EvaluationOfSymptomsVisit2Set");
-                }
-                return _EvaluationOfSymptomsVisit2Set;
-            }
-        }
-        private ObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_2> _EvaluationOfSymptomsVisit2Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ECHOCARDIOGRAPHY_VISIT_3> EchocardiographyVisit3Set
-        {
-            get
-            {
-                if ((_EchocardiographyVisit3Set == null))
-                {
-                    _EchocardiographyVisit3Set = base.CreateObjectSet<ECHOCARDIOGRAPHY_VISIT_3>("EchocardiographyVisit3Set");
-                }
-                return _EchocardiographyVisit3Set;
-            }
-        }
-        private ObjectSet<ECHOCARDIOGRAPHY_VISIT_3> _EchocardiographyVisit3Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_11> EvaluationOfSymptomsVisit11Set
-        {
-            get
-            {
-                if ((_EvaluationOfSymptomsVisit11Set == null))
-                {
-                    _EvaluationOfSymptomsVisit11Set = base.CreateObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_11>("EvaluationOfSymptomsVisit11Set");
-                }
-                return _EvaluationOfSymptomsVisit11Set;
-            }
-        }
-        private ObjectSet<EVALUATION_OF_SYMPTOMS_VISIT_11> _EvaluationOfSymptomsVisit11Set;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BLOOD_CLINICAL_ANALYSIS> BloodClinicalAnalyses
-        {
-            get
-            {
-                if ((_BloodClinicalAnalyses == null))
-                {
-                    _BloodClinicalAnalyses = base.CreateObjectSet<BLOOD_CLINICAL_ANALYSIS>("BloodClinicalAnalyses");
-                }
-                return _BloodClinicalAnalyses;
-            }
-        }
-        private ObjectSet<BLOOD_CLINICAL_ANALYSIS> _BloodClinicalAnalyses;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION> BloodTestsForMarkersOfInflammations
-        {
-            get
-            {
-                if ((_BloodTestsForMarkersOfInflammations == null))
-                {
-                    _BloodTestsForMarkersOfInflammations = base.CreateObjectSet<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION>("BloodTestsForMarkersOfInflammations");
-                }
-                return _BloodTestsForMarkersOfInflammations;
-            }
-        }
-        private ObjectSet<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION> _BloodTestsForMarkersOfInflammations;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION> BloodTestsForMarkersOfCardiacDysfunctions
-        {
-            get
-            {
-                if ((_BloodTestsForMarkersOfCardiacDysfunctions == null))
-                {
-                    _BloodTestsForMarkersOfCardiacDysfunctions = base.CreateObjectSet<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION>("BloodTestsForMarkersOfCardiacDysfunctions");
-                }
-                return _BloodTestsForMarkersOfCardiacDysfunctions;
-            }
-        }
-        private ObjectSet<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION> _BloodTestsForMarkersOfCardiacDysfunctions;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BLOOD_CHEMISTRY> BloodChemistrys
-        {
-            get
-            {
-                if ((_BloodChemistrys == null))
-                {
-                    _BloodChemistrys = base.CreateObjectSet<BLOOD_CHEMISTRY>("BloodChemistrys");
-                }
-                return _BloodChemistrys;
-            }
-        }
-        private ObjectSet<BLOOD_CHEMISTRY> _BloodChemistrys;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ORGANISM> Organisms
-        {
-            get
-            {
-                if ((_Organisms == null))
-                {
-                    _Organisms = base.CreateObjectSet<ORGANISM>("Organisms");
-                }
-                return _Organisms;
-            }
-        }
-        private ObjectSet<ORGANISM> _Organisms;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ROUTE> Routes
-        {
-            get
-            {
-                if ((_Routes == null))
-                {
-                    _Routes = base.CreateObjectSet<ROUTE>("Routes");
-                }
-                return _Routes;
-            }
-        }
-        private ObjectSet<ROUTE> _Routes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<DRUG> Drugs
+        public ObjectSet<Drug> Drugs
         {
             get
             {
                 if ((_Drugs == null))
                 {
-                    _Drugs = base.CreateObjectSet<DRUG>("Drugs");
+                    _Drugs = base.CreateObjectSet<Drug>("Drugs");
                 }
                 return _Drugs;
             }
         }
-        private ObjectSet<DRUG> _Drugs;
+        private ObjectSet<Drug> _Drugs;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<AB_THERAPY> AbTherapys
+        public ObjectSet<EchocardiographyVisit1Set> EchocardiographyVisit1Set
         {
             get
             {
-                if ((_AbTherapys == null))
+                if ((_EchocardiographyVisit1Set == null))
                 {
-                    _AbTherapys = base.CreateObjectSet<AB_THERAPY>("AbTherapys");
+                    _EchocardiographyVisit1Set = base.CreateObjectSet<EchocardiographyVisit1Set>("EchocardiographyVisit1Set");
                 }
-                return _AbTherapys;
+                return _EchocardiographyVisit1Set;
             }
         }
-        private ObjectSet<AB_THERAPY> _AbTherapys;
+        private ObjectSet<EchocardiographyVisit1Set> _EchocardiographyVisit1Set;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<TEST_FOR_PNEUMOCOCCAL> TestForPneumococcals
+        public ObjectSet<EchocardiographyVisit3Set> EchocardiographyVisit3Set
         {
             get
             {
-                if ((_TestForPneumococcals == null))
+                if ((_EchocardiographyVisit3Set == null))
                 {
-                    _TestForPneumococcals = base.CreateObjectSet<TEST_FOR_PNEUMOCOCCAL>("TestForPneumococcals");
+                    _EchocardiographyVisit3Set = base.CreateObjectSet<EchocardiographyVisit3Set>("EchocardiographyVisit3Set");
                 }
-                return _TestForPneumococcals;
+                return _EchocardiographyVisit3Set;
             }
         }
-        private ObjectSet<TEST_FOR_PNEUMOCOCCAL> _TestForPneumococcals;
+        private ObjectSet<EchocardiographyVisit3Set> _EchocardiographyVisit3Set;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<MICROBIOLOGY_SPUTUM> MicrobiologySputums
+        public ObjectSet<ElectrocardiographyVisit1Set> ElectrocardiographyVisit1Set
         {
             get
             {
-                if ((_MicrobiologySputums == null))
+                if ((_ElectrocardiographyVisit1Set == null))
                 {
-                    _MicrobiologySputums = base.CreateObjectSet<MICROBIOLOGY_SPUTUM>("MicrobiologySputums");
+                    _ElectrocardiographyVisit1Set = base.CreateObjectSet<ElectrocardiographyVisit1Set>("ElectrocardiographyVisit1Set");
                 }
-                return _MicrobiologySputums;
+                return _ElectrocardiographyVisit1Set;
             }
         }
-        private ObjectSet<MICROBIOLOGY_SPUTUM> _MicrobiologySputums;
+        private ObjectSet<ElectrocardiographyVisit1Set> _ElectrocardiographyVisit1Set;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<MICROBIOLOGY_BLOOD> MicrobiologyBloods
+        public ObjectSet<EvaluationOfSymptomsVisit11Set> EvaluationOfSymptomsVisit11Set
+        {
+            get
+            {
+                if ((_EvaluationOfSymptomsVisit11Set == null))
+                {
+                    _EvaluationOfSymptomsVisit11Set = base.CreateObjectSet<EvaluationOfSymptomsVisit11Set>("EvaluationOfSymptomsVisit11Set");
+                }
+                return _EvaluationOfSymptomsVisit11Set;
+            }
+        }
+        private ObjectSet<EvaluationOfSymptomsVisit11Set> _EvaluationOfSymptomsVisit11Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<EvaluationOfSymptomsVisit1Set> EvaluationOfSymptomsVisit1Set
+        {
+            get
+            {
+                if ((_EvaluationOfSymptomsVisit1Set == null))
+                {
+                    _EvaluationOfSymptomsVisit1Set = base.CreateObjectSet<EvaluationOfSymptomsVisit1Set>("EvaluationOfSymptomsVisit1Set");
+                }
+                return _EvaluationOfSymptomsVisit1Set;
+            }
+        }
+        private ObjectSet<EvaluationOfSymptomsVisit1Set> _EvaluationOfSymptomsVisit1Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<EvaluationOfSymptomsVisit2Set> EvaluationOfSymptomsVisit2Set
+        {
+            get
+            {
+                if ((_EvaluationOfSymptomsVisit2Set == null))
+                {
+                    _EvaluationOfSymptomsVisit2Set = base.CreateObjectSet<EvaluationOfSymptomsVisit2Set>("EvaluationOfSymptomsVisit2Set");
+                }
+                return _EvaluationOfSymptomsVisit2Set;
+            }
+        }
+        private ObjectSet<EvaluationOfSymptomsVisit2Set> _EvaluationOfSymptomsVisit2Set;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<MicrobiologyBlood> MicrobiologyBloods
         {
             get
             {
                 if ((_MicrobiologyBloods == null))
                 {
-                    _MicrobiologyBloods = base.CreateObjectSet<MICROBIOLOGY_BLOOD>("MicrobiologyBloods");
+                    _MicrobiologyBloods = base.CreateObjectSet<MicrobiologyBlood>("MicrobiologyBloods");
                 }
                 return _MicrobiologyBloods;
             }
         }
-        private ObjectSet<MICROBIOLOGY_BLOOD> _MicrobiologyBloods;
+        private ObjectSet<MicrobiologyBlood> _MicrobiologyBloods;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<MicrobiologySputum> MicrobiologySputums
+        {
+            get
+            {
+                if ((_MicrobiologySputums == null))
+                {
+                    _MicrobiologySputums = base.CreateObjectSet<MicrobiologySputum>("MicrobiologySputums");
+                }
+                return _MicrobiologySputums;
+            }
+        }
+        private ObjectSet<MicrobiologySputum> _MicrobiologySputums;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Organism> Organisms
+        {
+            get
+            {
+                if ((_Organisms == null))
+                {
+                    _Organisms = base.CreateObjectSet<Organism>("Organisms");
+                }
+                return _Organisms;
+            }
+        }
+        private ObjectSet<Organism> _Organisms;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Route> Routes
+        {
+            get
+            {
+                if ((_Routes == null))
+                {
+                    _Routes = base.CreateObjectSet<Route>("Routes");
+                }
+                return _Routes;
+            }
+        }
+        private ObjectSet<Route> _Routes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<sysdiagram> sysdiagrams
+        {
+            get
+            {
+                if ((_sysdiagrams == null))
+                {
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
+                }
+                return _sysdiagrams;
+            }
+        }
+        private ObjectSet<sysdiagram> _sysdiagrams;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<TestForPneumococcal> TestForPneumococcals
+        {
+            get
+            {
+                if ((_TestForPneumococcals == null))
+                {
+                    _TestForPneumococcals = base.CreateObjectSet<TestForPneumococcal>("TestForPneumococcals");
+                }
+                return _TestForPneumococcals;
+            }
+        }
+        private ObjectSet<TestForPneumococcal> _TestForPneumococcals;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<User> Users
+        {
+            get
+            {
+                if ((_Users == null))
+                {
+                    _Users = base.CreateObjectSet<User>("Users");
+                }
+                return _Users;
+            }
+        }
+        private ObjectSet<User> _Users;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<VisitOneOne> VisitOneOnes
+        {
+            get
+            {
+                if ((_VisitOneOnes == null))
+                {
+                    _VisitOneOnes = base.CreateObjectSet<VisitOneOne>("VisitOneOnes");
+                }
+                return _VisitOneOnes;
+            }
+        }
+        private ObjectSet<VisitOneOne> _VisitOneOnes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<VisitOne> VisitOnes
+        {
+            get
+            {
+                if ((_VisitOnes == null))
+                {
+                    _VisitOnes = base.CreateObjectSet<VisitOne>("VisitOnes");
+                }
+                return _VisitOnes;
+            }
+        }
+        private ObjectSet<VisitOne> _VisitOnes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<VisitThree> VisitThrees
+        {
+            get
+            {
+                if ((_VisitThrees == null))
+                {
+                    _VisitThrees = base.CreateObjectSet<VisitThree>("VisitThrees");
+                }
+                return _VisitThrees;
+            }
+        }
+        private ObjectSet<VisitThree> _VisitThrees;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<VisitTwo> VisitTwoes
+        {
+            get
+            {
+                if ((_VisitTwoes == null))
+                {
+                    _VisitTwoes = base.CreateObjectSet<VisitTwo>("VisitTwoes");
+                }
+                return _VisitTwoes;
+            }
+        }
+        private ObjectSet<VisitTwo> _VisitTwoes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Ward> Wards
+        {
+            get
+            {
+                if ((_Wards == null))
+                {
+                    _Wards = base.CreateObjectSet<Ward>("Wards");
+                }
+                return _Wards;
+            }
+        }
+        private ObjectSet<Ward> _Wards;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<XrayChestVisit1Set> XrayChestVisit1Set
+        {
+            get
+            {
+                if ((_XrayChestVisit1Set == null))
+                {
+                    _XrayChestVisit1Set = base.CreateObjectSet<XrayChestVisit1Set>("XrayChestVisit1Set");
+                }
+                return _XrayChestVisit1Set;
+            }
+        }
+        private ObjectSet<XrayChestVisit1Set> _XrayChestVisit1Set;
 
         #endregion
 
         #region AddTo Methods
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the AbTherapys EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAbTherapys(AbTherapy abTherapy)
+        {
+            base.AddObject("AbTherapys", abTherapy);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the AEs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAEs(AE aE)
+        {
+            base.AddObject("AEs", aE);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the AnamnesticDataVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAnamnesticDataVisit1Set(AnamnesticDataVisit1Set anamnesticDataVisit1Set)
+        {
+            base.AddObject("AnamnesticDataVisit1Set", anamnesticDataVisit1Set);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BaseLiveIndicatorsVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBaseLiveIndicatorsVisit1Set(BaseLiveIndicatorsVisit1Set baseLiveIndicatorsVisit1Set)
+        {
+            base.AddObject("BaseLiveIndicatorsVisit1Set", baseLiveIndicatorsVisit1Set);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BaseLiveIndicatorsVisit2Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBaseLiveIndicatorsVisit2Set(BaseLiveIndicatorsVisit2Set baseLiveIndicatorsVisit2Set)
+        {
+            base.AddObject("BaseLiveIndicatorsVisit2Set", baseLiveIndicatorsVisit2Set);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BloodChemistrys EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBloodChemistrys(BloodChemistry bloodChemistry)
+        {
+            base.AddObject("BloodChemistrys", bloodChemistry);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BloodClinicalAnalyses EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBloodClinicalAnalyses(BloodClinicalAnalys bloodClinicalAnalys)
+        {
+            base.AddObject("BloodClinicalAnalyses", bloodClinicalAnalys);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BloodTestsForMarkersOfCardiacDysfunctions EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBloodTestsForMarkersOfCardiacDysfunctions(BloodTestsForMarkersOfCardiacDysfunction bloodTestsForMarkersOfCardiacDysfunction)
+        {
+            base.AddObject("BloodTestsForMarkersOfCardiacDysfunctions", bloodTestsForMarkersOfCardiacDysfunction);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BloodTestsForMarkersOfInflammations EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBloodTestsForMarkersOfInflammations(BloodTestsForMarkersOfInflammation bloodTestsForMarkersOfInflammation)
+        {
+            base.AddObject("BloodTestsForMarkersOfInflammations", bloodTestsForMarkersOfInflammation);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ComputedTomographyChestVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToComputedTomographyChestVisit1Set(ComputedTomographyChestVisit1Set computedTomographyChestVisit1Set)
+        {
+            base.AddObject("ComputedTomographyChestVisit1Set", computedTomographyChestVisit1Set);
+        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the CRFs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -592,235 +688,163 @@ namespace CINCOPA.Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Wards EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Drugs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToWards(WARD wARD)
+        public void AddToDrugs(Drug drug)
         {
-            base.AddObject("Wards", wARD);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToUsers(USER uSER)
-        {
-            base.AddObject("Users", uSER);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the VisitOnes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToVisitOnes(VISIT_ONE vISIT_ONE)
-        {
-            base.AddObject("VisitOnes", vISIT_ONE);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the VisitOneOnes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToVisitOneOnes(VISIT_ONE_ONE vISIT_ONE_ONE)
-        {
-            base.AddObject("VisitOneOnes", vISIT_ONE_ONE);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the VisitTwoes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToVisitTwoes(VISIT_TWO vISIT_TWO)
-        {
-            base.AddObject("VisitTwoes", vISIT_TWO);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the VisitThrees EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToVisitThrees(VISIT_THREE vISIT_THREE)
-        {
-            base.AddObject("VisitThrees", vISIT_THREE);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the AEs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToAEs(ADVERSE_EVENT aDVERSE_EVENT)
-        {
-            base.AddObject("AEs", aDVERSE_EVENT);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the BaseLiveIndicatorsVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToBaseLiveIndicatorsVisit1Set(BASE_LIVE_INDICATORS_VISIT_1 bASE_LIVE_INDICATORS_VISIT_1)
-        {
-            base.AddObject("BaseLiveIndicatorsVisit1Set", bASE_LIVE_INDICATORS_VISIT_1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the AnamnesticDataVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToAnamnesticDataVisit1Set(ANAMNESTIC_DATA_VISIT_1 aNAMNESTIC_DATA_VISIT_1)
-        {
-            base.AddObject("AnamnesticDataVisit1Set", aNAMNESTIC_DATA_VISIT_1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the EvaluationOfSymptomsVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToEvaluationOfSymptomsVisit1Set(EVALUATION_OF_SYMPTOMS_VISIT_1 eVALUATION_OF_SYMPTOMS_VISIT_1)
-        {
-            base.AddObject("EvaluationOfSymptomsVisit1Set", eVALUATION_OF_SYMPTOMS_VISIT_1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the ElectrocardiographyVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToElectrocardiographyVisit1Set(ELECTROCARDIOGRAPHY_VISIT_1 eLECTROCARDIOGRAPHY_VISIT_1)
-        {
-            base.AddObject("ElectrocardiographyVisit1Set", eLECTROCARDIOGRAPHY_VISIT_1);
+            base.AddObject("Drugs", drug);
         }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the EchocardiographyVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToEchocardiographyVisit1Set(ECHOCARDIOGRAPHY_VISIT_1 eCHOCARDIOGRAPHY_VISIT_1)
+        public void AddToEchocardiographyVisit1Set(EchocardiographyVisit1Set echocardiographyVisit1Set)
         {
-            base.AddObject("EchocardiographyVisit1Set", eCHOCARDIOGRAPHY_VISIT_1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the XrayChestVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToXrayChestVisit1Set(XRAY_CHEST_VISIT_1 xRAY_CHEST_VISIT_1)
-        {
-            base.AddObject("XrayChestVisit1Set", xRAY_CHEST_VISIT_1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the ComputedTomographyChestVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToComputedTomographyChestVisit1Set(COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 cOMPUTED_TOMOGRAPHY_CHEST_VISIT_1)
-        {
-            base.AddObject("ComputedTomographyChestVisit1Set", cOMPUTED_TOMOGRAPHY_CHEST_VISIT_1);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the BaseLiveIndicatorsVisit2Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToBaseLiveIndicatorsVisit2Set(BASE_LIVE_INDICATORS_VISIT_2 bASE_LIVE_INDICATORS_VISIT_2)
-        {
-            base.AddObject("BaseLiveIndicatorsVisit2Set", bASE_LIVE_INDICATORS_VISIT_2);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the EvaluationOfSymptomsVisit2Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToEvaluationOfSymptomsVisit2Set(EVALUATION_OF_SYMPTOMS_VISIT_2 eVALUATION_OF_SYMPTOMS_VISIT_2)
-        {
-            base.AddObject("EvaluationOfSymptomsVisit2Set", eVALUATION_OF_SYMPTOMS_VISIT_2);
+            base.AddObject("EchocardiographyVisit1Set", echocardiographyVisit1Set);
         }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the EchocardiographyVisit3Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToEchocardiographyVisit3Set(ECHOCARDIOGRAPHY_VISIT_3 eCHOCARDIOGRAPHY_VISIT_3)
+        public void AddToEchocardiographyVisit3Set(EchocardiographyVisit3Set echocardiographyVisit3Set)
         {
-            base.AddObject("EchocardiographyVisit3Set", eCHOCARDIOGRAPHY_VISIT_3);
+            base.AddObject("EchocardiographyVisit3Set", echocardiographyVisit3Set);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ElectrocardiographyVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToElectrocardiographyVisit1Set(ElectrocardiographyVisit1Set electrocardiographyVisit1Set)
+        {
+            base.AddObject("ElectrocardiographyVisit1Set", electrocardiographyVisit1Set);
         }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the EvaluationOfSymptomsVisit11Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToEvaluationOfSymptomsVisit11Set(EVALUATION_OF_SYMPTOMS_VISIT_11 eVALUATION_OF_SYMPTOMS_VISIT_11)
+        public void AddToEvaluationOfSymptomsVisit11Set(EvaluationOfSymptomsVisit11Set evaluationOfSymptomsVisit11Set)
         {
-            base.AddObject("EvaluationOfSymptomsVisit11Set", eVALUATION_OF_SYMPTOMS_VISIT_11);
+            base.AddObject("EvaluationOfSymptomsVisit11Set", evaluationOfSymptomsVisit11Set);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the BloodClinicalAnalyses EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the EvaluationOfSymptomsVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToBloodClinicalAnalyses(BLOOD_CLINICAL_ANALYSIS bLOOD_CLINICAL_ANALYSIS)
+        public void AddToEvaluationOfSymptomsVisit1Set(EvaluationOfSymptomsVisit1Set evaluationOfSymptomsVisit1Set)
         {
-            base.AddObject("BloodClinicalAnalyses", bLOOD_CLINICAL_ANALYSIS);
+            base.AddObject("EvaluationOfSymptomsVisit1Set", evaluationOfSymptomsVisit1Set);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the BloodTestsForMarkersOfInflammations EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the EvaluationOfSymptomsVisit2Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToBloodTestsForMarkersOfInflammations(BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION bLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION)
+        public void AddToEvaluationOfSymptomsVisit2Set(EvaluationOfSymptomsVisit2Set evaluationOfSymptomsVisit2Set)
         {
-            base.AddObject("BloodTestsForMarkersOfInflammations", bLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the BloodTestsForMarkersOfCardiacDysfunctions EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToBloodTestsForMarkersOfCardiacDysfunctions(BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION bLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION)
-        {
-            base.AddObject("BloodTestsForMarkersOfCardiacDysfunctions", bLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the BloodChemistrys EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToBloodChemistrys(BLOOD_CHEMISTRY bLOOD_CHEMISTRY)
-        {
-            base.AddObject("BloodChemistrys", bLOOD_CHEMISTRY);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Organisms EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToOrganisms(ORGANISM oRGANISM)
-        {
-            base.AddObject("Organisms", oRGANISM);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Routes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToRoutes(ROUTE rOUTE)
-        {
-            base.AddObject("Routes", rOUTE);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Drugs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToDrugs(DRUG dRUG)
-        {
-            base.AddObject("Drugs", dRUG);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the AbTherapys EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToAbTherapys(AB_THERAPY aB_THERAPY)
-        {
-            base.AddObject("AbTherapys", aB_THERAPY);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the TestForPneumococcals EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToTestForPneumococcals(TEST_FOR_PNEUMOCOCCAL tEST_FOR_PNEUMOCOCCAL)
-        {
-            base.AddObject("TestForPneumococcals", tEST_FOR_PNEUMOCOCCAL);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the MicrobiologySputums EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToMicrobiologySputums(MICROBIOLOGY_SPUTUM mICROBIOLOGY_SPUTUM)
-        {
-            base.AddObject("MicrobiologySputums", mICROBIOLOGY_SPUTUM);
+            base.AddObject("EvaluationOfSymptomsVisit2Set", evaluationOfSymptomsVisit2Set);
         }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the MicrobiologyBloods EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToMicrobiologyBloods(MICROBIOLOGY_BLOOD mICROBIOLOGY_BLOOD)
+        public void AddToMicrobiologyBloods(MicrobiologyBlood microbiologyBlood)
         {
-            base.AddObject("MicrobiologyBloods", mICROBIOLOGY_BLOOD);
+            base.AddObject("MicrobiologyBloods", microbiologyBlood);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the MicrobiologySputums EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMicrobiologySputums(MicrobiologySputum microbiologySputum)
+        {
+            base.AddObject("MicrobiologySputums", microbiologySputum);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Organisms EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrganisms(Organism organism)
+        {
+            base.AddObject("Organisms", organism);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Routes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToRoutes(Route route)
+        {
+            base.AddObject("Routes", route);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
+        {
+            base.AddObject("sysdiagrams", sysdiagram);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the TestForPneumococcals EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTestForPneumococcals(TestForPneumococcal testForPneumococcal)
+        {
+            base.AddObject("TestForPneumococcals", testForPneumococcal);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Users EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToUsers(User user)
+        {
+            base.AddObject("Users", user);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the VisitOneOnes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToVisitOneOnes(VisitOneOne visitOneOne)
+        {
+            base.AddObject("VisitOneOnes", visitOneOne);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the VisitOnes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToVisitOnes(VisitOne visitOne)
+        {
+            base.AddObject("VisitOnes", visitOne);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the VisitThrees EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToVisitThrees(VisitThree visitThree)
+        {
+            base.AddObject("VisitThrees", visitThree);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the VisitTwoes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToVisitTwoes(VisitTwo visitTwo)
+        {
+            base.AddObject("VisitTwoes", visitTwo);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Wards EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToWards(Ward ward)
+        {
+            base.AddObject("Wards", ward);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the XrayChestVisit1Set EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToXrayChestVisit1Set(XrayChestVisit1Set xrayChestVisit1Set)
+        {
+            base.AddObject("XrayChestVisit1Set", xrayChestVisit1Set);
         }
 
         #endregion
@@ -834,33 +858,33 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="AB_THERAPY")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="AbTherapy")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class AB_THERAPY : EntityObject
+    public partial class AbTherapy : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new AB_THERAPY object.
+        /// Create a new AbTherapy object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
         /// <param name="dRUGId">Initial value of the DRUGId property.</param>
         /// <param name="rOUTEId">Initial value of the ROUTEId property.</param>
-        public static AB_THERAPY CreateAB_THERAPY(global::System.Guid id, global::System.Guid cRFId, global::System.Guid dRUGId, global::System.Guid rOUTEId)
+        public static AbTherapy CreateAbTherapy(global::System.Guid id, global::System.Guid cRFId, global::System.Guid dRUGId, global::System.Guid rOUTEId)
         {
-            AB_THERAPY aB_THERAPY = new AB_THERAPY();
-            aB_THERAPY.Id = id;
-            aB_THERAPY.CRFId = cRFId;
-            aB_THERAPY.DRUGId = dRUGId;
-            aB_THERAPY.ROUTEId = rOUTEId;
-            return aB_THERAPY;
+            AbTherapy abTherapy = new AbTherapy();
+            abTherapy.Id = id;
+            abTherapy.CRFId = cRFId;
+            abTherapy.DRUGId = dRUGId;
+            abTherapy.ROUTEId = rOUTEId;
+            return abTherapy;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -879,7 +903,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -904,7 +928,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -928,7 +952,7 @@ namespace CINCOPA.Model
             {
                 OnDRUGIdChanging(value);
                 ReportPropertyChanging("DRUGId");
-                _DRUGId = StructuralObject.SetValidValue(value);
+                _DRUGId = StructuralObject.SetValidValue(value, "DRUGId");
                 ReportPropertyChanged("DRUGId");
                 OnDRUGIdChanged();
             }
@@ -952,7 +976,7 @@ namespace CINCOPA.Model
             {
                 OnROUTEIdChanging(value);
                 ReportPropertyChanging("ROUTEId");
-                _ROUTEId = StructuralObject.SetValidValue(value);
+                _ROUTEId = StructuralObject.SetValidValue(value, "ROUTEId");
                 ReportPropertyChanged("ROUTEId");
                 OnROUTEIdChanged();
             }
@@ -976,7 +1000,7 @@ namespace CINCOPA.Model
             {
                 OnSINGLE_DOSEChanging(value);
                 ReportPropertyChanging("SINGLE_DOSE");
-                _SINGLE_DOSE = StructuralObject.SetValidValue(value, true);
+                _SINGLE_DOSE = StructuralObject.SetValidValue(value, true, "SINGLE_DOSE");
                 ReportPropertyChanged("SINGLE_DOSE");
                 OnSINGLE_DOSEChanged();
             }
@@ -1000,7 +1024,7 @@ namespace CINCOPA.Model
             {
                 OnFREQUENCYChanging(value);
                 ReportPropertyChanging("FREQUENCY");
-                _FREQUENCY = StructuralObject.SetValidValue(value, true);
+                _FREQUENCY = StructuralObject.SetValidValue(value, true, "FREQUENCY");
                 ReportPropertyChanged("FREQUENCY");
                 OnFREQUENCYChanged();
             }
@@ -1024,7 +1048,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_STARTChanging(value);
                 ReportPropertyChanging("DATE_START");
-                _DATE_START = StructuralObject.SetValidValue(value);
+                _DATE_START = StructuralObject.SetValidValue(value, "DATE_START");
                 ReportPropertyChanged("DATE_START");
                 OnDATE_STARTChanged();
             }
@@ -1048,7 +1072,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_ENDChanging(value);
                 ReportPropertyChanging("DATE_END");
-                _DATE_END = StructuralObject.SetValidValue(value);
+                _DATE_END = StructuralObject.SetValidValue(value, "DATE_END");
                 ReportPropertyChanged("DATE_END");
                 OnDATE_ENDChanged();
             }
@@ -1072,7 +1096,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -1096,7 +1120,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -1120,7 +1144,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -1144,7 +1168,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -1168,7 +1192,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -1179,7 +1203,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -1188,16 +1211,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFAB_THERAPY", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFAB_THERAPY", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFAB_THERAPY", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFAB_THERAPY", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -1209,13 +1232,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFAB_THERAPY", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFAB_THERAPY", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFAB_THERAPY", "CRF", value);
                 }
             }
         }
@@ -1226,16 +1249,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "ROUTEAB_THERAPY", "ROUTE")]
-        public ROUTE ROUTE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_DRUGAB_THERAPY", "Drug")]
+        public Drug Drug
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ROUTE>("CINCOPAModel.ROUTEAB_THERAPY", "ROUTE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Drug>("CINCOPAModel.FK_DRUGAB_THERAPY", "Drug").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ROUTE>("CINCOPAModel.ROUTEAB_THERAPY", "ROUTE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Drug>("CINCOPAModel.FK_DRUGAB_THERAPY", "Drug").Value = value;
             }
         }
         /// <summary>
@@ -1243,17 +1266,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<ROUTE> ROUTEReference
+        public EntityReference<Drug> DrugReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ROUTE>("CINCOPAModel.ROUTEAB_THERAPY", "ROUTE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Drug>("CINCOPAModel.FK_DRUGAB_THERAPY", "Drug");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ROUTE>("CINCOPAModel.ROUTEAB_THERAPY", "ROUTE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Drug>("CINCOPAModel.FK_DRUGAB_THERAPY", "Drug", value);
                 }
             }
         }
@@ -1264,16 +1287,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "DRUGAB_THERAPY", "DRUG")]
-        public DRUG DRUG
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_ROUTEAB_THERAPY", "Route")]
+        public Route Route
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DRUG>("CINCOPAModel.DRUGAB_THERAPY", "DRUG").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Route>("CINCOPAModel.FK_ROUTEAB_THERAPY", "Route").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DRUG>("CINCOPAModel.DRUGAB_THERAPY", "DRUG").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Route>("CINCOPAModel.FK_ROUTEAB_THERAPY", "Route").Value = value;
             }
         }
         /// <summary>
@@ -1281,17 +1304,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<DRUG> DRUGReference
+        public EntityReference<Route> RouteReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DRUG>("CINCOPAModel.DRUGAB_THERAPY", "DRUG");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Route>("CINCOPAModel.FK_ROUTEAB_THERAPY", "Route");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DRUG>("CINCOPAModel.DRUGAB_THERAPY", "DRUG", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Route>("CINCOPAModel.FK_ROUTEAB_THERAPY", "Route", value);
                 }
             }
         }
@@ -1303,29 +1326,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ADVERSE_EVENT")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="AE")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ADVERSE_EVENT : EntityObject
+    public partial class AE : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ADVERSE_EVENT object.
+        /// Create a new AE object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
-        public static ADVERSE_EVENT CreateADVERSE_EVENT(global::System.Guid id, global::System.Guid cRFId)
+        public static AE CreateAE(global::System.Guid id, global::System.Guid cRFId)
         {
-            ADVERSE_EVENT aDVERSE_EVENT = new ADVERSE_EVENT();
-            aDVERSE_EVENT.Id = id;
-            aDVERSE_EVENT.CRFId = cRFId;
-            return aDVERSE_EVENT;
+            AE aE = new AE();
+            aE.Id = id;
+            aE.CRFId = cRFId;
+            return aE;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1344,7 +1367,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -1369,7 +1392,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -1393,7 +1416,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, true);
+                _NAME = StructuralObject.SetValidValue(value, true, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -1417,7 +1440,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_STARTChanging(value);
                 ReportPropertyChanging("DATE_START");
-                _DATE_START = StructuralObject.SetValidValue(value);
+                _DATE_START = StructuralObject.SetValidValue(value, "DATE_START");
                 ReportPropertyChanged("DATE_START");
                 OnDATE_STARTChanged();
             }
@@ -1441,7 +1464,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_ENDChanging(value);
                 ReportPropertyChanging("DATE_END");
-                _DATE_END = StructuralObject.SetValidValue(value);
+                _DATE_END = StructuralObject.SetValidValue(value, "DATE_END");
                 ReportPropertyChanged("DATE_END");
                 OnDATE_ENDChanged();
             }
@@ -1465,7 +1488,7 @@ namespace CINCOPA.Model
             {
                 OnHEAVYChanging(value);
                 ReportPropertyChanging("HEAVY");
-                _HEAVY = StructuralObject.SetValidValue(value, true);
+                _HEAVY = StructuralObject.SetValidValue(value, true, "HEAVY");
                 ReportPropertyChanged("HEAVY");
                 OnHEAVYChanged();
             }
@@ -1489,7 +1512,7 @@ namespace CINCOPA.Model
             {
                 OnRESULTChanging(value);
                 ReportPropertyChanging("RESULT");
-                _RESULT = StructuralObject.SetValidValue(value, true);
+                _RESULT = StructuralObject.SetValidValue(value, true, "RESULT");
                 ReportPropertyChanged("RESULT");
                 OnRESULTChanged();
             }
@@ -1513,7 +1536,7 @@ namespace CINCOPA.Model
             {
                 OnRELATIONChanging(value);
                 ReportPropertyChanging("RELATION");
-                _RELATION = StructuralObject.SetValidValue(value, true);
+                _RELATION = StructuralObject.SetValidValue(value, true, "RELATION");
                 ReportPropertyChanged("RELATION");
                 OnRELATIONChanged();
             }
@@ -1537,7 +1560,7 @@ namespace CINCOPA.Model
             {
                 OnACTIONSChanging(value);
                 ReportPropertyChanging("ACTIONS");
-                _ACTIONS = StructuralObject.SetValidValue(value, true);
+                _ACTIONS = StructuralObject.SetValidValue(value, true, "ACTIONS");
                 ReportPropertyChanged("ACTIONS");
                 OnACTIONSChanged();
             }
@@ -1561,7 +1584,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -1585,7 +1608,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -1609,7 +1632,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -1633,7 +1656,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -1657,7 +1680,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -1668,7 +1691,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -1677,16 +1699,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFADVERSE_EVENT", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFADVERSE_EVENT", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFADVERSE_EVENT", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFADVERSE_EVENT", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -1698,13 +1720,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFADVERSE_EVENT", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFADVERSE_EVENT", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFADVERSE_EVENT", "CRF", value);
                 }
             }
         }
@@ -1716,27 +1738,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ANAMNESTIC_DATA_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="AnamnesticDataVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ANAMNESTIC_DATA_VISIT_1 : EntityObject
+    public partial class AnamnesticDataVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ANAMNESTIC_DATA_VISIT_1 object.
+        /// Create a new AnamnesticDataVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static ANAMNESTIC_DATA_VISIT_1 CreateANAMNESTIC_DATA_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static AnamnesticDataVisit1Set CreateAnamnesticDataVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            ANAMNESTIC_DATA_VISIT_1 aNAMNESTIC_DATA_VISIT_1 = new ANAMNESTIC_DATA_VISIT_1();
-            aNAMNESTIC_DATA_VISIT_1.Id = id;
-            return aNAMNESTIC_DATA_VISIT_1;
+            AnamnesticDataVisit1Set anamnesticDataVisit1Set = new AnamnesticDataVisit1Set();
+            anamnesticDataVisit1Set.Id = id;
+            anamnesticDataVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return anamnesticDataVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1755,7 +1779,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -1780,7 +1804,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_SYMPTOMChanging(value);
                 ReportPropertyChanging("DATE_SYMPTOM");
-                _DATE_SYMPTOM = StructuralObject.SetValidValue(value);
+                _DATE_SYMPTOM = StructuralObject.SetValidValue(value, "DATE_SYMPTOM");
                 ReportPropertyChanged("DATE_SYMPTOM");
                 OnDATE_SYMPTOMChanged();
             }
@@ -1804,7 +1828,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_DIAGNOSISChanging(value);
                 ReportPropertyChanging("DATE_DIAGNOSIS");
-                _DATE_DIAGNOSIS = StructuralObject.SetValidValue(value);
+                _DATE_DIAGNOSIS = StructuralObject.SetValidValue(value, "DATE_DIAGNOSIS");
                 ReportPropertyChanged("DATE_DIAGNOSIS");
                 OnDATE_DIAGNOSISChanged();
             }
@@ -1828,7 +1852,7 @@ namespace CINCOPA.Model
             {
                 OnNUMBER_EPISODESChanging(value);
                 ReportPropertyChanging("NUMBER_EPISODES");
-                _NUMBER_EPISODES = StructuralObject.SetValidValue(value);
+                _NUMBER_EPISODES = StructuralObject.SetValidValue(value, "NUMBER_EPISODES");
                 ReportPropertyChanged("NUMBER_EPISODES");
                 OnNUMBER_EPISODESChanged();
             }
@@ -1852,7 +1876,7 @@ namespace CINCOPA.Model
             {
                 OnNUMBER_EPISODES_NODATAChanging(value);
                 ReportPropertyChanging("NUMBER_EPISODES_NODATA");
-                _NUMBER_EPISODES_NODATA = StructuralObject.SetValidValue(value);
+                _NUMBER_EPISODES_NODATA = StructuralObject.SetValidValue(value, "NUMBER_EPISODES_NODATA");
                 ReportPropertyChanged("NUMBER_EPISODES_NODATA");
                 OnNUMBER_EPISODES_NODATAChanged();
             }
@@ -1876,7 +1900,7 @@ namespace CINCOPA.Model
             {
                 OnFUNCTION_CLASSChanging(value);
                 ReportPropertyChanging("FUNCTION_CLASS");
-                _FUNCTION_CLASS = StructuralObject.SetValidValue(value, true);
+                _FUNCTION_CLASS = StructuralObject.SetValidValue(value, true, "FUNCTION_CLASS");
                 ReportPropertyChanged("FUNCTION_CLASS");
                 OnFUNCTION_CLASSChanged();
             }
@@ -1900,7 +1924,7 @@ namespace CINCOPA.Model
             {
                 OnOTHER_EPISODESChanging(value);
                 ReportPropertyChanging("OTHER_EPISODES");
-                _OTHER_EPISODES = StructuralObject.SetValidValue(value, true);
+                _OTHER_EPISODES = StructuralObject.SetValidValue(value, true, "OTHER_EPISODES");
                 ReportPropertyChanged("OTHER_EPISODES");
                 OnOTHER_EPISODESChanged();
             }
@@ -1924,7 +1948,7 @@ namespace CINCOPA.Model
             {
                 OnSMOKE_STATUSChanging(value);
                 ReportPropertyChanging("SMOKE_STATUS");
-                _SMOKE_STATUS = StructuralObject.SetValidValue(value, true);
+                _SMOKE_STATUS = StructuralObject.SetValidValue(value, true, "SMOKE_STATUS");
                 ReportPropertyChanged("SMOKE_STATUS");
                 OnSMOKE_STATUSChanged();
             }
@@ -1948,7 +1972,7 @@ namespace CINCOPA.Model
             {
                 OnSMOKE_AVERAGEChanging(value);
                 ReportPropertyChanging("SMOKE_AVERAGE");
-                _SMOKE_AVERAGE = StructuralObject.SetValidValue(value);
+                _SMOKE_AVERAGE = StructuralObject.SetValidValue(value, "SMOKE_AVERAGE");
                 ReportPropertyChanged("SMOKE_AVERAGE");
                 OnSMOKE_AVERAGEChanged();
             }
@@ -1972,7 +1996,7 @@ namespace CINCOPA.Model
             {
                 OnSMOKE_YEARSChanging(value);
                 ReportPropertyChanging("SMOKE_YEARS");
-                _SMOKE_YEARS = StructuralObject.SetValidValue(value);
+                _SMOKE_YEARS = StructuralObject.SetValidValue(value, "SMOKE_YEARS");
                 ReportPropertyChanged("SMOKE_YEARS");
                 OnSMOKE_YEARSChanged();
             }
@@ -1996,7 +2020,7 @@ namespace CINCOPA.Model
             {
                 OnSMOKE_PACK_YEARSChanging(value);
                 ReportPropertyChanging("SMOKE_PACK_YEARS");
-                _SMOKE_PACK_YEARS = StructuralObject.SetValidValue(value);
+                _SMOKE_PACK_YEARS = StructuralObject.SetValidValue(value, "SMOKE_PACK_YEARS");
                 ReportPropertyChanged("SMOKE_PACK_YEARS");
                 OnSMOKE_PACK_YEARSChanged();
             }
@@ -2020,7 +2044,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -2044,7 +2068,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -2068,7 +2092,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -2092,7 +2116,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -2116,7 +2140,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -2124,10 +2148,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2136,16 +2183,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEANAMNESTIC_DATA", "VisitOne")]
+        public VisitOne VisitOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA", "VisitOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA", "VisitOne").Value = value;
             }
         }
         /// <summary>
@@ -2153,17 +2200,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
+        public EntityReference<VisitOne> VisitOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA", "VisitOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "VISIT_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA", "VisitOne", value);
                 }
             }
         }
@@ -2175,27 +2222,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BASE_LIVE_INDICATORS_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BaseLiveIndicatorsVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class BASE_LIVE_INDICATORS_VISIT_1 : EntityObject
+    public partial class BaseLiveIndicatorsVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new BASE_LIVE_INDICATORS_VISIT_1 object.
+        /// Create a new BaseLiveIndicatorsVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static BASE_LIVE_INDICATORS_VISIT_1 CreateBASE_LIVE_INDICATORS_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static BaseLiveIndicatorsVisit1Set CreateBaseLiveIndicatorsVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            BASE_LIVE_INDICATORS_VISIT_1 bASE_LIVE_INDICATORS_VISIT_1 = new BASE_LIVE_INDICATORS_VISIT_1();
-            bASE_LIVE_INDICATORS_VISIT_1.Id = id;
-            return bASE_LIVE_INDICATORS_VISIT_1;
+            BaseLiveIndicatorsVisit1Set baseLiveIndicatorsVisit1Set = new BaseLiveIndicatorsVisit1Set();
+            baseLiveIndicatorsVisit1Set.Id = id;
+            baseLiveIndicatorsVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return baseLiveIndicatorsVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2214,7 +2263,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -2239,7 +2288,7 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_RIGHT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_RIGHT_HAND");
-                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value, "BLOOD_PRESSURE_RIGHT_HAND");
                 ReportPropertyChanged("BLOOD_PRESSURE_RIGHT_HAND");
                 OnBLOOD_PRESSURE_RIGHT_HANDChanged();
             }
@@ -2263,7 +2312,7 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_LEFT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_LEFT_HAND");
-                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value, "BLOOD_PRESSURE_LEFT_HAND");
                 ReportPropertyChanged("BLOOD_PRESSURE_LEFT_HAND");
                 OnBLOOD_PRESSURE_LEFT_HANDChanged();
             }
@@ -2287,7 +2336,7 @@ namespace CINCOPA.Model
             {
                 OnHEART_RATEChanging(value);
                 ReportPropertyChanging("HEART_RATE");
-                _HEART_RATE = StructuralObject.SetValidValue(value);
+                _HEART_RATE = StructuralObject.SetValidValue(value, "HEART_RATE");
                 ReportPropertyChanged("HEART_RATE");
                 OnHEART_RATEChanged();
             }
@@ -2311,7 +2360,7 @@ namespace CINCOPA.Model
             {
                 OnRESPIRATORY_RATEChanging(value);
                 ReportPropertyChanging("RESPIRATORY_RATE");
-                _RESPIRATORY_RATE = StructuralObject.SetValidValue(value);
+                _RESPIRATORY_RATE = StructuralObject.SetValidValue(value, "RESPIRATORY_RATE");
                 ReportPropertyChanged("RESPIRATORY_RATE");
                 OnRESPIRATORY_RATEChanged();
             }
@@ -2335,7 +2384,7 @@ namespace CINCOPA.Model
             {
                 OnTEMPERATUREChanging(value);
                 ReportPropertyChanging("TEMPERATURE");
-                _TEMPERATURE = StructuralObject.SetValidValue(value);
+                _TEMPERATURE = StructuralObject.SetValidValue(value, "TEMPERATURE");
                 ReportPropertyChanged("TEMPERATURE");
                 OnTEMPERATUREChanged();
             }
@@ -2359,7 +2408,7 @@ namespace CINCOPA.Model
             {
                 OnHEAVY_TYPEChanging(value);
                 ReportPropertyChanging("HEAVY_TYPE");
-                _HEAVY_TYPE = StructuralObject.SetValidValue(value, true);
+                _HEAVY_TYPE = StructuralObject.SetValidValue(value, true, "HEAVY_TYPE");
                 ReportPropertyChanged("HEAVY_TYPE");
                 OnHEAVY_TYPEChanged();
             }
@@ -2383,7 +2432,7 @@ namespace CINCOPA.Model
             {
                 OnOXYGEN_THERAPY_NEEDEDChanging(value);
                 ReportPropertyChanging("OXYGEN_THERAPY_NEEDED");
-                _OXYGEN_THERAPY_NEEDED = StructuralObject.SetValidValue(value, true);
+                _OXYGEN_THERAPY_NEEDED = StructuralObject.SetValidValue(value, true, "OXYGEN_THERAPY_NEEDED");
                 ReportPropertyChanged("OXYGEN_THERAPY_NEEDED");
                 OnOXYGEN_THERAPY_NEEDEDChanged();
             }
@@ -2407,7 +2456,7 @@ namespace CINCOPA.Model
             {
                 OnDECOMPENSATION_SIGNSChanging(value);
                 ReportPropertyChanging("DECOMPENSATION_SIGNS");
-                _DECOMPENSATION_SIGNS = StructuralObject.SetValidValue(value, true);
+                _DECOMPENSATION_SIGNS = StructuralObject.SetValidValue(value, true, "DECOMPENSATION_SIGNS");
                 ReportPropertyChanged("DECOMPENSATION_SIGNS");
                 OnDECOMPENSATION_SIGNSChanged();
             }
@@ -2431,7 +2480,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -2455,7 +2504,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -2479,7 +2528,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -2503,7 +2552,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -2527,7 +2576,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -2535,10 +2584,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2547,16 +2619,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VisitOne")]
+        public VisitOne VisitOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VisitOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VisitOne").Value = value;
             }
         }
         /// <summary>
@@ -2564,17 +2636,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
+        public EntityReference<VisitOne> VisitOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VisitOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VISIT_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "VisitOne", value);
                 }
             }
         }
@@ -2586,27 +2658,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BASE_LIVE_INDICATORS_VISIT_2")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BaseLiveIndicatorsVisit2Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class BASE_LIVE_INDICATORS_VISIT_2 : EntityObject
+    public partial class BaseLiveIndicatorsVisit2Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new BASE_LIVE_INDICATORS_VISIT_2 object.
+        /// Create a new BaseLiveIndicatorsVisit2Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static BASE_LIVE_INDICATORS_VISIT_2 CreateBASE_LIVE_INDICATORS_VISIT_2(global::System.Guid id)
+        /// <param name="vISIT_TWO_Id">Initial value of the VISIT_TWO_Id property.</param>
+        public static BaseLiveIndicatorsVisit2Set CreateBaseLiveIndicatorsVisit2Set(global::System.Guid id, global::System.Guid vISIT_TWO_Id)
         {
-            BASE_LIVE_INDICATORS_VISIT_2 bASE_LIVE_INDICATORS_VISIT_2 = new BASE_LIVE_INDICATORS_VISIT_2();
-            bASE_LIVE_INDICATORS_VISIT_2.Id = id;
-            return bASE_LIVE_INDICATORS_VISIT_2;
+            BaseLiveIndicatorsVisit2Set baseLiveIndicatorsVisit2Set = new BaseLiveIndicatorsVisit2Set();
+            baseLiveIndicatorsVisit2Set.Id = id;
+            baseLiveIndicatorsVisit2Set.VISIT_TWO_Id = vISIT_TWO_Id;
+            return baseLiveIndicatorsVisit2Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2625,7 +2699,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -2650,7 +2724,7 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_RIGHT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_RIGHT_HAND");
-                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value, "BLOOD_PRESSURE_RIGHT_HAND");
                 ReportPropertyChanged("BLOOD_PRESSURE_RIGHT_HAND");
                 OnBLOOD_PRESSURE_RIGHT_HANDChanged();
             }
@@ -2674,7 +2748,7 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_LEFT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_LEFT_HAND");
-                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value, "BLOOD_PRESSURE_LEFT_HAND");
                 ReportPropertyChanged("BLOOD_PRESSURE_LEFT_HAND");
                 OnBLOOD_PRESSURE_LEFT_HANDChanged();
             }
@@ -2698,7 +2772,7 @@ namespace CINCOPA.Model
             {
                 OnHEART_RATEChanging(value);
                 ReportPropertyChanging("HEART_RATE");
-                _HEART_RATE = StructuralObject.SetValidValue(value);
+                _HEART_RATE = StructuralObject.SetValidValue(value, "HEART_RATE");
                 ReportPropertyChanged("HEART_RATE");
                 OnHEART_RATEChanged();
             }
@@ -2722,7 +2796,7 @@ namespace CINCOPA.Model
             {
                 OnRESPIRATORY_RATEChanging(value);
                 ReportPropertyChanging("RESPIRATORY_RATE");
-                _RESPIRATORY_RATE = StructuralObject.SetValidValue(value);
+                _RESPIRATORY_RATE = StructuralObject.SetValidValue(value, "RESPIRATORY_RATE");
                 ReportPropertyChanged("RESPIRATORY_RATE");
                 OnRESPIRATORY_RATEChanged();
             }
@@ -2746,7 +2820,7 @@ namespace CINCOPA.Model
             {
                 OnTEMPERATUREChanging(value);
                 ReportPropertyChanging("TEMPERATURE");
-                _TEMPERATURE = StructuralObject.SetValidValue(value);
+                _TEMPERATURE = StructuralObject.SetValidValue(value, "TEMPERATURE");
                 ReportPropertyChanged("TEMPERATURE");
                 OnTEMPERATUREChanged();
             }
@@ -2770,7 +2844,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -2794,7 +2868,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -2818,7 +2892,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -2842,7 +2916,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -2866,7 +2940,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -2874,10 +2948,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_TWO_Id
+        {
+            get
+            {
+                return _VISIT_TWO_Id;
+            }
+            set
+            {
+                OnVISIT_TWO_IdChanging(value);
+                ReportPropertyChanging("VISIT_TWO_Id");
+                _VISIT_TWO_Id = StructuralObject.SetValidValue(value, "VISIT_TWO_Id");
+                ReportPropertyChanged("VISIT_TWO_Id");
+                OnVISIT_TWO_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_TWO_Id;
+        partial void OnVISIT_TWO_IdChanging(global::System.Guid value);
+        partial void OnVISIT_TWO_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -2886,16 +2983,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VISIT_TWO")]
-        public VISIT_TWO VISIT_TWO
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VisitTwo")]
+        public VisitTwo VisitTwo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VISIT_TWO").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VisitTwo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VISIT_TWO").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VisitTwo").Value = value;
             }
         }
         /// <summary>
@@ -2903,17 +3000,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_TWO> VISIT_TWOReference
+        public EntityReference<VisitTwo> VisitTwoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VISIT_TWO");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VisitTwo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VISIT_TWO", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "VisitTwo", value);
                 }
             }
         }
@@ -2925,27 +3022,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BLOOD_CHEMISTRY")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BloodChemistry")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class BLOOD_CHEMISTRY : EntityObject
+    public partial class BloodChemistry : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new BLOOD_CHEMISTRY object.
+        /// Create a new BloodChemistry object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static BLOOD_CHEMISTRY CreateBLOOD_CHEMISTRY(global::System.Guid id)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static BloodChemistry CreateBloodChemistry(global::System.Guid id, global::System.Guid cRF_Id)
         {
-            BLOOD_CHEMISTRY bLOOD_CHEMISTRY = new BLOOD_CHEMISTRY();
-            bLOOD_CHEMISTRY.Id = id;
-            return bLOOD_CHEMISTRY;
+            BloodChemistry bloodChemistry = new BloodChemistry();
+            bloodChemistry.Id = id;
+            bloodChemistry.CRF_Id = cRF_Id;
+            return bloodChemistry;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2964,7 +3063,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -2989,7 +3088,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_SIGNIFICANT_CHANGESChanging(value);
                 ReportPropertyChanging("VISIT_ONE_SIGNIFICANT_CHANGES");
-                _VISIT_ONE_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true, "VISIT_ONE_SIGNIFICANT_CHANGES");
                 ReportPropertyChanged("VISIT_ONE_SIGNIFICANT_CHANGES");
                 OnVISIT_ONE_SIGNIFICANT_CHANGESChanged();
             }
@@ -3013,7 +3112,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_CHANGESChanging(value);
                 ReportPropertyChanging("VISIT_ONE_CHANGES");
-                _VISIT_ONE_CHANGES = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_CHANGES = StructuralObject.SetValidValue(value, true, "VISIT_ONE_CHANGES");
                 ReportPropertyChanged("VISIT_ONE_CHANGES");
                 OnVISIT_ONE_CHANGESChanged();
             }
@@ -3037,7 +3136,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_SIGNIFICANT_CHANGESChanging(value);
                 ReportPropertyChanging("VISIT_TWO_SIGNIFICANT_CHANGES");
-                _VISIT_TWO_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true, "VISIT_TWO_SIGNIFICANT_CHANGES");
                 ReportPropertyChanged("VISIT_TWO_SIGNIFICANT_CHANGES");
                 OnVISIT_TWO_SIGNIFICANT_CHANGESChanged();
             }
@@ -3061,7 +3160,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_CHANGESChanging(value);
                 ReportPropertyChanging("VISIT_TWO_CHANGES");
-                _VISIT_TWO_CHANGES = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_CHANGES = StructuralObject.SetValidValue(value, true, "VISIT_TWO_CHANGES");
                 ReportPropertyChanged("VISIT_TWO_CHANGES");
                 OnVISIT_TWO_CHANGESChanged();
             }
@@ -3085,7 +3184,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -3109,7 +3208,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -3133,7 +3232,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -3157,7 +3256,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -3181,7 +3280,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -3189,10 +3288,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -3201,16 +3323,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_CHEMISTRY", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_CHEMISTRY", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CHEMISTRY", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CHEMISTRY", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -3222,13 +3344,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CHEMISTRY", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CHEMISTRY", "CRF", value);
                 }
             }
         }
@@ -3240,27 +3362,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BLOOD_CLINICAL_ANALYSIS")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BloodClinicalAnalys")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class BLOOD_CLINICAL_ANALYSIS : EntityObject
+    public partial class BloodClinicalAnalys : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new BLOOD_CLINICAL_ANALYSIS object.
+        /// Create a new BloodClinicalAnalys object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static BLOOD_CLINICAL_ANALYSIS CreateBLOOD_CLINICAL_ANALYSIS(global::System.Guid id)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static BloodClinicalAnalys CreateBloodClinicalAnalys(global::System.Guid id, global::System.Guid cRF_Id)
         {
-            BLOOD_CLINICAL_ANALYSIS bLOOD_CLINICAL_ANALYSIS = new BLOOD_CLINICAL_ANALYSIS();
-            bLOOD_CLINICAL_ANALYSIS.Id = id;
-            return bLOOD_CLINICAL_ANALYSIS;
+            BloodClinicalAnalys bloodClinicalAnalys = new BloodClinicalAnalys();
+            bloodClinicalAnalys.Id = id;
+            bloodClinicalAnalys.CRF_Id = cRF_Id;
+            return bloodClinicalAnalys;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3279,7 +3403,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -3304,7 +3428,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_SIGNIFICANT_CHANGESChanging(value);
                 ReportPropertyChanging("VISIT_ONE_SIGNIFICANT_CHANGES");
-                _VISIT_ONE_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true, "VISIT_ONE_SIGNIFICANT_CHANGES");
                 ReportPropertyChanged("VISIT_ONE_SIGNIFICANT_CHANGES");
                 OnVISIT_ONE_SIGNIFICANT_CHANGESChanged();
             }
@@ -3328,7 +3452,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_LEUKOCYTOSISChanging(value);
                 ReportPropertyChanging("VISIT_ONE_LEUKOCYTOSIS");
-                _VISIT_ONE_LEUKOCYTOSIS = StructuralObject.SetValidValue(value);
+                _VISIT_ONE_LEUKOCYTOSIS = StructuralObject.SetValidValue(value, "VISIT_ONE_LEUKOCYTOSIS");
                 ReportPropertyChanged("VISIT_ONE_LEUKOCYTOSIS");
                 OnVISIT_ONE_LEUKOCYTOSISChanged();
             }
@@ -3352,7 +3476,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanging(value);
                 ReportPropertyChanging("VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
-                _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value);
+                _VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, "VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
                 ReportPropertyChanged("VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS");
                 OnVISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMSChanged();
             }
@@ -3376,7 +3500,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_OTHERSChanging(value);
                 ReportPropertyChanging("VISIT_ONE_OTHERS");
-                _VISIT_ONE_OTHERS = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_OTHERS = StructuralObject.SetValidValue(value, true, "VISIT_ONE_OTHERS");
                 ReportPropertyChanged("VISIT_ONE_OTHERS");
                 OnVISIT_ONE_OTHERSChanged();
             }
@@ -3400,7 +3524,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_SIGNIFICANT_CHANGESChanging(value);
                 ReportPropertyChanging("VISIT_TWO_SIGNIFICANT_CHANGES");
-                _VISIT_TWO_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true, "VISIT_TWO_SIGNIFICANT_CHANGES");
                 ReportPropertyChanged("VISIT_TWO_SIGNIFICANT_CHANGES");
                 OnVISIT_TWO_SIGNIFICANT_CHANGESChanged();
             }
@@ -3424,7 +3548,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_LEUKOCYTOSISChanging(value);
                 ReportPropertyChanging("VISIT_TWO_LEUKOCYTOSIS");
-                _VISIT_TWO_LEUKOCYTOSIS = StructuralObject.SetValidValue(value);
+                _VISIT_TWO_LEUKOCYTOSIS = StructuralObject.SetValidValue(value, "VISIT_TWO_LEUKOCYTOSIS");
                 ReportPropertyChanged("VISIT_TWO_LEUKOCYTOSIS");
                 OnVISIT_TWO_LEUKOCYTOSISChanged();
             }
@@ -3448,7 +3572,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanging(value);
                 ReportPropertyChanging("VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
-                _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value);
+                _VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = StructuralObject.SetValidValue(value, "VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
                 ReportPropertyChanged("VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS");
                 OnVISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMSChanged();
             }
@@ -3472,7 +3596,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_OTHERSChanging(value);
                 ReportPropertyChanging("VISIT_TWO_OTHERS");
-                _VISIT_TWO_OTHERS = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_OTHERS = StructuralObject.SetValidValue(value, true, "VISIT_TWO_OTHERS");
                 ReportPropertyChanged("VISIT_TWO_OTHERS");
                 OnVISIT_TWO_OTHERSChanged();
             }
@@ -3496,7 +3620,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -3520,7 +3644,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -3544,7 +3668,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -3568,7 +3692,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -3592,7 +3716,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -3600,10 +3724,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -3612,16 +3759,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_CLINICAL_ANALYSIS", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_CLINICAL_ANALYSIS", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -3633,13 +3780,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS", "CRF", value);
                 }
             }
         }
@@ -3651,27 +3798,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BloodTestsForMarkersOfCardiacDysfunction")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION : EntityObject
+    public partial class BloodTestsForMarkersOfCardiacDysfunction : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION object.
+        /// Create a new BloodTestsForMarkersOfCardiacDysfunction object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION CreateBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION(global::System.Guid id)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static BloodTestsForMarkersOfCardiacDysfunction CreateBloodTestsForMarkersOfCardiacDysfunction(global::System.Guid id, global::System.Guid cRF_Id)
         {
-            BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION bLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION = new BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION();
-            bLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.Id = id;
-            return bLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION;
+            BloodTestsForMarkersOfCardiacDysfunction bloodTestsForMarkersOfCardiacDysfunction = new BloodTestsForMarkersOfCardiacDysfunction();
+            bloodTestsForMarkersOfCardiacDysfunction.Id = id;
+            bloodTestsForMarkersOfCardiacDysfunction.CRF_Id = cRF_Id;
+            return bloodTestsForMarkersOfCardiacDysfunction;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3690,7 +3839,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -3715,7 +3864,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_BRAIN_NATRIURETIC_PEPTIDEChanging(value);
                 ReportPropertyChanging("VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE");
-                _VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE = StructuralObject.SetValidValue(value, true, "VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE");
                 ReportPropertyChanged("VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE");
                 OnVISIT_ONE_BRAIN_NATRIURETIC_PEPTIDEChanged();
             }
@@ -3739,7 +3888,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_KOPEPTINChanging(value);
                 ReportPropertyChanging("VISIT_ONE_KOPEPTIN");
-                _VISIT_ONE_KOPEPTIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_KOPEPTIN = StructuralObject.SetValidValue(value, true, "VISIT_ONE_KOPEPTIN");
                 ReportPropertyChanged("VISIT_ONE_KOPEPTIN");
                 OnVISIT_ONE_KOPEPTINChanged();
             }
@@ -3763,7 +3912,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_PROADRENOMEDULLINChanging(value);
                 ReportPropertyChanging("VISIT_ONE_PROADRENOMEDULLIN");
-                _VISIT_ONE_PROADRENOMEDULLIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_PROADRENOMEDULLIN = StructuralObject.SetValidValue(value, true, "VISIT_ONE_PROADRENOMEDULLIN");
                 ReportPropertyChanged("VISIT_ONE_PROADRENOMEDULLIN");
                 OnVISIT_ONE_PROADRENOMEDULLINChanged();
             }
@@ -3787,7 +3936,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_BRAIN_NATRIURETIC_PEPTIDEChanging(value);
                 ReportPropertyChanging("VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE");
-                _VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE = StructuralObject.SetValidValue(value, true, "VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE");
                 ReportPropertyChanged("VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE");
                 OnVISIT_TWO_BRAIN_NATRIURETIC_PEPTIDEChanged();
             }
@@ -3811,7 +3960,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_KOPEPTINChanging(value);
                 ReportPropertyChanging("VISIT_TWO_KOPEPTIN");
-                _VISIT_TWO_KOPEPTIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_KOPEPTIN = StructuralObject.SetValidValue(value, true, "VISIT_TWO_KOPEPTIN");
                 ReportPropertyChanged("VISIT_TWO_KOPEPTIN");
                 OnVISIT_TWO_KOPEPTINChanged();
             }
@@ -3835,7 +3984,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_PROADRENOMEDULLINChanging(value);
                 ReportPropertyChanging("VISIT_TWO_PROADRENOMEDULLIN");
-                _VISIT_TWO_PROADRENOMEDULLIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_PROADRENOMEDULLIN = StructuralObject.SetValidValue(value, true, "VISIT_TWO_PROADRENOMEDULLIN");
                 ReportPropertyChanged("VISIT_TWO_PROADRENOMEDULLIN");
                 OnVISIT_TWO_PROADRENOMEDULLINChanged();
             }
@@ -3859,7 +4008,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_BRAIN_NATRIURETIC_PEPTIDEChanging(value);
                 ReportPropertyChanging("VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE");
-                _VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE = StructuralObject.SetValidValue(value, true, "VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE");
                 ReportPropertyChanged("VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE");
                 OnVISIT_THREE_BRAIN_NATRIURETIC_PEPTIDEChanged();
             }
@@ -3883,7 +4032,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_KOPEPTINChanging(value);
                 ReportPropertyChanging("VISIT_THREE_KOPEPTIN");
-                _VISIT_THREE_KOPEPTIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_KOPEPTIN = StructuralObject.SetValidValue(value, true, "VISIT_THREE_KOPEPTIN");
                 ReportPropertyChanged("VISIT_THREE_KOPEPTIN");
                 OnVISIT_THREE_KOPEPTINChanged();
             }
@@ -3907,7 +4056,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_PROADRENOMEDULLINChanging(value);
                 ReportPropertyChanging("VISIT_THREE_PROADRENOMEDULLIN");
-                _VISIT_THREE_PROADRENOMEDULLIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_PROADRENOMEDULLIN = StructuralObject.SetValidValue(value, true, "VISIT_THREE_PROADRENOMEDULLIN");
                 ReportPropertyChanged("VISIT_THREE_PROADRENOMEDULLIN");
                 OnVISIT_THREE_PROADRENOMEDULLINChanged();
             }
@@ -3931,7 +4080,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -3955,7 +4104,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -3979,7 +4128,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -4003,7 +4152,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -4027,7 +4176,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -4035,10 +4184,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -4047,16 +4219,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -4068,13 +4240,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "CRF", value);
                 }
             }
         }
@@ -4086,27 +4258,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="BloodTestsForMarkersOfInflammation")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION : EntityObject
+    public partial class BloodTestsForMarkersOfInflammation : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION object.
+        /// Create a new BloodTestsForMarkersOfInflammation object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION CreateBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION(global::System.Guid id)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static BloodTestsForMarkersOfInflammation CreateBloodTestsForMarkersOfInflammation(global::System.Guid id, global::System.Guid cRF_Id)
         {
-            BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION bLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION = new BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION();
-            bLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.Id = id;
-            return bLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION;
+            BloodTestsForMarkersOfInflammation bloodTestsForMarkersOfInflammation = new BloodTestsForMarkersOfInflammation();
+            bloodTestsForMarkersOfInflammation.Id = id;
+            bloodTestsForMarkersOfInflammation.CRF_Id = cRF_Id;
+            return bloodTestsForMarkersOfInflammation;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4125,7 +4299,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -4150,7 +4324,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_C_REACTIVE_PROTEINChanging(value);
                 ReportPropertyChanging("VISIT_ONE_C_REACTIVE_PROTEIN");
-                _VISIT_ONE_C_REACTIVE_PROTEIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_C_REACTIVE_PROTEIN = StructuralObject.SetValidValue(value, true, "VISIT_ONE_C_REACTIVE_PROTEIN");
                 ReportPropertyChanged("VISIT_ONE_C_REACTIVE_PROTEIN");
                 OnVISIT_ONE_C_REACTIVE_PROTEINChanged();
             }
@@ -4174,7 +4348,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_PROCALCITONINChanging(value);
                 ReportPropertyChanging("VISIT_ONE_PROCALCITONIN");
-                _VISIT_ONE_PROCALCITONIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_PROCALCITONIN = StructuralObject.SetValidValue(value, true, "VISIT_ONE_PROCALCITONIN");
                 ReportPropertyChanged("VISIT_ONE_PROCALCITONIN");
                 OnVISIT_ONE_PROCALCITONINChanged();
             }
@@ -4198,7 +4372,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_IL6Changing(value);
                 ReportPropertyChanging("VISIT_ONE_IL6");
-                _VISIT_ONE_IL6 = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_IL6 = StructuralObject.SetValidValue(value, true, "VISIT_ONE_IL6");
                 ReportPropertyChanged("VISIT_ONE_IL6");
                 OnVISIT_ONE_IL6Changed();
             }
@@ -4222,7 +4396,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_ONE_FNOChanging(value);
                 ReportPropertyChanging("VISIT_ONE_FNO");
-                _VISIT_ONE_FNO = StructuralObject.SetValidValue(value, true);
+                _VISIT_ONE_FNO = StructuralObject.SetValidValue(value, true, "VISIT_ONE_FNO");
                 ReportPropertyChanged("VISIT_ONE_FNO");
                 OnVISIT_ONE_FNOChanged();
             }
@@ -4246,7 +4420,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_C_REACTIVE_PROTEINChanging(value);
                 ReportPropertyChanging("VISIT_TWO_C_REACTIVE_PROTEIN");
-                _VISIT_TWO_C_REACTIVE_PROTEIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_C_REACTIVE_PROTEIN = StructuralObject.SetValidValue(value, true, "VISIT_TWO_C_REACTIVE_PROTEIN");
                 ReportPropertyChanged("VISIT_TWO_C_REACTIVE_PROTEIN");
                 OnVISIT_TWO_C_REACTIVE_PROTEINChanged();
             }
@@ -4270,7 +4444,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_PROCALCITONINChanging(value);
                 ReportPropertyChanging("VISIT_TWO_PROCALCITONIN");
-                _VISIT_TWO_PROCALCITONIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_PROCALCITONIN = StructuralObject.SetValidValue(value, true, "VISIT_TWO_PROCALCITONIN");
                 ReportPropertyChanged("VISIT_TWO_PROCALCITONIN");
                 OnVISIT_TWO_PROCALCITONINChanged();
             }
@@ -4294,7 +4468,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_IL6Changing(value);
                 ReportPropertyChanging("VISIT_TWO_IL6");
-                _VISIT_TWO_IL6 = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_IL6 = StructuralObject.SetValidValue(value, true, "VISIT_TWO_IL6");
                 ReportPropertyChanged("VISIT_TWO_IL6");
                 OnVISIT_TWO_IL6Changed();
             }
@@ -4318,7 +4492,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_TWO_FNOChanging(value);
                 ReportPropertyChanging("VISIT_TWO_FNO");
-                _VISIT_TWO_FNO = StructuralObject.SetValidValue(value, true);
+                _VISIT_TWO_FNO = StructuralObject.SetValidValue(value, true, "VISIT_TWO_FNO");
                 ReportPropertyChanged("VISIT_TWO_FNO");
                 OnVISIT_TWO_FNOChanged();
             }
@@ -4342,7 +4516,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_C_REACTIVE_PROTEINChanging(value);
                 ReportPropertyChanging("VISIT_THREE_C_REACTIVE_PROTEIN");
-                _VISIT_THREE_C_REACTIVE_PROTEIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_C_REACTIVE_PROTEIN = StructuralObject.SetValidValue(value, true, "VISIT_THREE_C_REACTIVE_PROTEIN");
                 ReportPropertyChanged("VISIT_THREE_C_REACTIVE_PROTEIN");
                 OnVISIT_THREE_C_REACTIVE_PROTEINChanged();
             }
@@ -4366,7 +4540,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_PROCALCITONINChanging(value);
                 ReportPropertyChanging("VISIT_THREE_PROCALCITONIN");
-                _VISIT_THREE_PROCALCITONIN = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_PROCALCITONIN = StructuralObject.SetValidValue(value, true, "VISIT_THREE_PROCALCITONIN");
                 ReportPropertyChanged("VISIT_THREE_PROCALCITONIN");
                 OnVISIT_THREE_PROCALCITONINChanged();
             }
@@ -4390,7 +4564,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_IL6Changing(value);
                 ReportPropertyChanging("VISIT_THREE_IL6");
-                _VISIT_THREE_IL6 = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_IL6 = StructuralObject.SetValidValue(value, true, "VISIT_THREE_IL6");
                 ReportPropertyChanged("VISIT_THREE_IL6");
                 OnVISIT_THREE_IL6Changed();
             }
@@ -4414,7 +4588,7 @@ namespace CINCOPA.Model
             {
                 OnVISIT_THREE_FNOChanging(value);
                 ReportPropertyChanging("VISIT_THREE_FNO");
-                _VISIT_THREE_FNO = StructuralObject.SetValidValue(value, true);
+                _VISIT_THREE_FNO = StructuralObject.SetValidValue(value, true, "VISIT_THREE_FNO");
                 ReportPropertyChanged("VISIT_THREE_FNO");
                 OnVISIT_THREE_FNOChanged();
             }
@@ -4438,7 +4612,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -4462,7 +4636,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -4486,7 +4660,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -4510,7 +4684,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -4534,7 +4708,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -4542,10 +4716,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -4554,16 +4751,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -4575,13 +4772,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "CRF", value);
                 }
             }
         }
@@ -4593,27 +4790,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ComputedTomographyChestVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 : EntityObject
+    public partial class ComputedTomographyChestVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 object.
+        /// Create a new ComputedTomographyChestVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 CreateCOMPUTED_TOMOGRAPHY_CHEST_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static ComputedTomographyChestVisit1Set CreateComputedTomographyChestVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 cOMPUTED_TOMOGRAPHY_CHEST_VISIT_1 = new COMPUTED_TOMOGRAPHY_CHEST_VISIT_1();
-            cOMPUTED_TOMOGRAPHY_CHEST_VISIT_1.Id = id;
-            return cOMPUTED_TOMOGRAPHY_CHEST_VISIT_1;
+            ComputedTomographyChestVisit1Set computedTomographyChestVisit1Set = new ComputedTomographyChestVisit1Set();
+            computedTomographyChestVisit1Set.Id = id;
+            computedTomographyChestVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return computedTomographyChestVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4632,7 +4831,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -4657,7 +4856,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_PROCEDUREChanging(value);
                 ReportPropertyChanging("DATE_PROCEDURE");
-                _DATE_PROCEDURE = StructuralObject.SetValidValue(value);
+                _DATE_PROCEDURE = StructuralObject.SetValidValue(value, "DATE_PROCEDURE");
                 ReportPropertyChanged("DATE_PROCEDURE");
                 OnDATE_PROCEDUREChanged();
             }
@@ -4681,7 +4880,7 @@ namespace CINCOPA.Model
             {
                 OnPNEUMONIA_SIGNSChanging(value);
                 ReportPropertyChanging("PNEUMONIA_SIGNS");
-                _PNEUMONIA_SIGNS = StructuralObject.SetValidValue(value, true);
+                _PNEUMONIA_SIGNS = StructuralObject.SetValidValue(value, true, "PNEUMONIA_SIGNS");
                 ReportPropertyChanged("PNEUMONIA_SIGNS");
                 OnPNEUMONIA_SIGNSChanged();
             }
@@ -4705,7 +4904,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_RIGHT_TOPChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_RIGHT_TOP");
-                _ALVEOLAR_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_RIGHT_TOP");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_RIGHT_TOP");
                 OnALVEOLAR_INFILTRATION_RIGHT_TOPChanged();
             }
@@ -4729,7 +4928,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_RIGHT_MIDDLEChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_RIGHT_MIDDLE");
-                _ALVEOLAR_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_RIGHT_MIDDLE");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_RIGHT_MIDDLE");
                 OnALVEOLAR_INFILTRATION_RIGHT_MIDDLEChanged();
             }
@@ -4753,7 +4952,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_RIGHT_BOTTOMChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_RIGHT_BOTTOM");
-                _ALVEOLAR_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_RIGHT_BOTTOM");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_RIGHT_BOTTOM");
                 OnALVEOLAR_INFILTRATION_RIGHT_BOTTOMChanged();
             }
@@ -4777,7 +4976,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_LEFT_TOPChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_LEFT_TOP");
-                _ALVEOLAR_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_LEFT_TOP");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_LEFT_TOP");
                 OnALVEOLAR_INFILTRATION_LEFT_TOPChanged();
             }
@@ -4801,7 +5000,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_LEFT_BOTTOMChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_LEFT_BOTTOM");
-                _ALVEOLAR_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_LEFT_BOTTOM");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_LEFT_BOTTOM");
                 OnALVEOLAR_INFILTRATION_LEFT_BOTTOMChanged();
             }
@@ -4825,7 +5024,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_RIGHT_TOPChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_RIGHT_TOP");
-                _INTERSTITIAL_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_RIGHT_TOP");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_RIGHT_TOP");
                 OnINTERSTITIAL_INFILTRATION_RIGHT_TOPChanged();
             }
@@ -4849,7 +5048,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_RIGHT_MIDDLEChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE");
-                _INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE");
                 OnINTERSTITIAL_INFILTRATION_RIGHT_MIDDLEChanged();
             }
@@ -4873,7 +5072,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_RIGHT_BOTTOMChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM");
-                _INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM");
                 OnINTERSTITIAL_INFILTRATION_RIGHT_BOTTOMChanged();
             }
@@ -4897,7 +5096,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_LEFT_TOPChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_LEFT_TOP");
-                _INTERSTITIAL_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_LEFT_TOP");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_LEFT_TOP");
                 OnINTERSTITIAL_INFILTRATION_LEFT_TOPChanged();
             }
@@ -4921,7 +5120,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_LEFT_BOTTOMChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_LEFT_BOTTOM");
-                _INTERSTITIAL_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_LEFT_BOTTOM");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_LEFT_BOTTOM");
                 OnINTERSTITIAL_INFILTRATION_LEFT_BOTTOMChanged();
             }
@@ -4945,7 +5144,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_NONEChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_NONE");
-                _PLEURAL_EFFUSION_NONE = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_NONE = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_NONE");
                 ReportPropertyChanged("PLEURAL_EFFUSION_NONE");
                 OnPLEURAL_EFFUSION_NONEChanged();
             }
@@ -4969,7 +5168,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_RIGHTChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_RIGHT");
-                _PLEURAL_EFFUSION_RIGHT = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_RIGHT = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_RIGHT");
                 ReportPropertyChanged("PLEURAL_EFFUSION_RIGHT");
                 OnPLEURAL_EFFUSION_RIGHTChanged();
             }
@@ -4993,7 +5192,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_LEFTChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_LEFT");
-                _PLEURAL_EFFUSION_LEFT = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_LEFT = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_LEFT");
                 ReportPropertyChanged("PLEURAL_EFFUSION_LEFT");
                 OnPLEURAL_EFFUSION_LEFTChanged();
             }
@@ -5017,7 +5216,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_DOUBLEChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_DOUBLE");
-                _PLEURAL_EFFUSION_DOUBLE = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_DOUBLE = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_DOUBLE");
                 ReportPropertyChanged("PLEURAL_EFFUSION_DOUBLE");
                 OnPLEURAL_EFFUSION_DOUBLEChanged();
             }
@@ -5041,7 +5240,7 @@ namespace CINCOPA.Model
             {
                 OnOTHERChanging(value);
                 ReportPropertyChanging("OTHER");
-                _OTHER = StructuralObject.SetValidValue(value, true);
+                _OTHER = StructuralObject.SetValidValue(value, true, "OTHER");
                 ReportPropertyChanged("OTHER");
                 OnOTHERChanged();
             }
@@ -5065,7 +5264,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -5089,7 +5288,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -5113,7 +5312,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -5137,7 +5336,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -5161,7 +5360,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -5169,10 +5368,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -5181,16 +5403,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VisitOne")]
+        public VisitOne VisitOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VISIT_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VisitOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VISIT_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VisitOne").Value = value;
             }
         }
         /// <summary>
@@ -5198,17 +5420,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
+        public EntityReference<VisitOne> VisitOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VISIT_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VisitOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VISIT_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "VisitOne", value);
                 }
             }
         }
@@ -5256,7 +5478,7 @@ namespace CINCOPA.Model
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5275,7 +5497,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -5300,7 +5522,7 @@ namespace CINCOPA.Model
             {
                 OnWARDIdChanging(value);
                 ReportPropertyChanging("WARDId");
-                _WARDId = StructuralObject.SetValidValue(value);
+                _WARDId = StructuralObject.SetValidValue(value, "WARDId");
                 ReportPropertyChanged("WARDId");
                 OnWARDIdChanged();
             }
@@ -5324,7 +5546,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, false, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -5348,7 +5570,7 @@ namespace CINCOPA.Model
             {
                 OnNUMBERChanging(value);
                 ReportPropertyChanging("NUMBER");
-                _NUMBER = StructuralObject.SetValidValue(value);
+                _NUMBER = StructuralObject.SetValidValue(value, "NUMBER");
                 ReportPropertyChanged("NUMBER");
                 OnNUMBERChanged();
             }
@@ -5372,7 +5594,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_BIRTHChanging(value);
                 ReportPropertyChanging("DATE_BIRTH");
-                _DATE_BIRTH = StructuralObject.SetValidValue(value);
+                _DATE_BIRTH = StructuralObject.SetValidValue(value, "DATE_BIRTH");
                 ReportPropertyChanged("DATE_BIRTH");
                 OnDATE_BIRTHChanged();
             }
@@ -5396,7 +5618,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_HOSPITALISATIONChanging(value);
                 ReportPropertyChanging("DATE_HOSPITALISATION");
-                _DATE_HOSPITALISATION = StructuralObject.SetValidValue(value);
+                _DATE_HOSPITALISATION = StructuralObject.SetValidValue(value, "DATE_HOSPITALISATION");
                 ReportPropertyChanged("DATE_HOSPITALISATION");
                 OnDATE_HOSPITALISATIONChanged();
             }
@@ -5420,7 +5642,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_DISCHARGEChanging(value);
                 ReportPropertyChanging("DATE_DISCHARGE");
-                _DATE_DISCHARGE = StructuralObject.SetValidValue(value);
+                _DATE_DISCHARGE = StructuralObject.SetValidValue(value, "DATE_DISCHARGE");
                 ReportPropertyChanged("DATE_DISCHARGE");
                 OnDATE_DISCHARGEChanged();
             }
@@ -5444,7 +5666,7 @@ namespace CINCOPA.Model
             {
                 OnAE_LOGICChanging(value);
                 ReportPropertyChanging("AE_LOGIC");
-                _AE_LOGIC = StructuralObject.SetValidValue(value, false);
+                _AE_LOGIC = StructuralObject.SetValidValue(value, false, "AE_LOGIC");
                 ReportPropertyChanged("AE_LOGIC");
                 OnAE_LOGICChanged();
             }
@@ -5468,7 +5690,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, false);
+                _CreatedBy = StructuralObject.SetValidValue(value, false, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -5492,7 +5714,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, false);
+                _CreatedByDate = StructuralObject.SetValidValue(value, false, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -5516,7 +5738,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, false);
+                _UpdatedBy = StructuralObject.SetValidValue(value, false, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -5540,7 +5762,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, false);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, false, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -5564,7 +5786,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -5575,7 +5797,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -5584,16 +5805,302 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFWARD", "WARD")]
-        public WARD WARD
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFAB_THERAPY", "AbTherapy")]
+        public EntityCollection<AbTherapy> AbTherapys
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WARD>("CINCOPAModel.CRFWARD", "WARD").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AbTherapy>("CINCOPAModel.FK_CRFAB_THERAPY", "AbTherapy");
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WARD>("CINCOPAModel.CRFWARD", "WARD").Value = value;
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AbTherapy>("CINCOPAModel.FK_CRFAB_THERAPY", "AbTherapy", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFADVERSE_EVENT", "AE")]
+        public EntityCollection<AE> AEs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AE>("CINCOPAModel.FK_CRFADVERSE_EVENT", "AE");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AE>("CINCOPAModel.FK_CRFADVERSE_EVENT", "AE", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_CHEMISTRY", "BloodChemistry")]
+        public EntityCollection<BloodChemistry> BloodChemistrys
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BloodChemistry>("CINCOPAModel.FK_CRFBLOOD_CHEMISTRY", "BloodChemistry");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BloodChemistry>("CINCOPAModel.FK_CRFBLOOD_CHEMISTRY", "BloodChemistry", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_CLINICAL_ANALYSIS", "BloodClinicalAnalys")]
+        public EntityCollection<BloodClinicalAnalys> BloodClinicalAnalyses
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BloodClinicalAnalys>("CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS", "BloodClinicalAnalys");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BloodClinicalAnalys>("CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS", "BloodClinicalAnalys", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BloodTestsForMarkersOfCardiacDysfunction")]
+        public EntityCollection<BloodTestsForMarkersOfCardiacDysfunction> BloodTestsForMarkersOfCardiacDysfunctions
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BloodTestsForMarkersOfCardiacDysfunction>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BloodTestsForMarkersOfCardiacDysfunction");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BloodTestsForMarkersOfCardiacDysfunction>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BloodTestsForMarkersOfCardiacDysfunction", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BloodTestsForMarkersOfInflammation")]
+        public EntityCollection<BloodTestsForMarkersOfInflammation> BloodTestsForMarkersOfInflammations
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BloodTestsForMarkersOfInflammation>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BloodTestsForMarkersOfInflammation");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BloodTestsForMarkersOfInflammation>("CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BloodTestsForMarkersOfInflammation", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFMICROBIOLOGY_BLOOD", "MicrobiologyBlood")]
+        public EntityCollection<MicrobiologyBlood> MicrobiologyBloods
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MicrobiologyBlood>("CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD", "MicrobiologyBlood");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MicrobiologyBlood>("CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD", "MicrobiologyBlood", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFMICROBIOLOGY_SPUTUM", "MicrobiologySputum")]
+        public EntityCollection<MicrobiologySputum> MicrobiologySputums
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MicrobiologySputum>("CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM", "MicrobiologySputum");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MicrobiologySputum>("CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM", "MicrobiologySputum", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFTEST_FOR_PNEUMOCOCCAL", "TestForPneumococcal")]
+        public EntityCollection<TestForPneumococcal> TestForPneumococcals
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TestForPneumococcal>("CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL", "TestForPneumococcal");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TestForPneumococcal>("CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL", "TestForPneumococcal", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_ONE", "VisitOne")]
+        public EntityCollection<VisitOne> VisitOnes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<VisitOne>("CINCOPAModel.FK_CRFVISIT_ONE", "VisitOne");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<VisitOne>("CINCOPAModel.FK_CRFVISIT_ONE", "VisitOne", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_ONE_ONE", "VisitOneOne")]
+        public EntityCollection<VisitOneOne> VisitOneOnes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<VisitOneOne>("CINCOPAModel.FK_CRFVISIT_ONE_ONE", "VisitOneOne");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<VisitOneOne>("CINCOPAModel.FK_CRFVISIT_ONE_ONE", "VisitOneOne", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_THREE", "VisitThree")]
+        public EntityCollection<VisitThree> VisitThrees
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<VisitThree>("CINCOPAModel.FK_CRFVISIT_THREE", "VisitThree");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<VisitThree>("CINCOPAModel.FK_CRFVISIT_THREE", "VisitThree", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_TWO", "VisitTwo")]
+        public EntityCollection<VisitTwo> VisitTwoes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<VisitTwo>("CINCOPAModel.FK_CRFVISIT_TWO", "VisitTwo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<VisitTwo>("CINCOPAModel.FK_CRFVISIT_TWO", "VisitTwo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFWARD", "Ward")]
+        public Ward Ward
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ward>("CINCOPAModel.FK_CRFWARD", "Ward").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ward>("CINCOPAModel.FK_CRFWARD", "Ward").Value = value;
             }
         }
         /// <summary>
@@ -5601,447 +6108,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<WARD> WARDReference
+        public EntityReference<Ward> WardReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<WARD>("CINCOPAModel.CRFWARD", "WARD");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Ward>("CINCOPAModel.FK_CRFWARD", "Ward");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<WARD>("CINCOPAModel.CRFWARD", "WARD", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_ONE", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.CRFVISIT_ONE", "VISIT_ONE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.CRFVISIT_ONE", "VISIT_ONE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.CRFVISIT_ONE", "VISIT_ONE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.CRFVISIT_ONE", "VISIT_ONE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_ONE_ONE", "VISIT_ONE_ONE")]
-        public VISIT_ONE_ONE VISIT_ONE_ONE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.CRFVISIT_ONE_ONE", "VISIT_ONE_ONE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.CRFVISIT_ONE_ONE", "VISIT_ONE_ONE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE_ONE> VISIT_ONE_ONEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.CRFVISIT_ONE_ONE", "VISIT_ONE_ONE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.CRFVISIT_ONE_ONE", "VISIT_ONE_ONE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_THREE", "VISIT_THREE")]
-        public VISIT_THREE VISIT_THREE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_THREE>("CINCOPAModel.CRFVISIT_THREE", "VISIT_THREE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_THREE>("CINCOPAModel.CRFVISIT_THREE", "VISIT_THREE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<VISIT_THREE> VISIT_THREEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_THREE>("CINCOPAModel.CRFVISIT_THREE", "VISIT_THREE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_THREE>("CINCOPAModel.CRFVISIT_THREE", "VISIT_THREE", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_TWO", "VISIT_TWO")]
-        public VISIT_TWO VISIT_TWO
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.CRFVISIT_TWO", "VISIT_TWO").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.CRFVISIT_TWO", "VISIT_TWO").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<VISIT_TWO> VISIT_TWOReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.CRFVISIT_TWO", "VISIT_TWO");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_TWO>("CINCOPAModel.CRFVISIT_TWO", "VISIT_TWO", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFADVERSE_EVENT", "ADVERSE_EVENT")]
-        public EntityCollection<ADVERSE_EVENT> ADVERSE_EVENT
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ADVERSE_EVENT>("CINCOPAModel.CRFADVERSE_EVENT", "ADVERSE_EVENT");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ADVERSE_EVENT>("CINCOPAModel.CRFADVERSE_EVENT", "ADVERSE_EVENT", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_CLINICAL_ANALYSIS", "BLOOD_CLINICAL_ANALYSIS")]
-        public BLOOD_CLINICAL_ANALYSIS BLOOD_CLINICAL_ANALYSIS
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_CLINICAL_ANALYSIS>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "BLOOD_CLINICAL_ANALYSIS").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_CLINICAL_ANALYSIS>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "BLOOD_CLINICAL_ANALYSIS").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BLOOD_CLINICAL_ANALYSIS> BLOOD_CLINICAL_ANALYSISReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_CLINICAL_ANALYSIS>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "BLOOD_CLINICAL_ANALYSIS");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BLOOD_CLINICAL_ANALYSIS>("CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS", "BLOOD_CLINICAL_ANALYSIS", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION")]
-        public BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION> BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATIONReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", "BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION")]
-        public BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION> BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTIONReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION>("CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", "BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFBLOOD_CHEMISTRY", "BLOOD_CHEMISTRY")]
-        public BLOOD_CHEMISTRY BLOOD_CHEMISTRY
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_CHEMISTRY>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "BLOOD_CHEMISTRY").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_CHEMISTRY>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "BLOOD_CHEMISTRY").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BLOOD_CHEMISTRY> BLOOD_CHEMISTRYReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BLOOD_CHEMISTRY>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "BLOOD_CHEMISTRY");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BLOOD_CHEMISTRY>("CINCOPAModel.CRFBLOOD_CHEMISTRY", "BLOOD_CHEMISTRY", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFAB_THERAPY", "AB_THERAPY")]
-        public EntityCollection<AB_THERAPY> AB_THERAPY
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AB_THERAPY>("CINCOPAModel.CRFAB_THERAPY", "AB_THERAPY");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AB_THERAPY>("CINCOPAModel.CRFAB_THERAPY", "AB_THERAPY", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFTEST_FOR_PNEUMOCOCCAL", "TEST_FOR_PNEUMOCOCCAL")]
-        public TEST_FOR_PNEUMOCOCCAL TEST_FOR_PNEUMOCOCCAL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TEST_FOR_PNEUMOCOCCAL>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "TEST_FOR_PNEUMOCOCCAL").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TEST_FOR_PNEUMOCOCCAL>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "TEST_FOR_PNEUMOCOCCAL").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<TEST_FOR_PNEUMOCOCCAL> TEST_FOR_PNEUMOCOCCALReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TEST_FOR_PNEUMOCOCCAL>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "TEST_FOR_PNEUMOCOCCAL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TEST_FOR_PNEUMOCOCCAL>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "TEST_FOR_PNEUMOCOCCAL", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFMICROBIOLOGY_SPUTUM", "MICROBIOLOGY_SPUTUM")]
-        public EntityCollection<MICROBIOLOGY_SPUTUM> MICROBIOLOGY_SPUTUM
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MICROBIOLOGY_SPUTUM>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "MICROBIOLOGY_SPUTUM");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MICROBIOLOGY_SPUTUM>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "MICROBIOLOGY_SPUTUM", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFMICROBIOLOGY_BLOOD", "MICROBIOLOGY_BLOOD")]
-        public EntityCollection<MICROBIOLOGY_BLOOD> MICROBIOLOGY_BLOOD
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MICROBIOLOGY_BLOOD>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "MICROBIOLOGY_BLOOD");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MICROBIOLOGY_BLOOD>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "MICROBIOLOGY_BLOOD", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Ward>("CINCOPAModel.FK_CRFWARD", "Ward", value);
                 }
             }
         }
@@ -6053,29 +6130,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="DRUG")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="Drug")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class DRUG : EntityObject
+    public partial class Drug : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new DRUG object.
+        /// Create a new Drug object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nAME">Initial value of the NAME property.</param>
-        public static DRUG CreateDRUG(global::System.Guid id, global::System.String nAME)
+        public static Drug CreateDrug(global::System.Guid id, global::System.String nAME)
         {
-            DRUG dRUG = new DRUG();
-            dRUG.Id = id;
-            dRUG.NAME = nAME;
-            return dRUG;
+            Drug drug = new Drug();
+            drug.Id = id;
+            drug.NAME = nAME;
+            return drug;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6094,7 +6171,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -6119,7 +6196,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, false, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -6143,7 +6220,7 @@ namespace CINCOPA.Model
             {
                 OnMNNChanging(value);
                 ReportPropertyChanging("MNN");
-                _MNN = StructuralObject.SetValidValue(value, true);
+                _MNN = StructuralObject.SetValidValue(value, true, "MNN");
                 ReportPropertyChanged("MNN");
                 OnMNNChanged();
             }
@@ -6167,7 +6244,7 @@ namespace CINCOPA.Model
             {
                 OnGROUPChanging(value);
                 ReportPropertyChanging("GROUP");
-                _GROUP = StructuralObject.SetValidValue(value, true);
+                _GROUP = StructuralObject.SetValidValue(value, true, "GROUP");
                 ReportPropertyChanged("GROUP");
                 OnGROUPChanged();
             }
@@ -6191,7 +6268,7 @@ namespace CINCOPA.Model
             {
                 OnCODEChanging(value);
                 ReportPropertyChanging("CODE");
-                _CODE = StructuralObject.SetValidValue(value, true);
+                _CODE = StructuralObject.SetValidValue(value, true, "CODE");
                 ReportPropertyChanged("CODE");
                 OnCODEChanged();
             }
@@ -6215,7 +6292,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -6239,7 +6316,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -6263,7 +6340,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -6287,7 +6364,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -6311,7 +6388,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -6322,7 +6399,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -6331,18 +6407,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "DRUGAB_THERAPY", "AB_THERAPY")]
-        public EntityCollection<AB_THERAPY> AB_THERAPY
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_DRUGAB_THERAPY", "AbTherapy")]
+        public EntityCollection<AbTherapy> AbTherapys
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AB_THERAPY>("CINCOPAModel.DRUGAB_THERAPY", "AB_THERAPY");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AbTherapy>("CINCOPAModel.FK_DRUGAB_THERAPY", "AbTherapy");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AB_THERAPY>("CINCOPAModel.DRUGAB_THERAPY", "AB_THERAPY", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AbTherapy>("CINCOPAModel.FK_DRUGAB_THERAPY", "AbTherapy", value);
                 }
             }
         }
@@ -6354,27 +6430,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ECHOCARDIOGRAPHY_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EchocardiographyVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ECHOCARDIOGRAPHY_VISIT_1 : EntityObject
+    public partial class EchocardiographyVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ECHOCARDIOGRAPHY_VISIT_1 object.
+        /// Create a new EchocardiographyVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static ECHOCARDIOGRAPHY_VISIT_1 CreateECHOCARDIOGRAPHY_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static EchocardiographyVisit1Set CreateEchocardiographyVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            ECHOCARDIOGRAPHY_VISIT_1 eCHOCARDIOGRAPHY_VISIT_1 = new ECHOCARDIOGRAPHY_VISIT_1();
-            eCHOCARDIOGRAPHY_VISIT_1.Id = id;
-            return eCHOCARDIOGRAPHY_VISIT_1;
+            EchocardiographyVisit1Set echocardiographyVisit1Set = new EchocardiographyVisit1Set();
+            echocardiographyVisit1Set.Id = id;
+            echocardiographyVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return echocardiographyVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6393,7 +6471,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -6418,7 +6496,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_PROCEDUREChanging(value);
                 ReportPropertyChanging("DATE_PROCEDURE");
-                _DATE_PROCEDURE = StructuralObject.SetValidValue(value);
+                _DATE_PROCEDURE = StructuralObject.SetValidValue(value, "DATE_PROCEDURE");
                 ReportPropertyChanged("DATE_PROCEDURE");
                 OnDATE_PROCEDUREChanged();
             }
@@ -6442,7 +6520,7 @@ namespace CINCOPA.Model
             {
                 OnFV_PERCENTChanging(value);
                 ReportPropertyChanging("FV_PERCENT");
-                _FV_PERCENT = StructuralObject.SetValidValue(value);
+                _FV_PERCENT = StructuralObject.SetValidValue(value, "FV_PERCENT");
                 ReportPropertyChanged("FV_PERCENT");
                 OnFV_PERCENTChanged();
             }
@@ -6466,7 +6544,7 @@ namespace CINCOPA.Model
             {
                 OnEA_LJChanging(value);
                 ReportPropertyChanging("EA_LJ");
-                _EA_LJ = StructuralObject.SetValidValue(value);
+                _EA_LJ = StructuralObject.SetValidValue(value, "EA_LJ");
                 ReportPropertyChanged("EA_LJ");
                 OnEA_LJChanged();
             }
@@ -6490,7 +6568,7 @@ namespace CINCOPA.Model
             {
                 OnEA_RJChanging(value);
                 ReportPropertyChanging("EA_RJ");
-                _EA_RJ = StructuralObject.SetValidValue(value);
+                _EA_RJ = StructuralObject.SetValidValue(value, "EA_RJ");
                 ReportPropertyChanged("EA_RJ");
                 OnEA_RJChanged();
             }
@@ -6514,7 +6592,7 @@ namespace CINCOPA.Model
             {
                 OnSDLAChanging(value);
                 ReportPropertyChanging("SDLA");
-                _SDLA = StructuralObject.SetValidValue(value);
+                _SDLA = StructuralObject.SetValidValue(value, "SDLA");
                 ReportPropertyChanged("SDLA");
                 OnSDLAChanged();
             }
@@ -6538,7 +6616,7 @@ namespace CINCOPA.Model
             {
                 OnAMOUNT_OF_PERICARDIAL_EFFUSIONChanging(value);
                 ReportPropertyChanging("AMOUNT_OF_PERICARDIAL_EFFUSION");
-                _AMOUNT_OF_PERICARDIAL_EFFUSION = StructuralObject.SetValidValue(value);
+                _AMOUNT_OF_PERICARDIAL_EFFUSION = StructuralObject.SetValidValue(value, "AMOUNT_OF_PERICARDIAL_EFFUSION");
                 ReportPropertyChanged("AMOUNT_OF_PERICARDIAL_EFFUSION");
                 OnAMOUNT_OF_PERICARDIAL_EFFUSIONChanged();
             }
@@ -6562,7 +6640,7 @@ namespace CINCOPA.Model
             {
                 OnCOMMENTSChanging(value);
                 ReportPropertyChanging("COMMENTS");
-                _COMMENTS = StructuralObject.SetValidValue(value, true);
+                _COMMENTS = StructuralObject.SetValidValue(value, true, "COMMENTS");
                 ReportPropertyChanged("COMMENTS");
                 OnCOMMENTSChanged();
             }
@@ -6586,7 +6664,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -6610,7 +6688,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -6634,7 +6712,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -6658,7 +6736,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -6682,7 +6760,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -6690,10 +6768,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -6702,16 +6803,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VisitOne")]
+        public VisitOne VisitOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VISIT_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VisitOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VISIT_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VisitOne").Value = value;
             }
         }
         /// <summary>
@@ -6719,17 +6820,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
+        public EntityReference<VisitOne> VisitOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VISIT_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VisitOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VISIT_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "VisitOne", value);
                 }
             }
         }
@@ -6741,27 +6842,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ECHOCARDIOGRAPHY_VISIT_3")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EchocardiographyVisit3Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ECHOCARDIOGRAPHY_VISIT_3 : EntityObject
+    public partial class EchocardiographyVisit3Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ECHOCARDIOGRAPHY_VISIT_3 object.
+        /// Create a new EchocardiographyVisit3Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static ECHOCARDIOGRAPHY_VISIT_3 CreateECHOCARDIOGRAPHY_VISIT_3(global::System.Guid id)
+        /// <param name="vISIT_THREE_Id">Initial value of the VISIT_THREE_Id property.</param>
+        public static EchocardiographyVisit3Set CreateEchocardiographyVisit3Set(global::System.Guid id, global::System.Guid vISIT_THREE_Id)
         {
-            ECHOCARDIOGRAPHY_VISIT_3 eCHOCARDIOGRAPHY_VISIT_3 = new ECHOCARDIOGRAPHY_VISIT_3();
-            eCHOCARDIOGRAPHY_VISIT_3.Id = id;
-            return eCHOCARDIOGRAPHY_VISIT_3;
+            EchocardiographyVisit3Set echocardiographyVisit3Set = new EchocardiographyVisit3Set();
+            echocardiographyVisit3Set.Id = id;
+            echocardiographyVisit3Set.VISIT_THREE_Id = vISIT_THREE_Id;
+            return echocardiographyVisit3Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6780,7 +6883,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -6805,7 +6908,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_PROCEDUREChanging(value);
                 ReportPropertyChanging("DATE_PROCEDURE");
-                _DATE_PROCEDURE = StructuralObject.SetValidValue(value);
+                _DATE_PROCEDURE = StructuralObject.SetValidValue(value, "DATE_PROCEDURE");
                 ReportPropertyChanged("DATE_PROCEDURE");
                 OnDATE_PROCEDUREChanged();
             }
@@ -6829,7 +6932,7 @@ namespace CINCOPA.Model
             {
                 OnFV_PERCENTChanging(value);
                 ReportPropertyChanging("FV_PERCENT");
-                _FV_PERCENT = StructuralObject.SetValidValue(value);
+                _FV_PERCENT = StructuralObject.SetValidValue(value, "FV_PERCENT");
                 ReportPropertyChanged("FV_PERCENT");
                 OnFV_PERCENTChanged();
             }
@@ -6853,7 +6956,7 @@ namespace CINCOPA.Model
             {
                 OnEA_LJChanging(value);
                 ReportPropertyChanging("EA_LJ");
-                _EA_LJ = StructuralObject.SetValidValue(value);
+                _EA_LJ = StructuralObject.SetValidValue(value, "EA_LJ");
                 ReportPropertyChanged("EA_LJ");
                 OnEA_LJChanged();
             }
@@ -6877,7 +6980,7 @@ namespace CINCOPA.Model
             {
                 OnEA_RJChanging(value);
                 ReportPropertyChanging("EA_RJ");
-                _EA_RJ = StructuralObject.SetValidValue(value);
+                _EA_RJ = StructuralObject.SetValidValue(value, "EA_RJ");
                 ReportPropertyChanged("EA_RJ");
                 OnEA_RJChanged();
             }
@@ -6901,7 +7004,7 @@ namespace CINCOPA.Model
             {
                 OnSDLAChanging(value);
                 ReportPropertyChanging("SDLA");
-                _SDLA = StructuralObject.SetValidValue(value);
+                _SDLA = StructuralObject.SetValidValue(value, "SDLA");
                 ReportPropertyChanged("SDLA");
                 OnSDLAChanged();
             }
@@ -6925,7 +7028,7 @@ namespace CINCOPA.Model
             {
                 OnAMOUNT_OF_PERICARDIAL_EFFUSIONChanging(value);
                 ReportPropertyChanging("AMOUNT_OF_PERICARDIAL_EFFUSION");
-                _AMOUNT_OF_PERICARDIAL_EFFUSION = StructuralObject.SetValidValue(value);
+                _AMOUNT_OF_PERICARDIAL_EFFUSION = StructuralObject.SetValidValue(value, "AMOUNT_OF_PERICARDIAL_EFFUSION");
                 ReportPropertyChanged("AMOUNT_OF_PERICARDIAL_EFFUSION");
                 OnAMOUNT_OF_PERICARDIAL_EFFUSIONChanged();
             }
@@ -6949,7 +7052,7 @@ namespace CINCOPA.Model
             {
                 OnCOMMENTSChanging(value);
                 ReportPropertyChanging("COMMENTS");
-                _COMMENTS = StructuralObject.SetValidValue(value, true);
+                _COMMENTS = StructuralObject.SetValidValue(value, true, "COMMENTS");
                 ReportPropertyChanged("COMMENTS");
                 OnCOMMENTSChanged();
             }
@@ -6973,7 +7076,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -6997,7 +7100,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -7021,7 +7124,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -7045,7 +7148,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -7069,7 +7172,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -7077,10 +7180,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_THREE_Id
+        {
+            get
+            {
+                return _VISIT_THREE_Id;
+            }
+            set
+            {
+                OnVISIT_THREE_IdChanging(value);
+                ReportPropertyChanging("VISIT_THREE_Id");
+                _VISIT_THREE_Id = StructuralObject.SetValidValue(value, "VISIT_THREE_Id");
+                ReportPropertyChanged("VISIT_THREE_Id");
+                OnVISIT_THREE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_THREE_Id;
+        partial void OnVISIT_THREE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_THREE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -7089,16 +7215,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE")]
-        public VISIT_THREE VISIT_THREE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VisitThree")]
+        public VisitThree VisitThree
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_THREE>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitThree>("CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VisitThree").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_THREE>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitThree>("CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VisitThree").Value = value;
             }
         }
         /// <summary>
@@ -7106,17 +7232,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_THREE> VISIT_THREEReference
+        public EntityReference<VisitThree> VisitThreeReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_THREE>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitThree>("CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VisitThree");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_THREE>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VISIT_THREE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitThree>("CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "VisitThree", value);
                 }
             }
         }
@@ -7128,27 +7254,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ELECTROCARDIOGRAPHY_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ElectrocardiographyVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ELECTROCARDIOGRAPHY_VISIT_1 : EntityObject
+    public partial class ElectrocardiographyVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ELECTROCARDIOGRAPHY_VISIT_1 object.
+        /// Create a new ElectrocardiographyVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static ELECTROCARDIOGRAPHY_VISIT_1 CreateELECTROCARDIOGRAPHY_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static ElectrocardiographyVisit1Set CreateElectrocardiographyVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            ELECTROCARDIOGRAPHY_VISIT_1 eLECTROCARDIOGRAPHY_VISIT_1 = new ELECTROCARDIOGRAPHY_VISIT_1();
-            eLECTROCARDIOGRAPHY_VISIT_1.Id = id;
-            return eLECTROCARDIOGRAPHY_VISIT_1;
+            ElectrocardiographyVisit1Set electrocardiographyVisit1Set = new ElectrocardiographyVisit1Set();
+            electrocardiographyVisit1Set.Id = id;
+            electrocardiographyVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return electrocardiographyVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7167,7 +7295,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -7192,7 +7320,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_PROCEDUREChanging(value);
                 ReportPropertyChanging("DATE_PROCEDURE");
-                _DATE_PROCEDURE = StructuralObject.SetValidValue(value);
+                _DATE_PROCEDURE = StructuralObject.SetValidValue(value, "DATE_PROCEDURE");
                 ReportPropertyChanged("DATE_PROCEDURE");
                 OnDATE_PROCEDUREChanged();
             }
@@ -7216,7 +7344,7 @@ namespace CINCOPA.Model
             {
                 OnSINUS_RHYTHMChanging(value);
                 ReportPropertyChanging("SINUS_RHYTHM");
-                _SINUS_RHYTHM = StructuralObject.SetValidValue(value);
+                _SINUS_RHYTHM = StructuralObject.SetValidValue(value, "SINUS_RHYTHM");
                 ReportPropertyChanged("SINUS_RHYTHM");
                 OnSINUS_RHYTHMChanged();
             }
@@ -7240,7 +7368,7 @@ namespace CINCOPA.Model
             {
                 OnATRIAL_FIBRILLATIONChanging(value);
                 ReportPropertyChanging("ATRIAL_FIBRILLATION");
-                _ATRIAL_FIBRILLATION = StructuralObject.SetValidValue(value);
+                _ATRIAL_FIBRILLATION = StructuralObject.SetValidValue(value, "ATRIAL_FIBRILLATION");
                 ReportPropertyChanged("ATRIAL_FIBRILLATION");
                 OnATRIAL_FIBRILLATIONChanged();
             }
@@ -7264,7 +7392,7 @@ namespace CINCOPA.Model
             {
                 OnARRYTHMIA_SUPRAVENTRICULARChanging(value);
                 ReportPropertyChanging("ARRYTHMIA_SUPRAVENTRICULAR");
-                _ARRYTHMIA_SUPRAVENTRICULAR = StructuralObject.SetValidValue(value);
+                _ARRYTHMIA_SUPRAVENTRICULAR = StructuralObject.SetValidValue(value, "ARRYTHMIA_SUPRAVENTRICULAR");
                 ReportPropertyChanged("ARRYTHMIA_SUPRAVENTRICULAR");
                 OnARRYTHMIA_SUPRAVENTRICULARChanged();
             }
@@ -7288,7 +7416,7 @@ namespace CINCOPA.Model
             {
                 OnARRYTHMIA_VENTRICULAR_PREMATURE_BEATSChanging(value);
                 ReportPropertyChanging("ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS");
-                _ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS = StructuralObject.SetValidValue(value);
+                _ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS = StructuralObject.SetValidValue(value, "ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS");
                 ReportPropertyChanged("ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS");
                 OnARRYTHMIA_VENTRICULAR_PREMATURE_BEATSChanged();
             }
@@ -7312,7 +7440,7 @@ namespace CINCOPA.Model
             {
                 OnHEART_RATEChanging(value);
                 ReportPropertyChanging("HEART_RATE");
-                _HEART_RATE = StructuralObject.SetValidValue(value);
+                _HEART_RATE = StructuralObject.SetValidValue(value, "HEART_RATE");
                 ReportPropertyChanged("HEART_RATE");
                 OnHEART_RATEChanged();
             }
@@ -7336,7 +7464,7 @@ namespace CINCOPA.Model
             {
                 OnSIGNIFICANT_CHANGESChanging(value);
                 ReportPropertyChanging("SIGNIFICANT_CHANGES");
-                _SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true);
+                _SIGNIFICANT_CHANGES = StructuralObject.SetValidValue(value, true, "SIGNIFICANT_CHANGES");
                 ReportPropertyChanged("SIGNIFICANT_CHANGES");
                 OnSIGNIFICANT_CHANGESChanged();
             }
@@ -7360,7 +7488,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -7384,7 +7512,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -7408,7 +7536,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -7432,7 +7560,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -7456,7 +7584,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -7464,10 +7592,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -7476,16 +7627,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VisitOne")]
+        public VisitOne VisitOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VISIT_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VisitOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VISIT_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VisitOne").Value = value;
             }
         }
         /// <summary>
@@ -7493,17 +7644,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
+        public EntityReference<VisitOne> VisitOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VISIT_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VisitOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VISIT_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "VisitOne", value);
                 }
             }
         }
@@ -7515,27 +7666,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EVALUATION_OF_SYMPTOMS_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EvaluationOfSymptomsVisit11Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class EVALUATION_OF_SYMPTOMS_VISIT_1 : EntityObject
+    public partial class EvaluationOfSymptomsVisit11Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new EVALUATION_OF_SYMPTOMS_VISIT_1 object.
+        /// Create a new EvaluationOfSymptomsVisit11Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static EVALUATION_OF_SYMPTOMS_VISIT_1 CreateEVALUATION_OF_SYMPTOMS_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_ONE_Id">Initial value of the VISIT_ONE_ONE_Id property.</param>
+        public static EvaluationOfSymptomsVisit11Set CreateEvaluationOfSymptomsVisit11Set(global::System.Guid id, global::System.Guid vISIT_ONE_ONE_Id)
         {
-            EVALUATION_OF_SYMPTOMS_VISIT_1 eVALUATION_OF_SYMPTOMS_VISIT_1 = new EVALUATION_OF_SYMPTOMS_VISIT_1();
-            eVALUATION_OF_SYMPTOMS_VISIT_1.Id = id;
-            return eVALUATION_OF_SYMPTOMS_VISIT_1;
+            EvaluationOfSymptomsVisit11Set evaluationOfSymptomsVisit11Set = new EvaluationOfSymptomsVisit11Set();
+            evaluationOfSymptomsVisit11Set.Id = id;
+            evaluationOfSymptomsVisit11Set.VISIT_ONE_ONE_Id = vISIT_ONE_ONE_Id;
+            return evaluationOfSymptomsVisit11Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7554,7 +7707,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -7579,7 +7732,7 @@ namespace CINCOPA.Model
             {
                 OnDYSPNEAChanging(value);
                 ReportPropertyChanging("DYSPNEA");
-                _DYSPNEA = StructuralObject.SetValidValue(value, true);
+                _DYSPNEA = StructuralObject.SetValidValue(value, true, "DYSPNEA");
                 ReportPropertyChanged("DYSPNEA");
                 OnDYSPNEAChanged();
             }
@@ -7603,7 +7756,7 @@ namespace CINCOPA.Model
             {
                 OnCOUGHChanging(value);
                 ReportPropertyChanging("COUGH");
-                _COUGH = StructuralObject.SetValidValue(value, true);
+                _COUGH = StructuralObject.SetValidValue(value, true, "COUGH");
                 ReportPropertyChanged("COUGH");
                 OnCOUGHChanged();
             }
@@ -7627,7 +7780,7 @@ namespace CINCOPA.Model
             {
                 OnSPUTUMChanging(value);
                 ReportPropertyChanging("SPUTUM");
-                _SPUTUM = StructuralObject.SetValidValue(value, true);
+                _SPUTUM = StructuralObject.SetValidValue(value, true, "SPUTUM");
                 ReportPropertyChanged("SPUTUM");
                 OnSPUTUMChanged();
             }
@@ -7651,7 +7804,7 @@ namespace CINCOPA.Model
             {
                 OnSPUTUM_TYPEChanging(value);
                 ReportPropertyChanging("SPUTUM_TYPE");
-                _SPUTUM_TYPE = StructuralObject.SetValidValue(value, true);
+                _SPUTUM_TYPE = StructuralObject.SetValidValue(value, true, "SPUTUM_TYPE");
                 ReportPropertyChanged("SPUTUM_TYPE");
                 OnSPUTUM_TYPEChanged();
             }
@@ -7675,7 +7828,7 @@ namespace CINCOPA.Model
             {
                 OnTEMPERATURE_INCREASEChanging(value);
                 ReportPropertyChanging("TEMPERATURE_INCREASE");
-                _TEMPERATURE_INCREASE = StructuralObject.SetValidValue(value, true);
+                _TEMPERATURE_INCREASE = StructuralObject.SetValidValue(value, true, "TEMPERATURE_INCREASE");
                 ReportPropertyChanged("TEMPERATURE_INCREASE");
                 OnTEMPERATURE_INCREASEChanged();
             }
@@ -7699,7 +7852,7 @@ namespace CINCOPA.Model
             {
                 OnCOLD_SYMPTOMChanging(value);
                 ReportPropertyChanging("COLD_SYMPTOM");
-                _COLD_SYMPTOM = StructuralObject.SetValidValue(value, true);
+                _COLD_SYMPTOM = StructuralObject.SetValidValue(value, true, "COLD_SYMPTOM");
                 ReportPropertyChanged("COLD_SYMPTOM");
                 OnCOLD_SYMPTOMChanged();
             }
@@ -7723,7 +7876,7 @@ namespace CINCOPA.Model
             {
                 OnSHORTERING_OF_PERCUSSION_SOUNDSChanging(value);
                 ReportPropertyChanging("SHORTERING_OF_PERCUSSION_SOUNDS");
-                _SHORTERING_OF_PERCUSSION_SOUNDS = StructuralObject.SetValidValue(value, true);
+                _SHORTERING_OF_PERCUSSION_SOUNDS = StructuralObject.SetValidValue(value, true, "SHORTERING_OF_PERCUSSION_SOUNDS");
                 ReportPropertyChanged("SHORTERING_OF_PERCUSSION_SOUNDS");
                 OnSHORTERING_OF_PERCUSSION_SOUNDSChanged();
             }
@@ -7747,7 +7900,7 @@ namespace CINCOPA.Model
             {
                 OnMOIST_RALES_SOUNDSChanging(value);
                 ReportPropertyChanging("MOIST_RALES_SOUNDS");
-                _MOIST_RALES_SOUNDS = StructuralObject.SetValidValue(value, true);
+                _MOIST_RALES_SOUNDS = StructuralObject.SetValidValue(value, true, "MOIST_RALES_SOUNDS");
                 ReportPropertyChanged("MOIST_RALES_SOUNDS");
                 OnMOIST_RALES_SOUNDSChanged();
             }
@@ -7771,7 +7924,7 @@ namespace CINCOPA.Model
             {
                 OnCREPITUSChanging(value);
                 ReportPropertyChanging("CREPITUS");
-                _CREPITUS = StructuralObject.SetValidValue(value, true);
+                _CREPITUS = StructuralObject.SetValidValue(value, true, "CREPITUS");
                 ReportPropertyChanged("CREPITUS");
                 OnCREPITUSChanged();
             }
@@ -7795,7 +7948,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_FRICTION_NOISEChanging(value);
                 ReportPropertyChanging("PLEURAL_FRICTION_NOISE");
-                _PLEURAL_FRICTION_NOISE = StructuralObject.SetValidValue(value, true);
+                _PLEURAL_FRICTION_NOISE = StructuralObject.SetValidValue(value, true, "PLEURAL_FRICTION_NOISE");
                 ReportPropertyChanged("PLEURAL_FRICTION_NOISE");
                 OnPLEURAL_FRICTION_NOISEChanged();
             }
@@ -7819,7 +7972,7 @@ namespace CINCOPA.Model
             {
                 OnDRY_RALESChanging(value);
                 ReportPropertyChanging("DRY_RALES");
-                _DRY_RALES = StructuralObject.SetValidValue(value, true);
+                _DRY_RALES = StructuralObject.SetValidValue(value, true, "DRY_RALES");
                 ReportPropertyChanged("DRY_RALES");
                 OnDRY_RALESChanged();
             }
@@ -7843,7 +7996,7 @@ namespace CINCOPA.Model
             {
                 OnPRESENCE_OF_EDEMAChanging(value);
                 ReportPropertyChanging("PRESENCE_OF_EDEMA");
-                _PRESENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true);
+                _PRESENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true, "PRESENCE_OF_EDEMA");
                 ReportPropertyChanged("PRESENCE_OF_EDEMA");
                 OnPRESENCE_OF_EDEMAChanged();
             }
@@ -7867,538 +8020,7 @@ namespace CINCOPA.Model
             {
                 OnINCIDENCE_OF_EDEMAChanging(value);
                 ReportPropertyChanging("INCIDENCE_OF_EDEMA");
-                _INCIDENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("INCIDENCE_OF_EDEMA");
-                OnINCIDENCE_OF_EDEMAChanged();
-            }
-        }
-        private global::System.String _INCIDENCE_OF_EDEMA;
-        partial void OnINCIDENCE_OF_EDEMAChanging(global::System.String value);
-        partial void OnINCIDENCE_OF_EDEMAChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String CreatedBy
-        {
-            get
-            {
-                return _CreatedBy;
-            }
-            set
-            {
-                OnCreatedByChanging(value);
-                ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CreatedBy");
-                OnCreatedByChanged();
-            }
-        }
-        private global::System.String _CreatedBy;
-        partial void OnCreatedByChanging(global::System.String value);
-        partial void OnCreatedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String CreatedByDate
-        {
-            get
-            {
-                return _CreatedByDate;
-            }
-            set
-            {
-                OnCreatedByDateChanging(value);
-                ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CreatedByDate");
-                OnCreatedByDateChanged();
-            }
-        }
-        private global::System.String _CreatedByDate;
-        partial void OnCreatedByDateChanging(global::System.String value);
-        partial void OnCreatedByDateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String UpdatedBy
-        {
-            get
-            {
-                return _UpdatedBy;
-            }
-            set
-            {
-                OnUpdatedByChanging(value);
-                ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("UpdatedBy");
-                OnUpdatedByChanged();
-            }
-        }
-        private global::System.String _UpdatedBy;
-        partial void OnUpdatedByChanging(global::System.String value);
-        partial void OnUpdatedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String UpdatedByDate
-        {
-            get
-            {
-                return _UpdatedByDate;
-            }
-            set
-            {
-                OnUpdatedByDateChanging(value);
-                ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("UpdatedByDate");
-                OnUpdatedByDateChanged();
-            }
-        }
-        private global::System.String _UpdatedByDate;
-        partial void OnUpdatedByDateChanging(global::System.String value);
-        partial void OnUpdatedByDateChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String StateCode
-        {
-            get
-            {
-                return _StateCode;
-            }
-            set
-            {
-                OnStateCodeChanging(value);
-                ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("StateCode");
-                OnStateCodeChanged();
-            }
-        }
-        private global::System.String _StateCode;
-        partial void OnStateCodeChanging(global::System.String value);
-        partial void OnStateCodeChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VISIT_ONE", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EVALUATION_OF_SYMPTOMS_VISIT_11")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EVALUATION_OF_SYMPTOMS_VISIT_11 : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EVALUATION_OF_SYMPTOMS_VISIT_11 object.
-        /// </summary>
-        /// <param name="id">Initial value of the Id property.</param>
-        public static EVALUATION_OF_SYMPTOMS_VISIT_11 CreateEVALUATION_OF_SYMPTOMS_VISIT_11(global::System.Guid id)
-        {
-            EVALUATION_OF_SYMPTOMS_VISIT_11 eVALUATION_OF_SYMPTOMS_VISIT_11 = new EVALUATION_OF_SYMPTOMS_VISIT_11();
-            eVALUATION_OF_SYMPTOMS_VISIT_11.Id = id;
-            return eVALUATION_OF_SYMPTOMS_VISIT_11;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid Id
-        {
-            get
-            {
-                return _Id;
-            }
-            set
-            {
-                if (_Id != value)
-                {
-                    OnIdChanging(value);
-                    ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Id");
-                    OnIdChanged();
-                }
-            }
-        }
-        private global::System.Guid _Id;
-        partial void OnIdChanging(global::System.Guid value);
-        partial void OnIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String DYSPNEA
-        {
-            get
-            {
-                return _DYSPNEA;
-            }
-            set
-            {
-                OnDYSPNEAChanging(value);
-                ReportPropertyChanging("DYSPNEA");
-                _DYSPNEA = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("DYSPNEA");
-                OnDYSPNEAChanged();
-            }
-        }
-        private global::System.String _DYSPNEA;
-        partial void OnDYSPNEAChanging(global::System.String value);
-        partial void OnDYSPNEAChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String COUGH
-        {
-            get
-            {
-                return _COUGH;
-            }
-            set
-            {
-                OnCOUGHChanging(value);
-                ReportPropertyChanging("COUGH");
-                _COUGH = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("COUGH");
-                OnCOUGHChanged();
-            }
-        }
-        private global::System.String _COUGH;
-        partial void OnCOUGHChanging(global::System.String value);
-        partial void OnCOUGHChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String SPUTUM
-        {
-            get
-            {
-                return _SPUTUM;
-            }
-            set
-            {
-                OnSPUTUMChanging(value);
-                ReportPropertyChanging("SPUTUM");
-                _SPUTUM = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("SPUTUM");
-                OnSPUTUMChanged();
-            }
-        }
-        private global::System.String _SPUTUM;
-        partial void OnSPUTUMChanging(global::System.String value);
-        partial void OnSPUTUMChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String SPUTUM_TYPE
-        {
-            get
-            {
-                return _SPUTUM_TYPE;
-            }
-            set
-            {
-                OnSPUTUM_TYPEChanging(value);
-                ReportPropertyChanging("SPUTUM_TYPE");
-                _SPUTUM_TYPE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("SPUTUM_TYPE");
-                OnSPUTUM_TYPEChanged();
-            }
-        }
-        private global::System.String _SPUTUM_TYPE;
-        partial void OnSPUTUM_TYPEChanging(global::System.String value);
-        partial void OnSPUTUM_TYPEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String TEMPERATURE_INCREASE
-        {
-            get
-            {
-                return _TEMPERATURE_INCREASE;
-            }
-            set
-            {
-                OnTEMPERATURE_INCREASEChanging(value);
-                ReportPropertyChanging("TEMPERATURE_INCREASE");
-                _TEMPERATURE_INCREASE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("TEMPERATURE_INCREASE");
-                OnTEMPERATURE_INCREASEChanged();
-            }
-        }
-        private global::System.String _TEMPERATURE_INCREASE;
-        partial void OnTEMPERATURE_INCREASEChanging(global::System.String value);
-        partial void OnTEMPERATURE_INCREASEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String COLD_SYMPTOM
-        {
-            get
-            {
-                return _COLD_SYMPTOM;
-            }
-            set
-            {
-                OnCOLD_SYMPTOMChanging(value);
-                ReportPropertyChanging("COLD_SYMPTOM");
-                _COLD_SYMPTOM = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("COLD_SYMPTOM");
-                OnCOLD_SYMPTOMChanged();
-            }
-        }
-        private global::System.String _COLD_SYMPTOM;
-        partial void OnCOLD_SYMPTOMChanging(global::System.String value);
-        partial void OnCOLD_SYMPTOMChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String SHORTERING_OF_PERCUSSION_SOUNDS
-        {
-            get
-            {
-                return _SHORTERING_OF_PERCUSSION_SOUNDS;
-            }
-            set
-            {
-                OnSHORTERING_OF_PERCUSSION_SOUNDSChanging(value);
-                ReportPropertyChanging("SHORTERING_OF_PERCUSSION_SOUNDS");
-                _SHORTERING_OF_PERCUSSION_SOUNDS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("SHORTERING_OF_PERCUSSION_SOUNDS");
-                OnSHORTERING_OF_PERCUSSION_SOUNDSChanged();
-            }
-        }
-        private global::System.String _SHORTERING_OF_PERCUSSION_SOUNDS;
-        partial void OnSHORTERING_OF_PERCUSSION_SOUNDSChanging(global::System.String value);
-        partial void OnSHORTERING_OF_PERCUSSION_SOUNDSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String MOIST_RALES_SOUNDS
-        {
-            get
-            {
-                return _MOIST_RALES_SOUNDS;
-            }
-            set
-            {
-                OnMOIST_RALES_SOUNDSChanging(value);
-                ReportPropertyChanging("MOIST_RALES_SOUNDS");
-                _MOIST_RALES_SOUNDS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("MOIST_RALES_SOUNDS");
-                OnMOIST_RALES_SOUNDSChanged();
-            }
-        }
-        private global::System.String _MOIST_RALES_SOUNDS;
-        partial void OnMOIST_RALES_SOUNDSChanging(global::System.String value);
-        partial void OnMOIST_RALES_SOUNDSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String CREPITUS
-        {
-            get
-            {
-                return _CREPITUS;
-            }
-            set
-            {
-                OnCREPITUSChanging(value);
-                ReportPropertyChanging("CREPITUS");
-                _CREPITUS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CREPITUS");
-                OnCREPITUSChanged();
-            }
-        }
-        private global::System.String _CREPITUS;
-        partial void OnCREPITUSChanging(global::System.String value);
-        partial void OnCREPITUSChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PLEURAL_FRICTION_NOISE
-        {
-            get
-            {
-                return _PLEURAL_FRICTION_NOISE;
-            }
-            set
-            {
-                OnPLEURAL_FRICTION_NOISEChanging(value);
-                ReportPropertyChanging("PLEURAL_FRICTION_NOISE");
-                _PLEURAL_FRICTION_NOISE = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PLEURAL_FRICTION_NOISE");
-                OnPLEURAL_FRICTION_NOISEChanged();
-            }
-        }
-        private global::System.String _PLEURAL_FRICTION_NOISE;
-        partial void OnPLEURAL_FRICTION_NOISEChanging(global::System.String value);
-        partial void OnPLEURAL_FRICTION_NOISEChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String DRY_RALES
-        {
-            get
-            {
-                return _DRY_RALES;
-            }
-            set
-            {
-                OnDRY_RALESChanging(value);
-                ReportPropertyChanging("DRY_RALES");
-                _DRY_RALES = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("DRY_RALES");
-                OnDRY_RALESChanged();
-            }
-        }
-        private global::System.String _DRY_RALES;
-        partial void OnDRY_RALESChanging(global::System.String value);
-        partial void OnDRY_RALESChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PRESENCE_OF_EDEMA
-        {
-            get
-            {
-                return _PRESENCE_OF_EDEMA;
-            }
-            set
-            {
-                OnPRESENCE_OF_EDEMAChanging(value);
-                ReportPropertyChanging("PRESENCE_OF_EDEMA");
-                _PRESENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PRESENCE_OF_EDEMA");
-                OnPRESENCE_OF_EDEMAChanged();
-            }
-        }
-        private global::System.String _PRESENCE_OF_EDEMA;
-        partial void OnPRESENCE_OF_EDEMAChanging(global::System.String value);
-        partial void OnPRESENCE_OF_EDEMAChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String INCIDENCE_OF_EDEMA
-        {
-            get
-            {
-                return _INCIDENCE_OF_EDEMA;
-            }
-            set
-            {
-                OnINCIDENCE_OF_EDEMAChanging(value);
-                ReportPropertyChanging("INCIDENCE_OF_EDEMA");
-                _INCIDENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true);
+                _INCIDENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true, "INCIDENCE_OF_EDEMA");
                 ReportPropertyChanged("INCIDENCE_OF_EDEMA");
                 OnINCIDENCE_OF_EDEMAChanged();
             }
@@ -8422,7 +8044,7 @@ namespace CINCOPA.Model
             {
                 OnTHERAPY_EFFICIENCYChanging(value);
                 ReportPropertyChanging("THERAPY_EFFICIENCY");
-                _THERAPY_EFFICIENCY = StructuralObject.SetValidValue(value, true);
+                _THERAPY_EFFICIENCY = StructuralObject.SetValidValue(value, true, "THERAPY_EFFICIENCY");
                 ReportPropertyChanged("THERAPY_EFFICIENCY");
                 OnTHERAPY_EFFICIENCYChanged();
             }
@@ -8446,7 +8068,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -8470,7 +8092,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -8494,7 +8116,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -8518,7 +8140,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -8542,7 +8164,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -8550,10 +8172,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_ONE_Id");
+                _VISIT_ONE_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_ONE_Id");
+                OnVISIT_ONE_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_ONE_Id;
+        partial void OnVISIT_ONE_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -8562,16 +8207,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE")]
-        public VISIT_ONE_ONE VISIT_ONE_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VisitOneOne")]
+        public VisitOneOne VisitOneOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOneOne>("CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VisitOneOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOneOne>("CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VisitOneOne").Value = value;
             }
         }
         /// <summary>
@@ -8579,17 +8224,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE_ONE> VISIT_ONE_ONEReference
+        public EntityReference<VisitOneOne> VisitOneOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOneOne>("CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VisitOneOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE_ONE>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VISIT_ONE_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOneOne>("CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "VisitOneOne", value);
                 }
             }
         }
@@ -8601,29 +8246,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EVALUATION_OF_SYMPTOMS_VISIT_2")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EvaluationOfSymptomsVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class EVALUATION_OF_SYMPTOMS_VISIT_2 : EntityObject
+    public partial class EvaluationOfSymptomsVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new EVALUATION_OF_SYMPTOMS_VISIT_2 object.
+        /// Create a new EvaluationOfSymptomsVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="tHERAPY_EFFICIENCY">Initial value of the THERAPY_EFFICIENCY property.</param>
-        public static EVALUATION_OF_SYMPTOMS_VISIT_2 CreateEVALUATION_OF_SYMPTOMS_VISIT_2(global::System.Guid id, global::System.String tHERAPY_EFFICIENCY)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static EvaluationOfSymptomsVisit1Set CreateEvaluationOfSymptomsVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            EVALUATION_OF_SYMPTOMS_VISIT_2 eVALUATION_OF_SYMPTOMS_VISIT_2 = new EVALUATION_OF_SYMPTOMS_VISIT_2();
-            eVALUATION_OF_SYMPTOMS_VISIT_2.Id = id;
-            eVALUATION_OF_SYMPTOMS_VISIT_2.THERAPY_EFFICIENCY = tHERAPY_EFFICIENCY;
-            return eVALUATION_OF_SYMPTOMS_VISIT_2;
+            EvaluationOfSymptomsVisit1Set evaluationOfSymptomsVisit1Set = new EvaluationOfSymptomsVisit1Set();
+            evaluationOfSymptomsVisit1Set.Id = id;
+            evaluationOfSymptomsVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return evaluationOfSymptomsVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -8642,7 +8287,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -8667,7 +8312,7 @@ namespace CINCOPA.Model
             {
                 OnDYSPNEAChanging(value);
                 ReportPropertyChanging("DYSPNEA");
-                _DYSPNEA = StructuralObject.SetValidValue(value, true);
+                _DYSPNEA = StructuralObject.SetValidValue(value, true, "DYSPNEA");
                 ReportPropertyChanged("DYSPNEA");
                 OnDYSPNEAChanged();
             }
@@ -8691,7 +8336,7 @@ namespace CINCOPA.Model
             {
                 OnCOUGHChanging(value);
                 ReportPropertyChanging("COUGH");
-                _COUGH = StructuralObject.SetValidValue(value, true);
+                _COUGH = StructuralObject.SetValidValue(value, true, "COUGH");
                 ReportPropertyChanged("COUGH");
                 OnCOUGHChanged();
             }
@@ -8715,7 +8360,7 @@ namespace CINCOPA.Model
             {
                 OnSPUTUMChanging(value);
                 ReportPropertyChanging("SPUTUM");
-                _SPUTUM = StructuralObject.SetValidValue(value, true);
+                _SPUTUM = StructuralObject.SetValidValue(value, true, "SPUTUM");
                 ReportPropertyChanged("SPUTUM");
                 OnSPUTUMChanged();
             }
@@ -8739,7 +8384,7 @@ namespace CINCOPA.Model
             {
                 OnSPUTUM_TYPEChanging(value);
                 ReportPropertyChanging("SPUTUM_TYPE");
-                _SPUTUM_TYPE = StructuralObject.SetValidValue(value, true);
+                _SPUTUM_TYPE = StructuralObject.SetValidValue(value, true, "SPUTUM_TYPE");
                 ReportPropertyChanged("SPUTUM_TYPE");
                 OnSPUTUM_TYPEChanged();
             }
@@ -8763,7 +8408,7 @@ namespace CINCOPA.Model
             {
                 OnTEMPERATURE_INCREASEChanging(value);
                 ReportPropertyChanging("TEMPERATURE_INCREASE");
-                _TEMPERATURE_INCREASE = StructuralObject.SetValidValue(value, true);
+                _TEMPERATURE_INCREASE = StructuralObject.SetValidValue(value, true, "TEMPERATURE_INCREASE");
                 ReportPropertyChanged("TEMPERATURE_INCREASE");
                 OnTEMPERATURE_INCREASEChanged();
             }
@@ -8787,7 +8432,7 @@ namespace CINCOPA.Model
             {
                 OnCOLD_SYMPTOMChanging(value);
                 ReportPropertyChanging("COLD_SYMPTOM");
-                _COLD_SYMPTOM = StructuralObject.SetValidValue(value, true);
+                _COLD_SYMPTOM = StructuralObject.SetValidValue(value, true, "COLD_SYMPTOM");
                 ReportPropertyChanged("COLD_SYMPTOM");
                 OnCOLD_SYMPTOMChanged();
             }
@@ -8811,7 +8456,7 @@ namespace CINCOPA.Model
             {
                 OnSHORTERING_OF_PERCUSSION_SOUNDSChanging(value);
                 ReportPropertyChanging("SHORTERING_OF_PERCUSSION_SOUNDS");
-                _SHORTERING_OF_PERCUSSION_SOUNDS = StructuralObject.SetValidValue(value, true);
+                _SHORTERING_OF_PERCUSSION_SOUNDS = StructuralObject.SetValidValue(value, true, "SHORTERING_OF_PERCUSSION_SOUNDS");
                 ReportPropertyChanged("SHORTERING_OF_PERCUSSION_SOUNDS");
                 OnSHORTERING_OF_PERCUSSION_SOUNDSChanged();
             }
@@ -8835,7 +8480,7 @@ namespace CINCOPA.Model
             {
                 OnMOIST_RALES_SOUNDSChanging(value);
                 ReportPropertyChanging("MOIST_RALES_SOUNDS");
-                _MOIST_RALES_SOUNDS = StructuralObject.SetValidValue(value, true);
+                _MOIST_RALES_SOUNDS = StructuralObject.SetValidValue(value, true, "MOIST_RALES_SOUNDS");
                 ReportPropertyChanged("MOIST_RALES_SOUNDS");
                 OnMOIST_RALES_SOUNDSChanged();
             }
@@ -8859,7 +8504,7 @@ namespace CINCOPA.Model
             {
                 OnCREPITUSChanging(value);
                 ReportPropertyChanging("CREPITUS");
-                _CREPITUS = StructuralObject.SetValidValue(value, true);
+                _CREPITUS = StructuralObject.SetValidValue(value, true, "CREPITUS");
                 ReportPropertyChanged("CREPITUS");
                 OnCREPITUSChanged();
             }
@@ -8883,7 +8528,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_FRICTION_NOISEChanging(value);
                 ReportPropertyChanging("PLEURAL_FRICTION_NOISE");
-                _PLEURAL_FRICTION_NOISE = StructuralObject.SetValidValue(value, true);
+                _PLEURAL_FRICTION_NOISE = StructuralObject.SetValidValue(value, true, "PLEURAL_FRICTION_NOISE");
                 ReportPropertyChanged("PLEURAL_FRICTION_NOISE");
                 OnPLEURAL_FRICTION_NOISEChanged();
             }
@@ -8907,7 +8552,7 @@ namespace CINCOPA.Model
             {
                 OnDRY_RALESChanging(value);
                 ReportPropertyChanging("DRY_RALES");
-                _DRY_RALES = StructuralObject.SetValidValue(value, true);
+                _DRY_RALES = StructuralObject.SetValidValue(value, true, "DRY_RALES");
                 ReportPropertyChanged("DRY_RALES");
                 OnDRY_RALESChanged();
             }
@@ -8931,7 +8576,7 @@ namespace CINCOPA.Model
             {
                 OnPRESENCE_OF_EDEMAChanging(value);
                 ReportPropertyChanging("PRESENCE_OF_EDEMA");
-                _PRESENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true);
+                _PRESENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true, "PRESENCE_OF_EDEMA");
                 ReportPropertyChanged("PRESENCE_OF_EDEMA");
                 OnPRESENCE_OF_EDEMAChanged();
             }
@@ -8955,7 +8600,565 @@ namespace CINCOPA.Model
             {
                 OnINCIDENCE_OF_EDEMAChanging(value);
                 ReportPropertyChanging("INCIDENCE_OF_EDEMA");
-                _INCIDENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true);
+                _INCIDENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true, "INCIDENCE_OF_EDEMA");
+                ReportPropertyChanged("INCIDENCE_OF_EDEMA");
+                OnINCIDENCE_OF_EDEMAChanged();
+            }
+        }
+        private global::System.String _INCIDENCE_OF_EDEMA;
+        partial void OnINCIDENCE_OF_EDEMAChanging(global::System.String value);
+        partial void OnINCIDENCE_OF_EDEMAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedByDate
+        {
+            get
+            {
+                return _CreatedByDate;
+            }
+            set
+            {
+                OnCreatedByDateChanging(value);
+                ReportPropertyChanging("CreatedByDate");
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
+                ReportPropertyChanged("CreatedByDate");
+                OnCreatedByDateChanged();
+            }
+        }
+        private global::System.String _CreatedByDate;
+        partial void OnCreatedByDateChanging(global::System.String value);
+        partial void OnCreatedByDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String UpdatedBy
+        {
+            get
+            {
+                return _UpdatedBy;
+            }
+            set
+            {
+                OnUpdatedByChanging(value);
+                ReportPropertyChanging("UpdatedBy");
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
+                ReportPropertyChanged("UpdatedBy");
+                OnUpdatedByChanged();
+            }
+        }
+        private global::System.String _UpdatedBy;
+        partial void OnUpdatedByChanging(global::System.String value);
+        partial void OnUpdatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String UpdatedByDate
+        {
+            get
+            {
+                return _UpdatedByDate;
+            }
+            set
+            {
+                OnUpdatedByDateChanging(value);
+                ReportPropertyChanging("UpdatedByDate");
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
+                ReportPropertyChanged("UpdatedByDate");
+                OnUpdatedByDateChanged();
+            }
+        }
+        private global::System.String _UpdatedByDate;
+        partial void OnUpdatedByDateChanging(global::System.String value);
+        partial void OnUpdatedByDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String StateCode
+        {
+            get
+            {
+                return _StateCode;
+            }
+            set
+            {
+                OnStateCodeChanging(value);
+                ReportPropertyChanging("StateCode");
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
+                ReportPropertyChanged("StateCode");
+                OnStateCodeChanged();
+            }
+        }
+        private global::System.String _StateCode;
+        partial void OnStateCodeChanging(global::System.String value);
+        partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
+
+        #endregion
+
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VisitOne")]
+        public VisitOne VisitOne
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VisitOne").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VisitOne").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<VisitOne> VisitOneReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VisitOne");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "VisitOne", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="EvaluationOfSymptomsVisit2Set")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class EvaluationOfSymptomsVisit2Set : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new EvaluationOfSymptomsVisit2Set object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="tHERAPY_EFFICIENCY">Initial value of the THERAPY_EFFICIENCY property.</param>
+        /// <param name="vISIT_TWO_Id">Initial value of the VISIT_TWO_Id property.</param>
+        public static EvaluationOfSymptomsVisit2Set CreateEvaluationOfSymptomsVisit2Set(global::System.Guid id, global::System.String tHERAPY_EFFICIENCY, global::System.Guid vISIT_TWO_Id)
+        {
+            EvaluationOfSymptomsVisit2Set evaluationOfSymptomsVisit2Set = new EvaluationOfSymptomsVisit2Set();
+            evaluationOfSymptomsVisit2Set.Id = id;
+            evaluationOfSymptomsVisit2Set.THERAPY_EFFICIENCY = tHERAPY_EFFICIENCY;
+            evaluationOfSymptomsVisit2Set.VISIT_TWO_Id = vISIT_TWO_Id;
+            return evaluationOfSymptomsVisit2Set;
+        }
+
+        #endregion
+
+        #region Simple Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value, "Id");
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _Id;
+        partial void OnIdChanging(global::System.Guid value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String DYSPNEA
+        {
+            get
+            {
+                return _DYSPNEA;
+            }
+            set
+            {
+                OnDYSPNEAChanging(value);
+                ReportPropertyChanging("DYSPNEA");
+                _DYSPNEA = StructuralObject.SetValidValue(value, true, "DYSPNEA");
+                ReportPropertyChanged("DYSPNEA");
+                OnDYSPNEAChanged();
+            }
+        }
+        private global::System.String _DYSPNEA;
+        partial void OnDYSPNEAChanging(global::System.String value);
+        partial void OnDYSPNEAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String COUGH
+        {
+            get
+            {
+                return _COUGH;
+            }
+            set
+            {
+                OnCOUGHChanging(value);
+                ReportPropertyChanging("COUGH");
+                _COUGH = StructuralObject.SetValidValue(value, true, "COUGH");
+                ReportPropertyChanged("COUGH");
+                OnCOUGHChanged();
+            }
+        }
+        private global::System.String _COUGH;
+        partial void OnCOUGHChanging(global::System.String value);
+        partial void OnCOUGHChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SPUTUM
+        {
+            get
+            {
+                return _SPUTUM;
+            }
+            set
+            {
+                OnSPUTUMChanging(value);
+                ReportPropertyChanging("SPUTUM");
+                _SPUTUM = StructuralObject.SetValidValue(value, true, "SPUTUM");
+                ReportPropertyChanged("SPUTUM");
+                OnSPUTUMChanged();
+            }
+        }
+        private global::System.String _SPUTUM;
+        partial void OnSPUTUMChanging(global::System.String value);
+        partial void OnSPUTUMChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SPUTUM_TYPE
+        {
+            get
+            {
+                return _SPUTUM_TYPE;
+            }
+            set
+            {
+                OnSPUTUM_TYPEChanging(value);
+                ReportPropertyChanging("SPUTUM_TYPE");
+                _SPUTUM_TYPE = StructuralObject.SetValidValue(value, true, "SPUTUM_TYPE");
+                ReportPropertyChanged("SPUTUM_TYPE");
+                OnSPUTUM_TYPEChanged();
+            }
+        }
+        private global::System.String _SPUTUM_TYPE;
+        partial void OnSPUTUM_TYPEChanging(global::System.String value);
+        partial void OnSPUTUM_TYPEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String TEMPERATURE_INCREASE
+        {
+            get
+            {
+                return _TEMPERATURE_INCREASE;
+            }
+            set
+            {
+                OnTEMPERATURE_INCREASEChanging(value);
+                ReportPropertyChanging("TEMPERATURE_INCREASE");
+                _TEMPERATURE_INCREASE = StructuralObject.SetValidValue(value, true, "TEMPERATURE_INCREASE");
+                ReportPropertyChanged("TEMPERATURE_INCREASE");
+                OnTEMPERATURE_INCREASEChanged();
+            }
+        }
+        private global::System.String _TEMPERATURE_INCREASE;
+        partial void OnTEMPERATURE_INCREASEChanging(global::System.String value);
+        partial void OnTEMPERATURE_INCREASEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String COLD_SYMPTOM
+        {
+            get
+            {
+                return _COLD_SYMPTOM;
+            }
+            set
+            {
+                OnCOLD_SYMPTOMChanging(value);
+                ReportPropertyChanging("COLD_SYMPTOM");
+                _COLD_SYMPTOM = StructuralObject.SetValidValue(value, true, "COLD_SYMPTOM");
+                ReportPropertyChanged("COLD_SYMPTOM");
+                OnCOLD_SYMPTOMChanged();
+            }
+        }
+        private global::System.String _COLD_SYMPTOM;
+        partial void OnCOLD_SYMPTOMChanging(global::System.String value);
+        partial void OnCOLD_SYMPTOMChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SHORTERING_OF_PERCUSSION_SOUNDS
+        {
+            get
+            {
+                return _SHORTERING_OF_PERCUSSION_SOUNDS;
+            }
+            set
+            {
+                OnSHORTERING_OF_PERCUSSION_SOUNDSChanging(value);
+                ReportPropertyChanging("SHORTERING_OF_PERCUSSION_SOUNDS");
+                _SHORTERING_OF_PERCUSSION_SOUNDS = StructuralObject.SetValidValue(value, true, "SHORTERING_OF_PERCUSSION_SOUNDS");
+                ReportPropertyChanged("SHORTERING_OF_PERCUSSION_SOUNDS");
+                OnSHORTERING_OF_PERCUSSION_SOUNDSChanged();
+            }
+        }
+        private global::System.String _SHORTERING_OF_PERCUSSION_SOUNDS;
+        partial void OnSHORTERING_OF_PERCUSSION_SOUNDSChanging(global::System.String value);
+        partial void OnSHORTERING_OF_PERCUSSION_SOUNDSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String MOIST_RALES_SOUNDS
+        {
+            get
+            {
+                return _MOIST_RALES_SOUNDS;
+            }
+            set
+            {
+                OnMOIST_RALES_SOUNDSChanging(value);
+                ReportPropertyChanging("MOIST_RALES_SOUNDS");
+                _MOIST_RALES_SOUNDS = StructuralObject.SetValidValue(value, true, "MOIST_RALES_SOUNDS");
+                ReportPropertyChanged("MOIST_RALES_SOUNDS");
+                OnMOIST_RALES_SOUNDSChanged();
+            }
+        }
+        private global::System.String _MOIST_RALES_SOUNDS;
+        partial void OnMOIST_RALES_SOUNDSChanging(global::System.String value);
+        partial void OnMOIST_RALES_SOUNDSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CREPITUS
+        {
+            get
+            {
+                return _CREPITUS;
+            }
+            set
+            {
+                OnCREPITUSChanging(value);
+                ReportPropertyChanging("CREPITUS");
+                _CREPITUS = StructuralObject.SetValidValue(value, true, "CREPITUS");
+                ReportPropertyChanged("CREPITUS");
+                OnCREPITUSChanged();
+            }
+        }
+        private global::System.String _CREPITUS;
+        partial void OnCREPITUSChanging(global::System.String value);
+        partial void OnCREPITUSChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PLEURAL_FRICTION_NOISE
+        {
+            get
+            {
+                return _PLEURAL_FRICTION_NOISE;
+            }
+            set
+            {
+                OnPLEURAL_FRICTION_NOISEChanging(value);
+                ReportPropertyChanging("PLEURAL_FRICTION_NOISE");
+                _PLEURAL_FRICTION_NOISE = StructuralObject.SetValidValue(value, true, "PLEURAL_FRICTION_NOISE");
+                ReportPropertyChanged("PLEURAL_FRICTION_NOISE");
+                OnPLEURAL_FRICTION_NOISEChanged();
+            }
+        }
+        private global::System.String _PLEURAL_FRICTION_NOISE;
+        partial void OnPLEURAL_FRICTION_NOISEChanging(global::System.String value);
+        partial void OnPLEURAL_FRICTION_NOISEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String DRY_RALES
+        {
+            get
+            {
+                return _DRY_RALES;
+            }
+            set
+            {
+                OnDRY_RALESChanging(value);
+                ReportPropertyChanging("DRY_RALES");
+                _DRY_RALES = StructuralObject.SetValidValue(value, true, "DRY_RALES");
+                ReportPropertyChanged("DRY_RALES");
+                OnDRY_RALESChanged();
+            }
+        }
+        private global::System.String _DRY_RALES;
+        partial void OnDRY_RALESChanging(global::System.String value);
+        partial void OnDRY_RALESChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PRESENCE_OF_EDEMA
+        {
+            get
+            {
+                return _PRESENCE_OF_EDEMA;
+            }
+            set
+            {
+                OnPRESENCE_OF_EDEMAChanging(value);
+                ReportPropertyChanging("PRESENCE_OF_EDEMA");
+                _PRESENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true, "PRESENCE_OF_EDEMA");
+                ReportPropertyChanged("PRESENCE_OF_EDEMA");
+                OnPRESENCE_OF_EDEMAChanged();
+            }
+        }
+        private global::System.String _PRESENCE_OF_EDEMA;
+        partial void OnPRESENCE_OF_EDEMAChanging(global::System.String value);
+        partial void OnPRESENCE_OF_EDEMAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String INCIDENCE_OF_EDEMA
+        {
+            get
+            {
+                return _INCIDENCE_OF_EDEMA;
+            }
+            set
+            {
+                OnINCIDENCE_OF_EDEMAChanging(value);
+                ReportPropertyChanging("INCIDENCE_OF_EDEMA");
+                _INCIDENCE_OF_EDEMA = StructuralObject.SetValidValue(value, true, "INCIDENCE_OF_EDEMA");
                 ReportPropertyChanged("INCIDENCE_OF_EDEMA");
                 OnINCIDENCE_OF_EDEMAChanged();
             }
@@ -8979,7 +9182,7 @@ namespace CINCOPA.Model
             {
                 OnTHERAPY_EFFICIENCYChanging(value);
                 ReportPropertyChanging("THERAPY_EFFICIENCY");
-                _THERAPY_EFFICIENCY = StructuralObject.SetValidValue(value, false);
+                _THERAPY_EFFICIENCY = StructuralObject.SetValidValue(value, false, "THERAPY_EFFICIENCY");
                 ReportPropertyChanged("THERAPY_EFFICIENCY");
                 OnTHERAPY_EFFICIENCYChanged();
             }
@@ -9003,7 +9206,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -9027,7 +9230,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -9051,7 +9254,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -9075,7 +9278,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -9099,7 +9302,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -9107,10 +9310,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_TWO_Id
+        {
+            get
+            {
+                return _VISIT_TWO_Id;
+            }
+            set
+            {
+                OnVISIT_TWO_IdChanging(value);
+                ReportPropertyChanging("VISIT_TWO_Id");
+                _VISIT_TWO_Id = StructuralObject.SetValidValue(value, "VISIT_TWO_Id");
+                ReportPropertyChanged("VISIT_TWO_Id");
+                OnVISIT_TWO_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_TWO_Id;
+        partial void OnVISIT_TWO_IdChanging(global::System.Guid value);
+        partial void OnVISIT_TWO_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -9119,16 +9345,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO")]
-        public VISIT_TWO VISIT_TWO
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VisitTwo")]
+        public VisitTwo VisitTwo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VisitTwo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VisitTwo").Value = value;
             }
         }
         /// <summary>
@@ -9136,17 +9362,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_TWO> VISIT_TWOReference
+        public EntityReference<VisitTwo> VisitTwoReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VisitTwo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_TWO>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VISIT_TWO", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitTwo>("CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "VisitTwo", value);
                 }
             }
         }
@@ -9158,29 +9384,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="MICROBIOLOGY_BLOOD")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="MicrobiologyBlood")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class MICROBIOLOGY_BLOOD : EntityObject
+    public partial class MicrobiologyBlood : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new MICROBIOLOGY_BLOOD object.
+        /// Create a new MicrobiologyBlood object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
-        public static MICROBIOLOGY_BLOOD CreateMICROBIOLOGY_BLOOD(global::System.Guid id, global::System.Guid cRFId)
+        public static MicrobiologyBlood CreateMicrobiologyBlood(global::System.Guid id, global::System.Guid cRFId)
         {
-            MICROBIOLOGY_BLOOD mICROBIOLOGY_BLOOD = new MICROBIOLOGY_BLOOD();
-            mICROBIOLOGY_BLOOD.Id = id;
-            mICROBIOLOGY_BLOOD.CRFId = cRFId;
-            return mICROBIOLOGY_BLOOD;
+            MicrobiologyBlood microbiologyBlood = new MicrobiologyBlood();
+            microbiologyBlood.Id = id;
+            microbiologyBlood.CRFId = cRFId;
+            return microbiologyBlood;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9199,7 +9425,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -9224,7 +9450,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -9248,7 +9474,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_CAPTUREChanging(value);
                 ReportPropertyChanging("DATE_CAPTURE");
-                _DATE_CAPTURE = StructuralObject.SetValidValue(value);
+                _DATE_CAPTURE = StructuralObject.SetValidValue(value, "DATE_CAPTURE");
                 ReportPropertyChanged("DATE_CAPTURE");
                 OnDATE_CAPTUREChanged();
             }
@@ -9272,7 +9498,7 @@ namespace CINCOPA.Model
             {
                 OnLAB_NUMBERChanging(value);
                 ReportPropertyChanging("LAB_NUMBER");
-                _LAB_NUMBER = StructuralObject.SetValidValue(value, true);
+                _LAB_NUMBER = StructuralObject.SetValidValue(value, true, "LAB_NUMBER");
                 ReportPropertyChanged("LAB_NUMBER");
                 OnLAB_NUMBERChanged();
             }
@@ -9296,7 +9522,7 @@ namespace CINCOPA.Model
             {
                 OnGROWTH_PATHOGENSChanging(value);
                 ReportPropertyChanging("GROWTH_PATHOGENS");
-                _GROWTH_PATHOGENS = StructuralObject.SetValidValue(value, true);
+                _GROWTH_PATHOGENS = StructuralObject.SetValidValue(value, true, "GROWTH_PATHOGENS");
                 ReportPropertyChanged("GROWTH_PATHOGENS");
                 OnGROWTH_PATHOGENSChanged();
             }
@@ -9320,7 +9546,7 @@ namespace CINCOPA.Model
             {
                 OnORGANISMIdChanging(value);
                 ReportPropertyChanging("ORGANISMId");
-                _ORGANISMId = StructuralObject.SetValidValue(value);
+                _ORGANISMId = StructuralObject.SetValidValue(value, "ORGANISMId");
                 ReportPropertyChanged("ORGANISMId");
                 OnORGANISMIdChanged();
             }
@@ -9344,7 +9570,7 @@ namespace CINCOPA.Model
             {
                 OnBETAChanging(value);
                 ReportPropertyChanging("BETA");
-                _BETA = StructuralObject.SetValidValue(value, true);
+                _BETA = StructuralObject.SetValidValue(value, true, "BETA");
                 ReportPropertyChanged("BETA");
                 OnBETAChanged();
             }
@@ -9368,7 +9594,7 @@ namespace CINCOPA.Model
             {
                 OnMRSAChanging(value);
                 ReportPropertyChanging("MRSA");
-                _MRSA = StructuralObject.SetValidValue(value, true);
+                _MRSA = StructuralObject.SetValidValue(value, true, "MRSA");
                 ReportPropertyChanged("MRSA");
                 OnMRSAChanged();
             }
@@ -9392,7 +9618,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -9416,7 +9642,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -9440,7 +9666,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -9464,7 +9690,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -9488,7 +9714,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -9499,7 +9725,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -9508,16 +9733,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFMICROBIOLOGY_BLOOD", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFMICROBIOLOGY_BLOOD", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -9529,13 +9754,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_BLOOD", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD", "CRF", value);
                 }
             }
         }
@@ -9546,16 +9771,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM")]
-        public ORGANISM ORGANISM
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_ORGANISMMICROBIOLOGY_BLOOD", "Organism")]
+        public Organism Organism
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD", "Organism").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD", "Organism").Value = value;
             }
         }
         /// <summary>
@@ -9563,17 +9788,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<ORGANISM> ORGANISMReference
+        public EntityReference<Organism> OrganismReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD", "Organism");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD", "ORGANISM", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD", "Organism", value);
                 }
             }
         }
@@ -9585,29 +9810,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="MICROBIOLOGY_SPUTUM")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="MicrobiologySputum")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class MICROBIOLOGY_SPUTUM : EntityObject
+    public partial class MicrobiologySputum : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new MICROBIOLOGY_SPUTUM object.
+        /// Create a new MicrobiologySputum object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
-        public static MICROBIOLOGY_SPUTUM CreateMICROBIOLOGY_SPUTUM(global::System.Guid id, global::System.Guid cRFId)
+        public static MicrobiologySputum CreateMicrobiologySputum(global::System.Guid id, global::System.Guid cRFId)
         {
-            MICROBIOLOGY_SPUTUM mICROBIOLOGY_SPUTUM = new MICROBIOLOGY_SPUTUM();
-            mICROBIOLOGY_SPUTUM.Id = id;
-            mICROBIOLOGY_SPUTUM.CRFId = cRFId;
-            return mICROBIOLOGY_SPUTUM;
+            MicrobiologySputum microbiologySputum = new MicrobiologySputum();
+            microbiologySputum.Id = id;
+            microbiologySputum.CRFId = cRFId;
+            return microbiologySputum;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9626,7 +9851,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -9651,7 +9876,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -9675,7 +9900,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_CAPTUREChanging(value);
                 ReportPropertyChanging("DATE_CAPTURE");
-                _DATE_CAPTURE = StructuralObject.SetValidValue(value);
+                _DATE_CAPTURE = StructuralObject.SetValidValue(value, "DATE_CAPTURE");
                 ReportPropertyChanged("DATE_CAPTURE");
                 OnDATE_CAPTUREChanged();
             }
@@ -9699,7 +9924,7 @@ namespace CINCOPA.Model
             {
                 OnLAB_NUMBERChanging(value);
                 ReportPropertyChanging("LAB_NUMBER");
-                _LAB_NUMBER = StructuralObject.SetValidValue(value, true);
+                _LAB_NUMBER = StructuralObject.SetValidValue(value, true, "LAB_NUMBER");
                 ReportPropertyChanged("LAB_NUMBER");
                 OnLAB_NUMBERChanged();
             }
@@ -9723,7 +9948,7 @@ namespace CINCOPA.Model
             {
                 OnQUALITY_LEUKOCYTESChanging(value);
                 ReportPropertyChanging("QUALITY_LEUKOCYTES");
-                _QUALITY_LEUKOCYTES = StructuralObject.SetValidValue(value, true);
+                _QUALITY_LEUKOCYTES = StructuralObject.SetValidValue(value, true, "QUALITY_LEUKOCYTES");
                 ReportPropertyChanged("QUALITY_LEUKOCYTES");
                 OnQUALITY_LEUKOCYTESChanged();
             }
@@ -9747,7 +9972,7 @@ namespace CINCOPA.Model
             {
                 OnQUALITY_EPITHELIALChanging(value);
                 ReportPropertyChanging("QUALITY_EPITHELIAL");
-                _QUALITY_EPITHELIAL = StructuralObject.SetValidValue(value, true);
+                _QUALITY_EPITHELIAL = StructuralObject.SetValidValue(value, true, "QUALITY_EPITHELIAL");
                 ReportPropertyChanged("QUALITY_EPITHELIAL");
                 OnQUALITY_EPITHELIALChanged();
             }
@@ -9771,7 +9996,7 @@ namespace CINCOPA.Model
             {
                 OnNOT_REPRESENTATIVEChanging(value);
                 ReportPropertyChanging("NOT_REPRESENTATIVE");
-                _NOT_REPRESENTATIVE = StructuralObject.SetValidValue(value);
+                _NOT_REPRESENTATIVE = StructuralObject.SetValidValue(value, "NOT_REPRESENTATIVE");
                 ReportPropertyChanged("NOT_REPRESENTATIVE");
                 OnNOT_REPRESENTATIVEChanged();
             }
@@ -9795,7 +10020,7 @@ namespace CINCOPA.Model
             {
                 OnGROWTH_PATHOGENSChanging(value);
                 ReportPropertyChanging("GROWTH_PATHOGENS");
-                _GROWTH_PATHOGENS = StructuralObject.SetValidValue(value, true);
+                _GROWTH_PATHOGENS = StructuralObject.SetValidValue(value, true, "GROWTH_PATHOGENS");
                 ReportPropertyChanged("GROWTH_PATHOGENS");
                 OnGROWTH_PATHOGENSChanged();
             }
@@ -9819,7 +10044,7 @@ namespace CINCOPA.Model
             {
                 OnORGANISMIdChanging(value);
                 ReportPropertyChanging("ORGANISMId");
-                _ORGANISMId = StructuralObject.SetValidValue(value);
+                _ORGANISMId = StructuralObject.SetValidValue(value, "ORGANISMId");
                 ReportPropertyChanged("ORGANISMId");
                 OnORGANISMIdChanged();
             }
@@ -9843,7 +10068,7 @@ namespace CINCOPA.Model
             {
                 OnBETAChanging(value);
                 ReportPropertyChanging("BETA");
-                _BETA = StructuralObject.SetValidValue(value, true);
+                _BETA = StructuralObject.SetValidValue(value, true, "BETA");
                 ReportPropertyChanged("BETA");
                 OnBETAChanged();
             }
@@ -9867,7 +10092,7 @@ namespace CINCOPA.Model
             {
                 OnMRSAChanging(value);
                 ReportPropertyChanging("MRSA");
-                _MRSA = StructuralObject.SetValidValue(value, true);
+                _MRSA = StructuralObject.SetValidValue(value, true, "MRSA");
                 ReportPropertyChanged("MRSA");
                 OnMRSAChanged();
             }
@@ -9891,7 +10116,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -9915,7 +10140,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -9939,7 +10164,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -9963,7 +10188,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -9987,7 +10212,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -9998,7 +10223,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -10007,16 +10231,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFMICROBIOLOGY_SPUTUM", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFMICROBIOLOGY_SPUTUM", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -10028,13 +10252,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFMICROBIOLOGY_SPUTUM", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM", "CRF", value);
                 }
             }
         }
@@ -10045,16 +10269,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM")]
-        public ORGANISM ORGANISM
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_ORGANISMMICROBIOLOGY_SPUTUM", "Organism")]
+        public Organism Organism
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM", "Organism").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM", "Organism").Value = value;
             }
         }
         /// <summary>
@@ -10062,17 +10286,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<ORGANISM> ORGANISMReference
+        public EntityReference<Organism> OrganismReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM", "Organism");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORGANISM>("CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM", "ORGANISM", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Organism>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM", "Organism", value);
                 }
             }
         }
@@ -10084,29 +10308,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ORGANISM")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="Organism")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ORGANISM : EntityObject
+    public partial class Organism : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ORGANISM object.
+        /// Create a new Organism object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nAME">Initial value of the NAME property.</param>
-        public static ORGANISM CreateORGANISM(global::System.Guid id, global::System.String nAME)
+        public static Organism CreateOrganism(global::System.Guid id, global::System.String nAME)
         {
-            ORGANISM oRGANISM = new ORGANISM();
-            oRGANISM.Id = id;
-            oRGANISM.NAME = nAME;
-            return oRGANISM;
+            Organism organism = new Organism();
+            organism.Id = id;
+            organism.NAME = nAME;
+            return organism;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10125,7 +10349,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -10150,7 +10374,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, false, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -10174,7 +10398,7 @@ namespace CINCOPA.Model
             {
                 OnCODEChanging(value);
                 ReportPropertyChanging("CODE");
-                _CODE = StructuralObject.SetValidValue(value, true);
+                _CODE = StructuralObject.SetValidValue(value, true, "CODE");
                 ReportPropertyChanged("CODE");
                 OnCODEChanged();
             }
@@ -10198,7 +10422,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -10222,7 +10446,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -10246,7 +10470,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -10270,7 +10494,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -10294,7 +10518,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -10305,7 +10529,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -10314,18 +10537,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_BLOOD", "MICROBIOLOGY_BLOOD")]
-        public EntityCollection<MICROBIOLOGY_BLOOD> MICROBIOLOGY_BLOOD
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_ORGANISMMICROBIOLOGY_BLOOD", "MicrobiologyBlood")]
+        public EntityCollection<MicrobiologyBlood> MicrobiologyBloods
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MICROBIOLOGY_BLOOD>("CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD", "MICROBIOLOGY_BLOOD");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MicrobiologyBlood>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD", "MicrobiologyBlood");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MICROBIOLOGY_BLOOD>("CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD", "MICROBIOLOGY_BLOOD", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MicrobiologyBlood>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD", "MicrobiologyBlood", value);
                 }
             }
         }
@@ -10336,18 +10559,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "ORGANISMMICROBIOLOGY_SPUTUM", "MICROBIOLOGY_SPUTUM")]
-        public EntityCollection<MICROBIOLOGY_SPUTUM> MICROBIOLOGY_SPUTUM
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_ORGANISMMICROBIOLOGY_SPUTUM", "MicrobiologySputum")]
+        public EntityCollection<MicrobiologySputum> MicrobiologySputums
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MICROBIOLOGY_SPUTUM>("CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM", "MICROBIOLOGY_SPUTUM");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MicrobiologySputum>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM", "MicrobiologySputum");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MICROBIOLOGY_SPUTUM>("CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM", "MICROBIOLOGY_SPUTUM", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MicrobiologySputum>("CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM", "MicrobiologySputum", value);
                 }
             }
         }
@@ -10359,29 +10582,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="ROUTE")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="Route")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ROUTE : EntityObject
+    public partial class Route : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new ROUTE object.
+        /// Create a new Route object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nAME">Initial value of the NAME property.</param>
-        public static ROUTE CreateROUTE(global::System.Guid id, global::System.String nAME)
+        public static Route CreateRoute(global::System.Guid id, global::System.String nAME)
         {
-            ROUTE rOUTE = new ROUTE();
-            rOUTE.Id = id;
-            rOUTE.NAME = nAME;
-            return rOUTE;
+            Route route = new Route();
+            route.Id = id;
+            route.NAME = nAME;
+            return route;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10400,7 +10623,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -10425,7 +10648,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, false, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -10449,7 +10672,7 @@ namespace CINCOPA.Model
             {
                 OnCODEChanging(value);
                 ReportPropertyChanging("CODE");
-                _CODE = StructuralObject.SetValidValue(value, true);
+                _CODE = StructuralObject.SetValidValue(value, true, "CODE");
                 ReportPropertyChanged("CODE");
                 OnCODEChanged();
             }
@@ -10473,7 +10696,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -10497,7 +10720,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -10521,7 +10744,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -10545,7 +10768,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -10569,7 +10792,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -10580,7 +10803,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -10589,18 +10811,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "ROUTEAB_THERAPY", "AB_THERAPY")]
-        public EntityCollection<AB_THERAPY> AB_THERAPY
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_ROUTEAB_THERAPY", "AbTherapy")]
+        public EntityCollection<AbTherapy> AbTherapys
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AB_THERAPY>("CINCOPAModel.ROUTEAB_THERAPY", "AB_THERAPY");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AbTherapy>("CINCOPAModel.FK_ROUTEAB_THERAPY", "AbTherapy");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AB_THERAPY>("CINCOPAModel.ROUTEAB_THERAPY", "AB_THERAPY", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AbTherapy>("CINCOPAModel.FK_ROUTEAB_THERAPY", "AbTherapy", value);
                 }
             }
         }
@@ -10612,27 +10834,185 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="TEST_FOR_PNEUMOCOCCAL")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="sysdiagram")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class TEST_FOR_PNEUMOCOCCAL : EntityObject
+    public partial class sysdiagram : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new TEST_FOR_PNEUMOCOCCAL object.
+        /// Create a new sysdiagram object.
         /// </summary>
-        /// <param name="id">Initial value of the Id property.</param>
-        public static TEST_FOR_PNEUMOCOCCAL CreateTEST_FOR_PNEUMOCOCCAL(global::System.Guid id)
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
         {
-            TEST_FOR_PNEUMOCOCCAL tEST_FOR_PNEUMOCOCCAL = new TEST_FOR_PNEUMOCOCCAL();
-            tEST_FOR_PNEUMOCOCCAL.Id = id;
-            return tEST_FOR_PNEUMOCOCCAL;
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false, "name");
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value, "principal_id");
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value, "diagram_id");
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value, "version");
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true, "definition");
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="TestForPneumococcal")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class TestForPneumococcal : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new TestForPneumococcal object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static TestForPneumococcal CreateTestForPneumococcal(global::System.Guid id, global::System.Guid cRF_Id)
+        {
+            TestForPneumococcal testForPneumococcal = new TestForPneumococcal();
+            testForPneumococcal.Id = id;
+            testForPneumococcal.CRF_Id = cRF_Id;
+            return testForPneumococcal;
+        }
+
+        #endregion
+
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10651,7 +11031,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -10676,7 +11056,7 @@ namespace CINCOPA.Model
             {
                 OnLOGICChanging(value);
                 ReportPropertyChanging("LOGIC");
-                _LOGIC = StructuralObject.SetValidValue(value, true);
+                _LOGIC = StructuralObject.SetValidValue(value, true, "LOGIC");
                 ReportPropertyChanged("LOGIC");
                 OnLOGICChanged();
             }
@@ -10700,7 +11080,7 @@ namespace CINCOPA.Model
             {
                 OnRESULTChanging(value);
                 ReportPropertyChanging("RESULT");
-                _RESULT = StructuralObject.SetValidValue(value, true);
+                _RESULT = StructuralObject.SetValidValue(value, true, "RESULT");
                 ReportPropertyChanged("RESULT");
                 OnRESULTChanged();
             }
@@ -10724,7 +11104,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -10748,7 +11128,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -10772,7 +11152,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -10796,7 +11176,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -10820,7 +11200,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -10828,10 +11208,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -10840,16 +11243,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFTEST_FOR_PNEUMOCOCCAL", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFTEST_FOR_PNEUMOCOCCAL", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -10861,13 +11264,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL", "CRF", value);
                 }
             }
         }
@@ -10879,31 +11282,31 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="USER")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="User")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class USER : EntityObject
+    public partial class User : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new USER object.
+        /// Create a new User object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nAME">Initial value of the NAME property.</param>
         /// <param name="pASSWORD">Initial value of the PASSWORD property.</param>
-        public static USER CreateUSER(global::System.Guid id, global::System.String nAME, global::System.String pASSWORD)
+        public static User CreateUser(global::System.Guid id, global::System.String nAME, global::System.String pASSWORD)
         {
-            USER uSER = new USER();
-            uSER.Id = id;
-            uSER.NAME = nAME;
-            uSER.PASSWORD = pASSWORD;
-            return uSER;
+            User user = new User();
+            user.Id = id;
+            user.NAME = nAME;
+            user.PASSWORD = pASSWORD;
+            return user;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10922,7 +11325,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -10947,7 +11350,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, false, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -10971,7 +11374,7 @@ namespace CINCOPA.Model
             {
                 OnPASSWORDChanging(value);
                 ReportPropertyChanging("PASSWORD");
-                _PASSWORD = StructuralObject.SetValidValue(value, false);
+                _PASSWORD = StructuralObject.SetValidValue(value, false, "PASSWORD");
                 ReportPropertyChanged("PASSWORD");
                 OnPASSWORDChanged();
             }
@@ -10995,7 +11398,7 @@ namespace CINCOPA.Model
             {
                 OnROLEChanging(value);
                 ReportPropertyChanging("ROLE");
-                _ROLE = StructuralObject.SetValidValue(value, true);
+                _ROLE = StructuralObject.SetValidValue(value, true, "ROLE");
                 ReportPropertyChanged("ROLE");
                 OnROLEChanged();
             }
@@ -11006,33 +11409,34 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VISIT_ONE")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VisitOne")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class VISIT_ONE : EntityObject
+    public partial class VisitOne : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new VISIT_ONE object.
+        /// Create a new VisitOne object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static VISIT_ONE CreateVISIT_ONE(global::System.Guid id)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static VisitOne CreateVisitOne(global::System.Guid id, global::System.Guid cRF_Id)
         {
-            VISIT_ONE vISIT_ONE = new VISIT_ONE();
-            vISIT_ONE.Id = id;
-            return vISIT_ONE;
+            VisitOne visitOne = new VisitOne();
+            visitOne.Id = id;
+            visitOne.CRF_Id = cRF_Id;
+            return visitOne;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11051,7 +11455,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -11076,7 +11480,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_VISITChanging(value);
                 ReportPropertyChanging("DATE_VISIT");
-                _DATE_VISIT = StructuralObject.SetValidValue(value);
+                _DATE_VISIT = StructuralObject.SetValidValue(value, "DATE_VISIT");
                 ReportPropertyChanged("DATE_VISIT");
                 OnDATE_VISITChanged();
             }
@@ -11100,7 +11504,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -11124,7 +11528,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -11148,7 +11552,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -11172,7 +11576,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -11196,7 +11600,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -11204,10 +11608,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -11216,16 +11643,82 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_ONE", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEANAMNESTIC_DATA", "AnamnesticDataVisit1Set")]
+        public EntityCollection<AnamnesticDataVisit1Set> AnamnesticDataVisit1Set
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnamnesticDataVisit1Set>("CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA", "AnamnesticDataVisit1Set");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnamnesticDataVisit1Set>("CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA", "AnamnesticDataVisit1Set", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BaseLiveIndicatorsVisit1Set")]
+        public EntityCollection<BaseLiveIndicatorsVisit1Set> BaseLiveIndicatorsVisit1Set
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BaseLiveIndicatorsVisit1Set>("CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BaseLiveIndicatorsVisit1Set");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BaseLiveIndicatorsVisit1Set>("CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BaseLiveIndicatorsVisit1Set", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "ComputedTomographyChestVisit1Set")]
+        public EntityCollection<ComputedTomographyChestVisit1Set> ComputedTomographyChestVisit1Set
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ComputedTomographyChestVisit1Set>("CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "ComputedTomographyChestVisit1Set");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ComputedTomographyChestVisit1Set>("CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "ComputedTomographyChestVisit1Set", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_ONE", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -11237,13 +11730,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE", "CRF", value);
                 }
             }
         }
@@ -11254,34 +11747,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BASE_LIVE_INDICATORS_VISIT_1")]
-        public BASE_LIVE_INDICATORS_VISIT_1 BASE_LIVE_INDICATORS_VISIT_1
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "EchocardiographyVisit1Set")]
+        public EntityCollection<EchocardiographyVisit1Set> EchocardiographyVisit1Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BASE_LIVE_INDICATORS_VISIT_1>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BASE_LIVE_INDICATORS_VISIT_1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BASE_LIVE_INDICATORS_VISIT_1>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BASE_LIVE_INDICATORS_VISIT_1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BASE_LIVE_INDICATORS_VISIT_1> BASE_LIVE_INDICATORS_VISIT_1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BASE_LIVE_INDICATORS_VISIT_1>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BASE_LIVE_INDICATORS_VISIT_1");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EchocardiographyVisit1Set>("CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "EchocardiographyVisit1Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BASE_LIVE_INDICATORS_VISIT_1>("CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1", "BASE_LIVE_INDICATORS_VISIT_1", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EchocardiographyVisit1Set>("CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "EchocardiographyVisit1Set", value);
                 }
             }
         }
@@ -11292,34 +11769,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEANAMNESTIC_DATA", "ANAMNESTIC_DATA")]
-        public ANAMNESTIC_DATA_VISIT_1 ANAMNESTIC_DATA
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ElectrocardiographyVisit1Set")]
+        public EntityCollection<ElectrocardiographyVisit1Set> ElectrocardiographyVisit1Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ANAMNESTIC_DATA_VISIT_1>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "ANAMNESTIC_DATA").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ANAMNESTIC_DATA_VISIT_1>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "ANAMNESTIC_DATA").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ANAMNESTIC_DATA_VISIT_1> ANAMNESTIC_DATAReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ANAMNESTIC_DATA_VISIT_1>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "ANAMNESTIC_DATA");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ElectrocardiographyVisit1Set>("CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ElectrocardiographyVisit1Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ANAMNESTIC_DATA_VISIT_1>("CINCOPAModel.VISIT_ONEANAMNESTIC_DATA", "ANAMNESTIC_DATA", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ElectrocardiographyVisit1Set>("CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ElectrocardiographyVisit1Set", value);
                 }
             }
         }
@@ -11330,34 +11791,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EVALUATION_OF_SYMPTOMS_VISIT_1")]
-        public EVALUATION_OF_SYMPTOMS_VISIT_1 EVALUATION_OF_SYMPTOMS_VISIT_1
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EvaluationOfSymptomsVisit1Set")]
+        public EntityCollection<EvaluationOfSymptomsVisit1Set> EvaluationOfSymptomsVisit1Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_1>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EVALUATION_OF_SYMPTOMS_VISIT_1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_1>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EVALUATION_OF_SYMPTOMS_VISIT_1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EVALUATION_OF_SYMPTOMS_VISIT_1> EVALUATION_OF_SYMPTOMS_VISIT_1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_1>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EVALUATION_OF_SYMPTOMS_VISIT_1");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EvaluationOfSymptomsVisit1Set>("CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EvaluationOfSymptomsVisit1Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_1>("CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EVALUATION_OF_SYMPTOMS_VISIT_1", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EvaluationOfSymptomsVisit1Set>("CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1", "EvaluationOfSymptomsVisit1Set", value);
                 }
             }
         }
@@ -11368,148 +11813,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ELECTROCARDIOGRAPHY_VISIT_1")]
-        public ELECTROCARDIOGRAPHY_VISIT_1 ELECTROCARDIOGRAPHY_VISIT_1
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEXRAY_CHEST_VISIT_1", "XrayChestVisit1Set")]
+        public EntityCollection<XrayChestVisit1Set> XrayChestVisit1Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ELECTROCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ELECTROCARDIOGRAPHY_VISIT_1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ELECTROCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ELECTROCARDIOGRAPHY_VISIT_1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ELECTROCARDIOGRAPHY_VISIT_1> ELECTROCARDIOGRAPHY_VISIT_1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ELECTROCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ELECTROCARDIOGRAPHY_VISIT_1");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<XrayChestVisit1Set>("CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1", "XrayChestVisit1Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ELECTROCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1", "ELECTROCARDIOGRAPHY_VISIT_1", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "ECHOCARDIOGRAPHY_VISIT_1")]
-        public ECHOCARDIOGRAPHY_VISIT_1 ECHOCARDIOGRAPHY_VISIT_1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ECHOCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "ECHOCARDIOGRAPHY_VISIT_1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ECHOCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "ECHOCARDIOGRAPHY_VISIT_1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ECHOCARDIOGRAPHY_VISIT_1> ECHOCARDIOGRAPHY_VISIT_1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ECHOCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "ECHOCARDIOGRAPHY_VISIT_1");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ECHOCARDIOGRAPHY_VISIT_1>("CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1", "ECHOCARDIOGRAPHY_VISIT_1", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEXRAY_CHEST_VISIT_1", "XRAY_CHEST_VISIT_1")]
-        public XRAY_CHEST_VISIT_1 XRAY_CHEST_VISIT_1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<XRAY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "XRAY_CHEST_VISIT_1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<XRAY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "XRAY_CHEST_VISIT_1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<XRAY_CHEST_VISIT_1> XRAY_CHEST_VISIT_1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<XRAY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "XRAY_CHEST_VISIT_1");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<XRAY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "XRAY_CHEST_VISIT_1", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "COMPUTED_TOMOGRAPHY_CHEST_VISIT_1")]
-        public COMPUTED_TOMOGRAPHY_CHEST_VISIT_1 COMPUTED_TOMOGRAPHY_CHEST_VISIT_1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "COMPUTED_TOMOGRAPHY_CHEST_VISIT_1").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "COMPUTED_TOMOGRAPHY_CHEST_VISIT_1").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1> COMPUTED_TOMOGRAPHY_CHEST_VISIT_1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "COMPUTED_TOMOGRAPHY_CHEST_VISIT_1");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<COMPUTED_TOMOGRAPHY_CHEST_VISIT_1>("CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1", "COMPUTED_TOMOGRAPHY_CHEST_VISIT_1", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<XrayChestVisit1Set>("CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1", "XrayChestVisit1Set", value);
                 }
             }
         }
@@ -11521,29 +11836,31 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VISIT_ONE_ONE")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VisitOneOne")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class VISIT_ONE_ONE : EntityObject
+    public partial class VisitOneOne : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new VISIT_ONE_ONE object.
+        /// Create a new VisitOneOne object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
-        public static VISIT_ONE_ONE CreateVISIT_ONE_ONE(global::System.Guid id, global::System.Guid cRFId)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static VisitOneOne CreateVisitOneOne(global::System.Guid id, global::System.Guid cRFId, global::System.Guid cRF_Id)
         {
-            VISIT_ONE_ONE vISIT_ONE_ONE = new VISIT_ONE_ONE();
-            vISIT_ONE_ONE.Id = id;
-            vISIT_ONE_ONE.CRFId = cRFId;
-            return vISIT_ONE_ONE;
+            VisitOneOne visitOneOne = new VisitOneOne();
+            visitOneOne.Id = id;
+            visitOneOne.CRFId = cRFId;
+            visitOneOne.CRF_Id = cRF_Id;
+            return visitOneOne;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11562,7 +11879,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -11587,7 +11904,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -11611,7 +11928,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_VISITChanging(value);
                 ReportPropertyChanging("DATE_VISIT");
-                _DATE_VISIT = StructuralObject.SetValidValue(value);
+                _DATE_VISIT = StructuralObject.SetValidValue(value, "DATE_VISIT");
                 ReportPropertyChanged("DATE_VISIT");
                 OnDATE_VISITChanged();
             }
@@ -11635,7 +11952,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -11659,7 +11976,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -11683,7 +12000,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -11707,7 +12024,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -11731,7 +12048,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -11739,10 +12056,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -11751,16 +12091,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_ONE_ONE", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_ONE_ONE", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE_ONE", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE_ONE", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -11772,13 +12112,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE_ONE", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_ONE_ONE", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_ONE_ONE", "CRF", value);
                 }
             }
         }
@@ -11789,34 +12129,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EVALUATION_OF_SYMPTOMS_VISIT_11")]
-        public EVALUATION_OF_SYMPTOMS_VISIT_11 EVALUATION_OF_SYMPTOMS_VISIT_11
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EvaluationOfSymptomsVisit11Set")]
+        public EntityCollection<EvaluationOfSymptomsVisit11Set> EvaluationOfSymptomsVisit11Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_11>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EVALUATION_OF_SYMPTOMS_VISIT_11").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_11>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EVALUATION_OF_SYMPTOMS_VISIT_11").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EVALUATION_OF_SYMPTOMS_VISIT_11> EVALUATION_OF_SYMPTOMS_VISIT_11Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_11>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EVALUATION_OF_SYMPTOMS_VISIT_11");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EvaluationOfSymptomsVisit11Set>("CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EvaluationOfSymptomsVisit11Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_11>("CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EVALUATION_OF_SYMPTOMS_VISIT_11", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EvaluationOfSymptomsVisit11Set>("CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11", "EvaluationOfSymptomsVisit11Set", value);
                 }
             }
         }
@@ -11828,29 +12152,31 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VISIT_THREE")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VisitThree")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class VISIT_THREE : EntityObject
+    public partial class VisitThree : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new VISIT_THREE object.
+        /// Create a new VisitThree object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
-        public static VISIT_THREE CreateVISIT_THREE(global::System.Guid id, global::System.Guid cRFId)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static VisitThree CreateVisitThree(global::System.Guid id, global::System.Guid cRFId, global::System.Guid cRF_Id)
         {
-            VISIT_THREE vISIT_THREE = new VISIT_THREE();
-            vISIT_THREE.Id = id;
-            vISIT_THREE.CRFId = cRFId;
-            return vISIT_THREE;
+            VisitThree visitThree = new VisitThree();
+            visitThree.Id = id;
+            visitThree.CRFId = cRFId;
+            visitThree.CRF_Id = cRF_Id;
+            return visitThree;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11869,7 +12195,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -11894,7 +12220,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -11918,7 +12244,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_VISITChanging(value);
                 ReportPropertyChanging("DATE_VISIT");
-                _DATE_VISIT = StructuralObject.SetValidValue(value);
+                _DATE_VISIT = StructuralObject.SetValidValue(value, "DATE_VISIT");
                 ReportPropertyChanged("DATE_VISIT");
                 OnDATE_VISITChanged();
             }
@@ -11942,7 +12268,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -11966,7 +12292,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -11990,7 +12316,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -12014,7 +12340,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -12038,7 +12364,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -12046,10 +12372,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -12058,16 +12407,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_THREE", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_THREE", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_THREE", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_THREE", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -12079,13 +12428,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_THREE", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_THREE", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_THREE", "CRF", value);
                 }
             }
         }
@@ -12096,34 +12445,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "ECHOCARDIOGRAPHY_VISIT_3")]
-        public ECHOCARDIOGRAPHY_VISIT_3 ECHOCARDIOGRAPHY_VISIT_3
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "EchocardiographyVisit3Set")]
+        public EntityCollection<EchocardiographyVisit3Set> EchocardiographyVisit3Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ECHOCARDIOGRAPHY_VISIT_3>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "ECHOCARDIOGRAPHY_VISIT_3").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ECHOCARDIOGRAPHY_VISIT_3>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "ECHOCARDIOGRAPHY_VISIT_3").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ECHOCARDIOGRAPHY_VISIT_3> ECHOCARDIOGRAPHY_VISIT_3Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ECHOCARDIOGRAPHY_VISIT_3>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "ECHOCARDIOGRAPHY_VISIT_3");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EchocardiographyVisit3Set>("CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "EchocardiographyVisit3Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ECHOCARDIOGRAPHY_VISIT_3>("CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "ECHOCARDIOGRAPHY_VISIT_3", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EchocardiographyVisit3Set>("CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3", "EchocardiographyVisit3Set", value);
                 }
             }
         }
@@ -12135,29 +12468,31 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VISIT_TWO")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="VisitTwo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class VISIT_TWO : EntityObject
+    public partial class VisitTwo : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new VISIT_TWO object.
+        /// Create a new VisitTwo object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="cRFId">Initial value of the CRFId property.</param>
-        public static VISIT_TWO CreateVISIT_TWO(global::System.Guid id, global::System.Guid cRFId)
+        /// <param name="cRF_Id">Initial value of the CRF_Id property.</param>
+        public static VisitTwo CreateVisitTwo(global::System.Guid id, global::System.Guid cRFId, global::System.Guid cRF_Id)
         {
-            VISIT_TWO vISIT_TWO = new VISIT_TWO();
-            vISIT_TWO.Id = id;
-            vISIT_TWO.CRFId = cRFId;
-            return vISIT_TWO;
+            VisitTwo visitTwo = new VisitTwo();
+            visitTwo.Id = id;
+            visitTwo.CRFId = cRFId;
+            visitTwo.CRF_Id = cRF_Id;
+            return visitTwo;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12176,7 +12511,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -12201,7 +12536,7 @@ namespace CINCOPA.Model
             {
                 OnCRFIdChanging(value);
                 ReportPropertyChanging("CRFId");
-                _CRFId = StructuralObject.SetValidValue(value);
+                _CRFId = StructuralObject.SetValidValue(value, "CRFId");
                 ReportPropertyChanged("CRFId");
                 OnCRFIdChanged();
             }
@@ -12225,7 +12560,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_VISITChanging(value);
                 ReportPropertyChanging("DATE_VISIT");
-                _DATE_VISIT = StructuralObject.SetValidValue(value);
+                _DATE_VISIT = StructuralObject.SetValidValue(value, "DATE_VISIT");
                 ReportPropertyChanged("DATE_VISIT");
                 OnDATE_VISITChanged();
             }
@@ -12249,7 +12584,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -12273,7 +12608,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -12297,7 +12632,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -12321,7 +12656,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -12345,7 +12680,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -12353,10 +12688,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid CRF_Id
+        {
+            get
+            {
+                return _CRF_Id;
+            }
+            set
+            {
+                OnCRF_IdChanging(value);
+                ReportPropertyChanging("CRF_Id");
+                _CRF_Id = StructuralObject.SetValidValue(value, "CRF_Id");
+                ReportPropertyChanged("CRF_Id");
+                OnCRF_IdChanged();
+            }
+        }
+        private global::System.Guid _CRF_Id;
+        partial void OnCRF_IdChanging(global::System.Guid value);
+        partial void OnCRF_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -12365,16 +12723,38 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFVISIT_TWO", "CRF")]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BaseLiveIndicatorsVisit2Set")]
+        public EntityCollection<BaseLiveIndicatorsVisit2Set> BaseLiveIndicatorsVisit2Set
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BaseLiveIndicatorsVisit2Set>("CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BaseLiveIndicatorsVisit2Set");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BaseLiveIndicatorsVisit2Set>("CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BaseLiveIndicatorsVisit2Set", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFVISIT_TWO", "CRF")]
         public CRF CRF
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_TWO", "CRF").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_TWO", "CRF").Value = value;
             }
         }
         /// <summary>
@@ -12386,13 +12766,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_TWO", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.CRFVISIT_TWO", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CRF>("CINCOPAModel.FK_CRFVISIT_TWO", "CRF", value);
                 }
             }
         }
@@ -12403,72 +12783,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BASE_LIVE_INDICATORS_VISIT_2")]
-        public BASE_LIVE_INDICATORS_VISIT_2 BASE_LIVE_INDICATORS_VISIT_2
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EvaluationOfSymptomsVisit2Set")]
+        public EntityCollection<EvaluationOfSymptomsVisit2Set> EvaluationOfSymptomsVisit2Set
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BASE_LIVE_INDICATORS_VISIT_2>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BASE_LIVE_INDICATORS_VISIT_2").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BASE_LIVE_INDICATORS_VISIT_2>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BASE_LIVE_INDICATORS_VISIT_2").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BASE_LIVE_INDICATORS_VISIT_2> BASE_LIVE_INDICATORS_VISIT_2Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BASE_LIVE_INDICATORS_VISIT_2>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BASE_LIVE_INDICATORS_VISIT_2");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EvaluationOfSymptomsVisit2Set>("CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EvaluationOfSymptomsVisit2Set");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BASE_LIVE_INDICATORS_VISIT_2>("CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2", "BASE_LIVE_INDICATORS_VISIT_2", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EVALUATION_OF_SYMPTOMS_VISIT_2")]
-        public EVALUATION_OF_SYMPTOMS_VISIT_2 EVALUATION_OF_SYMPTOMS_VISIT_2
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_2>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EVALUATION_OF_SYMPTOMS_VISIT_2").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_2>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EVALUATION_OF_SYMPTOMS_VISIT_2").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<EVALUATION_OF_SYMPTOMS_VISIT_2> EVALUATION_OF_SYMPTOMS_VISIT_2Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_2>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EVALUATION_OF_SYMPTOMS_VISIT_2");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EVALUATION_OF_SYMPTOMS_VISIT_2>("CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EVALUATION_OF_SYMPTOMS_VISIT_2", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EvaluationOfSymptomsVisit2Set>("CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2", "EvaluationOfSymptomsVisit2Set", value);
                 }
             }
         }
@@ -12480,15 +12806,15 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="WARD")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="Ward")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class WARD : EntityObject
+    public partial class Ward : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new WARD object.
+        /// Create a new Ward object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="nAME">Initial value of the NAME property.</param>
@@ -12497,22 +12823,22 @@ namespace CINCOPA.Model
         /// <param name="createdByDate">Initial value of the CreatedByDate property.</param>
         /// <param name="updatedBy">Initial value of the UpdatedBy property.</param>
         /// <param name="updatedByDate">Initial value of the UpdatedByDate property.</param>
-        public static WARD CreateWARD(global::System.Guid id, global::System.String nAME, global::System.Int32 nUMBER, global::System.String createdBy, global::System.String createdByDate, global::System.String updatedBy, global::System.String updatedByDate)
+        public static Ward CreateWard(global::System.Guid id, global::System.String nAME, global::System.Int32 nUMBER, global::System.String createdBy, global::System.String createdByDate, global::System.String updatedBy, global::System.String updatedByDate)
         {
-            WARD wARD = new WARD();
-            wARD.Id = id;
-            wARD.NAME = nAME;
-            wARD.NUMBER = nUMBER;
-            wARD.CreatedBy = createdBy;
-            wARD.CreatedByDate = createdByDate;
-            wARD.UpdatedBy = updatedBy;
-            wARD.UpdatedByDate = updatedByDate;
-            return wARD;
+            Ward ward = new Ward();
+            ward.Id = id;
+            ward.NAME = nAME;
+            ward.NUMBER = nUMBER;
+            ward.CreatedBy = createdBy;
+            ward.CreatedByDate = createdByDate;
+            ward.UpdatedBy = updatedBy;
+            ward.UpdatedByDate = updatedByDate;
+            return ward;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12531,7 +12857,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -12556,7 +12882,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, false, "NAME");
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -12580,7 +12906,7 @@ namespace CINCOPA.Model
             {
                 OnNUMBERChanging(value);
                 ReportPropertyChanging("NUMBER");
-                _NUMBER = StructuralObject.SetValidValue(value);
+                _NUMBER = StructuralObject.SetValidValue(value, "NUMBER");
                 ReportPropertyChanged("NUMBER");
                 OnNUMBERChanged();
             }
@@ -12604,7 +12930,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, false);
+                _CreatedBy = StructuralObject.SetValidValue(value, false, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -12628,7 +12954,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, false);
+                _CreatedByDate = StructuralObject.SetValidValue(value, false, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -12652,7 +12978,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, false);
+                _UpdatedBy = StructuralObject.SetValidValue(value, false, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -12676,7 +13002,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, false);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, false, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -12700,7 +13026,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -12711,7 +13037,6 @@ namespace CINCOPA.Model
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -12720,18 +13045,18 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "CRFWARD", "CRF")]
-        public EntityCollection<CRF> CRF
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_CRFWARD", "CRF")]
+        public EntityCollection<CRF> CRFs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CRF>("CINCOPAModel.CRFWARD", "CRF");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CRF>("CINCOPAModel.FK_CRFWARD", "CRF");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CRF>("CINCOPAModel.CRFWARD", "CRF", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CRF>("CINCOPAModel.FK_CRFWARD", "CRF", value);
                 }
             }
         }
@@ -12743,27 +13068,29 @@ namespace CINCOPA.Model
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="XRAY_CHEST_VISIT_1")]
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="XrayChestVisit1Set")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class XRAY_CHEST_VISIT_1 : EntityObject
+    public partial class XrayChestVisit1Set : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new XRAY_CHEST_VISIT_1 object.
+        /// Create a new XrayChestVisit1Set object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        public static XRAY_CHEST_VISIT_1 CreateXRAY_CHEST_VISIT_1(global::System.Guid id)
+        /// <param name="vISIT_ONE_Id">Initial value of the VISIT_ONE_Id property.</param>
+        public static XrayChestVisit1Set CreateXrayChestVisit1Set(global::System.Guid id, global::System.Guid vISIT_ONE_Id)
         {
-            XRAY_CHEST_VISIT_1 xRAY_CHEST_VISIT_1 = new XRAY_CHEST_VISIT_1();
-            xRAY_CHEST_VISIT_1.Id = id;
-            return xRAY_CHEST_VISIT_1;
+            XrayChestVisit1Set xrayChestVisit1Set = new XrayChestVisit1Set();
+            xrayChestVisit1Set.Id = id;
+            xrayChestVisit1Set.VISIT_ONE_Id = vISIT_ONE_Id;
+            return xrayChestVisit1Set;
         }
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12782,7 +13109,7 @@ namespace CINCOPA.Model
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -12807,7 +13134,7 @@ namespace CINCOPA.Model
             {
                 OnDATE_PROCEDUREChanging(value);
                 ReportPropertyChanging("DATE_PROCEDURE");
-                _DATE_PROCEDURE = StructuralObject.SetValidValue(value);
+                _DATE_PROCEDURE = StructuralObject.SetValidValue(value, "DATE_PROCEDURE");
                 ReportPropertyChanged("DATE_PROCEDURE");
                 OnDATE_PROCEDUREChanged();
             }
@@ -12831,7 +13158,7 @@ namespace CINCOPA.Model
             {
                 OnPNEUMONIA_SIGNSChanging(value);
                 ReportPropertyChanging("PNEUMONIA_SIGNS");
-                _PNEUMONIA_SIGNS = StructuralObject.SetValidValue(value, true);
+                _PNEUMONIA_SIGNS = StructuralObject.SetValidValue(value, true, "PNEUMONIA_SIGNS");
                 ReportPropertyChanged("PNEUMONIA_SIGNS");
                 OnPNEUMONIA_SIGNSChanged();
             }
@@ -12855,7 +13182,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_RIGHT_TOPChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_RIGHT_TOP");
-                _ALVEOLAR_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_RIGHT_TOP");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_RIGHT_TOP");
                 OnALVEOLAR_INFILTRATION_RIGHT_TOPChanged();
             }
@@ -12879,7 +13206,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_RIGHT_MIDDLEChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_RIGHT_MIDDLE");
-                _ALVEOLAR_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_RIGHT_MIDDLE");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_RIGHT_MIDDLE");
                 OnALVEOLAR_INFILTRATION_RIGHT_MIDDLEChanged();
             }
@@ -12903,7 +13230,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_RIGHT_BOTTOMChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_RIGHT_BOTTOM");
-                _ALVEOLAR_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_RIGHT_BOTTOM");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_RIGHT_BOTTOM");
                 OnALVEOLAR_INFILTRATION_RIGHT_BOTTOMChanged();
             }
@@ -12927,7 +13254,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_LEFT_TOPChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_LEFT_TOP");
-                _ALVEOLAR_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_LEFT_TOP");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_LEFT_TOP");
                 OnALVEOLAR_INFILTRATION_LEFT_TOPChanged();
             }
@@ -12951,7 +13278,7 @@ namespace CINCOPA.Model
             {
                 OnALVEOLAR_INFILTRATION_LEFT_BOTTOMChanging(value);
                 ReportPropertyChanging("ALVEOLAR_INFILTRATION_LEFT_BOTTOM");
-                _ALVEOLAR_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value);
+                _ALVEOLAR_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value, "ALVEOLAR_INFILTRATION_LEFT_BOTTOM");
                 ReportPropertyChanged("ALVEOLAR_INFILTRATION_LEFT_BOTTOM");
                 OnALVEOLAR_INFILTRATION_LEFT_BOTTOMChanged();
             }
@@ -12975,7 +13302,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_RIGHT_TOPChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_RIGHT_TOP");
-                _INTERSTITIAL_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_RIGHT_TOP = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_RIGHT_TOP");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_RIGHT_TOP");
                 OnINTERSTITIAL_INFILTRATION_RIGHT_TOPChanged();
             }
@@ -12999,7 +13326,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_RIGHT_MIDDLEChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE");
-                _INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE");
                 OnINTERSTITIAL_INFILTRATION_RIGHT_MIDDLEChanged();
             }
@@ -13023,7 +13350,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_RIGHT_BOTTOMChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM");
-                _INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM");
                 OnINTERSTITIAL_INFILTRATION_RIGHT_BOTTOMChanged();
             }
@@ -13047,7 +13374,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_LEFT_TOPChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_LEFT_TOP");
-                _INTERSTITIAL_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_LEFT_TOP = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_LEFT_TOP");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_LEFT_TOP");
                 OnINTERSTITIAL_INFILTRATION_LEFT_TOPChanged();
             }
@@ -13071,7 +13398,7 @@ namespace CINCOPA.Model
             {
                 OnINTERSTITIAL_INFILTRATION_LEFT_BOTTOMChanging(value);
                 ReportPropertyChanging("INTERSTITIAL_INFILTRATION_LEFT_BOTTOM");
-                _INTERSTITIAL_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value);
+                _INTERSTITIAL_INFILTRATION_LEFT_BOTTOM = StructuralObject.SetValidValue(value, "INTERSTITIAL_INFILTRATION_LEFT_BOTTOM");
                 ReportPropertyChanged("INTERSTITIAL_INFILTRATION_LEFT_BOTTOM");
                 OnINTERSTITIAL_INFILTRATION_LEFT_BOTTOMChanged();
             }
@@ -13095,7 +13422,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_NONEChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_NONE");
-                _PLEURAL_EFFUSION_NONE = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_NONE = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_NONE");
                 ReportPropertyChanged("PLEURAL_EFFUSION_NONE");
                 OnPLEURAL_EFFUSION_NONEChanged();
             }
@@ -13119,7 +13446,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_RIGHTChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_RIGHT");
-                _PLEURAL_EFFUSION_RIGHT = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_RIGHT = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_RIGHT");
                 ReportPropertyChanged("PLEURAL_EFFUSION_RIGHT");
                 OnPLEURAL_EFFUSION_RIGHTChanged();
             }
@@ -13143,7 +13470,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_LEFTChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_LEFT");
-                _PLEURAL_EFFUSION_LEFT = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_LEFT = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_LEFT");
                 ReportPropertyChanged("PLEURAL_EFFUSION_LEFT");
                 OnPLEURAL_EFFUSION_LEFTChanged();
             }
@@ -13167,7 +13494,7 @@ namespace CINCOPA.Model
             {
                 OnPLEURAL_EFFUSION_DOUBLEChanging(value);
                 ReportPropertyChanging("PLEURAL_EFFUSION_DOUBLE");
-                _PLEURAL_EFFUSION_DOUBLE = StructuralObject.SetValidValue(value);
+                _PLEURAL_EFFUSION_DOUBLE = StructuralObject.SetValidValue(value, "PLEURAL_EFFUSION_DOUBLE");
                 ReportPropertyChanged("PLEURAL_EFFUSION_DOUBLE");
                 OnPLEURAL_EFFUSION_DOUBLEChanged();
             }
@@ -13191,7 +13518,7 @@ namespace CINCOPA.Model
             {
                 OnOTHERChanging(value);
                 ReportPropertyChanging("OTHER");
-                _OTHER = StructuralObject.SetValidValue(value, true);
+                _OTHER = StructuralObject.SetValidValue(value, true, "OTHER");
                 ReportPropertyChanged("OTHER");
                 OnOTHERChanged();
             }
@@ -13215,7 +13542,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByChanging(value);
                 ReportPropertyChanging("CreatedBy");
-                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                _CreatedBy = StructuralObject.SetValidValue(value, true, "CreatedBy");
                 ReportPropertyChanged("CreatedBy");
                 OnCreatedByChanged();
             }
@@ -13239,7 +13566,7 @@ namespace CINCOPA.Model
             {
                 OnCreatedByDateChanging(value);
                 ReportPropertyChanging("CreatedByDate");
-                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                _CreatedByDate = StructuralObject.SetValidValue(value, true, "CreatedByDate");
                 ReportPropertyChanged("CreatedByDate");
                 OnCreatedByDateChanged();
             }
@@ -13263,7 +13590,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByChanging(value);
                 ReportPropertyChanging("UpdatedBy");
-                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                _UpdatedBy = StructuralObject.SetValidValue(value, true, "UpdatedBy");
                 ReportPropertyChanged("UpdatedBy");
                 OnUpdatedByChanged();
             }
@@ -13287,7 +13614,7 @@ namespace CINCOPA.Model
             {
                 OnUpdatedByDateChanging(value);
                 ReportPropertyChanging("UpdatedByDate");
-                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true, "UpdatedByDate");
                 ReportPropertyChanged("UpdatedByDate");
                 OnUpdatedByDateChanged();
             }
@@ -13311,7 +13638,7 @@ namespace CINCOPA.Model
             {
                 OnStateCodeChanging(value);
                 ReportPropertyChanging("StateCode");
-                _StateCode = StructuralObject.SetValidValue(value, true);
+                _StateCode = StructuralObject.SetValidValue(value, true, "StateCode");
                 ReportPropertyChanged("StateCode");
                 OnStateCodeChanged();
             }
@@ -13319,10 +13646,33 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VISIT_ONE_Id
+        {
+            get
+            {
+                return _VISIT_ONE_Id;
+            }
+            set
+            {
+                OnVISIT_ONE_IdChanging(value);
+                ReportPropertyChanging("VISIT_ONE_Id");
+                _VISIT_ONE_Id = StructuralObject.SetValidValue(value, "VISIT_ONE_Id");
+                ReportPropertyChanged("VISIT_ONE_Id");
+                OnVISIT_ONE_IdChanged();
+            }
+        }
+        private global::System.Guid _VISIT_ONE_Id;
+        partial void OnVISIT_ONE_IdChanging(global::System.Guid value);
+        partial void OnVISIT_ONE_IdChanged();
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -13331,16 +13681,16 @@ namespace CINCOPA.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "VISIT_ONEXRAY_CHEST_VISIT_1", "VISIT_ONE")]
-        public VISIT_ONE VISIT_ONE
+        [EdmRelationshipNavigationPropertyAttribute("CINCOPAModel", "FK_VISIT_ONEXRAY_CHEST_VISIT_1", "VisitOne")]
+        public VisitOne VisitOne
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "VISIT_ONE").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1", "VisitOne").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "VISIT_ONE").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1", "VisitOne").Value = value;
             }
         }
         /// <summary>
@@ -13348,17 +13698,17 @@ namespace CINCOPA.Model
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<VISIT_ONE> VISIT_ONEReference
+        public EntityReference<VisitOne> VisitOneReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "VISIT_ONE");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1", "VisitOne");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VISIT_ONE>("CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1", "VISIT_ONE", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VisitOne>("CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1", "VisitOne", value);
                 }
             }
         }
@@ -13369,5 +13719,4 @@ namespace CINCOPA.Model
 
     #endregion
 
-    
 }

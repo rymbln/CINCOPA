@@ -28,20 +28,26 @@ namespace CINCOPA.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ((txtName.Text != "") & (txtPassword.Text != ""))
+            try
             {
-                var user = new USER();
-                user.NAME = txtName.Text;
-                user.PASSWORD = txtPassword.Text;
-                if (Authentification.AuthentificateUser(user))
+                if ((txtName.Text != "") & (txtPassword.Text != ""))
                 {
-                    MainWindowViewModel main = new MainWindowViewModel();
-                    MainWindow window = new MainWindow { DataContext = main };
-                    window.Show();
+                    var user = new USER();
+                    user.NAME = txtName.Text;
+                    user.PASSWORD = txtPassword.Text;
+                    if (Authentification.AuthentificateUser(user))
+                    {
+                        MainWindowViewModel main = new MainWindowViewModel();
+                        MainWindow window = new MainWindow { DataContext = main };
+                        window.Show();
 
-                    this.Close();
+                        this.Close();
+                    }
+
                 }
-
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + " | " +ex.InnerException );
             }
         }
     }

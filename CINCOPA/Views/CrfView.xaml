@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:s="clr-namespace:System;assembly=mscorlib"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        Title="CrfView" Height="768" Width="1024">
+        Title="CINCOPA" Height="768" Width="1024">
     <ScrollViewer>
         <DockPanel>
             <ToolBarTray DockPanel.Dock="Top">
@@ -551,8 +551,6 @@
                                         </Border>
                                     </Grid>
                                 </HeaderedContentControl>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Grid.Row="5">
                                 <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
                                     <HeaderedContentControl.Header>
                                         Электрокардиографическое исследование
@@ -634,7 +632,7 @@
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
                                         <Label Grid.Row="0" Grid.Column="0"  Content="Дата проведения:" />
-           
+
                                         <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1"
                                                 Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
                                                 Value="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
@@ -682,6 +680,10 @@
 
                                     </Grid>
                                 </HeaderedContentControl>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Row="5">
+                              
+                               
                             </StackPanel>
 
                         </Grid>
@@ -1068,8 +1070,6 @@
                                         </Border>
                                     </Grid>
                                 </HeaderedContentControl>
-                            </StackPanel>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal">
                                 <HeaderedContentControl Style="{StaticResource SubDisplayArea}" Margin="2">
                                     <HeaderedContentControl.Header>
                                         Анализ крови на маркеры воспаления
@@ -1175,6 +1175,7 @@
                                     </Border>
                                 </HeaderedContentControl>
                             </StackPanel>
+           
                         </Grid>
 
                     </TabItem>

@@ -1,7 +1,7 @@
 ﻿<Window x:Class="CINCOPA.Views.CheckDoubleView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="CheckDoubleView" Height="768" Width="1024">
+        Title="CINCOPA CHECK DOUBLE" Height="768" Width="1024">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
             <Button Command="{Binding OpenCrfCommand}"
