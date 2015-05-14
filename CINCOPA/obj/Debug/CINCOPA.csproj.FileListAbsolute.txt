@@ -25,3 +25,29 @@ C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.baml
 C:\Users\Rymbln\documents\visual studio 2012\Projects\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\CINCOPA.exe.config
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.exe
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.pdb
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\CINCOPA.exe
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\CINCOPA.pdb
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\EntityFramework.dll
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\EntityFramework.xml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\ControlResources.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\CrfView.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\MainWindow.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\LoginView.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\SelectWindowView.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\App.baml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\CrfView.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\LoginView.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\SelectWindowView.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\App.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA_Content.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA_MarkupCompile.cache
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.g.resources
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.Properties.Resources.resources
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csproj.GenerateResource.Cache
