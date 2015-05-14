@@ -8,7 +8,6 @@ using System.Windows.Input;
 using System.Windows.Navigation;
 using CINCOPA.Common;
 using CINCOPA.Model;
-using System.Windows;
 
 namespace CINCOPA.ViewModel
 {
@@ -321,7 +320,7 @@ namespace CINCOPA.ViewModel
             get { return Model.NUMBER; }
             set
             {
-               Model.NUMBER = value;
+                Model.NUMBER = value;
                 OnPropertyChanged("NUMBER");
             }
         }
@@ -351,8 +350,8 @@ namespace CINCOPA.ViewModel
             get { return Model.DATE_BIRTH; }
             set
             {
-                    Model.DATE_BIRTH = value;
-                    OnPropertyChanged("DATE_BIRTH");
+                Model.DATE_BIRTH = value;
+                OnPropertyChanged("DATE_BIRTH");
             }
         }
 

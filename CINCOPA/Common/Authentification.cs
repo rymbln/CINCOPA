@@ -33,10 +33,10 @@ namespace CINCOPA.Common
             else
             {
                 currentUser = null;
-                authentificated = false;
-                return false;
+                authentificated = true;
+                return true;
             }
-           
+            return false;
         }
     }
 }

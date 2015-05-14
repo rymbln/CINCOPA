@@ -1,211 +1,153 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CINCOPAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="AbTherapys">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DRUGId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ROUTEId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="SINGLE_DOSE" Type="nvarchar(max)" />
-    <Property Name="FREQUENCY" Type="nvarchar(max)" />
-    <Property Name="DATE_START" Type="datetime" />
-    <Property Name="DATE_END" Type="datetime" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="AEs">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="NAME" Type="nvarchar(max)" />
-    <Property Name="DATE_START" Type="datetime" />
-    <Property Name="DATE_END" Type="datetime" />
-    <Property Name="HEAVY" Type="nvarchar(max)" />
-    <Property Name="RESULT" Type="nvarchar(max)" />
-    <Property Name="RELATION" Type="nvarchar(max)" />
-    <Property Name="ACTIONS" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="AnamnesticDataVisit1Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_SYMPTOM" Type="datetime" />
-    <Property Name="DATE_DIAGNOSIS" Type="datetime" />
-    <Property Name="NUMBER_EPISODES" Type="int" />
-    <Property Name="NUMBER_EPISODES_NODATA" Type="bit" />
-    <Property Name="FUNCTION_CLASS" Type="nvarchar(max)" />
-    <Property Name="OTHER_EPISODES" Type="nvarchar(max)" />
-    <Property Name="SMOKE_STATUS" Type="nvarchar(max)" />
-    <Property Name="SMOKE_AVERAGE" Type="int" />
-    <Property Name="SMOKE_YEARS" Type="int" />
-    <Property Name="SMOKE_PACK_YEARS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BaseLiveIndicatorsVisit1Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="int" />
-    <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="int" />
-    <Property Name="HEART_RATE" Type="int" />
-    <Property Name="RESPIRATORY_RATE" Type="int" />
-    <Property Name="TEMPERATURE" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="HEAVY_TYPE" Type="nvarchar(max)" />
-    <Property Name="OXYGEN_THERAPY_NEEDED" Type="nvarchar(max)" />
-    <Property Name="DECOMPENSATION_SIGNS" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BaseLiveIndicatorsVisit2Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="int" />
-    <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="int" />
-    <Property Name="HEART_RATE" Type="int" />
-    <Property Name="RESPIRATORY_RATE" Type="int" />
-    <Property Name="TEMPERATURE" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BloodChemistrys">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_ONE_SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_CHANGES" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BloodClinicalAnalyses">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_ONE_SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_LEUKOCYTOSIS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="VISIT_ONE_OTHERS" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_LEUKOCYTOSIS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="VISIT_TWO_OTHERS" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BloodTestsForMarkersOfCardiacDysfunctions">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_KOPEPTIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_PROADRENOMEDULLIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_KOPEPTIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_PROADRENOMEDULLIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_KOPEPTIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_PROADRENOMEDULLIN" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BloodTestsForMarkersOfInflammations">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="VISIT_ONE_C_REACTIVE_PROTEIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_PROCALCITONIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_IL6" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_FNO" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_C_REACTIVE_PROTEIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_PROCALCITONIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_IL6" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_FNO" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_C_REACTIVE_PROTEIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_PROCALCITONIN" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_IL6" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_FNO" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ComputedTomographyChestVisit1Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="PNEUMONIA_SIGNS" Type="nvarchar(max)" />
-    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_TOP" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_MIDDLE" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_BOTTOM" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_LEFT_TOP" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_LEFT_BOTTOM" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_TOP" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_TOP" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_BOTTOM" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_NONE" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_RIGHT" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_LEFT" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_DOUBLE" Type="bit" />
-    <Property Name="OTHER" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
+<Schema Namespace="CINCOPAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CINCOPAModelStoreContainer">
+    <EntitySet Name="CRFs" EntityType="CINCOPAModel.Store.CRFs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Wards" EntityType="CINCOPAModel.Store.Wards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="CINCOPAModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VisitOnes" EntityType="CINCOPAModel.Store.VisitOnes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VisitOneOnes" EntityType="CINCOPAModel.Store.VisitOneOnes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VisitTwoes" EntityType="CINCOPAModel.Store.VisitTwoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VisitThrees" EntityType="CINCOPAModel.Store.VisitThrees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AEs" EntityType="CINCOPAModel.Store.AEs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BaseLiveIndicatorsVisit1Set" EntityType="CINCOPAModel.Store.BaseLiveIndicatorsVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AnamnesticDataVisit1Set" EntityType="CINCOPAModel.Store.AnamnesticDataVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EvaluationOfSymptomsVisit1Set" EntityType="CINCOPAModel.Store.EvaluationOfSymptomsVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ElectrocardiographyVisit1Set" EntityType="CINCOPAModel.Store.ElectrocardiographyVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EchocardiographyVisit1Set" EntityType="CINCOPAModel.Store.EchocardiographyVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="XrayChestVisit1Set" EntityType="CINCOPAModel.Store.XrayChestVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComputedTomographyChestVisit1Set" EntityType="CINCOPAModel.Store.ComputedTomographyChestVisit1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BaseLiveIndicatorsVisit2Set" EntityType="CINCOPAModel.Store.BaseLiveIndicatorsVisit2Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EvaluationOfSymptomsVisit2Set" EntityType="CINCOPAModel.Store.EvaluationOfSymptomsVisit2Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EchocardiographyVisit3Set" EntityType="CINCOPAModel.Store.EchocardiographyVisit3Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EvaluationOfSymptomsVisit11Set" EntityType="CINCOPAModel.Store.EvaluationOfSymptomsVisit11Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BloodClinicalAnalyses" EntityType="CINCOPAModel.Store.BloodClinicalAnalyses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BloodTestsForMarkersOfInflammations" EntityType="CINCOPAModel.Store.BloodTestsForMarkersOfInflammations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BloodTestsForMarkersOfCardiacDysfunctions" EntityType="CINCOPAModel.Store.BloodTestsForMarkersOfCardiacDysfunctions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BloodChemistrys" EntityType="CINCOPAModel.Store.BloodChemistrys" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Organisms" EntityType="CINCOPAModel.Store.Organisms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Routes" EntityType="CINCOPAModel.Store.Routes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Drugs" EntityType="CINCOPAModel.Store.Drugs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AbTherapys" EntityType="CINCOPAModel.Store.AbTherapys" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestForPneumococcals" EntityType="CINCOPAModel.Store.TestForPneumococcals" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MicrobiologySputums" EntityType="CINCOPAModel.Store.MicrobiologySputums" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MicrobiologyBloods" EntityType="CINCOPAModel.Store.MicrobiologyBloods" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CRFWARD" Association="CINCOPAModel.Store.CRFWARD">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="WARD" EntitySet="Wards" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_ONE" Association="CINCOPAModel.Store.CRFVISIT_ONE">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_ONE_ONE" Association="CINCOPAModel.Store.CRFVISIT_ONE_ONE">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="VISIT_ONE_ONE" EntitySet="VisitOneOnes" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_THREE" Association="CINCOPAModel.Store.CRFVISIT_THREE">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="VISIT_THREE" EntitySet="VisitThrees" />
+    </AssociationSet>
+    <AssociationSet Name="CRFVISIT_TWO" Association="CINCOPAModel.Store.CRFVISIT_TWO">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="VISIT_TWO" EntitySet="VisitTwoes" />
+    </AssociationSet>
+    <AssociationSet Name="CRFADVERSE_EVENT" Association="CINCOPAModel.Store.CRFADVERSE_EVENT">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="ADVERSE_EVENT" EntitySet="AEs" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="BASE_LIVE_INDICATORS_VISIT_1" EntitySet="BaseLiveIndicatorsVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEANAMNESTIC_DATA" Association="CINCOPAModel.Store.VISIT_ONEANAMNESTIC_DATA">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="ANAMNESTIC_DATA" EntitySet="AnamnesticDataVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" EntitySet="EvaluationOfSymptomsVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="ELECTROCARDIOGRAPHY_VISIT_1" EntitySet="ElectrocardiographyVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="ECHOCARDIOGRAPHY_VISIT_1" EntitySet="EchocardiographyVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONEXRAY_CHEST_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONEXRAY_CHEST_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="XRAY_CHEST_VISIT_1" EntitySet="XrayChestVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Association="CINCOPAModel.Store.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
+      <End Role="VISIT_ONE" EntitySet="VisitOnes" />
+      <End Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" EntitySet="ComputedTomographyChestVisit1Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" Association="CINCOPAModel.Store.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
+      <End Role="VISIT_TWO" EntitySet="VisitTwoes" />
+      <End Role="BASE_LIVE_INDICATORS_VISIT_2" EntitySet="BaseLiveIndicatorsVisit2Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" Association="CINCOPAModel.Store.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
+      <End Role="VISIT_TWO" EntitySet="VisitTwoes" />
+      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_2" EntitySet="EvaluationOfSymptomsVisit2Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" Association="CINCOPAModel.Store.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
+      <End Role="VISIT_THREE" EntitySet="VisitThrees" />
+      <End Role="ECHOCARDIOGRAPHY_VISIT_3" EntitySet="EchocardiographyVisit3Set" />
+    </AssociationSet>
+    <AssociationSet Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" Association="CINCOPAModel.Store.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
+      <End Role="VISIT_ONE_ONE" EntitySet="VisitOneOnes" />
+      <End Role="EVALUATION_OF_SYMPTOMS_VISIT_11" EntitySet="EvaluationOfSymptomsVisit11Set" />
+    </AssociationSet>
+    <AssociationSet Name="CRFBLOOD_CLINICAL_ANALYSIS" Association="CINCOPAModel.Store.CRFBLOOD_CLINICAL_ANALYSIS">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="BLOOD_CLINICAL_ANALYSIS" EntitySet="BloodClinicalAnalyses" />
+    </AssociationSet>
+    <AssociationSet Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Association="CINCOPAModel.Store.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" EntitySet="BloodTestsForMarkersOfInflammations" />
+    </AssociationSet>
+    <AssociationSet Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Association="CINCOPAModel.Store.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" EntitySet="BloodTestsForMarkersOfCardiacDysfunctions" />
+    </AssociationSet>
+    <AssociationSet Name="CRFBLOOD_CHEMISTRY" Association="CINCOPAModel.Store.CRFBLOOD_CHEMISTRY">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="BLOOD_CHEMISTRY" EntitySet="BloodChemistrys" />
+    </AssociationSet>
+    <AssociationSet Name="CRFAB_THERAPY" Association="CINCOPAModel.Store.CRFAB_THERAPY">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="AB_THERAPY" EntitySet="AbTherapys" />
+    </AssociationSet>
+    <AssociationSet Name="ROUTEAB_THERAPY" Association="CINCOPAModel.Store.ROUTEAB_THERAPY">
+      <End Role="ROUTE" EntitySet="Routes" />
+      <End Role="AB_THERAPY" EntitySet="AbTherapys" />
+    </AssociationSet>
+    <AssociationSet Name="DRUGAB_THERAPY" Association="CINCOPAModel.Store.DRUGAB_THERAPY">
+      <End Role="DRUG" EntitySet="Drugs" />
+      <End Role="AB_THERAPY" EntitySet="AbTherapys" />
+    </AssociationSet>
+    <AssociationSet Name="CRFTEST_FOR_PNEUMOCOCCAL" Association="CINCOPAModel.Store.CRFTEST_FOR_PNEUMOCOCCAL">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="TEST_FOR_PNEUMOCOCCAL" EntitySet="TestForPneumococcals" />
+    </AssociationSet>
+    <AssociationSet Name="CRFMICROBIOLOGY_SPUTUM" Association="CINCOPAModel.Store.CRFMICROBIOLOGY_SPUTUM">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="MICROBIOLOGY_SPUTUM" EntitySet="MicrobiologySputums" />
+    </AssociationSet>
+    <AssociationSet Name="CRFMICROBIOLOGY_BLOOD" Association="CINCOPAModel.Store.CRFMICROBIOLOGY_BLOOD">
+      <End Role="CRF" EntitySet="CRFs" />
+      <End Role="MICROBIOLOGY_BLOOD" EntitySet="MicrobiologyBloods" />
+    </AssociationSet>
+    <AssociationSet Name="ORGANISMMICROBIOLOGY_BLOOD" Association="CINCOPAModel.Store.ORGANISMMICROBIOLOGY_BLOOD">
+      <End Role="ORGANISM" EntitySet="Organisms" />
+      <End Role="MICROBIOLOGY_BLOOD" EntitySet="MicrobiologyBloods" />
+    </AssociationSet>
+    <AssociationSet Name="ORGANISMMICROBIOLOGY_SPUTUM" Association="CINCOPAModel.Store.ORGANISMMICROBIOLOGY_SPUTUM">
+      <End Role="ORGANISM" EntitySet="Organisms" />
+      <End Role="MICROBIOLOGY_SPUTUM" EntitySet="MicrobiologySputums" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="CRFs">
     <Key>
       <PropertyRef Name="Id" />
@@ -214,317 +156,15 @@
     <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
     <Property Name="NUMBER" Type="int" Nullable="false" />
-    <Property Name="DATE_BIRTH" Type="datetime" />
-    <Property Name="DATE_HOSPITALISATION" Type="datetime" />
-    <Property Name="DATE_DISCHARGE" Type="datetime" />
+    <Property Name="DATE_BIRTH" Type="datetime" Nullable="true" />
+    <Property Name="DATE_HOSPITALISATION" Type="datetime" Nullable="true" />
+    <Property Name="DATE_DISCHARGE" Type="datetime" Nullable="true" />
     <Property Name="AE_LOGIC" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="Drugs">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MNN" Type="nvarchar(max)" />
-    <Property Name="GROUP" Type="nvarchar(max)" />
-    <Property Name="CODE" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="EchocardiographyVisit1Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="FV_PERCENT" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_LJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_RJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="SDLA" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="COMMENTS" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EchocardiographyVisit3Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="FV_PERCENT" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_LJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_RJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="SDLA" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="COMMENTS" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_THREE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ElectrocardiographyVisit1Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="SINUS_RHYTHM" Type="bit" />
-    <Property Name="ATRIAL_FIBRILLATION" Type="bit" />
-    <Property Name="ARRYTHMIA_SUPRAVENTRICULAR" Type="bit" />
-    <Property Name="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" Type="bit" />
-    <Property Name="HEART_RATE" Type="int" />
-    <Property Name="SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EvaluationOfSymptomsVisit11Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DYSPNEA" Type="nvarchar(max)" />
-    <Property Name="COUGH" Type="nvarchar(max)" />
-    <Property Name="SPUTUM" Type="nvarchar(max)" />
-    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" />
-    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" />
-    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" />
-    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" />
-    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" />
-    <Property Name="CREPITUS" Type="nvarchar(max)" />
-    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" />
-    <Property Name="DRY_RALES" Type="nvarchar(max)" />
-    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" />
-    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" />
-    <Property Name="THERAPY_EFFICIENCY" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EvaluationOfSymptomsVisit1Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DYSPNEA" Type="nvarchar(max)" />
-    <Property Name="COUGH" Type="nvarchar(max)" />
-    <Property Name="SPUTUM" Type="nvarchar(max)" />
-    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" />
-    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" />
-    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" />
-    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" />
-    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" />
-    <Property Name="CREPITUS" Type="nvarchar(max)" />
-    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" />
-    <Property Name="DRY_RALES" Type="nvarchar(max)" />
-    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" />
-    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EvaluationOfSymptomsVisit2Set">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DYSPNEA" Type="nvarchar(max)" />
-    <Property Name="COUGH" Type="nvarchar(max)" />
-    <Property Name="SPUTUM" Type="nvarchar(max)" />
-    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" />
-    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" />
-    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" />
-    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" />
-    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" />
-    <Property Name="CREPITUS" Type="nvarchar(max)" />
-    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" />
-    <Property Name="DRY_RALES" Type="nvarchar(max)" />
-    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" />
-    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" />
-    <Property Name="THERAPY_EFFICIENCY" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="MicrobiologyBloods">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_CAPTURE" Type="datetime" />
-    <Property Name="LAB_NUMBER" Type="nvarchar(max)" />
-    <Property Name="GROWTH_PATHOGENS" Type="nvarchar(max)" />
-    <Property Name="ORGANISMId" Type="uniqueidentifier" />
-    <Property Name="BETA" Type="nvarchar(max)" />
-    <Property Name="MRSA" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="MicrobiologySputums">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_CAPTURE" Type="datetime" />
-    <Property Name="LAB_NUMBER" Type="nvarchar(max)" />
-    <Property Name="QUALITY_LEUKOCYTES" Type="nvarchar(max)" />
-    <Property Name="QUALITY_EPITHELIAL" Type="nvarchar(max)" />
-    <Property Name="NOT_REPRESENTATIVE" Type="bit" />
-    <Property Name="GROWTH_PATHOGENS" Type="nvarchar(max)" />
-    <Property Name="ORGANISMId" Type="uniqueidentifier" />
-    <Property Name="BETA" Type="nvarchar(max)" />
-    <Property Name="MRSA" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="Organisms">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CODE" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="Routes">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CODE" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
-  <EntityType Name="TestForPneumococcals">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="LOGIC" Type="nvarchar(max)" />
-    <Property Name="RESULT" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Users">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ROLE" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="VisitOneOnes">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_VISIT" Type="datetime" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="VisitOnes">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_VISIT" Type="datetime" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="VisitThrees">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_VISIT" Type="datetime" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="VisitTwoes">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_VISIT" Type="datetime" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
-    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Wards">
     <Key>
@@ -537,580 +177,929 @@
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ROLE" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="VisitOnes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitOneOnes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitTwoes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitThrees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_VISIT" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AEs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DATE_START" Type="datetime" Nullable="true" />
+    <Property Name="DATE_END" Type="datetime" Nullable="true" />
+    <Property Name="HEAVY" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RESULT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RELATION" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ACTIONS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="BaseLiveIndicatorsVisit1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="int" Nullable="true" />
+    <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="int" Nullable="true" />
+    <Property Name="HEART_RATE" Type="int" Nullable="true" />
+    <Property Name="RESPIRATORY_RATE" Type="int" Nullable="true" />
+    <Property Name="TEMPERATURE" Type="decimal" Nullable="true" />
+    <Property Name="HEAVY_TYPE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="OXYGEN_THERAPY_NEEDED" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DECOMPENSATION_SIGNS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnamnesticDataVisit1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_SYMPTOM" Type="datetime" Nullable="true" />
+    <Property Name="DATE_DIAGNOSIS" Type="datetime" Nullable="true" />
+    <Property Name="NUMBER_EPISODES" Type="int" Nullable="true" />
+    <Property Name="NUMBER_EPISODES_NODATA" Type="bit" Nullable="true" />
+    <Property Name="FUNCTION_CLASS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="OTHER_EPISODES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SMOKE_STATUS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SMOKE_AVERAGE" Type="int" Nullable="true" />
+    <Property Name="SMOKE_YEARS" Type="int" Nullable="true" />
+    <Property Name="SMOKE_PACK_YEARS" Type="decimal" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvaluationOfSymptomsVisit1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DYSPNEA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="COUGH" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SPUTUM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CREPITUS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DRY_RALES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ElectrocardiographyVisit1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="true" />
+    <Property Name="SINUS_RHYTHM" Type="bit" Nullable="true" />
+    <Property Name="ATRIAL_FIBRILLATION" Type="bit" Nullable="true" />
+    <Property Name="ARRYTHMIA_SUPRAVENTRICULAR" Type="bit" Nullable="true" />
+    <Property Name="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" Type="bit" Nullable="true" />
+    <Property Name="HEART_RATE" Type="int" Nullable="true" />
+    <Property Name="SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EchocardiographyVisit1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="true" />
+    <Property Name="FV_PERCENT" Type="decimal" Nullable="true" />
+    <Property Name="EA_LJ" Type="decimal" Nullable="true" />
+    <Property Name="EA_RJ" Type="decimal" Nullable="true" />
+    <Property Name="SDLA" Type="decimal" Nullable="true" />
+    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Nullable="true" />
+    <Property Name="COMMENTS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="XrayChestVisit1Set">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="PNEUMONIA_SIGNS" Type="nvarchar(max)" />
-    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_TOP" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_MIDDLE" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_BOTTOM" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_LEFT_TOP" Type="bit" />
-    <Property Name="ALVEOLAR_INFILTRATION_LEFT_BOTTOM" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_TOP" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_TOP" Type="bit" />
-    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_BOTTOM" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_NONE" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_RIGHT" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_LEFT" Type="bit" />
-    <Property Name="PLEURAL_EFFUSION_DOUBLE" Type="bit" />
-    <Property Name="OTHER" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" />
-    <Property Name="CreatedByDate" Type="nvarchar(max)" />
-    <Property Name="UpdatedBy" Type="nvarchar(max)" />
-    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
-    <Property Name="StateCode" Type="nvarchar(max)" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="true" />
+    <Property Name="PNEUMONIA_SIGNS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_TOP" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_MIDDLE" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_LEFT_TOP" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_LEFT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_TOP" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_TOP" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_NONE" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_RIGHT" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_LEFT" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_DOUBLE" Type="bit" Nullable="true" />
+    <Property Name="OTHER" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <Association Name="FK_CRFAB_THERAPY">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="AbTherapys" Type="Self.AbTherapys" Multiplicity="*" />
+  <EntityType Name="ComputedTomographyChestVisit1Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="true" />
+    <Property Name="PNEUMONIA_SIGNS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_TOP" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_MIDDLE" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_RIGHT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_LEFT_TOP" Type="bit" Nullable="true" />
+    <Property Name="ALVEOLAR_INFILTRATION_LEFT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_TOP" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_TOP" Type="bit" Nullable="true" />
+    <Property Name="INTERSTITIAL_INFILTRATION_LEFT_BOTTOM" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_NONE" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_RIGHT" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_LEFT" Type="bit" Nullable="true" />
+    <Property Name="PLEURAL_EFFUSION_DOUBLE" Type="bit" Nullable="true" />
+    <Property Name="OTHER" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BaseLiveIndicatorsVisit2Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="int" Nullable="true" />
+    <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="int" Nullable="true" />
+    <Property Name="HEART_RATE" Type="int" Nullable="true" />
+    <Property Name="RESPIRATORY_RATE" Type="int" Nullable="true" />
+    <Property Name="TEMPERATURE" Type="decimal" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvaluationOfSymptomsVisit2Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DYSPNEA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="COUGH" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SPUTUM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CREPITUS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DRY_RALES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="THERAPY_EFFICIENCY" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EchocardiographyVisit3Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_PROCEDURE" Type="datetime" Nullable="true" />
+    <Property Name="FV_PERCENT" Type="decimal" Nullable="true" />
+    <Property Name="EA_LJ" Type="decimal" Nullable="true" />
+    <Property Name="EA_RJ" Type="decimal" Nullable="true" />
+    <Property Name="SDLA" Type="decimal" Nullable="true" />
+    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Nullable="true" />
+    <Property Name="COMMENTS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvaluationOfSymptomsVisit11Set">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DYSPNEA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="COUGH" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SPUTUM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SPUTUM_TYPE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TEMPERATURE_INCREASE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="COLD_SYMPTOM" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SHORTERING_OF_PERCUSSION_SOUNDS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MOIST_RALES_SOUNDS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CREPITUS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PLEURAL_FRICTION_NOISE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DRY_RALES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PRESENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="INCIDENCE_OF_EDEMA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="THERAPY_EFFICIENCY" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_ONE_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BloodClinicalAnalyses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_ONE_SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_LEUKOCYTOSIS" Type="decimal" Nullable="true" />
+    <Property Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Nullable="true" />
+    <Property Name="VISIT_ONE_OTHERS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_LEUKOCYTOSIS" Type="decimal" Nullable="true" />
+    <Property Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Nullable="true" />
+    <Property Name="VISIT_TWO_OTHERS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BloodTestsForMarkersOfInflammations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_ONE_C_REACTIVE_PROTEIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_PROCALCITONIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_IL6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_FNO" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_C_REACTIVE_PROTEIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_PROCALCITONIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_IL6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_FNO" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_C_REACTIVE_PROTEIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_PROCALCITONIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_IL6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_FNO" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BloodTestsForMarkersOfCardiacDysfunctions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_KOPEPTIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_PROADRENOMEDULLIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_KOPEPTIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_PROADRENOMEDULLIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_KOPEPTIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_THREE_PROADRENOMEDULLIN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BloodChemistrys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VISIT_ONE_SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_ONE_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_SIGNIFICANT_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VISIT_TWO_CHANGES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organisms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Routes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Drugs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MNN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GROUP" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CODE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AbTherapys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DRUGId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ROUTEId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SINGLE_DOSE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FREQUENCY" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DATE_START" Type="datetime" Nullable="true" />
+    <Property Name="DATE_END" Type="datetime" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TestForPneumococcals">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LOGIC" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RESULT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MicrobiologySputums">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_CAPTURE" Type="datetime" Nullable="true" />
+    <Property Name="LAB_NUMBER" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="QUALITY_LEUKOCYTES" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="QUALITY_EPITHELIAL" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NOT_REPRESENTATIVE" Type="bit" Nullable="true" />
+    <Property Name="GROWTH_PATHOGENS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ORGANISMId" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="BETA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MRSA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MicrobiologyBloods">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CRFId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DATE_CAPTURE" Type="datetime" Nullable="true" />
+    <Property Name="LAB_NUMBER" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GROWTH_PATHOGENS" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ORGANISMId" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="BETA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MRSA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StateCode" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <Association Name="CRFWARD">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="*" />
+    <End Role="WARD" Type="CINCOPAModel.Store.Wards" Multiplicity="1" />
     <ReferentialConstraint>
-      <Principal Role="CRFs">
+      <Principal Role="WARD">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="AbTherapys">
-        <PropertyRef Name="CRFId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFADVERSE_EVENT">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="AEs" Type="Self.AEs" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="AEs">
-        <PropertyRef Name="CRFId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFBLOOD_CHEMISTRY">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="BloodChemistrys" Type="Self.BloodChemistrys" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="BloodChemistrys">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFBLOOD_CLINICAL_ANALYSIS">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="BloodClinicalAnalyses" Type="Self.BloodClinicalAnalyses" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="BloodClinicalAnalyses">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="BloodTestsForMarkersOfCardiacDysfunctions" Type="Self.BloodTestsForMarkersOfCardiacDysfunctions" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="BloodTestsForMarkersOfCardiacDysfunctions">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="BloodTestsForMarkersOfInflammations" Type="Self.BloodTestsForMarkersOfInflammations" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="BloodTestsForMarkersOfInflammations">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFMICROBIOLOGY_BLOOD">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="MicrobiologyBloods" Type="Self.MicrobiologyBloods" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="MicrobiologyBloods">
-        <PropertyRef Name="CRFId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFMICROBIOLOGY_SPUTUM">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="MicrobiologySputums" Type="Self.MicrobiologySputums" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="MicrobiologySputums">
-        <PropertyRef Name="CRFId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFTEST_FOR_PNEUMOCOCCAL">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="TestForPneumococcals" Type="Self.TestForPneumococcals" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TestForPneumococcals">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFVISIT_ONE">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="VisitOnes">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFVISIT_ONE_ONE">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="VisitOneOnes" Type="Self.VisitOneOnes" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="VisitOneOnes">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFVISIT_THREE">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="VisitThrees" Type="Self.VisitThrees" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="VisitThrees">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFVISIT_TWO">
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="VisitTwoes" Type="Self.VisitTwoes" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CRFs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="VisitTwoes">
-        <PropertyRef Name="CRF_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CRFWARD">
-    <End Role="Wards" Type="Self.Wards" Multiplicity="1" />
-    <End Role="CRFs" Type="Self.CRFs" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Wards">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="CRFs">
+      <Dependent Role="CRF">
         <PropertyRef Name="WARDId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_DRUGAB_THERAPY">
-    <End Role="Drugs" Type="Self.Drugs" Multiplicity="1" />
-    <End Role="AbTherapys" Type="Self.AbTherapys" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Drugs">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="AbTherapys">
-        <PropertyRef Name="DRUGId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ORGANISMMICROBIOLOGY_BLOOD">
-    <End Role="Organisms" Type="Self.Organisms" Multiplicity="0..1" />
-    <End Role="MicrobiologyBloods" Type="Self.MicrobiologyBloods" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Organisms">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="MicrobiologyBloods">
-        <PropertyRef Name="ORGANISMId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ORGANISMMICROBIOLOGY_SPUTUM">
-    <End Role="Organisms" Type="Self.Organisms" Multiplicity="0..1" />
-    <End Role="MicrobiologySputums" Type="Self.MicrobiologySputums" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Organisms">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="MicrobiologySputums">
-        <PropertyRef Name="ORGANISMId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ROUTEAB_THERAPY">
-    <End Role="Routes" Type="Self.Routes" Multiplicity="1" />
-    <End Role="AbTherapys" Type="Self.AbTherapys" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Routes">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="AbTherapys">
-        <PropertyRef Name="ROUTEId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
-    <End Role="VisitOneOnes" Type="Self.VisitOneOnes" Multiplicity="1">
+  <Association Name="CRFVISIT_ONE">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="EvaluationOfSymptomsVisit11Set" Type="Self.EvaluationOfSymptomsVisit11Set" Multiplicity="*" />
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOneOnes">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="EvaluationOfSymptomsVisit11Set">
-        <PropertyRef Name="VISIT_ONE_ONE_Id" />
+      <Dependent Role="VISIT_ONE">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONEANAMNESTIC_DATA">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="CRFVISIT_ONE_ONE">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="AnamnesticDataVisit1Set" Type="Self.AnamnesticDataVisit1Set" Multiplicity="*" />
+    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VisitOneOnes" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="AnamnesticDataVisit1Set">
+      <Dependent Role="VISIT_ONE_ONE">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFVISIT_THREE">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VisitThrees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_THREE">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFVISIT_TWO">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VISIT_TWO">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFADVERSE_EVENT">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ADVERSE_EVENT" Type="CINCOPAModel.Store.AEs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADVERSE_EVENT">
+        <PropertyRef Name="CRFId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BASE_LIVE_INDICATORS_VISIT_1" Type="CINCOPAModel.Store.BaseLiveIndicatorsVisit1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_ONE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BASE_LIVE_INDICATORS_VISIT_1">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="VISIT_ONEANAMNESTIC_DATA">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="BaseLiveIndicatorsVisit1Set" Type="Self.BaseLiveIndicatorsVisit1Set" Multiplicity="*" />
+    <End Role="ANAMNESTIC_DATA" Type="CINCOPAModel.Store.AnamnesticDataVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="BaseLiveIndicatorsVisit1Set">
+      <Dependent Role="ANAMNESTIC_DATA">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="ComputedTomographyChestVisit1Set" Type="Self.ComputedTomographyChestVisit1Set" Multiplicity="*" />
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_1" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="ComputedTomographyChestVisit1Set">
+      <Dependent Role="EVALUATION_OF_SYMPTOMS_VISIT_1">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="EchocardiographyVisit1Set" Type="Self.EchocardiographyVisit1Set" Multiplicity="*" />
+    <End Role="ELECTROCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.ElectrocardiographyVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="EchocardiographyVisit1Set">
+      <Dependent Role="ELECTROCARDIOGRAPHY_VISIT_1">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="ElectrocardiographyVisit1Set" Type="Self.ElectrocardiographyVisit1Set" Multiplicity="*" />
+    <End Role="ECHOCARDIOGRAPHY_VISIT_1" Type="CINCOPAModel.Store.EchocardiographyVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="ElectrocardiographyVisit1Set">
+      <Dependent Role="ECHOCARDIOGRAPHY_VISIT_1">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="VISIT_ONEXRAY_CHEST_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="EvaluationOfSymptomsVisit1Set" Type="Self.EvaluationOfSymptomsVisit1Set" Multiplicity="*" />
+    <End Role="XRAY_CHEST_VISIT_1" Type="CINCOPAModel.Store.XrayChestVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="EvaluationOfSymptomsVisit1Set">
+      <Dependent Role="XRAY_CHEST_VISIT_1">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_ONEXRAY_CHEST_VISIT_1">
-    <End Role="VisitOnes" Type="Self.VisitOnes" Multiplicity="1">
+  <Association Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
+    <End Role="VISIT_ONE" Type="CINCOPAModel.Store.VisitOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="XrayChestVisit1Set" Type="Self.XrayChestVisit1Set" Multiplicity="*" />
+    <End Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Type="CINCOPAModel.Store.ComputedTomographyChestVisit1Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitOnes">
+      <Principal Role="VISIT_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="XrayChestVisit1Set">
+      <Dependent Role="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
         <PropertyRef Name="VISIT_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
-    <End Role="VisitThrees" Type="Self.VisitThrees" Multiplicity="1">
+  <Association Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="EchocardiographyVisit3Set" Type="Self.EchocardiographyVisit3Set" Multiplicity="*" />
+    <End Role="BASE_LIVE_INDICATORS_VISIT_2" Type="CINCOPAModel.Store.BaseLiveIndicatorsVisit2Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitThrees">
+      <Principal Role="VISIT_TWO">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="EchocardiographyVisit3Set">
+      <Dependent Role="BASE_LIVE_INDICATORS_VISIT_2">
+        <PropertyRef Name="VISIT_TWO_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
+    <End Role="VISIT_TWO" Type="CINCOPAModel.Store.VisitTwoes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_2" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit2Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_TWO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EVALUATION_OF_SYMPTOMS_VISIT_2">
+        <PropertyRef Name="VISIT_TWO_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
+    <End Role="VISIT_THREE" Type="CINCOPAModel.Store.VisitThrees" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ECHOCARDIOGRAPHY_VISIT_3" Type="CINCOPAModel.Store.EchocardiographyVisit3Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VISIT_THREE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ECHOCARDIOGRAPHY_VISIT_3">
         <PropertyRef Name="VISIT_THREE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
-    <End Role="VisitTwoes" Type="Self.VisitTwoes" Multiplicity="1">
+  <Association Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
+    <End Role="VISIT_ONE_ONE" Type="CINCOPAModel.Store.VisitOneOnes" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="BaseLiveIndicatorsVisit2Set" Type="Self.BaseLiveIndicatorsVisit2Set" Multiplicity="*" />
+    <End Role="EVALUATION_OF_SYMPTOMS_VISIT_11" Type="CINCOPAModel.Store.EvaluationOfSymptomsVisit11Set" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitTwoes">
+      <Principal Role="VISIT_ONE_ONE">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="BaseLiveIndicatorsVisit2Set">
-        <PropertyRef Name="VISIT_TWO_Id" />
+      <Dependent Role="EVALUATION_OF_SYMPTOMS_VISIT_11">
+        <PropertyRef Name="VISIT_ONE_ONE_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
-    <End Role="VisitTwoes" Type="Self.VisitTwoes" Multiplicity="1">
+  <Association Name="CRFBLOOD_CLINICAL_ANALYSIS">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="EvaluationOfSymptomsVisit2Set" Type="Self.EvaluationOfSymptomsVisit2Set" Multiplicity="*" />
+    <End Role="BLOOD_CLINICAL_ANALYSIS" Type="CINCOPAModel.Store.BloodClinicalAnalyses" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="VisitTwoes">
+      <Principal Role="CRF">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="EvaluationOfSymptomsVisit2Set">
-        <PropertyRef Name="VISIT_TWO_Id" />
+      <Dependent Role="BLOOD_CLINICAL_ANALYSIS">
+        <PropertyRef Name="CRF_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="CINCOPAModelStoreContainer">
-    <EntitySet Name="AbTherapys" EntityType="Self.AbTherapys" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AEs" EntityType="Self.AEs" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AnamnesticDataVisit1Set" EntityType="Self.AnamnesticDataVisit1Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BaseLiveIndicatorsVisit1Set" EntityType="Self.BaseLiveIndicatorsVisit1Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BaseLiveIndicatorsVisit2Set" EntityType="Self.BaseLiveIndicatorsVisit2Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BloodChemistrys" EntityType="Self.BloodChemistrys" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BloodClinicalAnalyses" EntityType="Self.BloodClinicalAnalyses" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BloodTestsForMarkersOfCardiacDysfunctions" EntityType="Self.BloodTestsForMarkersOfCardiacDysfunctions" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BloodTestsForMarkersOfInflammations" EntityType="Self.BloodTestsForMarkersOfInflammations" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ComputedTomographyChestVisit1Set" EntityType="Self.ComputedTomographyChestVisit1Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CRFs" EntityType="Self.CRFs" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Drugs" EntityType="Self.Drugs" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EchocardiographyVisit1Set" EntityType="Self.EchocardiographyVisit1Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EchocardiographyVisit3Set" EntityType="Self.EchocardiographyVisit3Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ElectrocardiographyVisit1Set" EntityType="Self.ElectrocardiographyVisit1Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EvaluationOfSymptomsVisit11Set" EntityType="Self.EvaluationOfSymptomsVisit11Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EvaluationOfSymptomsVisit1Set" EntityType="Self.EvaluationOfSymptomsVisit1Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EvaluationOfSymptomsVisit2Set" EntityType="Self.EvaluationOfSymptomsVisit2Set" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="MicrobiologyBloods" EntityType="Self.MicrobiologyBloods" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="MicrobiologySputums" EntityType="Self.MicrobiologySputums" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Organisms" EntityType="Self.Organisms" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Routes" EntityType="Self.Routes" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TestForPneumococcals" EntityType="Self.TestForPneumococcals" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VisitOneOnes" EntityType="Self.VisitOneOnes" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VisitOnes" EntityType="Self.VisitOnes" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VisitThrees" EntityType="Self.VisitThrees" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VisitTwoes" EntityType="Self.VisitTwoes" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Wards" EntityType="Self.Wards" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="XrayChestVisit1Set" EntityType="Self.XrayChestVisit1Set" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_CRFAB_THERAPY" Association="Self.FK_CRFAB_THERAPY">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="AbTherapys" EntitySet="AbTherapys" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFADVERSE_EVENT" Association="Self.FK_CRFADVERSE_EVENT">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="AEs" EntitySet="AEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFBLOOD_CHEMISTRY" Association="Self.FK_CRFBLOOD_CHEMISTRY">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="BloodChemistrys" EntitySet="BloodChemistrys" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFBLOOD_CLINICAL_ANALYSIS" Association="Self.FK_CRFBLOOD_CLINICAL_ANALYSIS">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="BloodClinicalAnalyses" EntitySet="BloodClinicalAnalyses" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Association="Self.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="BloodTestsForMarkersOfCardiacDysfunctions" EntitySet="BloodTestsForMarkersOfCardiacDysfunctions" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Association="Self.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="BloodTestsForMarkersOfInflammations" EntitySet="BloodTestsForMarkersOfInflammations" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFMICROBIOLOGY_BLOOD" Association="Self.FK_CRFMICROBIOLOGY_BLOOD">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="MicrobiologyBloods" EntitySet="MicrobiologyBloods" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFMICROBIOLOGY_SPUTUM" Association="Self.FK_CRFMICROBIOLOGY_SPUTUM">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="MicrobiologySputums" EntitySet="MicrobiologySputums" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFTEST_FOR_PNEUMOCOCCAL" Association="Self.FK_CRFTEST_FOR_PNEUMOCOCCAL">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="TestForPneumococcals" EntitySet="TestForPneumococcals" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFVISIT_ONE" Association="Self.FK_CRFVISIT_ONE">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFVISIT_ONE_ONE" Association="Self.FK_CRFVISIT_ONE_ONE">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="VisitOneOnes" EntitySet="VisitOneOnes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFVISIT_THREE" Association="Self.FK_CRFVISIT_THREE">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="VisitThrees" EntitySet="VisitThrees" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFVISIT_TWO" Association="Self.FK_CRFVISIT_TWO">
-      <End Role="CRFs" EntitySet="CRFs" />
-      <End Role="VisitTwoes" EntitySet="VisitTwoes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CRFWARD" Association="Self.FK_CRFWARD">
-      <End Role="Wards" EntitySet="Wards" />
-      <End Role="CRFs" EntitySet="CRFs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_DRUGAB_THERAPY" Association="Self.FK_DRUGAB_THERAPY">
-      <End Role="Drugs" EntitySet="Drugs" />
-      <End Role="AbTherapys" EntitySet="AbTherapys" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ORGANISMMICROBIOLOGY_BLOOD" Association="Self.FK_ORGANISMMICROBIOLOGY_BLOOD">
-      <End Role="Organisms" EntitySet="Organisms" />
-      <End Role="MicrobiologyBloods" EntitySet="MicrobiologyBloods" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ORGANISMMICROBIOLOGY_SPUTUM" Association="Self.FK_ORGANISMMICROBIOLOGY_SPUTUM">
-      <End Role="Organisms" EntitySet="Organisms" />
-      <End Role="MicrobiologySputums" EntitySet="MicrobiologySputums" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ROUTEAB_THERAPY" Association="Self.FK_ROUTEAB_THERAPY">
-      <End Role="Routes" EntitySet="Routes" />
-      <End Role="AbTherapys" EntitySet="AbTherapys" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" Association="Self.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
-      <End Role="VisitOneOnes" EntitySet="VisitOneOnes" />
-      <End Role="EvaluationOfSymptomsVisit11Set" EntitySet="EvaluationOfSymptomsVisit11Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONEANAMNESTIC_DATA" Association="Self.FK_VISIT_ONEANAMNESTIC_DATA">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="AnamnesticDataVisit1Set" EntitySet="AnamnesticDataVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" Association="Self.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="BaseLiveIndicatorsVisit1Set" EntitySet="BaseLiveIndicatorsVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Association="Self.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="ComputedTomographyChestVisit1Set" EntitySet="ComputedTomographyChestVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" Association="Self.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="EchocardiographyVisit1Set" EntitySet="EchocardiographyVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" Association="Self.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="ElectrocardiographyVisit1Set" EntitySet="ElectrocardiographyVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" Association="Self.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="EvaluationOfSymptomsVisit1Set" EntitySet="EvaluationOfSymptomsVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_ONEXRAY_CHEST_VISIT_1" Association="Self.FK_VISIT_ONEXRAY_CHEST_VISIT_1">
-      <End Role="VisitOnes" EntitySet="VisitOnes" />
-      <End Role="XrayChestVisit1Set" EntitySet="XrayChestVisit1Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" Association="Self.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
-      <End Role="VisitThrees" EntitySet="VisitThrees" />
-      <End Role="EchocardiographyVisit3Set" EntitySet="EchocardiographyVisit3Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" Association="Self.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
-      <End Role="VisitTwoes" EntitySet="VisitTwoes" />
-      <End Role="BaseLiveIndicatorsVisit2Set" EntitySet="BaseLiveIndicatorsVisit2Set" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" Association="Self.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
-      <End Role="VisitTwoes" EntitySet="VisitTwoes" />
-      <End Role="EvaluationOfSymptomsVisit2Set" EntitySet="EvaluationOfSymptomsVisit2Set" />
-    </AssociationSet>
-  </EntityContainer>
+  <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Type="CINCOPAModel.Store.BloodTestsForMarkersOfInflammations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Type="CINCOPAModel.Store.BloodTestsForMarkersOfCardiacDysfunctions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFBLOOD_CHEMISTRY">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BLOOD_CHEMISTRY" Type="CINCOPAModel.Store.BloodChemistrys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BLOOD_CHEMISTRY">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFAB_THERAPY">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AB_THERAPY" Type="CINCOPAModel.Store.AbTherapys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AB_THERAPY">
+        <PropertyRef Name="CRFId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ROUTEAB_THERAPY">
+    <End Role="ROUTE" Type="CINCOPAModel.Store.Routes" Multiplicity="1" />
+    <End Role="AB_THERAPY" Type="CINCOPAModel.Store.AbTherapys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROUTE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AB_THERAPY">
+        <PropertyRef Name="ROUTEId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DRUGAB_THERAPY">
+    <End Role="DRUG" Type="CINCOPAModel.Store.Drugs" Multiplicity="1" />
+    <End Role="AB_THERAPY" Type="CINCOPAModel.Store.AbTherapys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DRUG">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AB_THERAPY">
+        <PropertyRef Name="DRUGId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFTEST_FOR_PNEUMOCOCCAL">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TEST_FOR_PNEUMOCOCCAL" Type="CINCOPAModel.Store.TestForPneumococcals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TEST_FOR_PNEUMOCOCCAL">
+        <PropertyRef Name="CRF_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFMICROBIOLOGY_SPUTUM">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MICROBIOLOGY_SPUTUM" Type="CINCOPAModel.Store.MicrobiologySputums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MICROBIOLOGY_SPUTUM">
+        <PropertyRef Name="CRFId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CRFMICROBIOLOGY_BLOOD">
+    <End Role="CRF" Type="CINCOPAModel.Store.CRFs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MICROBIOLOGY_BLOOD" Type="CINCOPAModel.Store.MicrobiologyBloods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRF">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MICROBIOLOGY_BLOOD">
+        <PropertyRef Name="CRFId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORGANISMMICROBIOLOGY_BLOOD">
+    <End Role="ORGANISM" Type="CINCOPAModel.Store.Organisms" Multiplicity="0..1" />
+    <End Role="MICROBIOLOGY_BLOOD" Type="CINCOPAModel.Store.MicrobiologyBloods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORGANISM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MICROBIOLOGY_BLOOD">
+        <PropertyRef Name="ORGANISMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORGANISMMICROBIOLOGY_SPUTUM">
+    <End Role="ORGANISM" Type="CINCOPAModel.Store.Organisms" Multiplicity="0..1" />
+    <End Role="MICROBIOLOGY_SPUTUM" Type="CINCOPAModel.Store.MicrobiologySputums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORGANISM">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MICROBIOLOGY_SPUTUM">
+        <PropertyRef Name="ORGANISMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

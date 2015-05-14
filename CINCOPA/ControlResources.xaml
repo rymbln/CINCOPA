@@ -3,16 +3,18 @@
                     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
 
     <Style TargetType="TextBox">
-        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontSize" Value="10" />
         <Setter Property="Margin" Value="2,1,2,1" />
+        <Setter Property="MinHeight" Value="18" />
         <Setter Property="MinWidth" Value="50"/>
         <Setter Property="MaxWidth" Value="400"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
     <Style x:Key="TextBoxLarge"  TargetType="TextBox">
-        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontSize" Value="10" />
         <Setter Property="Margin" Value="2,1,2,1" />
+        <Setter Property="MinHeight" Value="18" />
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
@@ -23,9 +25,9 @@
     </Style>
     <Style TargetType="ComboBox">
 
-        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontSize" Value="10" />
         <Setter Property="Margin" Value="2,1,2,1" />
-        
+        <Setter Property="Height" Value="18" />
         <Setter Property="MinWidth" Value="50"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center" />
@@ -38,7 +40,7 @@
     </Style>
     <Style TargetType="Label">
         <Setter Property="Margin" Value="2,1,2,1" />
-        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontSize" Value="10" />
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
@@ -63,7 +65,7 @@
     </Style>
 
     <Style TargetType="xctk:MaskedTextBox">
-
+    <Setter Property="Height" Value="18"/>
 </Style>
     <!--Light pane with header, used to isolate sub sections of the interface-->
     <Style x:Key="SubDisplayArea" TargetType="{x:Type HeaderedContentControl}">

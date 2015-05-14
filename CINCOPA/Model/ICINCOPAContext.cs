@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Objects;
 using System.Linq;
 using System.Text;
 
 namespace CINCOPA.Model
 {
     using System;
+    using System.Data.Objects;
     using CINCOPA.Model;
-    using System.Data.Entity.Core.Objects;
 
     public interface ICINCOPAContext : IDisposable
     {

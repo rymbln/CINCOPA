@@ -30,9 +30,9 @@
                     <DataGridTextColumn Header="ИРК" Width="*"  Binding="{Binding Path=NUMBER}" />
                     <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding Path=NAME}" />
                     <DataGridTextColumn Header="ЛПУ" Width="*" Binding="{Binding Path=WARD_NAME}" />
-                <DataGridTextColumn Header="Дата рождения" Width="*" Binding="{Binding Path=DATE_BIRTH,StringFormat=dd-MM-yyyy}" />
-                <DataGridTextColumn Header="Дата госпитализации" Width="*" Binding="{Binding Path=DATE_HOSPITALISATION, StringFormat=dd-MM-yyyy}" />
-                <DataGridTextColumn Header="Дата выписки" Width="*" Binding="{Binding Path=DATE_DISCHARGE,StringFormat=dd-MM-yyyy}" />
+                    <DataGridTextColumn Header="Дата рождения" Width="*" Binding="{Binding Path=DATE_BIRTH}" />
+                <DataGridTextColumn Header="Дата госпитализации" Width="*" Binding="{Binding Path=DATE_HOSPITALISATION}" />
+                <DataGridTextColumn Header="Дата выписки" Width="*" Binding="{Binding Path=DATE_DISCHARGE}" />
             </DataGrid.Columns>
 
             </DataGrid>
