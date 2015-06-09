@@ -65,8 +65,8 @@
     </Style>
 
     <Style TargetType="xctk:MaskedTextBox">
-
-</Style>
+        <Setter Property="Height" Value="24"/>
+    </Style>
     <!--Light pane with header, used to isolate sub sections of the interface-->
     <Style x:Key="SubDisplayArea" TargetType="{x:Type HeaderedContentControl}">
         <Setter Property="Template">
@@ -124,6 +124,6 @@
 
     <Style TargetType="Button">
         <Setter Property="Margin" Value="2,5,2,5"/>
-        <Setter Property="MinWidth" Value="100"/>
+       
     </Style>
 </ResourceDictionary>
