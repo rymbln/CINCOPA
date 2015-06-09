@@ -154,17 +154,17 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="WARDId" Nullable="false" />
-    <Property Type="String" Name="NAME" Nullable="false" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Int32" Name="NUMBER" Nullable="false" />
-    <Property Type="DateTime" Name="DATE_BIRTH" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_HOSPITALISATION" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_DISCHARGE" Nullable="true" />
-    <Property Type="String" Name="AE_LOGIC" Nullable="false" />
-    <Property Type="String" Name="CreatedBy" Nullable="false" />
-    <Property Type="String" Name="CreatedByDate" Nullable="false" />
-    <Property Type="String" Name="UpdatedBy" Nullable="false" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_BIRTH" Nullable="true" Precision="3" />
+    <Property Type="DateTime" Name="DATE_HOSPITALISATION" Nullable="true" Precision="3" />
+    <Property Type="DateTime" Name="DATE_DISCHARGE" Nullable="true" Precision="3" />
+    <Property Type="String" Name="AE_LOGIC" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="WARD" Relationship="CINCOPAModel.CRFWARD" FromRole="CRF" ToRole="WARD" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.CRFVISIT_ONE" FromRole="CRF" ToRole="VISIT_ONE" />
     <NavigationProperty Name="VISIT_ONE_ONE" Relationship="CINCOPAModel.CRFVISIT_ONE_ONE" FromRole="CRF" ToRole="VISIT_ONE_ONE" />
@@ -185,13 +185,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="NAME" Nullable="false" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Int32" Name="NUMBER" Nullable="false" />
-    <Property Type="String" Name="CreatedBy" Nullable="false" />
-    <Property Type="String" Name="CreatedByDate" Nullable="false" />
-    <Property Type="String" Name="UpdatedBy" Nullable="false" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="false" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFWARD" FromRole="WARD" ToRole="CRF" />
   </EntityType>
   <EntityType Name="USER">
@@ -199,9 +199,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="NAME" Nullable="false" />
-    <Property Type="String" Name="PASSWORD" Nullable="false" />
-    <Property Type="String" Name="ROLE" Nullable="true" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ROLE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="CRFWARD">
     <End Type="CINCOPAModel.CRF" Role="CRF" Multiplicity="*" />
@@ -220,12 +220,12 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_ONE" FromRole="VISIT_ONE" ToRole="CRF" />
     <NavigationProperty Name="BASE_LIVE_INDICATORS_VISIT_1" Relationship="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" FromRole="VISIT_ONE" ToRole="BASE_LIVE_INDICATORS_VISIT_1" />
     <NavigationProperty Name="ANAMNESTIC_DATA" Relationship="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" FromRole="VISIT_ONE" ToRole="ANAMNESTIC_DATA" />
@@ -241,12 +241,12 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
-    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_ONE_ONE" FromRole="VISIT_ONE_ONE" ToRole="CRF" />
     <NavigationProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_11" Relationship="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" FromRole="VISIT_ONE_ONE" ToRole="EVALUATION_OF_SYMPTOMS_VISIT_11" />
   </EntityType>
@@ -256,12 +256,12 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
-    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_TWO" FromRole="VISIT_TWO" ToRole="CRF" />
     <NavigationProperty Name="BASE_LIVE_INDICATORS_VISIT_2" Relationship="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" FromRole="VISIT_TWO" ToRole="BASE_LIVE_INDICATORS_VISIT_2" />
     <NavigationProperty Name="EVALUATION_OF_SYMPTOMS_VISIT_2" Relationship="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" FromRole="VISIT_TWO" ToRole="EVALUATION_OF_SYMPTOMS_VISIT_2" />
@@ -272,12 +272,12 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
-    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_VISIT" Nullable="true" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFVISIT_THREE" FromRole="VISIT_THREE" ToRole="CRF" />
     <NavigationProperty Name="ECHOCARDIOGRAPHY_VISIT_3" Relationship="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" FromRole="VISIT_THREE" ToRole="ECHOCARDIOGRAPHY_VISIT_3" />
   </EntityType>
@@ -287,18 +287,18 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
-    <Property Type="String" Name="NAME" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_START" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_END" Nullable="true" />
-    <Property Type="String" Name="HEAVY" Nullable="true" />
-    <Property Type="String" Name="RESULT" Nullable="true" />
-    <Property Type="String" Name="RELATION" Nullable="true" />
-    <Property Type="String" Name="ACTIONS" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="NAME" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="DateTime" Name="DATE_START" Nullable="true" Precision="3" />
+    <Property Type="DateTime" Name="DATE_END" Nullable="true" Precision="3" />
+    <Property Type="String" Name="HEAVY" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="RESULT" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="RELATION" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ACTIONS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFADVERSE_EVENT" FromRole="ADVERSE_EVENT" ToRole="CRF" />
   </EntityType>
   <EntityType Name="BASE_LIVE_INDICATORS_VISIT_1">
@@ -307,19 +307,19 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" FromRole="BASE_LIVE_INDICATORS_VISIT_1" ToRole="VISIT_ONE" />
-    <Property Type="Int32" Name="BLOOD_PRESSURE_RIGHT_HAND" Nullable="true" />
-    <Property Type="Int32" Name="BLOOD_PRESSURE_LEFT_HAND" Nullable="true" />
+    <Property Type="String" Name="BLOOD_PRESSURE_RIGHT_HAND" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Type="String" Name="BLOOD_PRESSURE_LEFT_HAND" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
     <Property Type="Int32" Name="HEART_RATE" Nullable="true" />
     <Property Type="Int32" Name="RESPIRATORY_RATE" Nullable="true" />
-    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" />
-    <Property Type="String" Name="HEAVY_TYPE" Nullable="true" />
-    <Property Type="String" Name="OXYGEN_THERAPY_NEEDED" Nullable="true" />
-    <Property Type="String" Name="DECOMPENSATION_SIGNS" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="HEAVY_TYPE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="OXYGEN_THERAPY_NEEDED" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="DECOMPENSATION_SIGNS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="CRFVISIT_ONE">
     <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
@@ -371,21 +371,21 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" FromRole="ANAMNESTIC_DATA" ToRole="VISIT_ONE" />
-    <Property Type="DateTime" Name="DATE_SYMPTOM" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_DIAGNOSIS" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_SYMPTOM" Nullable="true" Precision="3" />
+    <Property Type="DateTime" Name="DATE_DIAGNOSIS" Nullable="true" Precision="3" />
     <Property Type="Int32" Name="NUMBER_EPISODES" Nullable="true" />
     <Property Type="Boolean" Name="NUMBER_EPISODES_NODATA" Nullable="true" />
-    <Property Type="String" Name="FUNCTION_CLASS" Nullable="true" />
-    <Property Type="String" Name="OTHER_EPISODES" Nullable="true" />
-    <Property Type="String" Name="SMOKE_STATUS" Nullable="true" />
+    <Property Type="String" Name="FUNCTION_CLASS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="OTHER_EPISODES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SMOKE_STATUS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Int32" Name="SMOKE_AVERAGE" Nullable="true" />
     <Property Type="Int32" Name="SMOKE_YEARS" Nullable="true" />
-    <Property Type="Decimal" Name="SMOKE_PACK_YEARS" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="Decimal" Name="SMOKE_PACK_YEARS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="VISIT_ONEANAMNESTIC_DATA">
     <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
@@ -399,24 +399,24 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_1" ToRole="VISIT_ONE" />
-    <Property Type="String" Name="DYSPNEA" Nullable="true" />
-    <Property Type="String" Name="COUGH" Nullable="true" />
-    <Property Type="String" Name="SPUTUM" Nullable="true" />
-    <Property Type="String" Name="SPUTUM_TYPE" Nullable="true" />
-    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="true" />
-    <Property Type="String" Name="COLD_SYMPTOM" Nullable="true" />
-    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="true" />
-    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="true" />
-    <Property Type="String" Name="CREPITUS" Nullable="true" />
-    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="true" />
-    <Property Type="String" Name="DRY_RALES" Nullable="true" />
-    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="true" />
-    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="DYSPNEA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="COUGH" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SPUTUM" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SPUTUM_TYPE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="COLD_SYMPTOM" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CREPITUS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="DRY_RALES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1">
     <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
@@ -430,18 +430,18 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" FromRole="ELECTROCARDIOGRAPHY_VISIT_1" ToRole="VISIT_ONE" />
-    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
     <Property Type="Boolean" Name="SINUS_RHYTHM" Nullable="true" />
     <Property Type="Boolean" Name="ATRIAL_FIBRILLATION" Nullable="true" />
     <Property Type="Boolean" Name="ARRYTHMIA_SUPRAVENTRICULAR" Nullable="true" />
     <Property Type="Boolean" Name="ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS" Nullable="true" />
     <Property Type="Int32" Name="HEART_RATE" Nullable="true" />
-    <Property Type="String" Name="SIGNIFICANT_CHANGES" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1">
     <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
@@ -455,18 +455,18 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" FromRole="ECHOCARDIOGRAPHY_VISIT_1" ToRole="VISIT_ONE" />
-    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" />
-    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" />
-    <Property Type="Decimal" Name="EA_LJ" Nullable="true" />
-    <Property Type="Decimal" Name="EA_RJ" Nullable="true" />
-    <Property Type="Decimal" Name="SDLA" Nullable="true" />
-    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" />
-    <Property Type="String" Name="COMMENTS" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
+    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EA_LJ" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EA_RJ" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="SDLA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="COMMENTS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="VISIT_ONEECHOCARDIOGRAPHY_VISIT_1">
     <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
@@ -479,9 +479,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1" FromRole="XRAY_CHEST_VISIT_1" ToRole="VISIT_ONE" />
-    <Property Type="String" Name="PNEUMONIA_SIGNS" Nullable="true" />
+    <Property Type="String" Name="PNEUMONIA_SIGNS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Boolean" Name="ALVEOLAR_INFILTRATION_RIGHT_TOP" Nullable="true" />
     <Property Type="Boolean" Name="ALVEOLAR_INFILTRATION_RIGHT_MIDDLE" Nullable="true" />
     <Property Type="Boolean" Name="ALVEOLAR_INFILTRATION_RIGHT_BOTTOM" Nullable="true" />
@@ -496,12 +496,12 @@
     <Property Type="Boolean" Name="PLEURAL_EFFUSION_RIGHT" Nullable="true" />
     <Property Type="Boolean" Name="PLEURAL_EFFUSION_LEFT" Nullable="true" />
     <Property Type="Boolean" Name="PLEURAL_EFFUSION_DOUBLE" Nullable="true" />
-    <Property Type="String" Name="OTHER" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="OTHER" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <Association Name="VISIT_ONEXRAY_CHEST_VISIT_1">
     <End Type="CINCOPAModel.VISIT_ONE" Multiplicity="1" Role="VISIT_ONE">
@@ -514,8 +514,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" />
-    <Property Type="String" Name="PNEUMONIA_SIGNS" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
+    <Property Type="String" Name="PNEUMONIA_SIGNS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Boolean" Name="ALVEOLAR_INFILTRATION_RIGHT_TOP" Nullable="true" />
     <Property Type="Boolean" Name="ALVEOLAR_INFILTRATION_RIGHT_MIDDLE" Nullable="true" />
     <Property Type="Boolean" Name="ALVEOLAR_INFILTRATION_RIGHT_BOTTOM" Nullable="true" />
@@ -530,12 +530,12 @@
     <Property Type="Boolean" Name="PLEURAL_EFFUSION_RIGHT" Nullable="true" />
     <Property Type="Boolean" Name="PLEURAL_EFFUSION_LEFT" Nullable="true" />
     <Property Type="Boolean" Name="PLEURAL_EFFUSION_DOUBLE" Nullable="true" />
-    <Property Type="String" Name="OTHER" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="OTHER" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" FromRole="COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" ToRole="VISIT_ONE" />
   </EntityType>
   <Association Name="VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1">
@@ -549,16 +549,16 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="Int32" Name="BLOOD_PRESSURE_RIGHT_HAND" Nullable="true" />
-    <Property Type="Int32" Name="BLOOD_PRESSURE_LEFT_HAND" Nullable="true" />
-    <Property Type="Int32" Name="HEART_RATE" Nullable="true" />
-    <Property Type="Int32" Name="RESPIRATORY_RATE" Nullable="true" />
-    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="BLOOD_PRESSURE_RIGHT_HAND" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="BLOOD_PRESSURE_LEFT_HAND" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Decimal" Name="HEART_RATE" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="RESPIRATORY_RATE" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" FromRole="BASE_LIVE_INDICATORS_VISIT_2" ToRole="VISIT_TWO" />
   </EntityType>
   <Association Name="VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2">
@@ -572,25 +572,25 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="DYSPNEA" Nullable="true" />
-    <Property Type="String" Name="COUGH" Nullable="true" />
-    <Property Type="String" Name="SPUTUM" Nullable="true" />
-    <Property Type="String" Name="SPUTUM_TYPE" Nullable="true" />
-    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="true" />
-    <Property Type="String" Name="COLD_SYMPTOM" Nullable="true" />
-    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="true" />
-    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="true" />
-    <Property Type="String" Name="CREPITUS" Nullable="true" />
-    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="true" />
-    <Property Type="String" Name="DRY_RALES" Nullable="true" />
-    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="true" />
-    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="true" />
-    <Property Type="String" Name="THERAPY_EFFICIENCY" Nullable="false" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="DYSPNEA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="COUGH" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SPUTUM" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SPUTUM_TYPE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="COLD_SYMPTOM" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CREPITUS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="DRY_RALES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="THERAPY_EFFICIENCY" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="VISIT_TWO" Relationship="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_2" ToRole="VISIT_TWO" />
   </EntityType>
   <Association Name="VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2">
@@ -604,18 +604,18 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" />
-    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" />
-    <Property Type="Decimal" Name="EA_LJ" Nullable="true" />
-    <Property Type="Decimal" Name="EA_RJ" Nullable="true" />
-    <Property Type="Decimal" Name="SDLA" Nullable="true" />
-    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" />
-    <Property Type="String" Name="COMMENTS" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
+    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EA_LJ" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EA_RJ" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="SDLA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="COMMENTS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="VISIT_THREE" Relationship="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" FromRole="ECHOCARDIOGRAPHY_VISIT_3" ToRole="VISIT_THREE" />
   </EntityType>
   <Association Name="VISIT_THREEECHOCARDIOGRAPHY_VISIT_3">
@@ -629,25 +629,25 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="DYSPNEA" Nullable="true" />
-    <Property Type="String" Name="COUGH" Nullable="true" />
-    <Property Type="String" Name="SPUTUM" Nullable="true" />
-    <Property Type="String" Name="SPUTUM_TYPE" Nullable="true" />
-    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="true" />
-    <Property Type="String" Name="COLD_SYMPTOM" Nullable="true" />
-    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="true" />
-    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="true" />
-    <Property Type="String" Name="CREPITUS" Nullable="true" />
-    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="true" />
-    <Property Type="String" Name="DRY_RALES" Nullable="true" />
-    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="true" />
-    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="true" />
-    <Property Type="String" Name="THERAPY_EFFICIENCY" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="DYSPNEA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="COUGH" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SPUTUM" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SPUTUM_TYPE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="TEMPERATURE_INCREASE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="COLD_SYMPTOM" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="SHORTERING_OF_PERCUSSION_SOUNDS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MOIST_RALES_SOUNDS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CREPITUS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PLEURAL_FRICTION_NOISE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="DRY_RALES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="PRESENCE_OF_EDEMA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="INCIDENCE_OF_EDEMA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="THERAPY_EFFICIENCY" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="VISIT_ONE_ONE" Relationship="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" FromRole="EVALUATION_OF_SYMPTOMS_VISIT_11" ToRole="VISIT_ONE_ONE" />
   </EntityType>
   <Association Name="VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11">
@@ -661,19 +661,19 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="VISIT_ONE_SIGNIFICANT_CHANGES" Nullable="true" />
-    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS" Nullable="true" />
-    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_OTHERS" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_SIGNIFICANT_CHANGES" Nullable="true" />
-    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS" Nullable="true" />
-    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_OTHERS" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="VISIT_ONE_SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="VISIT_ONE_OTHERS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="VISIT_TWO_OTHERS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS" FromRole="BLOOD_CLINICAL_ANALYSIS" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_CLINICAL_ANALYSIS">
@@ -687,23 +687,23 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="VISIT_ONE_C_REACTIVE_PROTEIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_PROCALCITONIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_IL6" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_FNO" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_C_REACTIVE_PROTEIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_PROCALCITONIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_IL6" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_FNO" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_C_REACTIVE_PROTEIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_PROCALCITONIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_IL6" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_FNO" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="VISIT_ONE_C_REACTIVE_PROTEIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_ONE_PROCALCITONIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_ONE_IL6" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_ONE_FNO" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_C_REACTIVE_PROTEIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_PROCALCITONIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_IL6" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_FNO" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_C_REACTIVE_PROTEIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_PROCALCITONIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_IL6" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_FNO" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
@@ -717,20 +717,20 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_KOPEPTIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_PROADRENOMEDULLIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_KOPEPTIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_PROADRENOMEDULLIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_KOPEPTIN" Nullable="true" />
-    <Property Type="String" Name="VISIT_THREE_PROADRENOMEDULLIN" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_ONE_KOPEPTIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_ONE_PROADRENOMEDULLIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_KOPEPTIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_PROADRENOMEDULLIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_KOPEPTIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_THREE_PROADRENOMEDULLIN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
@@ -744,15 +744,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="VISIT_ONE_SIGNIFICANT_CHANGES" Nullable="true" />
-    <Property Type="String" Name="VISIT_ONE_CHANGES" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_SIGNIFICANT_CHANGES" Nullable="true" />
-    <Property Type="String" Name="VISIT_TWO_CHANGES" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="VISIT_ONE_SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_ONE_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="VISIT_TWO_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_CHEMISTRY" FromRole="BLOOD_CHEMISTRY" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFBLOOD_CHEMISTRY">
@@ -766,13 +766,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="NAME" Nullable="false" />
-    <Property Type="String" Name="CODE" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CODE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="MICROBIOLOGY_BLOOD" Relationship="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD" FromRole="ORGANISM" ToRole="MICROBIOLOGY_BLOOD" />
     <NavigationProperty Name="MICROBIOLOGY_SPUTUM" Relationship="CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM" FromRole="ORGANISM" ToRole="MICROBIOLOGY_SPUTUM" />
   </EntityType>
@@ -781,13 +781,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="NAME" Nullable="false" />
-    <Property Type="String" Name="CODE" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CODE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="AB_THERAPY" Relationship="CINCOPAModel.ROUTEAB_THERAPY" FromRole="ROUTE" ToRole="AB_THERAPY" />
   </EntityType>
   <EntityType Name="DRUG">
@@ -795,15 +795,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="NAME" Nullable="false" />
-    <Property Type="String" Name="MNN" Nullable="true" />
-    <Property Type="String" Name="GROUP" Nullable="true" />
-    <Property Type="String" Name="CODE" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MNN" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="GROUP" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CODE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="AB_THERAPY" Relationship="CINCOPAModel.DRUGAB_THERAPY" FromRole="DRUG" ToRole="AB_THERAPY" />
   </EntityType>
   <EntityType Name="AB_THERAPY">
@@ -814,15 +814,15 @@
     <Property Type="Guid" Name="CRFId" Nullable="false" />
     <Property Type="Guid" Name="DRUGId" Nullable="false" />
     <Property Type="Guid" Name="ROUTEId" Nullable="false" />
-    <Property Type="String" Name="SINGLE_DOSE" Nullable="true" />
-    <Property Type="String" Name="FREQUENCY" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_START" Nullable="true" />
-    <Property Type="DateTime" Name="DATE_END" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="SINGLE_DOSE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="FREQUENCY" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="DateTime" Name="DATE_START" Nullable="true" Precision="3" />
+    <Property Type="DateTime" Name="DATE_END" Nullable="true" Precision="3" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFAB_THERAPY" FromRole="AB_THERAPY" ToRole="CRF" />
     <NavigationProperty Name="ROUTE" Relationship="CINCOPAModel.ROUTEAB_THERAPY" FromRole="AB_THERAPY" ToRole="ROUTE" />
     <NavigationProperty Name="DRUG" Relationship="CINCOPAModel.DRUGAB_THERAPY" FromRole="AB_THERAPY" ToRole="DRUG" />
@@ -870,13 +870,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="String" Name="LOGIC" Nullable="true" />
-    <Property Type="String" Name="RESULT" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="LOGIC" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="RESULT" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL" FromRole="TEST_FOR_PNEUMOCOCCAL" ToRole="CRF" />
   </EntityType>
   <Association Name="CRFTEST_FOR_PNEUMOCOCCAL">
@@ -891,20 +891,20 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
-    <Property Type="DateTime" Name="DATE_CAPTURE" Nullable="true" />
-    <Property Type="String" Name="LAB_NUMBER" Nullable="true" />
-    <Property Type="String" Name="QUALITY_LEUKOCYTES" Nullable="true" />
-    <Property Type="String" Name="QUALITY_EPITHELIAL" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_CAPTURE" Nullable="true" Precision="3" />
+    <Property Type="String" Name="LAB_NUMBER" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="QUALITY_LEUKOCYTES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="QUALITY_EPITHELIAL" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Boolean" Name="NOT_REPRESENTATIVE" Nullable="true" />
-    <Property Type="String" Name="GROWTH_PATHOGENS" Nullable="true" />
+    <Property Type="String" Name="GROWTH_PATHOGENS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Guid" Name="ORGANISMId" Nullable="true" />
-    <Property Type="String" Name="BETA" Nullable="true" />
-    <Property Type="String" Name="MRSA" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="BETA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MRSA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFMICROBIOLOGY_SPUTUM" FromRole="MICROBIOLOGY_SPUTUM" ToRole="CRF" />
     <NavigationProperty Name="ORGANISM" Relationship="CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM" FromRole="MICROBIOLOGY_SPUTUM" ToRole="ORGANISM" />
   </EntityType>
@@ -914,17 +914,17 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="Guid" Name="CRFId" Nullable="false" />
-    <Property Type="DateTime" Name="DATE_CAPTURE" Nullable="true" />
-    <Property Type="String" Name="LAB_NUMBER" Nullable="true" />
-    <Property Type="String" Name="GROWTH_PATHOGENS" Nullable="true" />
+    <Property Type="DateTime" Name="DATE_CAPTURE" Nullable="true" Precision="3" />
+    <Property Type="String" Name="LAB_NUMBER" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="GROWTH_PATHOGENS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Guid" Name="ORGANISMId" Nullable="true" />
-    <Property Type="String" Name="BETA" Nullable="true" />
-    <Property Type="String" Name="MRSA" Nullable="true" />
-    <Property Type="String" Name="CreatedBy" Nullable="true" />
-    <Property Type="String" Name="CreatedByDate" Nullable="true" />
-    <Property Type="String" Name="UpdatedBy" Nullable="true" />
-    <Property Type="String" Name="UpdatedByDate" Nullable="true" />
-    <Property Type="String" Name="StateCode" Nullable="true" />
+    <Property Type="String" Name="BETA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MRSA" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFMICROBIOLOGY_BLOOD" FromRole="MICROBIOLOGY_BLOOD" ToRole="CRF" />
     <NavigationProperty Name="ORGANISM" Relationship="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD" FromRole="MICROBIOLOGY_BLOOD" ToRole="ORGANISM" />
   </EntityType>

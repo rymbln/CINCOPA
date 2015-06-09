@@ -2229,7 +2229,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BLOOD_PRESSURE_RIGHT_HAND
+        public global::System.String BLOOD_PRESSURE_RIGHT_HAND
         {
             get
             {
@@ -2239,13 +2239,13 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_RIGHT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_RIGHT_HAND");
-                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BLOOD_PRESSURE_RIGHT_HAND");
                 OnBLOOD_PRESSURE_RIGHT_HANDChanged();
             }
         }
-        private Nullable<global::System.Int32> _BLOOD_PRESSURE_RIGHT_HAND;
-        partial void OnBLOOD_PRESSURE_RIGHT_HANDChanging(Nullable<global::System.Int32> value);
+        private global::System.String _BLOOD_PRESSURE_RIGHT_HAND;
+        partial void OnBLOOD_PRESSURE_RIGHT_HANDChanging(global::System.String value);
         partial void OnBLOOD_PRESSURE_RIGHT_HANDChanged();
     
         /// <summary>
@@ -2253,7 +2253,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BLOOD_PRESSURE_LEFT_HAND
+        public global::System.String BLOOD_PRESSURE_LEFT_HAND
         {
             get
             {
@@ -2263,13 +2263,13 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_LEFT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_LEFT_HAND");
-                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BLOOD_PRESSURE_LEFT_HAND");
                 OnBLOOD_PRESSURE_LEFT_HANDChanged();
             }
         }
-        private Nullable<global::System.Int32> _BLOOD_PRESSURE_LEFT_HAND;
-        partial void OnBLOOD_PRESSURE_LEFT_HANDChanging(Nullable<global::System.Int32> value);
+        private global::System.String _BLOOD_PRESSURE_LEFT_HAND;
+        partial void OnBLOOD_PRESSURE_LEFT_HANDChanging(global::System.String value);
         partial void OnBLOOD_PRESSURE_LEFT_HANDChanged();
     
         /// <summary>
@@ -2640,7 +2640,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BLOOD_PRESSURE_RIGHT_HAND
+        public global::System.String BLOOD_PRESSURE_RIGHT_HAND
         {
             get
             {
@@ -2650,13 +2650,13 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_RIGHT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_RIGHT_HAND");
-                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_RIGHT_HAND = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BLOOD_PRESSURE_RIGHT_HAND");
                 OnBLOOD_PRESSURE_RIGHT_HANDChanged();
             }
         }
-        private Nullable<global::System.Int32> _BLOOD_PRESSURE_RIGHT_HAND;
-        partial void OnBLOOD_PRESSURE_RIGHT_HANDChanging(Nullable<global::System.Int32> value);
+        private global::System.String _BLOOD_PRESSURE_RIGHT_HAND;
+        partial void OnBLOOD_PRESSURE_RIGHT_HANDChanging(global::System.String value);
         partial void OnBLOOD_PRESSURE_RIGHT_HANDChanged();
     
         /// <summary>
@@ -2664,7 +2664,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BLOOD_PRESSURE_LEFT_HAND
+        public global::System.String BLOOD_PRESSURE_LEFT_HAND
         {
             get
             {
@@ -2674,13 +2674,13 @@ namespace CINCOPA.Model
             {
                 OnBLOOD_PRESSURE_LEFT_HANDChanging(value);
                 ReportPropertyChanging("BLOOD_PRESSURE_LEFT_HAND");
-                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value);
+                _BLOOD_PRESSURE_LEFT_HAND = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BLOOD_PRESSURE_LEFT_HAND");
                 OnBLOOD_PRESSURE_LEFT_HANDChanged();
             }
         }
-        private Nullable<global::System.Int32> _BLOOD_PRESSURE_LEFT_HAND;
-        partial void OnBLOOD_PRESSURE_LEFT_HANDChanging(Nullable<global::System.Int32> value);
+        private global::System.String _BLOOD_PRESSURE_LEFT_HAND;
+        partial void OnBLOOD_PRESSURE_LEFT_HANDChanging(global::System.String value);
         partial void OnBLOOD_PRESSURE_LEFT_HANDChanged();
     
         /// <summary>
@@ -2688,7 +2688,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> HEART_RATE
+        public Nullable<global::System.Decimal> HEART_RATE
         {
             get
             {
@@ -2703,8 +2703,8 @@ namespace CINCOPA.Model
                 OnHEART_RATEChanged();
             }
         }
-        private Nullable<global::System.Int32> _HEART_RATE;
-        partial void OnHEART_RATEChanging(Nullable<global::System.Int32> value);
+        private Nullable<global::System.Decimal> _HEART_RATE;
+        partial void OnHEART_RATEChanging(Nullable<global::System.Decimal> value);
         partial void OnHEART_RATEChanged();
     
         /// <summary>
@@ -2712,7 +2712,7 @@ namespace CINCOPA.Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> RESPIRATORY_RATE
+        public Nullable<global::System.Decimal> RESPIRATORY_RATE
         {
             get
             {
@@ -2727,8 +2727,8 @@ namespace CINCOPA.Model
                 OnRESPIRATORY_RATEChanged();
             }
         }
-        private Nullable<global::System.Int32> _RESPIRATORY_RATE;
-        partial void OnRESPIRATORY_RATEChanging(Nullable<global::System.Int32> value);
+        private Nullable<global::System.Decimal> _RESPIRATORY_RATE;
+        partial void OnRESPIRATORY_RATEChanging(Nullable<global::System.Decimal> value);
         partial void OnRESPIRATORY_RATEChanged();
     
         /// <summary>

@@ -518,7 +518,7 @@ namespace CINCOPA.ViewModel
         #endregion
         #region VISIT ONE BASE LIVE INDICATIONS
 
-        public int? VISIT_ONE_BLOOD_PRESSURE_RIGHT_HAND
+        public string VISIT_ONE_BLOOD_PRESSURE_RIGHT_HAND
         {
             get { return Model.VISIT_ONE.BASE_LIVE_INDICATORS_VISIT_1.BLOOD_PRESSURE_RIGHT_HAND; }
             set
@@ -528,7 +528,7 @@ namespace CINCOPA.ViewModel
             }
         }
 
-        public int? VISIT_ONE_BLOOD_PRESSURE_LEFT_HAND
+        public string VISIT_ONE_BLOOD_PRESSURE_LEFT_HAND
         {
             get { return Model.VISIT_ONE.BASE_LIVE_INDICATORS_VISIT_1.BLOOD_PRESSURE_LEFT_HAND; }
             set
@@ -1639,7 +1639,7 @@ namespace CINCOPA.ViewModel
         }
         #endregion
         #region VISIT TWO BASE LIVE INDICATIONS
-        public int? VISIT_TWO_BLOOD_PRESSURE_RIGHT_HAND
+        public string VISIT_TWO_BLOOD_PRESSURE_RIGHT_HAND
         {
             get { return Model.VISIT_TWO.BASE_LIVE_INDICATORS_VISIT_2.BLOOD_PRESSURE_RIGHT_HAND; }
             set
@@ -1649,7 +1649,7 @@ namespace CINCOPA.ViewModel
             }
         }
 
-        public int? VISIT_TWO_BLOOD_PRESSURE_LEFT_HAND
+        public string VISIT_TWO_BLOOD_PRESSURE_LEFT_HAND
         {
             get { return Model.VISIT_TWO.BASE_LIVE_INDICATORS_VISIT_2.BLOOD_PRESSURE_LEFT_HAND; }
             set
@@ -1658,7 +1658,7 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("VISIT_TWO_BLOOD_PRESSURE_LEFT_HAND");
             }
         }
-        public int? VISIT_TWO_HEART_RATE
+        public decimal? VISIT_TWO_HEART_RATE
         {
             get { return Model.VISIT_TWO.BASE_LIVE_INDICATORS_VISIT_2.HEART_RATE; }
             set
@@ -1667,7 +1667,7 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("VISIT_TWO_HEART_RATE");
             }
         }
-        public int? VISIT_TWO_RESPIRATORY_RATE
+        public decimal? VISIT_TWO_RESPIRATORY_RATE
         {
             get { return Model.VISIT_TWO.BASE_LIVE_INDICATORS_VISIT_2.RESPIRATORY_RATE; }
             set
