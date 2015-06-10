@@ -22,5 +22,7 @@ namespace CINCOPA.Views
         {
             InitializeComponent();
         }
+
+       
     }
 }

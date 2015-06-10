@@ -373,10 +373,10 @@ namespace CINCOPA.Common
                 obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
                 obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
-                obj.StateCode = "---";
+            //    obj.StateCode = "---";
 
-                obj.NAME = "---";
-                obj.NUMBER = -100;
+           //     obj.NAME = "---";
+           //     obj.NUMBER = -100;
                 obj.DATE_BIRTH = null;
                 obj.DATE_HOSPITALISATION = null;
                 obj.DATE_DISCHARGE = null;
@@ -388,8 +388,7 @@ namespace CINCOPA.Common
                 obj.BLOOD_CHEMISTRY = CreateBloodChemistry();
                 obj.BLOOD_CLINICAL_ANALYSIS = CreateBloodClinicalAnalysis();
 
-                obj.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION =
-                    CreateBloodTestsForMarkersOfCardiacDysfunction();
+                obj.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION = CreateBloodTestsForMarkersOfCardiacDysfunction();
                 obj.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION = CreateTestsForMarkersOfInflammation();
 
 
@@ -408,8 +407,7 @@ namespace CINCOPA.Common
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Операция не может быть выполнена. Ошибка: "
-                                       + ex.Message);
+                MessageBox.Show(@"Операция не может быть выполнена. Ошибка: " + ex.Message);
             }
 
             if (success)
@@ -495,12 +493,12 @@ namespace CINCOPA.Common
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture); ;
             obj.VISIT_ONE_LEUKOCYTOSIS = null;
             obj.VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS = null;
-            obj.VISIT_ONE_OTHERS = "---";
-            obj.VISIT_ONE_SIGNIFICANT_CHANGES = "---";
+            //obj.VISIT_ONE_OTHERS = "---";
+            //obj.VISIT_ONE_SIGNIFICANT_CHANGES = "---";
             obj.VISIT_TWO_LEUKOCYTOSIS = null;
             obj.VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS = null;
-            obj.VISIT_TWO_OTHERS = "---";
-            obj.VISIT_TWO_SIGNIFICANT_CHANGES = "---";
+            //obj.VISIT_TWO_OTHERS = "---";
+            //obj.VISIT_TWO_SIGNIFICANT_CHANGES = "---";
 
             underlyingContext.BloodClinicalAnalyses.AddObject(obj);
 
@@ -517,10 +515,10 @@ namespace CINCOPA.Common
             obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
-            obj.VISIT_ONE_SIGNIFICANT_CHANGES = "---";
-            obj.VISIT_ONE_CHANGES = "---";
-            obj.VISIT_TWO_CHANGES = "---";
-            obj.VISIT_TWO_SIGNIFICANT_CHANGES = "---";
+            //obj.VISIT_ONE_SIGNIFICANT_CHANGES = "---";
+            //obj.VISIT_ONE_CHANGES = "---";
+            //obj.VISIT_TWO_CHANGES = "---";
+            //obj.VISIT_TWO_SIGNIFICANT_CHANGES = "---";
 
             underlyingContext.BloodChemistrys.AddObject(obj);
 
@@ -538,7 +536,7 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
             obj.LOGIC = "2 - Нет";
-            obj.RESULT = "---";
+            //obj.RESULT = "---";
 
             underlyingContext.TestForPneumococcals.AddObject(obj);
 
@@ -638,7 +636,7 @@ namespace CINCOPA.Common
             obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
-            obj.StateCode = "---";
+            //obj.StateCode = "---";
 
             obj.Id = GuidComb.Generate();
             obj.DATE_VISIT = null;
@@ -669,7 +667,7 @@ namespace CINCOPA.Common
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
             obj.DATE_PROCEDURE = null;
-            obj.PNEUMONIA_SIGNS = "---";
+            //obj.PNEUMONIA_SIGNS = "---";
             obj.ALVEOLAR_INFILTRATION_LEFT_BOTTOM = null;
             obj.ALVEOLAR_INFILTRATION_LEFT_TOP = null;
             obj.ALVEOLAR_INFILTRATION_RIGHT_BOTTOM = null;
@@ -684,7 +682,7 @@ namespace CINCOPA.Common
             obj.PLEURAL_EFFUSION_LEFT = null;
             obj.PLEURAL_EFFUSION_NONE = null;
             obj.PLEURAL_EFFUSION_RIGHT = null;
-            obj.OTHER = "---";
+            //obj.OTHER = "---";
 
             //underlyingContext.XrayChestVisit1Set.AddObject(obj);
 
@@ -708,7 +706,7 @@ namespace CINCOPA.Common
             obj.ARRYTHMIA_SUPRAVENTRICULAR = null;
             obj.ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS = null;
             obj.HEART_RATE = null;
-            obj.SIGNIFICANT_CHANGES = "---";
+            //obj.SIGNIFICANT_CHANGES = "---";
 
             //      underlyingContext.ElectrocardiographyVisit1Set.AddObject(obj);
 
@@ -727,12 +725,12 @@ namespace CINCOPA.Common
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
             obj.DATE_PROCEDURE = null;
-            obj.AMOUNT_OF_PERICARDIAL_EFFUSION = 0;
+            //obj.AMOUNT_OF_PERICARDIAL_EFFUSION = 0;
             obj.FV_PERCENT = null;
             obj.EA_LJ = null;
             obj.EA_RJ = null;
             obj.SDLA = null;
-            obj.COMMENTS = "---";
+            //obj.COMMENTS = "---";
 
             //underlyingContext.EchocardiographyVisit1Set.AddObject(obj);
 
@@ -753,7 +751,7 @@ namespace CINCOPA.Common
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
             obj.DATE_PROCEDURE = null;
-            obj.PNEUMONIA_SIGNS = "---";
+            //obj.PNEUMONIA_SIGNS = "---";
             obj.ALVEOLAR_INFILTRATION_LEFT_BOTTOM = null;
             obj.ALVEOLAR_INFILTRATION_LEFT_TOP = null;
             obj.ALVEOLAR_INFILTRATION_RIGHT_BOTTOM = null;
@@ -768,7 +766,7 @@ namespace CINCOPA.Common
             obj.PLEURAL_EFFUSION_LEFT = null;
             obj.PLEURAL_EFFUSION_NONE = null;
             obj.PLEURAL_EFFUSION_RIGHT = null;
-            obj.OTHER = "---";
+            //obj.OTHER = "---";
 
 
             //underlyingContext.ComputedTomographyChestVisit1Set.AddObject(obj);
@@ -792,9 +790,9 @@ namespace CINCOPA.Common
             obj.HEART_RATE = null;
             obj.RESPIRATORY_RATE = null;
             obj.TEMPERATURE = null;
-            obj.HEAVY_TYPE = "---";
-            obj.OXYGEN_THERAPY_NEEDED = "---";
-            obj.DECOMPENSATION_SIGNS = "---";
+            //obj.HEAVY_TYPE = "---";
+            //obj.OXYGEN_THERAPY_NEEDED = "---";
+            //obj.DECOMPENSATION_SIGNS = "---";
 
             //      underlyingContext.BaseLiveIndicatorsVisit1Set.AddObject(obj);
 
@@ -814,19 +812,19 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
-            obj.DYSPNEA = "---";
-            obj.COUGH = "---";
-            obj.SPUTUM = "---";
-            obj.SPUTUM_TYPE = "---";
-            obj.TEMPERATURE_INCREASE = "---";
-            obj.COLD_SYMPTOM = "---";
-            obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
-            obj.MOIST_RALES_SOUNDS = "---";
-            obj.CREPITUS = "---";
-            obj.PLEURAL_FRICTION_NOISE = "---";
-            obj.DRY_RALES = "---";
-            obj.PRESENCE_OF_EDEMA = "---";
-            obj.INCIDENCE_OF_EDEMA = "---";
+            //obj.DYSPNEA = "---";
+            //obj.COUGH = "---";
+            //obj.SPUTUM = "---";
+            //obj.SPUTUM_TYPE = "---";
+            //obj.TEMPERATURE_INCREASE = "---";
+            //obj.COLD_SYMPTOM = "---";
+            //obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
+            //obj.MOIST_RALES_SOUNDS = "---";
+            //obj.CREPITUS = "---";
+            //obj.PLEURAL_FRICTION_NOISE = "---";
+            //obj.DRY_RALES = "---";
+            //obj.PRESENCE_OF_EDEMA = "---";
+            //obj.INCIDENCE_OF_EDEMA = "---";
 
             //      underlyingContext.EvaluationOfSymptomsVisit1Set.AddObject(obj);
 
@@ -849,10 +847,10 @@ namespace CINCOPA.Common
             obj.NUMBER_EPISODES = null;
             obj.NUMBER_EPISODES_NODATA = true;
             obj.FUNCTION_CLASS = null;
-            obj.OTHER_EPISODES = "---";
+            //obj.OTHER_EPISODES = "---";
             obj.SMOKE_AVERAGE = null;
             obj.SMOKE_PACK_YEARS = null;
-            obj.SMOKE_STATUS = "---";
+            //obj.SMOKE_STATUS = "---";
             obj.SMOKE_YEARS = null;
 
             //     underlyingContext.AnamnesticDataVisit1Set.AddObject(obj);
@@ -895,20 +893,20 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
-            obj.DYSPNEA = "---";
-            obj.COUGH = "---";
-            obj.SPUTUM = "---";
-            obj.SPUTUM_TYPE = "---";
-            obj.TEMPERATURE_INCREASE = "---";
-            obj.COLD_SYMPTOM = "---";
-            obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
-            obj.MOIST_RALES_SOUNDS = "---";
-            obj.CREPITUS = "---";
-            obj.PLEURAL_FRICTION_NOISE = "---";
-            obj.DRY_RALES = "---";
-            obj.PRESENCE_OF_EDEMA = "---";
-            obj.INCIDENCE_OF_EDEMA = "---";
-            obj.THERAPY_EFFICIENCY = "---";
+            //obj.DYSPNEA = "---";
+            //obj.COUGH = "---";
+            //obj.SPUTUM = "---";
+            //obj.SPUTUM_TYPE = "---";
+            //obj.TEMPERATURE_INCREASE = "---";
+            //obj.COLD_SYMPTOM = "---";
+            //obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
+            //obj.MOIST_RALES_SOUNDS = "---";
+            //obj.CREPITUS = "---";
+//            obj.PLEURAL_FRICTION_NOISE = "---";
+            //obj.DRY_RALES = "---";
+            //obj.PRESENCE_OF_EDEMA = "---";
+            //obj.INCIDENCE_OF_EDEMA = "---";
+            //obj.THERAPY_EFFICIENCY = "---";
 
             //      underlyingContext.EvaluationOfSymptomsVisit11Set.AddObject(obj);
 
@@ -949,20 +947,20 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
-            obj.DYSPNEA = "---";
-            obj.COUGH = "---";
-            obj.SPUTUM = "---";
-            obj.SPUTUM_TYPE = "---";
-            obj.TEMPERATURE_INCREASE = "---";
-            obj.COLD_SYMPTOM = "---";
-            obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
-            obj.MOIST_RALES_SOUNDS = "---";
-            obj.CREPITUS = "---";
-            obj.PLEURAL_FRICTION_NOISE = "---";
-            obj.DRY_RALES = "---";
-            obj.PRESENCE_OF_EDEMA = "---";
-            obj.INCIDENCE_OF_EDEMA = "---";
-            obj.THERAPY_EFFICIENCY = "---";
+          //  obj.DYSPNEA = "---";
+           // obj.COUGH = "---";
+            //obj.SPUTUM = "---";
+            //obj.SPUTUM_TYPE = "---";
+            //obj.TEMPERATURE_INCREASE = "---";
+            //obj.COLD_SYMPTOM = "---";
+            //obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
+            //obj.MOIST_RALES_SOUNDS = "---";
+            //obj.CREPITUS = "---";
+            //obj.PLEURAL_FRICTION_NOISE = "---";
+            //obj.DRY_RALES = "---";
+            //obj.PRESENCE_OF_EDEMA = "---";
+            //obj.INCIDENCE_OF_EDEMA = "---";
+            //obj.THERAPY_EFFICIENCY = "---";
 
             //     underlyingContext.EvaluationOfSymptomsVisit2Set.AddObject(obj);
 
@@ -1024,12 +1022,12 @@ namespace CINCOPA.Common
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
             obj.DATE_PROCEDURE = null;
-            obj.AMOUNT_OF_PERICARDIAL_EFFUSION = 0;
+            //obj.AMOUNT_OF_PERICARDIAL_EFFUSION = 0;
             obj.FV_PERCENT = null;
             obj.EA_LJ = null;
             obj.EA_RJ = null;
             obj.SDLA = null;
-            obj.COMMENTS = "---";
+            //obj.COMMENTS = "---";
 
             //     underlyingContext.EchocardiographyVisit3Set.AddObject(obj);
 
@@ -1050,13 +1048,13 @@ namespace CINCOPA.Common
                 obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
                 obj.CRF = crf;
-                obj.NAME = "---";
+                //obj.NAME = "---";
                 obj.DATE_START = null;
                 obj.DATE_END = null;
-                obj.HEAVY = "---";
-                obj.RESULT = "---";
-                obj.RELATION = "---";
-                obj.ACTIONS = "---";
+                //obj.HEAVY = "---";
+                //obj.RESULT = "---";
+                //obj.RELATION = "---";
+                //obj.ACTIONS = "---";
                 underlyingContext.AEs.AddObject(obj);
                 //  Save();
             }
@@ -1081,8 +1079,8 @@ namespace CINCOPA.Common
                 obj.CRF = crf;
                 obj.DRUG = GetDefaultDrug();
                 obj.ROUTE = GetDefaultRoute();
-                obj.SINGLE_DOSE = "---";
-                obj.FREQUENCY = "---";
+                //obj.SINGLE_DOSE = "---";
+                //obj.FREQUENCY = "---";
                 obj.DATE_START = null;
                 obj.DATE_END = null;
 
@@ -1110,13 +1108,13 @@ namespace CINCOPA.Common
                 obj.CRF = crf;
                 obj.ORGANISM = GetDefaultOrganism();
                 obj.DATE_CAPTURE = null;
-                obj.LAB_NUMBER = "---";
-                obj.QUALITY_EPITHELIAL = "---";
-                obj.QUALITY_LEUKOCYTES = "---";
+                //obj.LAB_NUMBER = "---";
+                //obj.QUALITY_EPITHELIAL = "---";
+                //obj.QUALITY_LEUKOCYTES = "---";
                 obj.NOT_REPRESENTATIVE = null;
-                obj.GROWTH_PATHOGENS = "---";
-                obj.BETA = "---";
-                obj.MRSA = "---";
+                //obj.GROWTH_PATHOGENS = "---";
+                //obj.BETA = "---";
+                //obj.MRSA = "---";
                 underlyingContext.MicrobiologySputums.AddObject(obj);
                 // Save();
             }
@@ -1141,10 +1139,10 @@ namespace CINCOPA.Common
                 obj.CRF = crf;
                 obj.ORGANISM = GetDefaultOrganism();
                 obj.DATE_CAPTURE = null;
-                obj.LAB_NUMBER = "---";
-                obj.GROWTH_PATHOGENS = "---";
-                obj.BETA = "---";
-                obj.MRSA = "---";
+                //obj.LAB_NUMBER = "---";
+                //obj.GROWTH_PATHOGENS = "---";
+                //obj.BETA = "---";
+                //obj.MRSA = "---";
                 underlyingContext.MicrobiologyBloods.AddObject(obj);
                 // Save();
             }
@@ -1221,11 +1219,11 @@ namespace CINCOPA.Common
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
                 obj.CRFId = Model.Id;
-                obj.ACTIONS = "---";
-                obj.HEAVY = "---";
-                obj.NAME = "---";
-                obj.RELATION = "---";
-                obj.RESULT = "---";
+                //obj.ACTIONS = "---";
+                //obj.HEAVY = "---";
+                //obj.NAME = "---";
+                //obj.RELATION = "---";
+                //obj.RESULT = "---";
 
                 return obj;
             }
@@ -1257,8 +1255,8 @@ namespace CINCOPA.Common
                 obj.CRFId = Model.Id;
                 obj.DRUG = GetDefaultDrug();
                 obj.ROUTE = GetDefaultRoute();
-                obj.SINGLE_DOSE = "---";
-                obj.FREQUENCY = "---";
+                //obj.SINGLE_DOSE = "---";
+                //obj.FREQUENCY = "---";
                 obj.DATE_START = null;
                 obj.DATE_END = null;
 
@@ -1334,15 +1332,15 @@ namespace CINCOPA.Common
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
                 obj.CRFId = Model.Id;
-                obj.BETA = "---";
+                //obj.BETA = "---";
                 obj.DATE_CAPTURE = null;
-                obj.GROWTH_PATHOGENS = "---";
-                obj.LAB_NUMBER = "---";
-                obj.QUALITY_LEUKOCYTES = "---";
-                obj.QUALITY_EPITHELIAL = "---";
+                //obj.GROWTH_PATHOGENS = "---";
+                //obj.LAB_NUMBER = "---";
+                //obj.QUALITY_LEUKOCYTES = "---";
+                //obj.QUALITY_EPITHELIAL = "---";
                 obj.NOT_REPRESENTATIVE = null;
                 obj.ORGANISM = GetDefaultOrganism();
-                obj.MRSA = "---";
+                //obj.MRSA = "---";
 
                 return obj;
             }
@@ -1365,12 +1363,12 @@ namespace CINCOPA.Common
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
                 obj.CRFId = Model.Id;
-                obj.BETA = "---";
+                //obj.BETA = "---";
                 obj.DATE_CAPTURE = null;
-                obj.GROWTH_PATHOGENS = "---";
-                obj.LAB_NUMBER = "---";
+                //obj.GROWTH_PATHOGENS = "---";
+                //obj.LAB_NUMBER = "---";
                 obj.ORGANISM = GetDefaultOrganism();
-                obj.MRSA = "---";
+                //obj.MRSA = "---";
 
                 return obj;
             }
@@ -1403,6 +1401,34 @@ namespace CINCOPA.Common
             catch (Exception ex)
             {
                 MessageBox.Show("Не удалось получить список карт.", ex.Message);
+                return null;
+            }
+        }
+
+        public IEnumerable<WARD> GetAllWards()
+        {
+            return underlyingContext.Wards.OrderBy(o => o.NAME);
+        }
+
+        public WARD AddWard(string NewItem)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<WARD>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.NAME = NewItem;
+               // obj.CODE = "NEED_CODE";
+                underlyingContext.Wards.AddObject(obj);
+                Save();
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось добавить отделение! Ошибка: " + ex.Message);
                 return null;
             }
         }

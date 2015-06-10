@@ -62,7 +62,7 @@ namespace CINCOPA.ViewModel
                 {
                     CurrentMBSputum = AllMicrobiologySputum.FirstOrDefault();
                 };
-
+                SelectLpuCommand = new DelegateCommand(o => SelectLpu());
                 SaveCommand = new DelegateCommand(o => Save());
                 CheckCommand = new DelegateCommand(o => Check());
                 CancelCommand = new DelegateCommand(o => Cancel());
@@ -78,6 +78,18 @@ namespace CINCOPA.ViewModel
                 AddAECommand = new DelegateCommand(o => AddAE());
                 DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
 
+            }
+        }
+        public ICommand SelectLpuCommand { get; set; }
+
+        private void SelectLpu()
+        {
+            var vm = new SelectLpuViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("WardLookup");
+                WARD = vm.CurrentItem;
             }
         }
 

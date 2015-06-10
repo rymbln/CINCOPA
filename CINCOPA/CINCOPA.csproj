@@ -81,6 +81,7 @@
     <Compile Include="ViewModel\MicrobiologyBloodViewModel.cs" />
     <Compile Include="ViewModel\MicrobiologySputumViewModel.cs" />
     <Compile Include="ViewModel\SelectDrugViewModel.cs" />
+    <Compile Include="ViewModel\SelectLpuViewModel.cs" />
     <Compile Include="ViewModel\SelectOrganismViewModel.cs" />
     <Compile Include="ViewModel\SelectRouteViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
