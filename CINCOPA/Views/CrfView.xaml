@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:s="clr-namespace:System;assembly=mscorlib"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        Title="CINCOPA ИРК" Height="1080" Width="1920">
-    <ScrollViewer>
+        Title="CINCOPA ИРК" Height="768" Width="1024">
+    <ScrollViewer HorizontalContentAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" >
         <DockPanel>
             <ToolBarTray DockPanel.Dock="Top">
                 <ToolBar>
@@ -1155,39 +1155,70 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0" Text="Визит 1" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0" Text="Визит 2" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0" Text="Визит 3" />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0" Text="Ед.Изм." />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0" Text="Визит 1" />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="0" Text="Визит 2" />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="5" Grid.Row="0" Text="Визит 3" />
                                         <TextBlock Grid.Column="0" Grid.Row="1" Text="С-реактивный белок" />
                                         <TextBlock  Grid.Column="0" Grid.Row="3" Text="ИЛ-6" />
                                         <TextBlock  Grid.Column="0" Grid.Row="2" Text="Прокальцитонин" />
                                         <TextBlock  Grid.Column="0" Grid.Row="4" Text="ФНО" />
 
-
-                                        <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <ComboBox Grid.Column="1" Grid.Row="1"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=C_REACTIVE_PROTEIN_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_C_REACTIVE_PROTEIN_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="1"/>
                                         <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_C_REACTIVE_PROTEIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
-                                        <TextBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <ComboBox Grid.Column="1" Grid.Row="2"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=PROCALCITONIN_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_PROCALCITONIN_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="2"/>
                                         <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
+                                        <TextBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_PROCALCITONIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <ComboBox Grid.Column="1" Grid.Row="3"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=IL6_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_IL6_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="3"/>
                                         <TextBox Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="4" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_IL6, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <ComboBox Grid.Column="1" Grid.Row="4"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=FNO_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_FNO_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="4"/>
                                         <TextBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_FNO, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                     </Grid>
                                 </Border>
@@ -1210,32 +1241,58 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0" Text="Визит 1" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="2" Grid.Row="0" Text="Визит 2" />
-                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0" Text="Визит 3" />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="1" Grid.Row="0" Text="Ед.Изм." />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="3" Grid.Row="0" Text="Визит 1" />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="4" Grid.Row="0" Text="Визит 2" />
+                                        <TextBlock Style="{StaticResource TextBlockSmall}" Grid.Column="5" Grid.Row="0" Text="Визит 3" />
                                         <TextBlock  Grid.Column="0" Grid.Row="1" Text="Мозговой натрийуретический пептид" />
                                         <TextBlock  Grid.Column="0" Grid.Row="2" Text="Копептин" />
                                         <TextBlock  Grid.Column="0" Grid.Row="3" Text="Проадреномедуллин" />
 
-
-                                        <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <ComboBox Grid.Column="1" Grid.Row="1"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=BRAIN_NATRIURETIC_PEPTIDE_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_BRAIN_NATRIURETIC_PEPTIDE_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="1"/>
                                         <TextBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
-                                        <TextBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        <ComboBox Grid.Column="1" Grid.Row="2"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=KOPEPTIN_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_KOPEPTIN_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="2"/>
                                         <TextBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" Margin="2,0,2,1"  />
+                                        <TextBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_KOPEPTIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                        <TextBox Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+
+                                        <ComboBox Grid.Column="1" Grid.Row="3"  Width="75"
+                                  SelectedValuePath="." 
+                                  SelectedItem="{Binding Path=PROADRENOMEDULLIN_MEAS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                  ItemsSource="{Binding Path=MeasureLookup}" 
+                                  DisplayMemberPath="NAME" />
+                                        <Button Command="{Binding Select_PROADRENOMEDULLIN_MEAS_Command}" 
+                                                Width="32" Content="..." Grid.Column="2" Grid.Row="3"/>
                                         <TextBox Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_ONE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="4" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Text="{Binding Path=BLOOD_TEST_VISIT_TWO_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                        <TextBox Grid.Column="5" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 Text="{Binding Path=BLOOD_TEST_VISIT_THREE_PROADRENOMEDULLIN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                     </Grid>
                                 </Border>

@@ -51,7 +51,7 @@
     <Property Name="SMOKE_STATUS" Type="nvarchar(max)" />
     <Property Name="SMOKE_AVERAGE" Type="int" />
     <Property Name="SMOKE_YEARS" Type="int" />
-    <Property Name="SMOKE_PACK_YEARS" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SMOKE_PACK_YEARS" Type="decimal" Precision="18" Scale="4" />
     <Property Name="CreatedBy" Type="nvarchar(max)" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" />
@@ -66,9 +66,9 @@
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="nvarchar(max)" />
     <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="nvarchar(max)" />
-    <Property Name="HEART_RATE" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="RESPIRATORY_RATE" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="TEMPERATURE" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="HEART_RATE" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="RESPIRATORY_RATE" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="TEMPERATURE" Type="decimal" Precision="18" Scale="4" />
     <Property Name="HEAVY_TYPE" Type="nvarchar(max)" />
     <Property Name="OXYGEN_THERAPY_NEEDED" Type="nvarchar(max)" />
     <Property Name="DECOMPENSATION_SIGNS" Type="nvarchar(max)" />
@@ -86,9 +86,9 @@
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="BLOOD_PRESSURE_RIGHT_HAND" Type="nvarchar(max)" />
     <Property Name="BLOOD_PRESSURE_LEFT_HAND" Type="nvarchar(max)" />
-    <Property Name="HEART_RATE" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="RESPIRATORY_RATE" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="TEMPERATURE" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="HEART_RATE" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="RESPIRATORY_RATE" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="TEMPERATURE" Type="decimal" Precision="18" Scale="4" />
     <Property Name="CreatedBy" Type="nvarchar(max)" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" />
@@ -118,12 +118,12 @@
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="VISIT_ONE_SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_ONE_LEUKOCYTOSIS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VISIT_ONE_LEUKOCYTOSIS" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Precision="18" Scale="4" />
     <Property Name="VISIT_ONE_OTHERS" Type="nvarchar(max)" />
     <Property Name="VISIT_TWO_SIGNIFICANT_CHANGES" Type="nvarchar(max)" />
-    <Property Name="VISIT_TWO_LEUKOCYTOSIS" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="VISIT_TWO_LEUKOCYTOSIS" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Type="decimal" Precision="18" Scale="4" />
     <Property Name="VISIT_TWO_OTHERS" Type="nvarchar(max)" />
     <Property Name="CreatedBy" Type="nvarchar(max)" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" />
@@ -152,6 +152,9 @@
     <Property Name="UpdatedByDate" Type="nvarchar(max)" />
     <Property Name="StateCode" Type="nvarchar(max)" />
     <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BRAIN_NATRIURETIC_PEPTIDE_MEAS" Type="nvarchar(max)" />
+    <Property Name="KOPEPTIN_MEAS" Type="nvarchar(max)" />
+    <Property Name="PROADRENOMEDULLIN_MEAS" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="BloodTestsForMarkersOfInflammations">
     <Key>
@@ -176,6 +179,10 @@
     <Property Name="UpdatedByDate" Type="nvarchar(max)" />
     <Property Name="StateCode" Type="nvarchar(max)" />
     <Property Name="CRF_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="C_REACTIVE_PROTEIN_MEAS" Type="nvarchar(max)" />
+    <Property Name="PROCALCITONIN_MEAS" Type="nvarchar(max)" />
+    <Property Name="IL6_MEAS" Type="nvarchar(max)" />
+    <Property Name="FNO_MEAS" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="ComputedTomographyChestVisit1Set">
     <Key>
@@ -245,11 +252,11 @@
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="FV_PERCENT" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_LJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_RJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="SDLA" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="FV_PERCENT" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="EA_LJ" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="EA_RJ" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="SDLA" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Precision="18" Scale="4" />
     <Property Name="COMMENTS" Type="nvarchar(max)" />
     <Property Name="CreatedBy" Type="nvarchar(max)" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" />
@@ -264,11 +271,11 @@
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="DATE_PROCEDURE" Type="datetime" />
-    <Property Name="FV_PERCENT" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_LJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="EA_RJ" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="SDLA" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="FV_PERCENT" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="EA_LJ" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="EA_RJ" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="SDLA" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Type="decimal" Precision="18" Scale="4" />
     <Property Name="COMMENTS" Type="nvarchar(max)" />
     <Property Name="CreatedBy" Type="nvarchar(max)" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" />
@@ -372,6 +379,19 @@
     <Property Name="UpdatedByDate" Type="nvarchar(max)" />
     <Property Name="StateCode" Type="nvarchar(max)" />
     <Property Name="VISIT_TWO_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Measures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="CreatedByDate" Type="nvarchar(max)" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" />
+    <Property Name="UpdatedByDate" Type="nvarchar(max)" />
+    <Property Name="StateCode" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="MicrobiologyBloods">
     <Key>
@@ -976,6 +996,7 @@
     <EntitySet Name="EvaluationOfSymptomsVisit11Set" EntityType="Self.EvaluationOfSymptomsVisit11Set" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EvaluationOfSymptomsVisit1Set" EntityType="Self.EvaluationOfSymptomsVisit1Set" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EvaluationOfSymptomsVisit2Set" EntityType="Self.EvaluationOfSymptomsVisit2Set" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Measures" EntityType="Self.Measures" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MicrobiologyBloods" EntityType="Self.MicrobiologyBloods" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MicrobiologySputums" EntityType="Self.MicrobiologySputums" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Organisms" EntityType="Self.Organisms" Schema="dbo" store:Type="Tables" />

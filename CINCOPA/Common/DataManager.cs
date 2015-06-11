@@ -256,11 +256,8 @@ namespace CINCOPA.Common
         {
             get
             {
-                if (wardLookup == null)
-                {
-                    wardLookup = underlyingContext.Wards.OrderBy(o => o.NAME).ToList();
-                }
-                return wardLookup;
+                return underlyingContext.Wards.OrderBy(o => o.NAME).ToList();
+
             }
         }
         public List<DRUG> DrugLookup
@@ -334,7 +331,7 @@ namespace CINCOPA.Common
             {
                 throw new ArgumentNullException("context");
             }
-           
+
             underlyingContext = context;
         }
 
@@ -902,7 +899,7 @@ namespace CINCOPA.Common
             //obj.SHORTERING_OF_PERCUSSION_SOUNDS = "---";
             //obj.MOIST_RALES_SOUNDS = "---";
             //obj.CREPITUS = "---";
-//            obj.PLEURAL_FRICTION_NOISE = "---";
+            //            obj.PLEURAL_FRICTION_NOISE = "---";
             //obj.DRY_RALES = "---";
             //obj.PRESENCE_OF_EDEMA = "---";
             //obj.INCIDENCE_OF_EDEMA = "---";
@@ -947,8 +944,8 @@ namespace CINCOPA.Common
             obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
             obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
 
-          //  obj.DYSPNEA = "---";
-           // obj.COUGH = "---";
+            //  obj.DYSPNEA = "---";
+            // obj.COUGH = "---";
             //obj.SPUTUM = "---";
             //obj.SPUTUM_TYPE = "---";
             //obj.TEMPERATURE_INCREASE = "---";
@@ -1381,7 +1378,7 @@ namespace CINCOPA.Common
 
         public void DeleteMBSputum(MICROBIOLOGY_SPUTUM mICROBIOLOGY_SPUTUM)
         {
-           underlyingContext.MicrobiologySputums.DeleteObject(mICROBIOLOGY_SPUTUM);
+            underlyingContext.MicrobiologySputums.DeleteObject(mICROBIOLOGY_SPUTUM);
         }
 
 
@@ -1421,7 +1418,7 @@ namespace CINCOPA.Common
                 obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
                 obj.NAME = NewItem;
-               // obj.CODE = "NEED_CODE";
+                // obj.CODE = "NEED_CODE";
                 underlyingContext.Wards.AddObject(obj);
                 Save();
                 return obj;
@@ -1433,10 +1430,35 @@ namespace CINCOPA.Common
             }
         }
 
-        public  void DeleteCrf(CRF CurrentCrf)
+        public void DeleteCrf(CRF CurrentCrf)
         {
             underlyingContext.proc_del_CRF(CurrentCrf.Id.ToString());
             Save();
+        }
+
+        public List<Measure> MeasureLookup { get { return underlyingContext.Measures.Distinct().OrderBy(o => o.NAME).ToList(); } }
+
+        public Measure AddMeasure(string NewItem)
+        {
+            try
+            {
+                var obj = underlyingContext.CreateObject<Measure>();
+                obj.Id = GuidComb.Generate();
+                obj.CreatedBy = Authentification.GetCurrentUser().NAME;
+                obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
+                obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
+                obj.NAME = NewItem;
+                // obj.CODE = "NEED_CODE";
+                underlyingContext.Measures.AddObject(obj);
+                Save();
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось добавить отделение! Ошибка: " + ex.Message);
+                return null;
+            }
         }
     }
 }

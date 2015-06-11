@@ -150,6 +150,7 @@
     <FunctionImport Name="proc_del_CRF">
       <Parameter Name="id" Mode="In" Type="String" />
     </FunctionImport>
+    <EntitySet Name="Measures" EntityType="CINCOPAModel.Measure" />
   </EntityContainer>
   <EntityType Name="CRF">
     <Key>
@@ -314,7 +315,7 @@
     <Property Type="String" Name="BLOOD_PRESSURE_LEFT_HAND" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
     <Property Type="Int32" Name="HEART_RATE" Nullable="true" />
     <Property Type="Int32" Name="RESPIRATORY_RATE" Nullable="true" />
-    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="HEAVY_TYPE" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="OXYGEN_THERAPY_NEEDED" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="DECOMPENSATION_SIGNS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -383,7 +384,7 @@
     <Property Type="String" Name="SMOKE_STATUS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="Int32" Name="SMOKE_AVERAGE" Nullable="true" />
     <Property Type="Int32" Name="SMOKE_YEARS" Nullable="true" />
-    <Property Type="Decimal" Name="SMOKE_PACK_YEARS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="SMOKE_PACK_YEARS" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -459,11 +460,11 @@
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <NavigationProperty Name="VISIT_ONE" Relationship="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" FromRole="ECHOCARDIOGRAPHY_VISIT_1" ToRole="VISIT_ONE" />
     <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
-    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="EA_LJ" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="EA_RJ" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="SDLA" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="EA_LJ" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="EA_RJ" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SDLA" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="COMMENTS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -554,9 +555,9 @@
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="BLOOD_PRESSURE_RIGHT_HAND" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="BLOOD_PRESSURE_LEFT_HAND" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Type="Decimal" Name="HEART_RATE" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="RESPIRATORY_RATE" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HEART_RATE" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="RESPIRATORY_RATE" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="TEMPERATURE" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -608,11 +609,11 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="DateTime" Name="DATE_PROCEDURE" Nullable="true" Precision="3" />
-    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="EA_LJ" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="EA_RJ" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="SDLA" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FV_PERCENT" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="EA_LJ" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="EA_RJ" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SDLA" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="AMOUNT_OF_PERICARDIAL_EFFUSION" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="COMMENTS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -665,12 +666,12 @@
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Type="String" Name="VISIT_ONE_SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="VISIT_ONE_OTHERS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="VISIT_TWO_SIGNIFICANT_CHANGES" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS" Nullable="true" Precision="18" Scale="0" />
-    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS" Nullable="true" Precision="18" Scale="4" />
     <Property Type="String" Name="VISIT_TWO_OTHERS" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -708,6 +709,10 @@
     <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" ToRole="CRF" />
+    <Property Name="C_REACTIVE_PROTEIN_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PROCALCITONIN_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IL6_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FNO_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION">
     <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
@@ -735,6 +740,9 @@
     <Property Type="String" Name="UpdatedByDate" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="StateCode" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="CRF" Relationship="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" FromRole="BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" ToRole="CRF" />
+    <Property Name="BRAIN_NATRIURETIC_PEPTIDE_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KOPEPTIN_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PROADRENOMEDULLIN_MEAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION">
     <End Type="CINCOPAModel.CRF" Multiplicity="1" Role="CRF">
@@ -983,4 +991,17 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Measure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CODE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedByDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedByDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StateCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

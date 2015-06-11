@@ -393,6 +393,10 @@
     <EntitySetMapping Name="BloodTestsForMarkersOfInflammations">
       <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION)">
         <MappingFragment StoreEntitySet="BloodTestsForMarkersOfInflammations">
+          <ScalarProperty Name="FNO_MEAS" ColumnName="FNO_MEAS" />
+          <ScalarProperty Name="IL6_MEAS" ColumnName="IL6_MEAS" />
+          <ScalarProperty Name="PROCALCITONIN_MEAS" ColumnName="PROCALCITONIN_MEAS" />
+          <ScalarProperty Name="C_REACTIVE_PROTEIN_MEAS" ColumnName="C_REACTIVE_PROTEIN_MEAS" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="VISIT_ONE_C_REACTIVE_PROTEIN" ColumnName="VISIT_ONE_C_REACTIVE_PROTEIN" />
           <ScalarProperty Name="VISIT_ONE_PROCALCITONIN" ColumnName="VISIT_ONE_PROCALCITONIN" />
@@ -417,6 +421,9 @@
     <EntitySetMapping Name="BloodTestsForMarkersOfCardiacDysfunctions">
       <EntityTypeMapping TypeName="IsTypeOf(CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION)">
         <MappingFragment StoreEntitySet="BloodTestsForMarkersOfCardiacDysfunctions">
+          <ScalarProperty Name="PROADRENOMEDULLIN_MEAS" ColumnName="PROADRENOMEDULLIN_MEAS" />
+          <ScalarProperty Name="KOPEPTIN_MEAS" ColumnName="KOPEPTIN_MEAS" />
+          <ScalarProperty Name="BRAIN_NATRIURETIC_PEPTIDE_MEAS" ColumnName="BRAIN_NATRIURETIC_PEPTIDE_MEAS" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" ColumnName="VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE" />
           <ScalarProperty Name="VISIT_ONE_KOPEPTIN" ColumnName="VISIT_ONE_KOPEPTIN" />
@@ -730,5 +737,19 @@
       </EndProperty>
     </AssociationSetMapping>
     <FunctionImportMapping FunctionImportName="proc_del_CRF" FunctionName="CINCOPAModel.Store.proc_del_CRF" />
+    <EntitySetMapping Name="Measures">
+      <EntityTypeMapping TypeName="CINCOPAModel.Measure">
+        <MappingFragment StoreEntitySet="Measures">
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="UpdatedByDate" ColumnName="UpdatedByDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedByDate" ColumnName="CreatedByDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

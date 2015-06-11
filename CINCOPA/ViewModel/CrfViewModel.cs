@@ -77,10 +77,25 @@ namespace CINCOPA.ViewModel
                 DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o => CurrentMBBlood != null);
                 AddAECommand = new DelegateCommand(o => AddAE());
                 DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
+                Select_PROADRENOMEDULLIN_MEAS_Command = new DelegateCommand(o => Select_PROADRENOMEDULLIN_MEAS());
+         Select_KOPEPTIN_MEAS_Command = new DelegateCommand(o=> Select_KOPEPTIN_MEAS());
+         Select_BRAIN_NATRIURETIC_PEPTIDE_MEAS_Command = new DelegateCommand(o=> Select_BRAIN_NATRIURETIC_PEPTIDE_MEAS());
+         Select_C_REACTIVE_PROTEIN_MEAS_Command = new DelegateCommand(o=> Select_C_REACTIVE_PROTEIN_MEAS());
+         Select_PROCALCITONIN_MEAS_Command = new DelegateCommand(o=> Select_PROCALCITONIN_MEAS());
+         Select_IL6_MEAS_Command = new DelegateCommand(o=> Select_IL6_MEAS());
+         Select_FNO_MEAS_Command = new DelegateCommand(o=> Select_FNO_MEAS());
+
 
             }
         }
         public ICommand SelectLpuCommand { get; set; }
+        public ICommand Select_PROADRENOMEDULLIN_MEAS_Command { get; set; }
+        public ICommand Select_KOPEPTIN_MEAS_Command { get; set; }
+        public ICommand Select_BRAIN_NATRIURETIC_PEPTIDE_MEAS_Command { get; set; }
+        public ICommand Select_C_REACTIVE_PROTEIN_MEAS_Command { get; set; }
+        public ICommand Select_PROCALCITONIN_MEAS_Command { get; set; }
+        public ICommand Select_IL6_MEAS_Command { get; set; }
+        public ICommand Select_FNO_MEAS_Command { get; set; }
 
         private void SelectLpu()
         {
@@ -93,6 +108,77 @@ namespace CINCOPA.ViewModel
             }
             //    OnPropertyChanged("WARD");
         }
+        private void Select_C_REACTIVE_PROTEIN_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                C_REACTIVE_PROTEIN_MEAS = vm.CurrentItem;
+            }
+        }
+        private void Select_PROCALCITONIN_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                PROCALCITONIN_MEAS = vm.CurrentItem;
+            }
+        }
+        private void Select_IL6_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                IL6_MEAS = vm.CurrentItem;
+            }
+        }
+        private void Select_FNO_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                FNO_MEAS = vm.CurrentItem;
+            }
+        }
+        private void Select_BRAIN_NATRIURETIC_PEPTIDE_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                BRAIN_NATRIURETIC_PEPTIDE_MEAS = vm.CurrentItem;
+            }
+        }
+        private void Select_KOPEPTIN_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                KOPEPTIN_MEAS = vm.CurrentItem;
+            }
+        }
+        private void Select_PROADRENOMEDULLIN_MEAS()
+        {
+            var vm = new SelectMeasureViewModel();
+            vm.ShowDialog();
+            if (vm.DialogResult)
+            {
+                OnPropertyChanged("MeasureLookup");
+                PROADRENOMEDULLIN_MEAS = vm.CurrentItem;
+            }
+        }
+
 
         public ObservableCollection<ABTherapyViewModel> AllABTherapy { get; private set; }
         public ObservableCollection<AEViewModel> AllAE { get; private set; }
@@ -303,6 +389,10 @@ namespace CINCOPA.ViewModel
         public List<string> Logic2Lookup
         {
             get { return DataManager.Instance.Logic2Lookup; }
+        }
+        public List<Measure> MeasureLookup
+        {
+            get { return DataManager.Instance.MeasureLookup; }
         }
         public List<WARD> WardLookup
         {
@@ -2037,6 +2127,43 @@ namespace CINCOPA.ViewModel
 
         #region BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION
 
+        public Measure C_REACTIVE_PROTEIN_MEAS
+        {
+            get { return MeasureLookup.Where(o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.C_REACTIVE_PROTEIN_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.C_REACTIVE_PROTEIN_MEAS = value.NAME;
+                OnPropertyChanged("C_REACTIVE_PROTEIN_MEAS");
+            }
+        }
+        public Measure PROCALCITONIN_MEAS
+        {
+            get { return MeasureLookup.Where(o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.PROCALCITONIN_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.PROCALCITONIN_MEAS = value.NAME;
+                OnPropertyChanged("PROCALCITONIN_MEAS");
+            }
+        }
+        public Measure IL6_MEAS
+        {
+            get { return MeasureLookup.Where(o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.IL6_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.IL6_MEAS = value.NAME;
+                OnPropertyChanged("IL6_MEAS");
+            }
+        }
+        public Measure FNO_MEAS
+        {
+            get { return MeasureLookup.Where( o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.FNO_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.FNO_MEAS = value.NAME;
+                OnPropertyChanged("FNO_MEAS");
+            }
+        }
+
         public string BLOOD_TEST_VISIT_ONE_C_REACTIVE_PROTEIN
         {
             get { return Model.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION.VISIT_ONE_C_REACTIVE_PROTEIN; }
@@ -2162,6 +2289,39 @@ namespace CINCOPA.ViewModel
         #endregion
 
         #region BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION
+
+        public Measure BRAIN_NATRIURETIC_PEPTIDE_MEAS
+        {
+            get { return MeasureLookup.Where( o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.BRAIN_NATRIURETIC_PEPTIDE_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.BRAIN_NATRIURETIC_PEPTIDE_MEAS = value.NAME;
+                OnPropertyChanged("BRAIN_NATRIURETIC_PEPTIDE_MEAS");
+            }
+
+        }
+
+        public Measure KOPEPTIN_MEAS
+        {
+            get { return MeasureLookup.Where(o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.KOPEPTIN_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.KOPEPTIN_MEAS = value.NAME;
+                OnPropertyChanged("KOPEPTIN_MEAS");
+            }
+
+        }
+
+        public Measure PROADRENOMEDULLIN_MEAS
+        {
+            get { return MeasureLookup.Where(o => o.NAME.Equals(Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.PROADRENOMEDULLIN_MEAS)).FirstOrDefault(); }
+            set
+            {
+                Model.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION.PROADRENOMEDULLIN_MEAS = value.NAME;
+                OnPropertyChanged("PROADRENOMEDULLIN_MEAS");
+            }
+
+        }
 
         public string BLOOD_TEST_VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE
         {

@@ -32,7 +32,6 @@ C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\CINCOPA.exe
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\CINCOPA.pdb
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\EntityFramework.dll
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\EntityFramework.xml
-C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\ControlResources.baml
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\CheckDoubleView.baml
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\Views\CrfView.baml

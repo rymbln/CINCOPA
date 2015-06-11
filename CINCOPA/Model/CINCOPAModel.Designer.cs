@@ -578,6 +578,22 @@ namespace CINCOPA.Model
             }
         }
         private ObjectSet<MICROBIOLOGY_BLOOD> _MicrobiologyBloods;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Measure> Measures
+        {
+            get
+            {
+                if ((_Measures == null))
+                {
+                    _Measures = base.CreateObjectSet<Measure>("Measures");
+                }
+                return _Measures;
+            }
+        }
+        private ObjectSet<Measure> _Measures;
 
         #endregion
 
@@ -821,6 +837,14 @@ namespace CINCOPA.Model
         public void AddToMicrobiologyBloods(MICROBIOLOGY_BLOOD mICROBIOLOGY_BLOOD)
         {
             base.AddObject("MicrobiologyBloods", mICROBIOLOGY_BLOOD);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Measures EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMeasures(Measure measure)
+        {
+            base.AddObject("Measures", measure);
         }
 
         #endregion
@@ -4058,6 +4082,78 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String BRAIN_NATRIURETIC_PEPTIDE_MEAS
+        {
+            get
+            {
+                return _BRAIN_NATRIURETIC_PEPTIDE_MEAS;
+            }
+            set
+            {
+                OnBRAIN_NATRIURETIC_PEPTIDE_MEASChanging(value);
+                ReportPropertyChanging("BRAIN_NATRIURETIC_PEPTIDE_MEAS");
+                _BRAIN_NATRIURETIC_PEPTIDE_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("BRAIN_NATRIURETIC_PEPTIDE_MEAS");
+                OnBRAIN_NATRIURETIC_PEPTIDE_MEASChanged();
+            }
+        }
+        private global::System.String _BRAIN_NATRIURETIC_PEPTIDE_MEAS;
+        partial void OnBRAIN_NATRIURETIC_PEPTIDE_MEASChanging(global::System.String value);
+        partial void OnBRAIN_NATRIURETIC_PEPTIDE_MEASChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String KOPEPTIN_MEAS
+        {
+            get
+            {
+                return _KOPEPTIN_MEAS;
+            }
+            set
+            {
+                OnKOPEPTIN_MEASChanging(value);
+                ReportPropertyChanging("KOPEPTIN_MEAS");
+                _KOPEPTIN_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("KOPEPTIN_MEAS");
+                OnKOPEPTIN_MEASChanged();
+            }
+        }
+        private global::System.String _KOPEPTIN_MEAS;
+        partial void OnKOPEPTIN_MEASChanging(global::System.String value);
+        partial void OnKOPEPTIN_MEASChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROADRENOMEDULLIN_MEAS
+        {
+            get
+            {
+                return _PROADRENOMEDULLIN_MEAS;
+            }
+            set
+            {
+                OnPROADRENOMEDULLIN_MEASChanging(value);
+                ReportPropertyChanging("PROADRENOMEDULLIN_MEAS");
+                _PROADRENOMEDULLIN_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROADRENOMEDULLIN_MEAS");
+                OnPROADRENOMEDULLIN_MEASChanged();
+            }
+        }
+        private global::System.String _PROADRENOMEDULLIN_MEAS;
+        partial void OnPROADRENOMEDULLIN_MEASChanging(global::System.String value);
+        partial void OnPROADRENOMEDULLIN_MEASChanged();
 
         #endregion
 
@@ -4565,6 +4661,102 @@ namespace CINCOPA.Model
         private global::System.String _StateCode;
         partial void OnStateCodeChanging(global::System.String value);
         partial void OnStateCodeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String C_REACTIVE_PROTEIN_MEAS
+        {
+            get
+            {
+                return _C_REACTIVE_PROTEIN_MEAS;
+            }
+            set
+            {
+                OnC_REACTIVE_PROTEIN_MEASChanging(value);
+                ReportPropertyChanging("C_REACTIVE_PROTEIN_MEAS");
+                _C_REACTIVE_PROTEIN_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("C_REACTIVE_PROTEIN_MEAS");
+                OnC_REACTIVE_PROTEIN_MEASChanged();
+            }
+        }
+        private global::System.String _C_REACTIVE_PROTEIN_MEAS;
+        partial void OnC_REACTIVE_PROTEIN_MEASChanging(global::System.String value);
+        partial void OnC_REACTIVE_PROTEIN_MEASChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PROCALCITONIN_MEAS
+        {
+            get
+            {
+                return _PROCALCITONIN_MEAS;
+            }
+            set
+            {
+                OnPROCALCITONIN_MEASChanging(value);
+                ReportPropertyChanging("PROCALCITONIN_MEAS");
+                _PROCALCITONIN_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PROCALCITONIN_MEAS");
+                OnPROCALCITONIN_MEASChanged();
+            }
+        }
+        private global::System.String _PROCALCITONIN_MEAS;
+        partial void OnPROCALCITONIN_MEASChanging(global::System.String value);
+        partial void OnPROCALCITONIN_MEASChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String IL6_MEAS
+        {
+            get
+            {
+                return _IL6_MEAS;
+            }
+            set
+            {
+                OnIL6_MEASChanging(value);
+                ReportPropertyChanging("IL6_MEAS");
+                _IL6_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("IL6_MEAS");
+                OnIL6_MEASChanged();
+            }
+        }
+        private global::System.String _IL6_MEAS;
+        partial void OnIL6_MEASChanging(global::System.String value);
+        partial void OnIL6_MEASChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String FNO_MEAS
+        {
+            get
+            {
+                return _FNO_MEAS;
+            }
+            set
+            {
+                OnFNO_MEASChanging(value);
+                ReportPropertyChanging("FNO_MEAS");
+                _FNO_MEAS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("FNO_MEAS");
+                OnFNO_MEASChanged();
+            }
+        }
+        private global::System.String _FNO_MEAS;
+        partial void OnFNO_MEASChanging(global::System.String value);
+        partial void OnFNO_MEASChanged();
 
         #endregion
 
@@ -9176,6 +9368,233 @@ namespace CINCOPA.Model
 
         #endregion
 
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="CINCOPAModel", Name="Measure")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Measure : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Measure object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="nAME">Initial value of the NAME property.</param>
+        public static Measure CreateMeasure(global::System.Guid id, global::System.String nAME)
+        {
+            Measure measure = new Measure();
+            measure.Id = id;
+            measure.NAME = nAME;
+            return measure;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _Id;
+        partial void OnIdChanging(global::System.Guid value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String NAME
+        {
+            get
+            {
+                return _NAME;
+            }
+            set
+            {
+                OnNAMEChanging(value);
+                ReportPropertyChanging("NAME");
+                _NAME = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("NAME");
+                OnNAMEChanged();
+            }
+        }
+        private global::System.String _NAME;
+        partial void OnNAMEChanging(global::System.String value);
+        partial void OnNAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CODE
+        {
+            get
+            {
+                return _CODE;
+            }
+            set
+            {
+                OnCODEChanging(value);
+                ReportPropertyChanging("CODE");
+                _CODE = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CODE");
+                OnCODEChanged();
+            }
+        }
+        private global::System.String _CODE;
+        partial void OnCODEChanging(global::System.String value);
+        partial void OnCODEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedByDate
+        {
+            get
+            {
+                return _CreatedByDate;
+            }
+            set
+            {
+                OnCreatedByDateChanging(value);
+                ReportPropertyChanging("CreatedByDate");
+                _CreatedByDate = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CreatedByDate");
+                OnCreatedByDateChanged();
+            }
+        }
+        private global::System.String _CreatedByDate;
+        partial void OnCreatedByDateChanging(global::System.String value);
+        partial void OnCreatedByDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String UpdatedBy
+        {
+            get
+            {
+                return _UpdatedBy;
+            }
+            set
+            {
+                OnUpdatedByChanging(value);
+                ReportPropertyChanging("UpdatedBy");
+                _UpdatedBy = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("UpdatedBy");
+                OnUpdatedByChanged();
+            }
+        }
+        private global::System.String _UpdatedBy;
+        partial void OnUpdatedByChanging(global::System.String value);
+        partial void OnUpdatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String UpdatedByDate
+        {
+            get
+            {
+                return _UpdatedByDate;
+            }
+            set
+            {
+                OnUpdatedByDateChanging(value);
+                ReportPropertyChanging("UpdatedByDate");
+                _UpdatedByDate = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("UpdatedByDate");
+                OnUpdatedByDateChanged();
+            }
+        }
+        private global::System.String _UpdatedByDate;
+        partial void OnUpdatedByDateChanging(global::System.String value);
+        partial void OnUpdatedByDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String StateCode
+        {
+            get
+            {
+                return _StateCode;
+            }
+            set
+            {
+                OnStateCodeChanging(value);
+                ReportPropertyChanging("StateCode");
+                _StateCode = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("StateCode");
+                OnStateCodeChanged();
+            }
+        }
+        private global::System.String _StateCode;
+        partial void OnStateCodeChanging(global::System.String value);
+        partial void OnStateCodeChanged();
+
+        #endregion
+
+    
     }
     
     /// <summary>

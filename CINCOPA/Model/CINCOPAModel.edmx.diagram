@@ -64,6 +64,7 @@
         <AssociationConnector Association="CINCOPAModel.CRFMICROBIOLOGY_BLOOD" />
         <AssociationConnector Association="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD" />
         <AssociationConnector Association="CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM" />
+        <EntityTypeShape EntityType="CINCOPAModel.Measure" Width="1.5" PointX="0.75" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -34,6 +34,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CINCOPA.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1434028350_icon-23-file-c.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
@@ -83,6 +89,7 @@
     <Compile Include="ViewModel\MicrobiologySputumViewModel.cs" />
     <Compile Include="ViewModel\SelectDrugViewModel.cs" />
     <Compile Include="ViewModel\SelectLpuViewModel.cs" />
+    <Compile Include="ViewModel\SelectMeasureViewModel.cs" />
     <Compile Include="ViewModel\SelectOrganismViewModel.cs" />
     <Compile Include="ViewModel\SelectRouteViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
@@ -175,7 +182,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="1434028350_icon-23-file-c.ico" />
     <Content Include="Model\CINCOPAModel.edmx.sql" />
+    <Resource Include="reddit.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
