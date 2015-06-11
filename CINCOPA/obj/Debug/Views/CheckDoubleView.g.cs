@@ -9,6 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using CINCOPA;
 using System;
 using System.Diagnostics;
 using System.Windows;

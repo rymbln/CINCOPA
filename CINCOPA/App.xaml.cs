@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using CINCOPA.Common;
 using CINCOPA.Views;
+using System.Globalization;
+using System.Windows.Markup;
+using System.Threading;
 
 namespace CINCOPA
 {
@@ -18,6 +21,10 @@ namespace CINCOPA
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("ru-RU");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru-RU");
+            FrameworkElement.LanguageProperty.OverrideMetadata(typeof(FrameworkElement), new FrameworkPropertyMetadata(
+                        XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
             var currentUser = Authentification.GetCurrentUser();
             if (Authentification.Authentificated())
             {

@@ -314,7 +314,7 @@ namespace CINCOPA.Common
         /// <summary>
         /// The underlying context tracking changes
         /// </summary>
-        private readonly ICINCOPAContext underlyingContext;
+        private CINCOPAEntities underlyingContext;
 
 
         public void Save()
@@ -334,7 +334,7 @@ namespace CINCOPA.Common
             {
                 throw new ArgumentNullException("context");
             }
-
+           
             underlyingContext = context;
         }
 
@@ -373,10 +373,10 @@ namespace CINCOPA.Common
                 obj.CreatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
                 obj.UpdatedBy = Authentification.GetCurrentUser().NAME;
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
-            //    obj.StateCode = "---";
+                obj.StateCode = "---";
 
-           //     obj.NAME = "---";
-           //     obj.NUMBER = -100;
+                obj.NAME = "---";
+                obj.NUMBER = -100;
                 obj.DATE_BIRTH = null;
                 obj.DATE_HOSPITALISATION = null;
                 obj.DATE_DISCHARGE = null;
@@ -960,7 +960,7 @@ namespace CINCOPA.Common
             //obj.DRY_RALES = "---";
             //obj.PRESENCE_OF_EDEMA = "---";
             //obj.INCIDENCE_OF_EDEMA = "---";
-            //obj.THERAPY_EFFICIENCY = "---";
+            obj.THERAPY_EFFICIENCY = "---";
 
             //     underlyingContext.EvaluationOfSymptomsVisit2Set.AddObject(obj);
 
@@ -1431,6 +1431,12 @@ namespace CINCOPA.Common
                 MessageBox.Show("Не удалось добавить отделение! Ошибка: " + ex.Message);
                 return null;
             }
+        }
+
+        public  void DeleteCrf(CRF CurrentCrf)
+        {
+            underlyingContext.proc_del_CRF(CurrentCrf.Id.ToString());
+            Save();
         }
     }
 }

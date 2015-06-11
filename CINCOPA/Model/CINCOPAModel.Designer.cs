@@ -825,6 +825,29 @@ namespace CINCOPA.Model
 
         #endregion
 
+        #region Function Imports
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="id">No Metadata Documentation available.</param>
+        public int proc_del_CRF(global::System.String id)
+        {
+            ObjectParameter idParameter;
+            if (id != null)
+            {
+                idParameter = new ObjectParameter("id", id);
+            }
+            else
+            {
+                idParameter = new ObjectParameter("id", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("proc_del_CRF", idParameter);
+        }
+
+        #endregion
+
     }
 
     #endregion

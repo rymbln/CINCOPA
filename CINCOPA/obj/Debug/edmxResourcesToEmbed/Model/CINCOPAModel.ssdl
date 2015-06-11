@@ -954,6 +954,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="proc_del_CRF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+  </Function>
   <EntityContainer Name="CINCOPAModelStoreContainer">
     <EntitySet Name="AbTherapys" EntityType="Self.AbTherapys" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AEs" EntityType="Self.AEs" Schema="dbo" store:Type="Tables" />

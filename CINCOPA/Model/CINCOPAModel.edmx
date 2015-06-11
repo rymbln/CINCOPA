@@ -959,6 +959,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="proc_del_CRF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <EntityContainer Name="CINCOPAModelStoreContainer">
           <EntitySet Name="AbTherapys" EntityType="Self.AbTherapys" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AEs" EntityType="Self.AEs" Schema="dbo" store:Type="Tables" />
@@ -1258,6 +1261,9 @@
             <End EntitySet="Organisms" Role="ORGANISM" />
             <End EntitySet="MicrobiologySputums" Role="MICROBIOLOGY_SPUTUM" />
           </AssociationSet>
+          <FunctionImport Name="proc_del_CRF">
+            <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="CRF">
           <Key>
@@ -2826,6 +2832,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="proc_del_CRF" FunctionName="CINCOPAModel.Store.proc_del_CRF" />
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

@@ -62,11 +62,15 @@ namespace CINCOPA.ViewModel
             var vm = new CrfViewModel(DataManager.Instance.CreateCrf());
             var v = new CrfView {DataContext = vm};
             v.Show();
+            Refresh();
+            OnPropertyChanged("AllCrf");
         }
 
         private void DeleteCrf()
         {
-         //Todo
+            DataManager.Instance.DeleteCrf(CurrentCrf);
+            Refresh();
+            OnPropertyChanged("AllCrf");
    
         }
 

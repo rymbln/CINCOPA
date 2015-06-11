@@ -11,7 +11,7 @@
                     <Button Command="{Binding SaveCommand}" Content="Сохранить"/>
                     <Separator/>
 
-                    <Button Command="{Binding CancelCommand}" Content="Закрыть"/>
+                    <Button  Content="Закрыть" Click="Button_Click"/>
                 </ToolBar>
             </ToolBarTray>
             <Grid>
@@ -218,7 +218,7 @@
                                                  Text="{Binding Path=VISIT_ONE_HEART_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <TextBox Grid.Column="3" Grid.Row="1" 
                                                  Text="{Binding Path=VISIT_ONE_RESPIRATORY_RATE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-                                                <TextBox Grid.Column="4" Grid.Row="1" 
+                                                <TextBox Grid.Column="4" Grid.Row="1"
                                                  Text="{Binding Path=VISIT_ONE_TEMPERATURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
                                             </Grid>
@@ -452,7 +452,7 @@
                                                 <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                 IsChecked="{Binding Path=XRAY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                                <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
+                                                <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Width="400" TextWrapping="Wrap"
                                                  Text="{Binding Path=XRAY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
@@ -473,12 +473,12 @@
 
                                             <xctk:MaskedTextBox 
                                                 Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
-                                                Value="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+                                                Value="{Binding Path=COMPUTED_TOMOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
 
                                             <Label Content="Томографические признаки пневмонии:" />
                                             <ComboBox
                                           SelectedValuePath="." 
-                                          SelectedItem="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
+                                          SelectedItem="{Binding Path=COMPUTED_TOMOGRAPHY_PNEUMONIA_SIGNS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}" 
                                           ItemsSource="{Binding Path=Logic2Lookup}" />
                                         </StackPanel>
 
@@ -530,36 +530,36 @@
 
 
                                                 <CheckBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="4" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_ALVEOLAR_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="4" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_TOP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="5" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_INTERSTITIAL_INFILTRATION_LEFT_BOTTOM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_NONE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_RIGHT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_LEFT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                 <CheckBox Grid.Column="4" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                IsChecked="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                IsChecked="{Binding Path=COMPUTED_TOMOGRAPHY_PLEURAL_EFFUSION_DOUBLE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
 
-                                                <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5"
-                                                 Text="{Binding Path=VISIT_ONE_COMPUTED_TOMOGRAPHY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Width="350" TextWrapping="Wrap"
+                                                 Text="{Binding Path=COMPUTED_TOMOGRAPHY_OTHER, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                             </Grid>
                                         </Border>
                                     </Grid>
@@ -661,15 +661,6 @@
                                         <xctk:MaskedTextBox Grid.Row="0" Grid.Column="1" Height="24"
                                                 Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
                                                 Value="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
-
-                                        <Label Grid.Row="2" Grid.Column="0"  Content="Объем перикардиального выпота:" />
-                                        <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-
-                                        <Label Grid.Row="3" Grid.Column="0"  Content="Комментарии:" />
-                                        <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="48" HorizontalAlignment="Stretch"
-                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-
                                         <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Style="{StaticResource DetailBorder}">
                                             <StackPanel Orientation="Horizontal">
 
@@ -679,7 +670,9 @@
 
                                                         <Label Grid.Column="0" Grid.Row="0"          Content="ФВ (%)" />
                                                         <TextBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+                                                Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                          
+                                                               />
                                                     </StackPanel>
                                                 </Border>
                                                 <Border Style="{StaticResource DetailBorder}">
@@ -687,6 +680,7 @@
 
                                                         <Label Grid.Column="0" Grid.Row="1"                                               Content="ЕА_ЛЖ (уе)" />
                                                         <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                            
                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                     </StackPanel>
                                                 </Border>
@@ -694,6 +688,7 @@
                                                     <StackPanel Orientation="Horizontal">
                                                         <Label Grid.Column="0" Grid.Row="2"                                               Content="ЕА_ПЖ (уе)" />
                                                         <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                               
                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                     </StackPanel>
                                                 </Border>
@@ -701,12 +696,23 @@
                                                     <StackPanel Orientation="Horizontal">
                                                         <Label Grid.Column="0" Grid.Row="3"                                               Content="СДЛА (мм.рт.ст.)" />
                                                         <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                                 
                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                     </StackPanel>
                                                 </Border>
                                             </StackPanel>
                                         </Border>
 
+                                        <Label Grid.Row="2" Grid.Column="0"  Content="Объем перикардиального выпота:" />
+                                        <TextBox Grid.Column="1" Grid.Row="2"
+                                                 
+                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                        <Label Grid.Row="3" Grid.Column="0"  Content="Комментарии:" />
+                                        <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="48" HorizontalAlignment="Stretch"
+                                                 Text="{Binding Path=VISIT_ONE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                               
                                     </Grid>
                                 </HeaderedContentControl>
                             </StackPanel>
@@ -924,14 +930,6 @@
                                                 Mask="00/00/0000" ValueDataType="{x:Type s:DateTime}" 
                                                 Value="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_DATE_PROCEDURE, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
 
-                                            <Label Grid.Row="2" Grid.Column="0"  Content="Объем перикардиального выпота:" />
-                                            <TextBox Grid.Column="1" Grid.Row="2"
-                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-
-                                            <Label Grid.Row="3" Grid.Column="0"  Content="Комментарии:" />
-                                            <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="48" HorizontalAlignment="Stretch"
-                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
-
                                             <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Style="{StaticResource DetailBorder}">
                                                 <StackPanel Orientation="Horizontal">
 
@@ -941,6 +939,7 @@
 
                                                             <Label Grid.Column="0" Grid.Row="0"          Content="ФВ (%)" />
                                                             <TextBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                             
                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_FV_PERCENT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                         </StackPanel>
                                                     </Border>
@@ -949,6 +948,7 @@
 
                                                             <Label Grid.Column="0" Grid.Row="1"                                               Content="ЕА_ЛЖ (уе)" />
                                                             <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                               
                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_EA_LJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                         </StackPanel>
                                                     </Border>
@@ -956,6 +956,7 @@
                                                         <StackPanel Orientation="Horizontal">
                                                             <Label Grid.Column="0" Grid.Row="2"                                               Content="ЕА_ПЖ (уе)" />
                                                             <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                                
                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_EA_RJ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                         </StackPanel>
                                                     </Border>
@@ -963,12 +964,23 @@
                                                         <StackPanel Orientation="Horizontal">
                                                             <Label Grid.Column="0" Grid.Row="3"                                               Content="СДЛА (мм.рт.ст.)" />
                                                             <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                                   
                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_SDLA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
                                                         </StackPanel>
                                                     </Border>
                                                 </StackPanel>
                                             </Border>
 
+
+                                            <Label Grid.Row="2" Grid.Column="0"  Content="Объем перикардиального выпота:" />
+                                            <TextBox Grid.Column="1" Grid.Row="2"
+                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_AMOUNT_OF_PERICARDIAL_EFFUSION, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                            <Label Grid.Row="3" Grid.Column="0"  Content="Комментарии:" />
+                                            <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="48" HorizontalAlignment="Stretch"
+                                                 Text="{Binding Path=VISIT_THREE_ECHOCARDIOGRAPHY_COMMENTS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"  />
+
+                                  
                                         </Grid>
                                     </HeaderedContentControl>
                                 </StackPanel>
@@ -1270,7 +1282,7 @@
                                     <DataGridTemplateColumn Header="Разовая доза"  >
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
-                                                <TextBox Text="{Binding Path=AB_SINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
+                                                <TextBox    Text="{Binding Path=AB_SINGLE_DOSE, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True, NotifyOnValidationError=True}" />
                                             </DataTemplate>
                                         </DataGridTemplateColumn.CellTemplate>
                                     </DataGridTemplateColumn>

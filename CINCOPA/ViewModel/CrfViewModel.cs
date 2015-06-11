@@ -67,14 +67,14 @@ namespace CINCOPA.ViewModel
                 CheckCommand = new DelegateCommand(o => Check());
                 CancelCommand = new DelegateCommand(o => Cancel());
                 AddABTherapyCommand = new DelegateCommand(o => AddAbTherapy());
-                DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o=> CurrentABTherapy !=null);
-          
-             
+                DeleteABTherapyCommand = new DelegateCommand(o => DeleteABTherapy(), o => CurrentABTherapy != null);
+
+
                 AddMBSputumCommand = new DelegateCommand(o => AddMBSputum());
-                DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o=> CurrentMBSputum != null);
-             
+                DeleteMBSputumCommand = new DelegateCommand(o => DeleteMBSputum(), o => CurrentMBSputum != null);
+
                 AddMBBloodCommand = new DelegateCommand(o => AddMBBlood());
-                DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o=> CurrentMBBlood != null);
+                DeleteMBBloodCommand = new DelegateCommand(o => DeleteMBBlood(), o => CurrentMBBlood != null);
                 AddAECommand = new DelegateCommand(o => AddAE());
                 DeleteAECommand = new DelegateCommand(o => DeleteAE(), o => CurrentAE != null);
 
@@ -91,10 +91,11 @@ namespace CINCOPA.ViewModel
                 OnPropertyChanged("WardLookup");
                 WARD = vm.CurrentItem;
             }
+            //    OnPropertyChanged("WARD");
         }
 
         public ObservableCollection<ABTherapyViewModel> AllABTherapy { get; private set; }
-        public ObservableCollection<AEViewModel> AllAE { get; private set; } 
+        public ObservableCollection<AEViewModel> AllAE { get; private set; }
         public ObservableCollection<MicrobiologySputumViewModel> AllMicrobiologySputum { get; private set; }
         public ObservableCollection<MicrobiologyBloodViewModel> AllMicrobiologyBlood { get; private set; }
 
@@ -173,8 +174,8 @@ namespace CINCOPA.ViewModel
             OnPropertyChanged("AllABTherapy");
             CurrentABTherapy = AllABTherapy.FirstOrDefault();
         }
-    
-  
+
+
         public ICommand AddMBSputumCommand { get; private set; }
         private void AddMBSputum()
         {
@@ -197,7 +198,7 @@ namespace CINCOPA.ViewModel
             CurrentMBSputum = AllMicrobiologySputum.FirstOrDefault();
         }
         public ICommand SelectOrganismForSputumCommand { get; private set; }
-       public ICommand AddMBBloodCommand { get; private set; }
+        public ICommand AddMBBloodCommand { get; private set; }
         private void AddMBBlood()
         {
             var obj = DataManager.Instance.CreateMicrobiologyBloodForCRF(Model);
@@ -235,11 +236,11 @@ namespace CINCOPA.ViewModel
             Model.ADVERSE_EVENT.Remove(CurrentAE.Model);
             DataManager.Instance.DeleteAE(CurrentAE.Model);
             AllAE.Remove(CurrentAE);
-        
+
             OnPropertyChanged("AllAE");
             CurrentAE = AllAE.FirstOrDefault();
         }
-     
+
 
         #region ComboBox Sources
         public List<string> AEHeavyLookup
@@ -1607,15 +1608,16 @@ namespace CINCOPA.ViewModel
             set
             {
                 Model.VISIT_ONE.ECHOCARDIOGRAPHY_VISIT_1.FV_PERCENT = value;
+
                 OnPropertyChanged("VISIT_ONE_ECHOCARDIOGRAPHY_FV_PERCENT");
             }
         }
         public decimal? VISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ
         {
-            get { return Model.VISIT_ONE.ECHOCARDIOGRAPHY_VISIT_1.EA_LJ; }
+            get { return (Model.VISIT_ONE.ECHOCARDIOGRAPHY_VISIT_1.EA_LJ); }
             set
             {
-                Model.VISIT_ONE.ECHOCARDIOGRAPHY_VISIT_1.EA_LJ = value;
+                Model.VISIT_ONE.ECHOCARDIOGRAPHY_VISIT_1.EA_LJ = (value);
                 OnPropertyChanged("VISIT_ONE_ECHOCARDIOGRAPHY_EA_LJ");
             }
         }

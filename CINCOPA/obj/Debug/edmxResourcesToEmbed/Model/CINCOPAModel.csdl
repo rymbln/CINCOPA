@@ -147,6 +147,9 @@
       <End EntitySet="Organisms" Role="ORGANISM" />
       <End EntitySet="MicrobiologySputums" Role="MICROBIOLOGY_SPUTUM" />
     </AssociationSet>
+    <FunctionImport Name="proc_del_CRF">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="CRF">
     <Key>

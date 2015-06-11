@@ -69,6 +69,7 @@
     <Compile Include="Common\CheckDoubles.cs" />
     <Compile Include="Common\DataManager.cs" />
     <Compile Include="Common\GuidComb.cs" />
+    <Compile Include="Common\TextBoxHelpers.cs" />
     <Compile Include="Model\CINCOPAEntities.cs" />
     <Compile Include="Model\ModelClasses.cs" />
     <Compile Include="Model\ICINCOPAContext.cs" />

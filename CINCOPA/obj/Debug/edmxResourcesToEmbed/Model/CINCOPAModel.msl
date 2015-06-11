@@ -729,5 +729,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="proc_del_CRF" FunctionName="CINCOPAModel.Store.proc_del_CRF" />
   </EntityContainerMapping>
 </Mapping>

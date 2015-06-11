@@ -43,6 +43,7 @@ namespace CINCOPA.Model
         ObjectSet<ANAMNESTIC_DATA_VISIT_1> AnamnesticDataVisit1Set { get; }
         ObjectSet<ELECTROCARDIOGRAPHY_VISIT_1> ElectrocardiographyVisit1Set { get; }
 
+        
         void Save();
 
         T CreateObject<T>() where T : class;
