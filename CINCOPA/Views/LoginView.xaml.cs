@@ -44,6 +44,28 @@ namespace CINCOPA.Views
 
             }
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                if ((txtName.Text != "") & (txtPassword.Text != ""))
+                {
+                    var user = new USER();
+                    user.NAME = txtName.Text;
+                    user.PASSWORD = txtPassword.Text;
+                    if (Authentification.AuthentificateUser(user))
+                    {
+                        MainWindowViewModel main = new MainWindowViewModel();
+                        MainWindow window = new MainWindow { DataContext = main };
+                        window.Show();
+
+                        this.Close();
+                    }
+
+                }
+            }
+        }
     }
 
 

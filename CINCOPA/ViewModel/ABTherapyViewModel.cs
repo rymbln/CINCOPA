@@ -31,7 +31,15 @@ namespace CINCOPA.ViewModel
             get { return Model.DRUG; }
             set
             {
-                Model.DRUG = value;
+                if (value == null)
+                {
+                    Model.DRUG = DataManager.Instance.GetDefaultDrug();
+                }
+                else
+                {
+                    Model.DRUG = value;
+                }
+                
                 OnPropertyChanged("AB_DRUG");
             }
         }
@@ -41,7 +49,16 @@ namespace CINCOPA.ViewModel
             get { return Model.ROUTE; }
             set
             {
-                Model.ROUTE = value;
+                if (value == null)
+                {
+                    Model.ROUTE = DataManager.Instance.GetDefaultRoute();
+                }
+                else
+                {
+                    Model.ROUTE = value;
+
+                }
+
                 OnPropertyChanged("AB_ROUTE");
             }
 

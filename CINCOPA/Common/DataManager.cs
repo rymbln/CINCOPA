@@ -542,87 +542,29 @@ namespace CINCOPA.Common
             return obj;
         }
 
-        private WARD GetDefaultWard()
+        public WARD GetDefaultWard()
         {
-            //if (!underlyingContext.Wards.Any())
-            //{
-            //    underlyingContext.Wards.AddObject(new WARD
-            //    {
-            //        CreatedBy = Authentification.GetCurrentUser().NAME,
-            //        CreatedByDate = DateTime.Now.ToString(),
-            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
-            //        UpdatedByDate = DateTime.Now.ToString(),
-            //        NAME = "---",
-            //        NUMBER = 0,
-            //        Id = GuidComb.Generate()
-            //    });
-            //    Save();
-            //}
+            
             var obj = underlyingContext.Wards.OrderBy(o => o.NUMBER).FirstOrDefault();
             return obj;
         }
 
-        private ORGANISM GetDefaultOrganism()
+        public ORGANISM GetDefaultOrganism()
         {
-            //if (!underlyingContext.Organisms.Any())
-            //{
-            //    underlyingContext.Organisms.AddObject(new ORGANISM
-            //    {
-            //        CreatedBy = Authentification.GetCurrentUser().NAME,
-            //        CreatedByDate = DateTime.Now.ToString(),
-            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
-            //        UpdatedByDate = DateTime.Now.ToString(),
-            //        NAME = "---",
-            //        CODE = "---",
-            //        Id = GuidComb.Generate()
-            //    });
-
-            //}
+          
             return underlyingContext.Organisms.OrderBy(o => o.NAME).FirstOrDefault();
         }
 
-        private DRUG GetDefaultDrug()
+        public DRUG GetDefaultDrug()
         {
-            //if (!underlyingContext.Drugs.Any())
-            //{
-            //    underlyingContext.Drugs.AddObject(new DRUG
-            //    {
-            //        CreatedBy = Authentification.GetCurrentUser().NAME,
-            //        CreatedByDate = DateTime.Now.ToString(),
-            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
-            //        UpdatedByDate = DateTime.Now.ToString(),
-            //        NAME = "---",
-            //        MNN = "---",
-            //        GROUP = "---",
-            //        CODE = "0",
-            //        Id = GuidComb.Generate()
-            //    })
-            //    ;
-
-
-
-            //}
+           
             return underlyingContext.Drugs.OrderBy(o => o.CODE).FirstOrDefault();
         }
 
 
-        private ROUTE GetDefaultRoute()
+        public ROUTE GetDefaultRoute()
         {
-            //if (!underlyingContext.Routes.Any())
-            //{
-            //    underlyingContext.Routes.AddObject(new ROUTE
-            //    {
-            //        CreatedBy = Authentification.GetCurrentUser().NAME,
-            //        CreatedByDate = DateTime.Now.ToString(),
-            //        UpdatedBy = Authentification.GetCurrentUser().NAME,
-            //        UpdatedByDate = DateTime.Now.ToString(),
-            //        NAME = "---",
-
-            //        CODE = "0",
-            //        Id = GuidComb.Generate()
-            //    });
-
-            //}
+           
             return underlyingContext.Routes.OrderBy(o => o.CODE).FirstOrDefault();
         }
 

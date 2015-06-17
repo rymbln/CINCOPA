@@ -75,7 +75,14 @@ namespace CINCOPA.ViewModel
             get { return Model.ORGANISM; }
             set
             {
-                Model.ORGANISM = value;
+                if (value == null)
+                {
+                    Model.ORGANISM = DataManager.Instance.GetDefaultOrganism();
+                }
+                else
+                {
+                    Model.ORGANISM = value;
+                }
                 OnPropertyChanged("MB_BLOOD_ORGANISM");
             }
         }
@@ -108,6 +115,10 @@ namespace CINCOPA.ViewModel
         public List<string> Logic3Lookup
         {
             get { return DataManager.Instance.Logic3Lookup; }
+        }
+        public List<string> Logic3Type2Lookup
+        {
+            get { return DataManager.Instance.Logic3Type2Lookup; }
         }
     }
 }

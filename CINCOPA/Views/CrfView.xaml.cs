@@ -57,6 +57,11 @@ namespace CINCOPA.Views
 
         private void Window_Activated(object sender, EventArgs e)
         {
+        
+        }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
             this.firstTextbox.Focus();
             this.firstTextbox.SelectAll();
         }

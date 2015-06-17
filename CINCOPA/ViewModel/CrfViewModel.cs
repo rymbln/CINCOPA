@@ -18,6 +18,10 @@ namespace CINCOPA.ViewModel
         private AEViewModel currentAE;
         private MicrobiologySputumViewModel currentMBSputum;
         private MicrobiologyBloodViewModel currentMBBlood;
+        private string lastsavetext;
+        public string LastSaveText { get { return lastsavetext; }
+            set { lastsavetext = value; OnPropertyChanged("LastSaveText"); }
+        }
 
         public CrfViewModel(CRF obj)
         {
@@ -229,7 +233,9 @@ namespace CINCOPA.ViewModel
         public ICommand SaveCommand { get; private set; }
         private void Save()
         {
+            LastSaveText = "Последнее сохранение выполнено: " + DateTime.Now.ToString();
             DataManager.Instance.Save();
+            OnPropertyChanged("AllCrf");
         }
         public ICommand CheckCommand { get; private set; }
         private void Check()
