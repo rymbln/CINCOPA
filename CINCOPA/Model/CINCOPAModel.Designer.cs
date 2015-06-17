@@ -5447,20 +5447,16 @@ namespace CINCOPA.Model
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="wARDId">Initial value of the WARDId property.</param>
-        /// <param name="nAME">Initial value of the NAME property.</param>
-        /// <param name="nUMBER">Initial value of the NUMBER property.</param>
         /// <param name="aE_LOGIC">Initial value of the AE_LOGIC property.</param>
         /// <param name="createdBy">Initial value of the CreatedBy property.</param>
         /// <param name="createdByDate">Initial value of the CreatedByDate property.</param>
         /// <param name="updatedBy">Initial value of the UpdatedBy property.</param>
         /// <param name="updatedByDate">Initial value of the UpdatedByDate property.</param>
-        public static CRF CreateCRF(global::System.Guid id, global::System.Guid wARDId, global::System.String nAME, global::System.Int32 nUMBER, global::System.String aE_LOGIC, global::System.String createdBy, global::System.String createdByDate, global::System.String updatedBy, global::System.String updatedByDate)
+        public static CRF CreateCRF(global::System.Guid id, global::System.Guid wARDId, global::System.String aE_LOGIC, global::System.String createdBy, global::System.String createdByDate, global::System.String updatedBy, global::System.String updatedByDate)
         {
             CRF cRF = new CRF();
             cRF.Id = id;
             cRF.WARDId = wARDId;
-            cRF.NAME = nAME;
-            cRF.NUMBER = nUMBER;
             cRF.AE_LOGIC = aE_LOGIC;
             cRF.CreatedBy = createdBy;
             cRF.CreatedByDate = createdByDate;
@@ -5527,7 +5523,7 @@ namespace CINCOPA.Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String NAME
         {
@@ -5539,7 +5535,7 @@ namespace CINCOPA.Model
             {
                 OnNAMEChanging(value);
                 ReportPropertyChanging("NAME");
-                _NAME = StructuralObject.SetValidValue(value, false);
+                _NAME = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("NAME");
                 OnNAMEChanged();
             }
@@ -5551,9 +5547,9 @@ namespace CINCOPA.Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 NUMBER
+        public Nullable<global::System.Int32> NUMBER
         {
             get
             {
@@ -5568,8 +5564,8 @@ namespace CINCOPA.Model
                 OnNUMBERChanged();
             }
         }
-        private global::System.Int32 _NUMBER;
-        partial void OnNUMBERChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _NUMBER;
+        partial void OnNUMBERChanging(Nullable<global::System.Int32> value);
         partial void OnNUMBERChanged();
     
         /// <summary>
