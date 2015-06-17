@@ -52,3 +52,4 @@ C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.Properties.
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csproj.GenerateResource.Cache
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA_MarkupCompile.lref
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache

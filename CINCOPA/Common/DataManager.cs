@@ -372,7 +372,7 @@ namespace CINCOPA.Common
                 obj.UpdatedByDate = DateTime.Now.ToString(CultureInfo.CurrentUICulture);
                 obj.StateCode = "---";
 
-                obj.NAME = "---";
+            //    obj.NAME = "---";
                 obj.NUMBER = -100;
                 obj.DATE_BIRTH = null;
                 obj.DATE_HOSPITALISATION = null;

@@ -230,6 +230,7 @@ namespace CINCOPA.ViewModel
         private void Save()
         {
             DataManager.Instance.Save();
+            OnPropertyChanged("AllCrf");
         }
         public ICommand CheckCommand { get; private set; }
         private void Check()
