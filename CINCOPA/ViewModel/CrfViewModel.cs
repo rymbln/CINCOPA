@@ -418,7 +418,7 @@ namespace CINCOPA.ViewModel
 
         #region CRF FIELDS
 
-        public int? NUMBER
+        public int NUMBER
         {
             get { return Model.NUMBER; }
             set

@@ -223,13 +223,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="WARDId" Type="uniqueidentifier" />
-          <Property Name="NAME" Type="nvarchar(max)" />
-          <Property Name="NUMBER" Type="int" />
+          <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="NUMBER" Type="int" Nullable="false" />
           <Property Name="DATE_BIRTH" Type="datetime" />
           <Property Name="DATE_HOSPITALISATION" Type="datetime" />
           <Property Name="DATE_DISCHARGE" Type="datetime" />
-          <Property Name="AE_LOGIC" Type="nvarchar(max)" />
+          <Property Name="AE_LOGIC" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
           <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
@@ -766,7 +766,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CRFWARD">
-          <End Role="Wards" Type="Self.Wards" Multiplicity="0..1" />
+          <End Role="Wards" Type="Self.Wards" Multiplicity="1" />
           <End Role="CRFs" Type="Self.CRFs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Wards">
@@ -1292,13 +1292,13 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-          <Property Type="Guid" Name="WARDId" />
-          <Property Type="String" Name="NAME" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
-          <Property Type="Int32" Name="NUMBER" Nullable="true" />
+          <Property Type="Guid" Name="WARDId" Nullable="false" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="NUMBER" Nullable="false" />
           <Property Type="DateTime" Name="DATE_BIRTH" Nullable="true" Precision="3" />
           <Property Type="DateTime" Name="DATE_HOSPITALISATION" Nullable="true" Precision="3" />
           <Property Type="DateTime" Name="DATE_DISCHARGE" Nullable="true" Precision="3" />
-          <Property Type="String" Name="AE_LOGIC" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="AE_LOGIC" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="CreatedByDate" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
