@@ -218,13 +218,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="NUMBER" Type="int" Nullable="false" />
+    <Property Name="WARDId" Type="uniqueidentifier" />
+    <Property Name="NAME" Type="nvarchar(max)" />
+    <Property Name="NUMBER" Type="int" />
     <Property Name="DATE_BIRTH" Type="datetime" />
     <Property Name="DATE_HOSPITALISATION" Type="datetime" />
     <Property Name="DATE_DISCHARGE" Type="datetime" />
-    <Property Name="AE_LOGIC" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AE_LOGIC" Type="nvarchar(max)" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
@@ -761,7 +761,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CRFWARD">
-    <End Role="Wards" Type="Self.Wards" Multiplicity="1" />
+    <End Role="Wards" Type="Self.Wards" Multiplicity="0..1" />
     <End Role="CRFs" Type="Self.CRFs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Wards">

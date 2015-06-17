@@ -157,13 +157,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Guid" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
-    <Property Type="Guid" Name="WARDId" Nullable="false" />
-    <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Type="Int32" Name="NUMBER" Nullable="false" />
+    <Property Type="Guid" Name="WARDId" />
+    <Property Type="String" Name="NAME" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+    <Property Type="Int32" Name="NUMBER" Nullable="true" />
     <Property Type="DateTime" Name="DATE_BIRTH" Nullable="true" Precision="3" />
     <Property Type="DateTime" Name="DATE_HOSPITALISATION" Nullable="true" Precision="3" />
     <Property Type="DateTime" Name="DATE_DISCHARGE" Nullable="true" Precision="3" />
-    <Property Type="String" Name="AE_LOGIC" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="AE_LOGIC" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="CreatedByDate" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
