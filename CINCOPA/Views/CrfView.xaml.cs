@@ -31,6 +31,36 @@ namespace CINCOPA.Views
             this.Close();
         }
 
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (sender as TextBox);
+
+            if (tb != null)
+            {
+
+                tb.SelectAll();
+
+            }
+        }
+
+        private void TextBox_GotFocus_1(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (sender as TextBox);
+
+            if (tb != null)
+            {
+
+                tb.SelectAll();
+
+            }
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            this.firstTextbox.Focus();
+            this.firstTextbox.SelectAll();
+        }
+
 
      
        
