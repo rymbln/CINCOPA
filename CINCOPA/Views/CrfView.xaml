@@ -1438,7 +1438,7 @@
                                     </ToolBar>
                                     <DataGrid AutoGenerateColumns="False"
                             ItemsSource="{Binding AllMicrobiologySputum}"
-                                  SelectedItem="{Binding CurrentMicrobiologySputum}" CanUserAddRows="False" CanUserDeleteRows="False">
+                                  SelectedItem="{Binding CurrentMBSputum}" CanUserAddRows="False" CanUserDeleteRows="False">
                                         <DataGrid.Columns>
                                             <DataGridTemplateColumn Header= "Дата забора">
                                                 <DataGridTemplateColumn.CellTemplate>
@@ -1551,7 +1551,7 @@
                                     </ToolBar>
                                     <DataGrid AutoGenerateColumns="False"
                             ItemsSource="{Binding AllMicrobiologyBlood}"
-                                  SelectedItem="{Binding CurrentMicrobiologyBlood}" CanUserAddRows="False" CanUserDeleteRows="False">
+                                  SelectedItem="{Binding CurrentMBBlood}" CanUserAddRows="False" CanUserDeleteRows="False">
                                         <DataGrid.Columns>
                                             <DataGridTemplateColumn Header= "Дата забора" >
                                                 <DataGridTemplateColumn.CellTemplate>
