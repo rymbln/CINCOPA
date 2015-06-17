@@ -5,67 +5,66 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0d38f5f58d9f46e59e547f3b96cf1db7" Name="Diagram1" ZoomLevel="79" >
-        <EntityTypeShape EntityType="CINCOPAModel.AbTherapy" Width="1.5" PointX="5.25" PointY="55.125" />
-        <EntityTypeShape EntityType="CINCOPAModel.AE" Width="1.5" PointX="5.25" PointY="83.25" />
-        <EntityTypeShape EntityType="CINCOPAModel.AnamnesticDataVisit1Set" Width="1.5" PointX="7.5" PointY="24.375" />
-        <EntityTypeShape EntityType="CINCOPAModel.BaseLiveIndicatorsVisit1Set" Width="1.5" PointX="7.5" PointY="46.625" />
-        <EntityTypeShape EntityType="CINCOPAModel.BaseLiveIndicatorsVisit2Set" Width="1.5" PointX="7.5" PointY="108.25" />
-        <EntityTypeShape EntityType="CINCOPAModel.BloodChemistry" Width="1.5" PointX="5.25" PointY="112.5" />
-        <EntityTypeShape EntityType="CINCOPAModel.BloodClinicalAnalys" Width="1.5" PointX="5.25" PointY="68.125" />
-        <EntityTypeShape EntityType="CINCOPAModel.BloodTestsForMarkersOfCardiacDysfunction" Width="1.5" PointX="5.25" PointY="77.625" />
-        <EntityTypeShape EntityType="CINCOPAModel.BloodTestsForMarkersOfInflammation" Width="1.5" PointX="5.25" PointY="13.375" />
-        <EntityTypeShape EntityType="CINCOPAModel.ComputedTomographyChestVisit1Set" Width="1.5" PointX="7.5" PointY="40" />
-        <EntityTypeShape EntityType="CINCOPAModel.CRF" Width="1.5" PointX="3" PointY="54.125" />
-        <EntityTypeShape EntityType="CINCOPAModel.Drug" Width="1.5" PointX="3" PointY="61.875" />
-        <EntityTypeShape EntityType="CINCOPAModel.EchocardiographyVisit1Set" Width="1.5" PointX="7.5" PointY="29.625" />
-        <EntityTypeShape EntityType="CINCOPAModel.EchocardiographyVisit3Set" Width="1.5" PointX="7.5" PointY="87.875" />
-        <EntityTypeShape EntityType="CINCOPAModel.ElectrocardiographyVisit1Set" Width="1.5" PointX="7.5" PointY="19.75" />
-        <EntityTypeShape EntityType="CINCOPAModel.EvaluationOfSymptomsVisit11Set" Width="1.5" PointX="7.5" PointY="92.5" />
-        <EntityTypeShape EntityType="CINCOPAModel.EvaluationOfSymptomsVisit1Set" Width="1.5" PointX="7.5" PointY="34.25" />
-        <EntityTypeShape EntityType="CINCOPAModel.EvaluationOfSymptomsVisit2Set" Width="1.5" PointX="7.5" PointY="102.25" />
-        <EntityTypeShape EntityType="CINCOPAModel.Measure" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CINCOPAModel.MicrobiologyBlood" Width="1.5" PointX="5.25" PointY="50.25" />
-        <EntityTypeShape EntityType="CINCOPAModel.MicrobiologySputum" Width="1.5" PointX="8.25" PointY="59" />
-        <EntityTypeShape EntityType="CINCOPAModel.Organism" Width="1.5" PointX="3" PointY="49.75" />
-        <EntityTypeShape EntityType="CINCOPAModel.Route" Width="1.5" PointX="3" PointY="65.75" />
-        <EntityTypeShape EntityType="CINCOPAModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CINCOPAModel.TestForPneumococcal" Width="1.5" PointX="5.25" PointY="98.5" />
-        <EntityTypeShape EntityType="CINCOPAModel.User" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="CINCOPAModel.VisitOneOne" Width="1.5" PointX="5.25" PointY="93.625" />
-        <EntityTypeShape EntityType="CINCOPAModel.VisitOne" Width="1.5" PointX="5.25" PointY="36.5" />
-        <EntityTypeShape EntityType="CINCOPAModel.VisitThree" Width="1.5" PointX="5.25" PointY="88.25" />
-        <EntityTypeShape EntityType="CINCOPAModel.VisitTwo" Width="1.5" PointX="5.25" PointY="105.375" />
-        <EntityTypeShape EntityType="CINCOPAModel.Ward" Width="1.5" PointX="0.75" PointY="55.875" />
-        <EntityTypeShape EntityType="CINCOPAModel.XrayChestVisit1Set" Width="1.5" PointX="7.5" PointY="51.5" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFAB_THERAPY" />
-        <AssociationConnector Association="CINCOPAModel.FK_DRUGAB_THERAPY" />
-        <AssociationConnector Association="CINCOPAModel.FK_ROUTEAB_THERAPY" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFADVERSE_EVENT" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONEANAMNESTIC_DATA" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFBLOOD_CHEMISTRY" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFBLOOD_CLINICAL_ANALYSIS" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFMICROBIOLOGY_BLOOD" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFMICROBIOLOGY_SPUTUM" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFTEST_FOR_PNEUMOCOCCAL" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFVISIT_ONE" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFVISIT_ONE_ONE" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFVISIT_THREE" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFVISIT_TWO" />
-        <AssociationConnector Association="CINCOPAModel.FK_CRFWARD" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" />
-        <AssociationConnector Association="CINCOPAModel.FK_ORGANISMMICROBIOLOGY_BLOOD" />
-        <AssociationConnector Association="CINCOPAModel.FK_ORGANISMMICROBIOLOGY_SPUTUM" />
-        <AssociationConnector Association="CINCOPAModel.FK_VISIT_ONEXRAY_CHEST_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.CRF" Width="2.5" PointX="2.5" PointY="2.875" />
+        <EntityTypeShape EntityType="CINCOPAModel.WARD" Width="1.5" PointX="0.5" PointY="2.875" />
+        <EntityTypeShape EntityType="CINCOPAModel.USER" Width="1.5" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="CINCOPAModel.CRFWARD" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_ONE" Width="1.5" PointX="5.625" PointY="2.875" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_ONE_ONE" Width="1.5" PointX="5.625" PointY="7" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_TWO" Width="1.5" PointX="5.625" PointY="11.125" />
+        <EntityTypeShape EntityType="CINCOPAModel.VISIT_THREE" Width="1.5" PointX="5.625" PointY="15" />
+        <EntityTypeShape EntityType="CINCOPAModel.ADVERSE_EVENT" Width="1.75" PointX="5.625" PointY="20.125" />
+        <EntityTypeShape EntityType="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_1" Width="2.75" PointX="8" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_ONE" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_ONE_ONE" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_THREE" />
+        <AssociationConnector Association="CINCOPAModel.CRFVISIT_TWO" />
+        <AssociationConnector Association="CINCOPAModel.CRFADVERSE_EVENT" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONEBASE_LIVE_INDICATORS_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.ANAMNESTIC_DATA_VISIT_1" Width="2.375" PointX="11.375" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONEANAMNESTIC_DATA" />
+        <EntityTypeShape EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_1" Width="3" PointX="14.375" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONEEVALUATION_OF_SYMPTOMS_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.ELECTROCARDIOGRAPHY_VISIT_1" Width="3.625" PointX="17.75" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONEELECTROCARDIOGRAPHY_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_1" Width="3.375" PointX="21.625" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONEECHOCARDIOGRAPHY_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.XRAY_CHEST_VISIT_1" Width="3.625" PointX="25.625" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONEXRAY_CHEST_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.COMPUTED_TOMOGRAPHY_CHEST_VISIT_1" Width="3.625" PointX="29.5" PointY="1.625" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONECOMPUTED_TOMOGRAPHY_CHEST_VISIT_1" />
+        <EntityTypeShape EntityType="CINCOPAModel.BASE_LIVE_INDICATORS_VISIT_2" Width="2.75" PointX="8" PointY="11.125" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_TWOBASE_LIVE_INDICATORS_VISIT_2" />
+        <EntityTypeShape EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_2" Width="3" PointX="11.5" PointY="11.125" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_TWOEVALUATION_OF_SYMPTOMS_VISIT_2" />
+        <EntityTypeShape EntityType="CINCOPAModel.ECHOCARDIOGRAPHY_VISIT_3" Width="3.125" PointX="7.875" PointY="16" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_THREEECHOCARDIOGRAPHY_VISIT_3" />
+        <EntityTypeShape EntityType="CINCOPAModel.EVALUATION_OF_SYMPTOMS_VISIT_11" Width="2.75" PointX="8.75" PointY="6" />
+        <AssociationConnector Association="CINCOPAModel.VISIT_ONE_ONEEVALUATION_OF_SYMPTOMS_VISIT_11" />
+        <EntityTypeShape EntityType="CINCOPAModel.BLOOD_CLINICAL_ANALYSIS" Width="3.25" PointX="8.375" PointY="20.125" />
+        <AssociationConnector Association="CINCOPAModel.CRFBLOOD_CLINICAL_ANALYSIS" />
+        <EntityTypeShape EntityType="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" Width="3.875" PointX="12" PointY="20.125" />
+        <AssociationConnector Association="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_INFLAMMATION" />
+        <EntityTypeShape EntityType="CINCOPAModel.BLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" Width="3.5" PointX="16.625" PointY="20.125" />
+        <AssociationConnector Association="CINCOPAModel.CRFBLOOD_TESTS_FOR_MARKERS_OF_CARDIAC_DYSFUNCTION" />
+        <EntityTypeShape EntityType="CINCOPAModel.BLOOD_CHEMISTRY" Width="2.875" PointX="20.75" PointY="20.125" />
+        <AssociationConnector Association="CINCOPAModel.CRFBLOOD_CHEMISTRY" />
+        <EntityTypeShape EntityType="CINCOPAModel.ORGANISM" Width="1.5" PointX="32.375" PointY="16.375" />
+        <EntityTypeShape EntityType="CINCOPAModel.ROUTE" Width="1.5" PointX="24.625" PointY="24.625" />
+        <EntityTypeShape EntityType="CINCOPAModel.DRUG" Width="1.5" PointX="26.5" PointY="24.625" />
+        <EntityTypeShape EntityType="CINCOPAModel.AB_THERAPY" Width="1.5" PointX="25.5" PointY="20" />
+        <AssociationConnector Association="CINCOPAModel.CRFAB_THERAPY" />
+        <AssociationConnector Association="CINCOPAModel.ROUTEAB_THERAPY" />
+        <AssociationConnector Association="CINCOPAModel.DRUGAB_THERAPY" />
+        <EntityTypeShape EntityType="CINCOPAModel.TEST_FOR_PNEUMOCOCCAL" Width="1.5" PointX="28.875" PointY="20.125" />
+        <AssociationConnector Association="CINCOPAModel.CRFTEST_FOR_PNEUMOCOCCAL" />
+        <EntityTypeShape EntityType="CINCOPAModel.MICROBIOLOGY_SPUTUM" Width="2.875" PointX="31.25" PointY="20.125" />
+        <EntityTypeShape EntityType="CINCOPAModel.MICROBIOLOGY_BLOOD" Width="3.5" PointX="34.875" PointY="20.25" />
+        <AssociationConnector Association="CINCOPAModel.CRFMICROBIOLOGY_SPUTUM" />
+        <AssociationConnector Association="CINCOPAModel.CRFMICROBIOLOGY_BLOOD" />
+        <AssociationConnector Association="CINCOPAModel.ORGANISMMICROBIOLOGY_BLOOD" />
+        <AssociationConnector Association="CINCOPAModel.ORGANISMMICROBIOLOGY_SPUTUM" />
+        <EntityTypeShape EntityType="CINCOPAModel.Measure" Width="1.5" PointX="0.75" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

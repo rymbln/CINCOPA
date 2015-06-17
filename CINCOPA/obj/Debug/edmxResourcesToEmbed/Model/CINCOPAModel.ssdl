@@ -218,13 +218,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="WARDId" Type="uniqueidentifier" />
-    <Property Name="NAME" Type="nvarchar(max)" />
-    <Property Name="NUMBER" Type="int" />
+    <Property Name="WARDId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NUMBER" Type="int" Nullable="false" />
     <Property Name="DATE_BIRTH" Type="datetime" />
     <Property Name="DATE_HOSPITALISATION" Type="datetime" />
     <Property Name="DATE_DISCHARGE" Type="datetime" />
-    <Property Name="AE_LOGIC" Type="nvarchar(max)" />
+    <Property Name="AE_LOGIC" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CreatedByDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UpdatedBy" Type="nvarchar(max)" Nullable="false" />
@@ -457,16 +457,6 @@
     <Property Name="UpdatedBy" Type="nvarchar(max)" />
     <Property Name="UpdatedByDate" Type="nvarchar(max)" />
     <Property Name="StateCode" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TestForPneumococcals">
     <Key>
@@ -771,7 +761,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CRFWARD">
-    <End Role="Wards" Type="Self.Wards" Multiplicity="0..1" />
+    <End Role="Wards" Type="Self.Wards" Multiplicity="1" />
     <End Role="CRFs" Type="Self.CRFs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Wards">
@@ -984,40 +974,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="proc_del_CRF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="nvarchar(max)" Mode="In" />
   </Function>
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="CINCOPAModelStoreContainer">
     <EntitySet Name="AbTherapys" EntityType="Self.AbTherapys" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AEs" EntityType="Self.AEs" Schema="dbo" store:Type="Tables" />
@@ -1042,7 +1001,6 @@
     <EntitySet Name="MicrobiologySputums" EntityType="Self.MicrobiologySputums" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Organisms" EntityType="Self.Organisms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Routes" EntityType="Self.Routes" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TestForPneumococcals" EntityType="Self.TestForPneumococcals" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VisitOneOnes" EntityType="Self.VisitOneOnes" Schema="dbo" store:Type="Tables" />
