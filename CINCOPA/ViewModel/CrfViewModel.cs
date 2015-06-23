@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Navigation;
 using CINCOPA.Common;
 using CINCOPA.Model;
+using System.Windows;
 
 namespace CINCOPA.ViewModel
 {
@@ -424,12 +425,37 @@ namespace CINCOPA.ViewModel
 
         #region CRF FIELDS
 
-        public int NUMBER
+        public string NUMBER
         {
-            get { return Model.NUMBER; }
+            get {
+                if (Model.NUMBER == -100)
+                {
+                    return "";
+                }
+                else
+                { return Model.NUMBER.ToString(); }
+
+            }
             set
             {
-                Model.NUMBER = value;
+                if (string.IsNullOrEmpty(value))
+                {
+                    Model.NUMBER = -100;
+                }
+                else
+                {
+                    int varint;
+                    bool res =int.TryParse(value, out varint);
+                    if (res)
+                    {
+                        Model.NUMBER = varint;
+                    }
+                    else
+                    {
+                        Model.NUMBER = -100;
+                        MessageBoxResult result = MessageBox.Show("Некорректно введен номер карты", "Препарат не найден", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                }
                 OnPropertyChanged("NUMBER");
             }
         }

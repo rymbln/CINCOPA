@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using CINCOPA.Common;
 using CINCOPA.Model;
+using System.Windows;
 
 namespace CINCOPA.ViewModel
 {
@@ -19,6 +20,7 @@ namespace CINCOPA.ViewModel
                 Model = obj;
             }
             SelectOrganismCommand = new DelegateCommand(o=>SelectOrganism());
+            LostFocusMbOrgCommand = new DelegateCommand(o => LostFocusMbOrg());
         }
 
         public ICommand SelectOrganismCommand { get; private set; }
@@ -133,6 +135,56 @@ namespace CINCOPA.ViewModel
             {
                 Model.MRSA = value;
                 OnPropertyChanged("MB_SPUTUM_MRSA");
+            }
+        }
+
+        private string _typedTextMbOrg;
+        public string TypedTextMbOrg
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_typedTextMbOrg))
+                {
+                    return MB_SPUTUM_ORGANISM.NAME;
+                }
+                else
+                {
+                    return _typedTextMbOrg;
+                };
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    _typedTextMbOrg = "---";
+                }
+                else
+                {
+                    _typedTextMbOrg = value;
+                }
+                OnPropertyChanged("TypedTextMbOrg");
+
+            }
+        }
+        public ICommand LostFocusMbOrgCommand { get; set; }
+        private void LostFocusMbOrg()
+        {
+            //check if the typed text is contained in the items source list
+            var searchedItem = OrganismLookup.Select(o => o.NAME).FirstOrDefault(item => item.Contains(TypedTextMbOrg));
+            if (searchedItem == null)
+            {
+                MessageBoxResult result = MessageBox.Show("Организм отсутствует в списке. Добавить?", "Организм не найден", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    DataManager.Instance.AddDrug(TypedTextMbOrg);
+                    OnPropertyChanged("OrganismLookup");
+                    var dr = OrganismLookup.Where(item => item.NAME.Equals(TypedTextMbOrg)).FirstOrDefault();
+                    MB_SPUTUM_ORGANISM = dr;
+                }
+            }
+            else
+            {
+                //do something else
             }
         }
 

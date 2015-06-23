@@ -53,3 +53,7 @@ C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csproj.Gene
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA_MarkupCompile.lref
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\obj\Debug\CINCOPA.csprojResolveAssemblyReference.cache
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Inspiron\Documents\GitHub\CINCOPA\CINCOPA\bin\Debug\System.Windows.Interactivity.xml
