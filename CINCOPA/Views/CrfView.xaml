@@ -5,18 +5,54 @@
 xmlns:b="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Title="CINCOPA ИРК" Height="768" Width="1024" Activated="Window_Activated" Initialized="Window_Initialized">
-    <ScrollViewer HorizontalContentAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" >
-        <DockPanel>
-            <ToolBarTray DockPanel.Dock="Top">
-                <ToolBar>
-                    <Button Command="{Binding SaveCommand}" Content="Сохранить"/>
-                    <Separator/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+    
+    <ToolBarTray Grid.Row="0">
+        <ToolBar>
+            <Button Command="{Binding SaveCommand}" Content="Сохранить"/>
+            <Separator/>
 
-                    <Button  Content="Закрыть" Click="Button_Click"/>
-                    <Separator/>
-                    <TextBlock  Text="{Binding LastSaveText}"/>
-                </ToolBar>
-            </ToolBarTray>
+            <Button  Content="Закрыть" Click="Button_Click"/>
+            <Separator/>
+            <TextBlock  Text="{Binding LastSaveText}"/>
+            <Separator/>
+
+
+            <Slider Width="150"
+    x:Name="uiScaleSlider"
+    ToolTip="Determines the UI scale factor."
+    Value="1" Minimum="0.5" Maximum="3"
+/>
+                <TextBlock Text="{Binding Value, ElementName=uiScaleSlider}"/>
+                <Button Content="1" Width="50" Click="Button_Click_1"/>
+                <Button Content="1.25" Width="50" Click="Button_Click_2"/>
+                <Button Content="1.5" Width="50" Click="Button_Click_3"/>
+                <Button Content="1.75" Width="50" Click="Button_Click_4"/>
+                <Button Content="2" Width="50" Click="Button_Click_5"/>
+            </ToolBar>
+    </ToolBarTray>
+
+
+    <ScrollViewer Grid.Row="1"  HorizontalContentAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" >
+        <DockPanel>
+            <DockPanel.LayoutTransform>
+
+                <ScaleTransform 
+
+            CenterX="0" CenterY="0"
+
+            ScaleX="{Binding ElementName=uiScaleSlider,Path=Value}"
+
+            ScaleY="{Binding ElementName=uiScaleSlider,Path=Value}"
+
+        />
+
+            </DockPanel.LayoutTransform>
+        
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -1903,4 +1939,5 @@ xmlns:b="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Inte
             </Grid>
         </DockPanel>
     </ScrollViewer>
+    </Grid>
 </Window>
