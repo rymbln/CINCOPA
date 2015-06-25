@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CINCOPA.Common;
+using System;
 using System.Collections.Generic;
 using System.Data.Objects.DataClasses;
 using System.Linq;
@@ -18,8 +19,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return WARD.NAME + NAME + NUMBER + DATE_BIRTH + DATE_HOSPITALISATION +
-                       DATE_DISCHARGE + AE_LOGIC;
+                return DataManager.Instance.NullToString(WARD.NAME)
+                    + DataManager.Instance.NullToString(NAME)
+                    + DataManager.Instance.NullToString(NUMBER )
+                    + DataManager.Instance.NullToString(DATE_BIRTH )
+                    + DataManager.Instance.NullToString(DATE_HOSPITALISATION )
+                    + DataManager.Instance.NullToString(DATE_DISCHARGE )
+                    + DataManager.Instance.NullToString(AE_LOGIC);
             }
         }
     }
@@ -28,7 +34,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DataManager.Instance.NullToString(DATE_VISIT); }
         }
     }
 
@@ -39,14 +45,14 @@ namespace CINCOPA.Model
         {
             get
             {
-                return BLOOD_PRESSURE_LEFT_HAND
-                       + BLOOD_PRESSURE_RIGHT_HAND
-                       + HEART_RATE
-                       + RESPIRATORY_RATE
-                       + TEMPERATURE
-                       + HEAVY_TYPE
-                       + OXYGEN_THERAPY_NEEDED
-                       + DECOMPENSATION_SIGNS;
+                return DataManager.Instance.NullToString(BLOOD_PRESSURE_LEFT_HAND)
+                       + DataManager.Instance.NullToString(BLOOD_PRESSURE_RIGHT_HAND)
+                       + DataManager.Instance.NullToString(HEART_RATE)
+                       + DataManager.Instance.NullToString(RESPIRATORY_RATE)
+                       + DataManager.Instance.NullToString(TEMPERATURE)
+                       + DataManager.Instance.NullToString(HEAVY_TYPE)
+                       + DataManager.Instance.NullToString(OXYGEN_THERAPY_NEEDED)
+                       + DataManager.Instance.NullToString(DECOMPENSATION_SIGNS);
             }
         }
     }
@@ -57,15 +63,16 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_SYMPTOM.ToString() + DATE_DIAGNOSIS.ToString()
-                       + NUMBER_EPISODES
-                       + NUMBER_EPISODES_NODATA
-                       + FUNCTION_CLASS
-                       + OTHER_EPISODES
-                       + SMOKE_STATUS
-                       + SMOKE_AVERAGE
-                       + SMOKE_YEARS
-                       + SMOKE_PACK_YEARS;
+                return DataManager.Instance.NullToString(DATE_SYMPTOM) 
+                    + DataManager.Instance.NullToString(DATE_DIAGNOSIS)
+                       + DataManager.Instance.NullToString(NUMBER_EPISODES)
+                       + DataManager.Instance.NullToString(NUMBER_EPISODES_NODATA)
+                       + DataManager.Instance.NullToString(FUNCTION_CLASS)
+                       + DataManager.Instance.NullToString(OTHER_EPISODES)
+                       + DataManager.Instance.NullToString(SMOKE_STATUS)
+                       + DataManager.Instance.NullToString(SMOKE_AVERAGE)
+                       + DataManager.Instance.NullToString(SMOKE_YEARS)
+                       + DataManager.Instance.NullToString(SMOKE_PACK_YEARS);
 
 
             }
@@ -78,9 +85,19 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DYSPNEA + COUGH + SPUTUM + SPUTUM_TYPE + TEMPERATURE_INCREASE + COLD_SYMPTOM +
-                       SHORTERING_OF_PERCUSSION_SOUNDS + MOIST_RALES_SOUNDS + CREPITUS + PLEURAL_FRICTION_NOISE +
-                       DRY_RALES + PRESENCE_OF_EDEMA + INCIDENCE_OF_EDEMA;
+                return DataManager.Instance.NullToString(DYSPNEA)
+                    + DataManager.Instance.NullToString(COUGH )
+                    + DataManager.Instance.NullToString(SPUTUM )
+                    + DataManager.Instance.NullToString(SPUTUM_TYPE )
+                    + DataManager.Instance.NullToString(TEMPERATURE_INCREASE )
+                    + DataManager.Instance.NullToString(COLD_SYMPTOM )
+                    + DataManager.Instance.NullToString(SHORTERING_OF_PERCUSSION_SOUNDS )
+                    + DataManager.Instance.NullToString(MOIST_RALES_SOUNDS )
+                    +DataManager.Instance.NullToString( CREPITUS )
+                    + DataManager.Instance.NullToString(PLEURAL_FRICTION_NOISE)
+                    + DataManager.Instance.NullToString(DRY_RALES )
+                    + DataManager.Instance.NullToString(PRESENCE_OF_EDEMA )
+                    + DataManager.Instance.NullToString(INCIDENCE_OF_EDEMA);
             }
         }
     }
@@ -91,8 +108,14 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + SINUS_RHYTHM + ATRIAL_FIBRILLATION + ARRYTHMIA_SUPRAVENTRICULAR +
-                       ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS + HEART_RATE + SIGNIFICANT_CHANGES;
+                return DataManager.Instance.NullToString(DATE_PROCEDURE)
+                    + DataManager.Instance.NullToString(SINUS_RHYTHM )
+                    + DataManager.Instance.NullToString(ATRIAL_FIBRILLATION )
+                    + DataManager.Instance.NullToString(ARRYTHMIA_SUPRAVENTRICULAR )
+                    +
+                       DataManager.Instance.NullToString(ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS )
+                       + DataManager.Instance.NullToString(HEART_RATE )
+                       + DataManager.Instance.NullToString(SIGNIFICANT_CHANGES);
             }
         }
     }
@@ -103,8 +126,14 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + FV_PERCENT + EA_LJ + EA_RJ + SDLA + AMOUNT_OF_PERICARDIAL_EFFUSION +
-                       COMMENTS;
+                return DataManager.Instance.NullToString(DATE_PROCEDURE)
+                    + DataManager.Instance.NullToString(FV_PERCENT )
+                    + DataManager.Instance.NullToString(EA_LJ )
+                    + DataManager.Instance.NullToString(EA_RJ )
+                    + DataManager.Instance.NullToString(SDLA )
+                    + DataManager.Instance.NullToString(AMOUNT_OF_PERICARDIAL_EFFUSION )
+                    +
+                       DataManager.Instance.NullToString(COMMENTS);
             }
         }
     }
@@ -115,13 +144,26 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + PNEUMONIA_SIGNS + ALVEOLAR_INFILTRATION_LEFT_BOTTOM +
-                       ALVEOLAR_INFILTRATION_LEFT_TOP + ALVEOLAR_INFILTRATION_RIGHT_BOTTOM +
-                       ALVEOLAR_INFILTRATION_RIGHT_MIDDLE + ALVEOLAR_INFILTRATION_RIGHT_TOP +
-                       INTERSTITIAL_INFILTRATION_LEFT_BOTTOM + INTERSTITIAL_INFILTRATION_LEFT_TOP +
-                       INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM + INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE +
-                       INTERSTITIAL_INFILTRATION_RIGHT_TOP + PLEURAL_EFFUSION_DOUBLE + PLEURAL_EFFUSION_LEFT +
-                       PLEURAL_EFFUSION_NONE + PLEURAL_EFFUSION_RIGHT + OTHER;
+                return DataManager.Instance.NullToString(DATE_PROCEDURE) 
+                    + DataManager.Instance.NullToString(PNEUMONIA_SIGNS )
+                    + DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_LEFT_BOTTOM )
+                    +
+                       DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_LEFT_TOP )
+                       + DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_RIGHT_BOTTOM )
+                       +
+                       DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_RIGHT_MIDDLE )
+                       + DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_RIGHT_TOP) +
+                       DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_LEFT_BOTTOM )
+                       + DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_LEFT_TOP) +
+                       DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM )
+                       + DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE )+
+                       DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_RIGHT_TOP )
+                       + DataManager.Instance.NullToString(PLEURAL_EFFUSION_DOUBLE )
+                       +DataManager.Instance.NullToString( PLEURAL_EFFUSION_LEFT )
+                       +
+                       DataManager.Instance.NullToString(PLEURAL_EFFUSION_NONE )
+                       + DataManager.Instance.NullToString(PLEURAL_EFFUSION_RIGHT)
+                       + DataManager.Instance.NullToString(OTHER);
             }
         }
     }
@@ -132,13 +174,25 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + PNEUMONIA_SIGNS + ALVEOLAR_INFILTRATION_LEFT_BOTTOM +
-                       ALVEOLAR_INFILTRATION_LEFT_TOP + ALVEOLAR_INFILTRATION_RIGHT_BOTTOM +
-                       ALVEOLAR_INFILTRATION_RIGHT_MIDDLE + ALVEOLAR_INFILTRATION_RIGHT_TOP +
-                       INTERSTITIAL_INFILTRATION_LEFT_BOTTOM + INTERSTITIAL_INFILTRATION_LEFT_TOP +
-                       INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM + INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE +
-                       INTERSTITIAL_INFILTRATION_RIGHT_TOP + PLEURAL_EFFUSION_DOUBLE + PLEURAL_EFFUSION_LEFT +
-                       PLEURAL_EFFUSION_NONE + PLEURAL_EFFUSION_RIGHT + OTHER;
+                return DataManager.Instance.NullToString(DATE_PROCEDURE)
+                    + DataManager.Instance.NullToString(PNEUMONIA_SIGNS )
+                    + DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_LEFT_BOTTOM)
+                    +
+                       DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_LEFT_TOP) 
+                       + DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_RIGHT_BOTTOM) +
+                       DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_RIGHT_MIDDLE )
+                       + DataManager.Instance.NullToString(ALVEOLAR_INFILTRATION_RIGHT_TOP) +
+                       DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_LEFT_BOTTOM )
+                       + DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_LEFT_TOP )+
+                       DataManager.Instance.NullToString(INTERSTITIAL_INFILTRATION_RIGHT_BOTTOM )
+                       +DataManager.Instance.NullToString( INTERSTITIAL_INFILTRATION_RIGHT_MIDDLE )
+                       +
+                      DataManager.Instance.NullToString( INTERSTITIAL_INFILTRATION_RIGHT_TOP )
+                       + DataManager.Instance.NullToString(PLEURAL_EFFUSION_DOUBLE )
+                       + DataManager.Instance.NullToString(PLEURAL_EFFUSION_LEFT) +
+                      DataManager.Instance.NullToString( PLEURAL_EFFUSION_NONE)
+                       +DataManager.Instance.NullToString( PLEURAL_EFFUSION_RIGHT )
+                       + DataManager.Instance.NullToString(OTHER);
             }
         }
     }
@@ -147,7 +201,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DataManager.Instance.NullToString(DATE_VISIT); }
         }
     }
 
@@ -157,9 +211,21 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DYSPNEA + COUGH + SPUTUM + SPUTUM_TYPE + TEMPERATURE_INCREASE + COLD_SYMPTOM +
-                       SHORTERING_OF_PERCUSSION_SOUNDS + MOIST_RALES_SOUNDS + CREPITUS + PLEURAL_FRICTION_NOISE +
-                       DRY_RALES + PRESENCE_OF_EDEMA + INCIDENCE_OF_EDEMA + THERAPY_EFFICIENCY;
+                return DataManager.Instance.NullToString(DYSPNEA)
+                    + DataManager.Instance.NullToString(COUGH )
+                    + DataManager.Instance.NullToString(SPUTUM )
+                    + DataManager.Instance.NullToString(SPUTUM_TYPE )
+                    + DataManager.Instance.NullToString(TEMPERATURE_INCREASE)
+                    + DataManager.Instance.NullToString(COLD_SYMPTOM )
+                    +
+                      DataManager.Instance.NullToString( SHORTERING_OF_PERCUSSION_SOUNDS )
+                       +DataManager.Instance.NullToString( MOIST_RALES_SOUNDS )
+                       + DataManager.Instance.NullToString(CREPITUS )
+                       + DataManager.Instance.NullToString(PLEURAL_FRICTION_NOISE )+
+                       DataManager.Instance.NullToString(DRY_RALES )
+                       + DataManager.Instance.NullToString(PRESENCE_OF_EDEMA)
+                       + DataManager.Instance.NullToString(INCIDENCE_OF_EDEMA )
+                       + DataManager.Instance.NullToString(THERAPY_EFFICIENCY);
             }
         }
     }
@@ -168,7 +234,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DataManager.Instance.NullToString(DATE_VISIT); }
         }
     }
 
@@ -176,7 +242,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DataManager.Instance.NullToString(DATE_VISIT); }
         }
     }
 
@@ -186,11 +252,11 @@ namespace CINCOPA.Model
         {
             get
             {
-                return BLOOD_PRESSURE_LEFT_HAND.ToString()
-                       + BLOOD_PRESSURE_RIGHT_HAND.ToString()
-                       + HEART_RATE.ToString()
-                       + RESPIRATORY_RATE.ToString()
-                       + TEMPERATURE.ToString();
+                return DataManager.Instance.NullToString(BLOOD_PRESSURE_LEFT_HAND)
+                       + DataManager.Instance.NullToString(BLOOD_PRESSURE_RIGHT_HAND)
+                       + DataManager.Instance.NullToString(HEART_RATE)
+                       + DataManager.Instance.NullToString(RESPIRATORY_RATE)
+                       + DataManager.Instance.NullToString(TEMPERATURE);
             }
         }
     }
@@ -201,9 +267,22 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DYSPNEA + COUGH + SPUTUM + SPUTUM_TYPE + TEMPERATURE_INCREASE + COLD_SYMPTOM +
-                       SHORTERING_OF_PERCUSSION_SOUNDS + MOIST_RALES_SOUNDS + CREPITUS + PLEURAL_FRICTION_NOISE +
-                       DRY_RALES + PRESENCE_OF_EDEMA + INCIDENCE_OF_EDEMA + THERAPY_EFFICIENCY;
+                return DataManager.Instance.NullToString( DYSPNEA )
+                    + DataManager.Instance.NullToString(COUGH )
+                    + DataManager.Instance.NullToString(SPUTUM )
+                    + DataManager.Instance.NullToString(SPUTUM_TYPE )
+                    + DataManager.Instance.NullToString(TEMPERATURE_INCREASE )
+                    +DataManager.Instance.NullToString(COLD_SYMPTOM )
+                    +
+                       DataManager.Instance.NullToString(SHORTERING_OF_PERCUSSION_SOUNDS )
+                       +DataManager.Instance.NullToString( MOIST_RALES_SOUNDS )
+                       + DataManager.Instance.NullToString(CREPITUS )
+                       
+                       +DataManager.Instance.NullToString( PLEURAL_FRICTION_NOISE )+
+                       DataManager.Instance.NullToString(DRY_RALES )
+                       + DataManager.Instance.NullToString(PRESENCE_OF_EDEMA )
+                       + DataManager.Instance.NullToString(INCIDENCE_OF_EDEMA )
+                       + DataManager.Instance.NullToString(THERAPY_EFFICIENCY);
             }
         }
     }
@@ -214,8 +293,14 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + FV_PERCENT + EA_LJ + EA_RJ + SDLA + AMOUNT_OF_PERICARDIAL_EFFUSION +
-                       COMMENTS;
+                return DataManager.Instance.NullToString(DATE_PROCEDURE)
+                    + DataManager.Instance.NullToString(FV_PERCENT )
+                    + 
+                    DataManager.Instance.NullToString(EA_RJ )
+                    +DataManager.Instance.NullToString( SDLA )
+                    + DataManager.Instance.NullToString(AMOUNT_OF_PERICARDIAL_EFFUSION )
+                    +
+                      DataManager.Instance.NullToString( COMMENTS);
             }
         }
     }
@@ -224,7 +309,14 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return NAME + DATE_START + DATE_END + HEAVY + RESULT + RELATION + ACTIONS; }
+            get { return DataManager.Instance.NullToString(NAME )
+                + DataManager.Instance.NullToString(DATE_START )
+                + DataManager.Instance.NullToString(DATE_END )
+                + DataManager.Instance.NullToString(HEAVY )
+                + DataManager.Instance.NullToString(RESULT)
+                + DataManager.Instance.NullToString(RELATION)
+                + DataManager.Instance.NullToString(ACTIONS);
+            }
         }
     }
 
@@ -234,9 +326,15 @@ namespace CINCOPA.Model
         {
             get
             {
-                return VISIT_ONE_SIGNIFICANT_CHANGES + VISIT_ONE_LEUKOCYTOSIS + VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS +
-                       VISIT_ONE_OTHERS + VISIT_TWO_SIGNIFICANT_CHANGES + VISIT_TWO_LEUKOCYTOSIS +
-                       VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS + VISIT_TWO_OTHERS;
+                return DataManager.Instance.NullToString(VISIT_ONE_SIGNIFICANT_CHANGES )
+                    + DataManager.Instance.NullToString(VISIT_ONE_LEUKOCYTOSIS )
+                    + DataManager.Instance.NullToString(VISIT_ONE_LEUKOCYTOSIS_YOUNG_FORMS)
+                    +
+                       DataManager.Instance.NullToString(VISIT_ONE_OTHERS )
+                       +DataManager.Instance.NullToString( VISIT_TWO_SIGNIFICANT_CHANGES )
+                       +DataManager.Instance.NullToString( VISIT_TWO_LEUKOCYTOSIS )+
+                       DataManager.Instance.NullToString(VISIT_TWO_LEUKOCYTOSIS_YOUNG_FORMS)
+                       + DataManager.Instance.NullToString(VISIT_TWO_OTHERS);
             }
         }
     }
@@ -247,9 +345,18 @@ namespace CINCOPA.Model
         {
             get
             {
-                return VISIT_ONE_C_REACTIVE_PROTEIN + VISIT_ONE_PROCALCITONIN + VISIT_ONE_IL6 + VISIT_ONE_FNO +
-                       VISIT_TWO_C_REACTIVE_PROTEIN + VISIT_TWO_PROCALCITONIN + VISIT_TWO_FNO + VISIT_THREE_IL6 +
-                       VISIT_THREE_C_REACTIVE_PROTEIN + VISIT_THREE_PROCALCITONIN + VISIT_THREE_IL6 + VISIT_THREE_FNO;
+                return DataManager.Instance.NullToString( VISIT_ONE_C_REACTIVE_PROTEIN )
+                    + DataManager.Instance.NullToString(VISIT_ONE_PROCALCITONIN )
+                    + DataManager.Instance.NullToString(VISIT_ONE_IL6 )
+                    + DataManager.Instance.NullToString(VISIT_ONE_FNO )+
+                       DataManager.Instance.NullToString(VISIT_TWO_C_REACTIVE_PROTEIN )
+                       + DataManager.Instance.NullToString(VISIT_TWO_PROCALCITONIN )
+                       + DataManager.Instance.NullToString(VISIT_TWO_FNO )
+                       + DataManager.Instance.NullToString(VISIT_THREE_IL6) +
+                       DataManager.Instance.NullToString(VISIT_THREE_C_REACTIVE_PROTEIN )
+                       + DataManager.Instance.NullToString(VISIT_THREE_PROCALCITONIN)
+                       + DataManager.Instance.NullToString(VISIT_THREE_IL6 )
+                       + DataManager.Instance.NullToString(VISIT_THREE_FNO);
             }
         }
     }
@@ -260,9 +367,16 @@ namespace CINCOPA.Model
         {
             get
             {
-                return VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE + VISIT_ONE_KOPEPTIN + VISIT_ONE_PROADRENOMEDULLIN +
-                       VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE + VISIT_TWO_KOPEPTIN + VISIT_TWO_PROADRENOMEDULLIN +
-                       VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE + VISIT_THREE_KOPEPTIN + VISIT_THREE_PROADRENOMEDULLIN;
+                return DataManager.Instance.NullToString(VISIT_ONE_BRAIN_NATRIURETIC_PEPTIDE)
+                    + DataManager.Instance.NullToString(VISIT_ONE_KOPEPTIN )
+                    + DataManager.Instance.NullToString(VISIT_ONE_PROADRENOMEDULLIN) +
+                       DataManager.Instance.NullToString(VISIT_TWO_BRAIN_NATRIURETIC_PEPTIDE )
+                       +DataManager.Instance.NullToString( VISIT_TWO_KOPEPTIN )
+                       
+                       + DataManager.Instance.NullToString(VISIT_TWO_PROADRENOMEDULLIN )+
+                       DataManager.Instance.NullToString(VISIT_THREE_BRAIN_NATRIURETIC_PEPTIDE )
+                       + DataManager.Instance.NullToString(VISIT_THREE_KOPEPTIN )
+                       + DataManager.Instance.NullToString(VISIT_THREE_PROADRENOMEDULLIN);
             }
         }
     }
@@ -273,8 +387,11 @@ namespace CINCOPA.Model
         {
             get
             {
-                return VISIT_ONE_SIGNIFICANT_CHANGES + VISIT_ONE_CHANGES + VISIT_TWO_SIGNIFICANT_CHANGES +
-                       VISIT_TWO_CHANGES;
+                return DataManager.Instance.NullToString(VISIT_ONE_SIGNIFICANT_CHANGES )
+                    + DataManager.Instance.NullToString(VISIT_ONE_CHANGES )
+                    +DataManager.Instance.NullToString( VISIT_TWO_SIGNIFICANT_CHANGES )
+                    +
+                       DataManager.Instance.NullToString(VISIT_TWO_CHANGES);
             }
         }
     }
@@ -284,7 +401,14 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DRUG.NAME + ROUTE.NAME + SINGLE_DOSE + FREQUENCY + DATE_START + DATE_END; }
+            get
+            {
+                return DataManager.Instance.NullToString(DRUG.NAME)
+                + DataManager.Instance.NullToString(ROUTE.NAME )
+                + DataManager.Instance.NullToString(SINGLE_DOSE) 
+                + DataManager.Instance.NullToString(FREQUENCY )
+                + DataManager.Instance.NullToString(DATE_START)
+                + DataManager.Instance.NullToString(DATE_END); }
         }
     }
 
@@ -292,7 +416,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return LOGIC + RESULT; }
+            get { return DataManager.Instance.NullToString(LOGIC) + DataManager.Instance.NullToString(RESULT); }
         }
     }
 
@@ -302,8 +426,15 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_CAPTURE + LAB_NUMBER + QUALITY_LEUKOCYTES + QUALITY_EPITHELIAL + NOT_REPRESENTATIVE +
-                       GROWTH_PATHOGENS + ORGANISM.NAME + BETA + MRSA;
+                return DataManager.Instance.NullToString(DATE_CAPTURE)
+                    + DataManager.Instance.NullToString(LAB_NUMBER )
+                    + DataManager.Instance.NullToString(QUALITY_LEUKOCYTES )
+                    + DataManager.Instance.NullToString(QUALITY_EPITHELIAL )
+                    + DataManager.Instance.NullToString(NOT_REPRESENTATIVE )+
+                       DataManager.Instance.NullToString(GROWTH_PATHOGENS )
+                       +DataManager.Instance.NullToString( ORGANISM != null ? ORGANISM.NAME : null )
+                       + DataManager.Instance.NullToString(BETA )
+                       + DataManager.Instance.NullToString(MRSA);
             }
         }
     }
@@ -314,8 +445,12 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_CAPTURE + LAB_NUMBER + 
-                       GROWTH_PATHOGENS + ORGANISM.NAME + BETA + MRSA;
+                return DataManager.Instance.NullToString(DATE_CAPTURE)
+                    + DataManager.Instance.NullToString(LAB_NUMBER) + 
+                       DataManager.Instance.NullToString(GROWTH_PATHOGENS)
+                       + DataManager.Instance.NullToString(ORGANISM != null ? ORGANISM.NAME : null)
+                       + DataManager.Instance.NullToString(BETA )
+                       + DataManager.Instance.NullToString(MRSA);
             }
         }
     }
