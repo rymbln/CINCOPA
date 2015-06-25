@@ -1107,7 +1107,18 @@ namespace CINCOPA.Common
             }
 
         }
+        public static string NullToString(object Value)
+        {
 
+            // Value) + NullToString( allows for Value being DBNull, but will also convert int, double, etc.
+            return Value == null ? "" : Value.ToString();
+
+            // If this is not what you want then this form may suit you better, handles 'Null' and DBNull otherwise tries a straight cast
+            // which will throw if Value isn't actually a string object.
+            //return Value == null || Value == DBNull.Value ? "" : (string)Value;
+
+
+        }
         public IEnumerable<ORGANISM> GetAllOrganisms()
         {
             return underlyingContext.Organisms.OrderBy(o => o.NAME);

@@ -7,8 +7,16 @@ using System.Text;
 namespace CINCOPA.Model
 {
 
+       
+
     public partial class CRF : EntityObject
     {
+
+
+  
+
+
+
         public string WARD_NAME
         {
             get { return WARD == null ? "---" : WARD.NAME; }
@@ -18,17 +26,17 @@ namespace CINCOPA.Model
         {
             get
             {
-                return WARD.NAME + NAME + NUMBER + DATE_BIRTH + DATE_HOSPITALISATION +
-                       DATE_DISCHARGE + AE_LOGIC;
+                return NullToString(WARD.NAME + NullToString(NAME + NullToString(NUMBER + NullToString(DATE_BIRTH + NullToString(DATE_HOSPITALISATION +
+                       NullToString(DATE_DISCHARGE + NullToString(AE_LOGIC;
             }
         }
     }
 
     public partial class VISIT_ONE : EntityObject
     {
-        public string ShortString
+        public string? ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return NullToString(DATE_VISIT); }
         }
     }
 
@@ -57,7 +65,7 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_SYMPTOM.ToString() + DATE_DIAGNOSIS.ToString()
+                return DATE_SYMPTOM) + NullToString( + DATE_DIAGNOSIS) + NullToString(
                        + NUMBER_EPISODES
                        + NUMBER_EPISODES_NODATA
                        + FUNCTION_CLASS
@@ -91,7 +99,7 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + SINUS_RHYTHM + ATRIAL_FIBRILLATION + ARRYTHMIA_SUPRAVENTRICULAR +
+                return DATE_PROCEDURE) + NullToString( + SINUS_RHYTHM + ATRIAL_FIBRILLATION + ARRYTHMIA_SUPRAVENTRICULAR +
                        ARRYTHMIA_VENTRICULAR_PREMATURE_BEATS + HEART_RATE + SIGNIFICANT_CHANGES;
             }
         }
@@ -103,7 +111,7 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + FV_PERCENT + EA_LJ + EA_RJ + SDLA + AMOUNT_OF_PERICARDIAL_EFFUSION +
+                return DATE_PROCEDURE) + NullToString( + FV_PERCENT + EA_LJ + EA_RJ + SDLA + AMOUNT_OF_PERICARDIAL_EFFUSION +
                        COMMENTS;
             }
         }
@@ -115,7 +123,7 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + PNEUMONIA_SIGNS + ALVEOLAR_INFILTRATION_LEFT_BOTTOM +
+                return DATE_PROCEDURE) + NullToString( + PNEUMONIA_SIGNS + ALVEOLAR_INFILTRATION_LEFT_BOTTOM +
                        ALVEOLAR_INFILTRATION_LEFT_TOP + ALVEOLAR_INFILTRATION_RIGHT_BOTTOM +
                        ALVEOLAR_INFILTRATION_RIGHT_MIDDLE + ALVEOLAR_INFILTRATION_RIGHT_TOP +
                        INTERSTITIAL_INFILTRATION_LEFT_BOTTOM + INTERSTITIAL_INFILTRATION_LEFT_TOP +
@@ -132,7 +140,7 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + PNEUMONIA_SIGNS + ALVEOLAR_INFILTRATION_LEFT_BOTTOM +
+                return DATE_PROCEDURE) + NullToString( + PNEUMONIA_SIGNS + ALVEOLAR_INFILTRATION_LEFT_BOTTOM +
                        ALVEOLAR_INFILTRATION_LEFT_TOP + ALVEOLAR_INFILTRATION_RIGHT_BOTTOM +
                        ALVEOLAR_INFILTRATION_RIGHT_MIDDLE + ALVEOLAR_INFILTRATION_RIGHT_TOP +
                        INTERSTITIAL_INFILTRATION_LEFT_BOTTOM + INTERSTITIAL_INFILTRATION_LEFT_TOP +
@@ -147,7 +155,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DATE_VISIT) + NullToString(; }
         }
     }
 
@@ -168,7 +176,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DATE_VISIT) + NullToString(; }
         }
     }
 
@@ -176,7 +184,7 @@ namespace CINCOPA.Model
     {
         public string ShortString
         {
-            get { return DATE_VISIT.ToString(); }
+            get { return DATE_VISIT) + NullToString(; }
         }
     }
 
@@ -185,12 +193,12 @@ namespace CINCOPA.Model
         public string ShortString
         {
             get
-            {
-                return BLOOD_PRESSURE_LEFT_HAND.ToString()
-                       + BLOOD_PRESSURE_RIGHT_HAND.ToString()
-                       + HEART_RATE.ToString()
-                       + RESPIRATORY_RATE.ToString()
-                       + TEMPERATURE.ToString();
+            {`
+                return BLOOD_PRESSURE_LEFT_HAND) + NullToString(
+                       + BLOOD_PRESSURE_RIGHT_HAND) + NullToString(
+                       + HEART_RATE) + NullToString(
+                       + RESPIRATORY_RATE) + NullToString(
+                       + TEMPERATURE) + NullToString(;
             }
         }
     }
@@ -214,7 +222,7 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_PROCEDURE.ToString() + FV_PERCENT + EA_LJ + EA_RJ + SDLA + AMOUNT_OF_PERICARDIAL_EFFUSION +
+                return DATE_PROCEDURE) + NullToString( + FV_PERCENT + EA_LJ + EA_RJ + SDLA + AMOUNT_OF_PERICARDIAL_EFFUSION +
                        COMMENTS;
             }
         }
@@ -302,8 +310,14 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_CAPTURE + LAB_NUMBER + QUALITY_LEUKOCYTES + QUALITY_EPITHELIAL + NOT_REPRESENTATIVE +
-                       GROWTH_PATHOGENS + ORGANISM.NAME + BETA + MRSA;
+                return DATE_CAPTURE) + NullToString( + LAB_NUMBER) + NullToString( + QUALITY_LEUKOCYTES) + NullToString( + QUALITY_EPITHELIAL) + NullToString( 
+                    + NOT_REPRESENTATIVE!=null ? NOT_REPRESENTATIVE) + NullToString( : "---" 
+                    +GROWTH_PATHOGENS != null ? GROWTH_PATHOGENS) + NullToString( : "---" 
+                     + ORGANISM.NAME) + NullToString(
+                    + BETA != null ? BETA) + NullToString( : "---"
+
+                    + MRSA != null ? MRSA) + NullToString( : "---" 
+                       ;
             }
         }
     }
@@ -314,8 +328,13 @@ namespace CINCOPA.Model
         {
             get
             {
-                return DATE_CAPTURE + LAB_NUMBER + 
-                       GROWTH_PATHOGENS + ORGANISM.NAME + BETA + MRSA;
+                return DATE_CAPTURE) + NullToString( + LAB_NUMBER) + NullToString( 
+                    + GROWTH_PATHOGENS != null ? GROWTH_PATHOGENS) + NullToString( : "---"
+                     + ORGANISM.NAME) + NullToString(
+                    + BETA != null ? BETA) + NullToString( : "---"
+
+                    + MRSA != null ? MRSA) + NullToString( : "---"
+                       ;
             }
         }
     }
